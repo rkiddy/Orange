@@ -1,18 +1,74 @@
-
 package com.webobjects.foundation;
 
 import java.io.*;
 import java.net.URL;
 
+/**
+ * <p>NSData and its subclass NSMutableData provide data objects, object-oriented wrappers for byte buffers.
+ * Data objects let byte arrays take on the behavior of Foundation objects. NSData creates static data
+ * objects, and NSMutableData creates dynamic data objects.
+ * </p><p>
+ * Data objects can wrap data of any size. The object contains no information about the data
+ * itself (such as its type); the responsibility for deciding how to use the data lies with the client.
+ * In particular, it will not handle byte-order swapping when distributed between big-endian and
+ * little-endian machines.
+ * </p><p>
+ * The following table describes the NSData methods that provide the basis for all NSData's other methods;
+ * that is, all other methods are implemented in terms of these four. If you create a subclass of NSData,
+ * you need to ensure that only these base methods work properly. Having done so, you can be sure that all
+ * the subclass's inherited methods operate properly.
+ *  <table border="1">
+ *  <caption>NSData's Base API</caption>
+ *  <tr><th>Method</th><th>Description</th></tr>
+ *  <tr>
+ *     <td><code>bytesNoCopy</code></td>
+ *     <td>Returns the internal byte array that contains the receiver's data. Used by mutable subclasses of NSData.</td>
+ *  </tr>
+ *  <tr>
+ *     <td><code>immutableBytes</code></td>
+ *     <td>Returns an immutable byte array that contains the receiver's data.</td>
+ *  </tr>
+ *  <tr>
+ *     <td><code>immutableRange</code></td>
+ *     <td>Returns an immutable NSRange object that specifies the receiver's length.</td>
+ *  </tr>
+ *  <tr>
+ *     <td><code>rangeNoCopy</code></td>
+ *     <td>Returns the internal NSRange object that specifies the receiver's length. Used by mutable subclasses of NSData.</td>
+ *  </tr>
+ *  </table>
+ * </p><p>
+ * To extract a data object that contains a subset of the bytes in another data object, use subdataWithRange.
+ * To determine if two data objects are equal, use isEqualToData, which does a byte-for-byte comparison.
+ * <code>writeToStream lets you write the contents of a data object to a stream (a java.io.OutputStream object).
+ * </p>
+ * @see NSData.bytesNoCopy
+ * @see NSData.immutableBytes
+ * @see NSData.immutableRange
+ * @see NSData.rangeNoCopy
+ * @see NSData.isEqualToData(NSData otherData)
+ * @see NSData.subdataWithRange(NSRange range)
+ * @see NSData.writeToStream(java.io.OutputStream outputStream)
+ */
+public class NSData implements Cloneable, Serializable, NSCoding {
 
-public class NSData
-    implements Cloneable, Serializable, NSCoding {
-
-
+    /**
+     * Create an empty data object.
+     */
     public NSData() { return null; }
 
+    /**
+     * Create a data object with all the data in the byte array <code>bytes</code>.
+     * @param bytes - input byte array
+     */
     public NSData(byte bytes[]) { return null; }
 
+    /**
+     * Create a data object with the bytes from the byte array <code>bytes</code> that fall in the range
+     * specified by <code>range</code>.
+     * @param bytes - input byte array
+     * @param range - subrange of data within array
+     */
     public NSData(byte bytes[], NSRange range) { return null; }
 
     public NSData(byte bytes[], int offset, int count) { return null; }
@@ -30,7 +86,6 @@ public class NSData
     /**
      * @deprecated Method NSData is deprecated
      */
-
     public NSData(File file) throws IOException { return null; }
 
     public NSData(URL url) throws IOException { return null; }
@@ -38,7 +93,6 @@ public class NSData
     /**
      * @deprecated Method NSData is deprecated
      */
-
     public NSData(String value) { return null; }
 
     public NSData(String value, String encoding) { return null; }
