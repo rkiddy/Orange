@@ -1,127 +1,154 @@
-
 package com.webobjects.eointerface.swing;
+/**
+ * An EOViewLayout is an AWT layout manager which offers "spring" resizing (like Cocoa views). EOViewLayout implements the geometry options available in Interface Builder's Size inspector. The size of a Component embedded in a Container using this layout scheme will be a function of both its autosizing mask and its initial size.
+ * See Also:Serialized Form
+ */
+public class EOViewLayout implements java.awt.LayoutManager2, java.io.Serializable{
+    /**
+     * This constant is used to specify that both width and height of a component may be adjusted.
+     * See Also:Constant Field Values
+     */
+    public static final int BothSizable=48;
 
-import com.webobjects.foundation.*;
-import java.awt.*;
-import java.io.Serializable;
-import javax.swing.JComponent;
+    /**
+     * This constant is used to specify that a component's height may be adjusted.
+     * See Also:Constant Field Values
+     */
+    public static final int HeightSizable=32;
 
-public class EOViewLayout
-    implements LayoutManager2, Serializable {
-    private static class _EOViewLayoutData
-        implements Serializable {
+    /**
+     * This constant is used to specify that the distance between a component's right edge and that of its parent may be adjusted.
+     * See Also:Constant Field Values
+     */
+    public static final int MaxXMargin=1;
 
+    /**
+     * This constant is used to specify that the distance between a component's bottom edge and that of its parent may be adjusted.
+     * See Also:Constant Field Values
+     */
+    public static final int MaxYMargin=4;
 
-        private _EOViewLayoutData() { return null; }
+    /**
+     * This constant is used to specify that the distance between a component's left edge and that of its parent may be adjusted.
+     * See Also:Constant Field Values
+     */
+    public static final int MinXMargin=2;
 
-        _EOViewLayoutData(_cls1 x0) { return null; }
+    /**
+     * This constant is used to specify that the distance between a component's top edge and that of its parent may be adjusted.
+     * See Also:Constant Field Values
+     */
+    public static final int MinYMargin=8;
 
-        public Dimension lastKnownSize;
-        public Integer springConstraint;
+    /**
+     * This constant is used to specify that a component's width may be adjusted.
+     * See Also:Constant Field Values
+     */
+    public static final int WidthSizable=16;
 
+    /**
+     * Constructs a new EOViewLayout.
+     */
+    public EOViewLayout(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Registers component with the EOViewLayout. constraints should be an Integer object representing the autosizing mask for component.
+     */
+    public void addLayoutComponent(java.awt.Component component, java.lang.Object constraints){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Does nothing.
+     */
+    public void addLayoutComponent(java.lang.String name, java.awt.Component component){
+        return; //TODO codavaj!!
+    }
 
-    protected static int _horizontalSpringCount(int springs) { return null; }
+    /**
+     * Returns the autosizing mask of a component layed out by the EOViewLayout. The mask is some bitwise combination of the following constants: MaxXMargin, MinXMargin, MaxYMargin, MinYMargin, WidthSizable, HeightSizable, and BothSizable.
+     */
+    public int autosizingMask(java.awt.Component component){
+        return 0; //TODO codavaj!!
+    }
 
-    protected static int _verticalSpringCount(int springs) { return null; }
+    /**
+     * Returns the alingment of the component container along the x axis.
+     */
+    public float getLayoutAlignmentX(java.awt.Container container){
+        return 0.0f; //TODO codavaj!!
+    }
 
-    public static Dimension _sizeOfComponentIfContainerIsResized(Component component, Dimension newContainerSize) { return null; }
+    /**
+     * Returns the alingment of the component container along the y axis.
+     */
+    public float getLayoutAlignmentY(java.awt.Container container){
+        return 0.0f; //TODO codavaj!!
+    }
 
-    public static Dimension _sizeOfContainerToResizeComponentWithAutosizingMaskToNewSize(Dimension containerSize, Dimension componentSize, int autosizingMask, Dimension newComponentSize) { return null; }
+    /**
+     * Does nothing.
+     */
+    public void invalidateLayout(java.awt.Container container){
+        return; //TODO codavaj!!
+    }
 
-    private static NSMutableDictionary _nonJComponentDataToStoreDataForComponent(Component component) { return null; }
+    /**
+     * Returns the "last known size" of a component layed out by the EOViewLayout. This size is the basis for the size adjustment of the component next time the component's parent is resized.
+     */
+    public java.awt.Dimension lastKnownSize(java.awt.Component component){
+        return null; //TODO codavaj!!
+    }
 
-    public static void _setAutosizingMaskAndLastKnownSize(Component component, int autosizingMask) { return null; }
+    /**
+     * Lays out the subcomponents of the component container. Adjusts the locations and sizes of the subcomponents according to the autosizing masks registered for them.
+     */
+    public void layoutContainer(java.awt.Container container){
+        return; //TODO codavaj!!
+    }
 
-    public static void _setAutosizingMask(Component component, int autosizingMask) { return null; }
+    /**
+     * Returns the maximum size of the component container.
+     */
+    public java.awt.Dimension maximumLayoutSize(java.awt.Container container){
+        return null; //TODO codavaj!!
+    }
 
-    public static int _autosizingMask(Component component) { return null; }
+    /**
+     * Returns the minimum size of the component container.
+     */
+    public java.awt.Dimension minimumLayoutSize(java.awt.Container container){
+        return null; //TODO codavaj!!
+    }
 
-    public static void _setLastKnownSizeIfNotAlreadySpecified(Component component) { return null; }
+    /**
+     * Returns the preferred size of the component container.
+     */
+    public java.awt.Dimension preferredLayoutSize(java.awt.Container container){
+        return null; //TODO codavaj!!
+    }
 
-    public static void _setLastKnownSize(Component component) { return null; }
+    /**
+     * Unregisters component from the EOViewLayout.
+     */
+    public void removeLayoutComponent(java.awt.Component component){
+        return; //TODO codavaj!!
+    }
 
-    public static void _setLastKnownSize(Component component, Dimension size) { return null; }
+    /**
+     * Sets the autosizing mask of a component layed out by the EOViewLayout to autosizingMask. This information is subsequently used by the receiver to calculate the new location and dimensions of component whenever its parent is resized. The mask should be some bitwise combination of the following constants: MaxXMargin, MinXMargin, MaxYMargin, MinYMargin, WidthSizable, HeightSizable, and BothSizable.
+     */
+    public void setAutosizingMask(java.awt.Component component, int autosizingMask){
+        return; //TODO codavaj!!
+    }
 
-    public static Dimension _lastKnownSize(Component component) { return null; }
-
-    public static void _forceLayout(Container container) { return null; }
-
-    public static void _blockLayout(Container container) { return null; }
-
-    public static void _unblockLayout(Container container) { return null; }
-
-    public EOViewLayout() { return null; }
-
-    protected NSMutableDictionary _nonJComponentData() { return null; }
-
-    public void setAutosizingMask(Component component, int autosizingMask) {}
-
-    public int autosizingMask(Component component) { return 0; }
-
-    public void setLastKnownSize(Component component, Dimension size) {}
-
-    public Dimension lastKnownSize(Component component) { return null; }
-
-    private _NSMutableIntegerDictionary _blockLayoutCounters() { return null; }
-
-    public void _blockLayoutOfContainer(Container container) {}
-
-    public void _unblockLayoutOfContainer(Container container) {}
-
-    public boolean _isLayoutOfContainerBlocked(Container container) { return true; }
-
-    public void addLayoutComponent(String s, Component component1) {}
-
-    public void addLayoutComponent(Component component, Object constraints) {}
-
-    public void removeLayoutComponent(Component component) {}
-
-    public float getLayoutAlignmentX(Container container) { return null; }
-
-    public float getLayoutAlignmentY(Container container) { return null; }
-
-    public void invalidateLayout(Container container1) {}
-
-    public Dimension maximumLayoutSize(Container container) { return null; }
-
-    public Dimension minimumLayoutSize(Container container) { return null; }
-
-    public Dimension preferredLayoutSize(Container container) { return null; }
-
-    public void layoutContainer(Container container) {}
-
-    public static boolean _isComponentToTrace(Component component) { return null; }
-
-    public static void _debug(String message) { return null; }
-
-    public static void _debug(Component component, String message) { return null; }
-
-    public static String _stringForComponent(Component component) { return null; }
-
-    public static String _stringForDimension(Dimension dimension) { return null; }
-
-    public static String _stringForRect(Rectangle rect) { return null; }
-
-    static  {}
-
-    private static final long serialVersionUID = 0x8865f8e4L;
-    public static final Class _CLASS;
-    public static final int MaxXMargin = 1;
-    public static final int MinXMargin = 2;
-    public static final int MaxYMargin = 4;
-    public static final int MinYMargin = 8;
-    public static final int WidthSizable = 16;
-    public static final int HeightSizable = 32;
-    public static final int BothSizable = 48;
-    public static final int _AllHorizontalMask = 19;
-    public static final int _AllVerticalMask = 44;
-    private static final String _SpringsKey = "_EOSpringsKey";
-    private static final String _LastKnownSizeKey = "_EOLastKnownSizeKey";
-    private NSMutableDictionary _nonJComponentData;
-    private _NSMutableIntegerDictionary _blockLayoutCounters;
-    private static boolean _debug;
+    /**
+     * Sets the "last known size" of a component layed out by the EOViewLayout. This size is the basis for the size adjustment of the component next time the component's parent is resized. You can use this method to explicitly register new dimensions of a component with the layout manager. This might be necessary for example if you change the location and dimension of components programmatically, without relying on the EOViewLayout.
+     */
+    public void setLastKnownSize(java.awt.Component component, java.awt.Dimension size){
+        return; //TODO codavaj!!
+    }
 
 }

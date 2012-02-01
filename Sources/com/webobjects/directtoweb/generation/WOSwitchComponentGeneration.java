@@ -1,16 +1,11 @@
-
 package com.webobjects.directtoweb.generation;
+public class WOSwitchComponentGeneration{
+    public WOSwitchComponentGeneration(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.appserver._private.WOGenerationSupport;
-import com.webobjects.appserver._private.WOSwitchComponent;
-import com.webobjects.foundation.NSDictionary;
-import com.webobjects.foundation.NSMutableDictionary;
+    public static void appendToTemplate(com.webobjects.appserver.WOElement element, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
-
-public class WOSwitchComponentGeneration {
-
-    public WOSwitchComponentGeneration() { return null; }
-
-    public static void appendToTemplate(WOElement element, DTWTemplate aTemplate, WOContext aContext) { return null; }
 }

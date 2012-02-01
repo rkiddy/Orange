@@ -1,82 +1,145 @@
-
 package com.webobjects.webservices.generation;
+/**
+ * See Also:Serialized Form
+ */
+public class WOOperation extends com.webobjects.appserver.WOComponent{
+    /**
+     * Constructor for WOOperation.
+     * Parameters:context - WOContext this operation was created in
+     */
+    public WOOperation(com.webobjects.appserver.WOContext context){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOComponent;
-import com.webobjects.appserver.WOContext;
-import com.webobjects.directtoweb.D2WContext;
-import com.webobjects.eocontrol.EOEditingContext;
-import com.webobjects.foundation.*;
-import com.webobjects.webservices.support.xml.WOEnterpriseObjectSerializationStrategy;
+    public com.webobjects.foundation.NSArray aggregateValuesResult(com.webobjects.foundation.NSArray resultArray){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Returns the class name for each input part key path. For key paths that terminate at an EOAttribute, this is the class defined by the EOAttribute. For key paths that terminate at an EORelationship, the class name will be the NSArray class name for toMany relationships, and EOGlobalID for toOne relationships. The result array is ordered to match the key paths in inputPartKeyPaths.
+     */
+    public com.webobjects.foundation.NSArray attributeClassNames(){
+        return null; //TODO codavaj!!
+    }
 
-public class WOOperation extends WOComponent {
+    /**
+     * Returns the representative class for each output key path. For key paths that terminate at an EOAttribute, this is the class defined by the EOAttribute. For key paths that terminate at an EORelationship, the class will be the NSArray class for toMany relationships, and EOGlobalID for toOne relationships. The result array is ordered to match the key paths in outputPartKeyPaths.
+     */
+    public com.webobjects.foundation.NSArray classesForKeyPaths(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Returns the String keys used for building key value qualifiers for attributes. These keys are defined in the rule system and are ordered to match the inputPartKeyPaths defined in the rule system.
+     */
+    public com.webobjects.foundation.NSArray comparisonKeys(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOOperation(WOContext context) { return null; }
+    /**
+     * Returns this operation's D2WContext
+     */
+    public com.webobjects.directtoweb.D2WContext d2wContext(){
+        return null; //TODO codavaj!!
+    }
 
-    public D2WContext d2wContext() { return null; }
+    /**
+     * Returns this operation's EOEditingContext
+     */
+    public com.webobjects.eocontrol.EOEditingContext editingContext(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setD2wContext(D2WContext context) {}
+    /**
+     * Returns the String key used at the end of a key path to represent that the EO at that key path should be serialized as its EOGenericRecord. The result is the D2WContext value for key WOServiceUtilities.RuleSystemConstants.GidArgumentKeyKey
+     */
+    public java.lang.String gidArgumentKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOEditingContext editingContext() { return null; }
+    /**
+     * Returns the EOProperty keys/key paths associated with the public names of the operation's input message parts. These keys are used for key-value coding operations on EO's desrialized during incovation. The result array is ordered so that the index of each argument key path matches that of its associated argument name.
+     */
+    public com.webobjects.foundation.NSArray inputPartKeyPaths(){
+        return null; //TODO codavaj!!
+    }
 
-    public static boolean requiresEntity() { return null; }
+    /**
+     * Returns the names of the operation's SOAP input message parts. These names are translated to the EOProperty key paths of inputPartKeyPaths() during the operation's incovation as EO arguments are deserialized. The result array is ordered so that the index of each input part name matches that of its associated input part key path. This ordering is also used to define the parameterOrdering of the operation's WSDL.
+     */
+    public com.webobjects.foundation.NSArray inputPartNames(){
+        return null; //TODO codavaj!!
+    }
 
-    public String unspecifiedArgumentKey() { return null; }
+    /**
+     * Returns the objects this operation was invoked with. These are the objects that were deserialized from the SOAP message from the web service's client. These objects have the same ordering as the arguments sent by the client. A compliant client will send arguments in the same order as was defined in the operation's WSDL, so the ordering will match that of the inputPartNames.
+     */
+    public com.webobjects.foundation.NSArray inputPartValues(){
+        return null; //TODO codavaj!!
+    }
 
-    public String gidArgumentKey() { return null; }
+    /**
+     * Invokes the operation and returns the invocation's result. Override this method to perform custom work and return a custom result set.
+     * The default implementation returns null.
+     */
+    public java.lang.Object invoke(){
+        return null; //TODO codavaj!!
+    }
 
-    public void saveChangesInEditingContext() {}
+    /**
+     * Returns the EOProperty keys/key paths associated with the public names of the operation's output message parts. These keys are used for key-value coding operations when serializing EO's during incovation. The result array is ordered so that the index of each output key path matches that of its associated result name.
+     */
+    public com.webobjects.foundation.NSArray outputPartKeyPaths(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOEnterpriseObjectSerializationStrategy serializationStrategy() { return null; }
+    /**
+     * Returns the names of the operation's SOAP output message parts. These names are translated to the EOProperty key paths of outputPartKeyPaths() during the operation's incovation as EO result are serialized. The result array is ordered so that the index of each output part name matches that of its associated result key path.
+     */
+    public com.webobjects.foundation.NSArray outputPartNames(){
+        return null; //TODO codavaj!!
+    }
 
-    protected Object _invoke(D2WContext d2wcontext) { return null; }
+    /**
+     * Translates the public name of an argument or result key to the EOProperty key path defined in the rule system
+     */
+    public java.lang.String propertyNameForPartName(java.lang.String name){
+        return null; //TODO codavaj!!
+    }
 
-    public NSArray aggregateValuesResult(NSArray resultArray) { return null; }
+    /**
+     * Returns true if this operation must work with an entity. Subclasses should override this method to return false ONLY if the operation will never return, or accept as input, an EOEnterpriseObject.
+     */
+    public static boolean requiresEntity(){
+        return false; //TODO codavaj!!
+    }
 
-    public String propertyNameForPartName(String name) { return null; }
+    /**
+     * Saves changes to the operation's EOEditingContext if the operation should save its changes immediately as specified by WOServiceUtilities.commitOperationImmediately
+     */
+    public void saveChangesInEditingContext(){
+        return; //TODO codavaj!!
+    }
 
-    private void _computeOperationParameters() {}
+    /**
+     * Returns the serialization strategy to use when serializing and deserializing objects for this operation. The default implementation returns null;
+     */
+    public com.webobjects.webservices.support.xml.WOEnterpriseObjectSerializationStrategy serializationStrategy(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSArray inputPartKeyPaths() { return null; }
+    /**
+     * Sets this operations D2WContext
+     */
+    public void setD2wContext(com.webobjects.directtoweb.D2WContext context){
+        return; //TODO codavaj!!
+    }
 
-    public NSArray inputPartNames() { return null; }
-
-    public NSArray inputPartValues() { return null; }
-
-    public NSArray comparisonKeys() { return null; }
-
-    public NSArray attributeClassNames() { return null; }
-
-    public Object invoke() { return null; }
-
-    public String _argumentListDescription() { return null; }
-
-    public String _argumentKeysDescription() { return null; }
-
-    public boolean _operationIsNotSearch() { return true; }
-
-    private void _computeSerializationParameters() {}
-
-    public NSArray _keyPathsForSerialization() { return null; }
-
-    public NSArray classesForKeyPaths() { return null; }
-
-    public NSArray outputPartNames() { return null; }
-
-    public NSArray outputPartKeyPaths() { return null; }
-
-    public String _classesString() { return null; }
-
-    private static final long serialVersionUID = 0xd8e8d2c3L;
-    private D2WContext _d2wcontext;
-    private WOEnterpriseObjectSerializationStrategy _serializationStrategy;
-    private EOEditingContext _editingContext;
-    private NSMutableArray _comparisonKeys;
-    private NSMutableArray _attributeClassNames;
-    private NSMutableArray _inputPartKeyPaths;
-    private NSArray _keyPathsForSerialization;
-    private NSMutableArray _outputPartKeyPaths;
-    private NSMutableArray _classesForKeyPaths;
+    /**
+     * Returns the String key to represent that the client did not specify a value for an input part. The result is the D2WContext value for key WOServiceUtilities.RuleSystemConstants.UnspecifiedArgumentKeyKey
+     */
+    public java.lang.String unspecifiedArgumentKey(){
+        return null; //TODO codavaj!!
+    }
 
 }

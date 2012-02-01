@@ -1,37 +1,59 @@
-
 package com.webobjects.jdbcadaptor;
-
-import com.webobjects.eoaccess.EOAdaptor;
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationFactory;
-
-
-public class MerantPlugIn extends MicrosoftPlugIn {
-    public static class MerantExpression extends MicrosoftPlugIn.MicrosoftExpression {
-
-        public MerantExpression(EOEntity entity) { return null; }
+public class MerantPlugIn extends com.webobjects.jdbcadaptor.MicrosoftPlugIn{
+    public MerantPlugIn(com.webobjects.jdbcadaptor.JDBCAdaptor adaptor){
+         //TODO codavaj!!
     }
 
-    public static class MerantSynchronizationFactory extends MicrosoftPlugIn.MicrosoftSynchronizationFactory {
-
-        public MerantSynchronizationFactory(EOAdaptor adaptor) { return null; }
+    /**
+     * Description copied from class:
+     * Creates a new EOSynchronizationFactory using the plugin's response to adaptor(). The default EOSynchronizationFactory supports only basic SQL table generation. Subclasses need to override this method to support schema synchronization.
+     */
+    public com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationFactory createSchemaSynchronizationFactory(){
+        return null; //TODO codavaj!!
     }
 
+    /**
+     * Description copied from class:
+     * Returns a string identifying the database. Subclasses should override.
+     */
+    public java.lang.String databaseProductName(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Returns a fully qualified name of the JDBC driver class that this plugin prefers to use. The adaptor will attempt to load this class when making a connection. Subclasses should override.
+     */
+    public java.lang.String defaultDriverName(){
+        return null; //TODO codavaj!!
+    }
 
-    public MerantPlugIn(JDBCAdaptor adaptor) { return null; }
+    /**
+     * Description copied from class:
+     * Returns the Java Class to use as the expression class. The default is JDBCExpression. Subclasses will typically override to use their own subclass of JDBCExpression.
+     */
+    public java.lang.Class defaultExpressionClass(){
+        return null; //TODO codavaj!!
+    }
 
-    public String name() { return null; }
+    /**
+     * Description copied from class:
+     * Returns the plugin's name. Subclasses of JDBCPlugIn need to override this method.
+     */
+    public java.lang.String name(){
+        return null; //TODO codavaj!!
+    }
 
-    public String defaultDriverName() { return null; }
+    public static class MerantExpression extends com.webobjects.jdbcadaptor.MicrosoftPlugIn.MicrosoftExpression{
+        public MerantExpression(com.webobjects.eoaccess.EOEntity entity){
+             //TODO codavaj!!
+        }
 
-    public String databaseProductName() { return null; }
+    }
+    public static class MerantSynchronizationFactory extends com.webobjects.jdbcadaptor.MicrosoftPlugIn.MicrosoftSynchronizationFactory{
+        public MerantSynchronizationFactory(com.webobjects.eoaccess.EOAdaptor adaptor){
+             //TODO codavaj!!
+        }
 
-    public Class defaultExpressionClass() { return null; }
-
-    public EOSchemaSynchronizationFactory createSchemaSynchronizationFactory() { return null; }
-
-    private static final String DriverClassName = "com.merant.datadirect.jdbc.sqlserver.SQLServerDriver";
-    private static final String DriverProductName = "Merant";
-
+    }
 }

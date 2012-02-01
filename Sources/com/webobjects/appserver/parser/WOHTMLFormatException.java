@@ -1,12 +1,10 @@
-
 package com.webobjects.appserver.parser;
-
-
-public class WOHTMLFormatException extends RuntimeException {
-
-
-    public WOHTMLFormatException(String s) { return null; }
-
-    private static final long serialVersionUID = 0x9f463694L;
+/**
+ * Since: 5.4 See Also:Serialized Form
+ */
+public class WOHTMLFormatException extends java.lang.RuntimeException{
+    public WOHTMLFormatException(java.lang.String s){
+         //TODO codavaj!!
+    }
 
 }

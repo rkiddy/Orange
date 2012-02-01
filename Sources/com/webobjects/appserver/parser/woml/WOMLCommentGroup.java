@@ -1,20 +1,23 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLCommentGroup extends com.webobjects.appserver._private.WODynamicGroup{
+    public WOMLCommentGroup(java.lang.String name, com.webobjects.foundation.NSDictionary someAssociations, com.webobjects.foundation.NSMutableArray children){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.appserver._private.WODynamicGroup;
-import com.webobjects.foundation.NSDictionary;
-import com.webobjects.foundation.NSMutableArray;
+    public WOMLCommentGroup(java.lang.String name, com.webobjects.foundation.NSDictionary someAssociations, com.webobjects.appserver.WOElement template){
+         //TODO codavaj!!
+    }
 
-public class WOMLCommentGroup extends WODynamicGroup {
+    public void appendChildrenToResponse(com.webobjects.appserver.WOResponse response, com.webobjects.appserver.WOContext context){
+        return; //TODO codavaj!!
+    }
 
-    public WOMLCommentGroup(String name, NSDictionary someAssociations, WOElement template) { return null; }
+    public com.webobjects.appserver.WOActionResults invokeChildrenAction(com.webobjects.appserver.WORequest request, com.webobjects.appserver.WOContext context){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLCommentGroup(String name, NSDictionary someAssociations, NSMutableArray children) { return null; }
+    public void takeChildrenValuesFromRequest(com.webobjects.appserver.WORequest request, com.webobjects.appserver.WOContext context){
+        return; //TODO codavaj!!
+    }
 
-    public void appendChildrenToResponse(WOResponse response, WOContext context) {}
-
-    public WOActionResults invokeChildrenAction(WORequest request, WOContext context) { return null; }
-
-    public void takeChildrenValuesFromRequest(WORequest request, WOContext context) {}
 }

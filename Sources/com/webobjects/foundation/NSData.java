@@ -1,367 +1,220 @@
 package com.webobjects.foundation;
-
-import java.io.*;
-import java.net.URL;
-
 /**
- * <p>NSData and its subclass NSMutableData provide data objects, object-oriented wrappers for byte buffers.
- * Data objects let byte arrays take on the behavior of Foundation objects. NSData creates static data
- * objects, and NSMutableData creates dynamic data objects.
- * </p><p>
- * Data objects can wrap data of any size. The object contains no information about the data
- * itself (such as its type); the responsibility for deciding how to use the data lies with the client.
- * In particular, it will not handle byte-order swapping when distributed between big-endian and
- * little-endian machines.
- * </p><p>
- * The following table describes the NSData methods that provide the basis for all NSData's other methods;
- * that is, all other methods are implemented in terms of these four. If you create a subclass of NSData,
- * you need to ensure that only these base methods work properly. Having done so, you can be sure that all
- * the subclass's inherited methods operate properly.
- *  <table border="1">
- *  <caption>NSData's Base API</caption>
- *  <tr><th>Method</th><th>Description</th></tr>
- *  <tr>
- *     <td><code>bytesNoCopy</code></td>
- *     <td>Returns the internal byte array that contains the receiver's data. Used by mutable subclasses of NSData.</td>
- *  </tr>
- *  <tr>
- *     <td><code>immutableBytes</code></td>
- *     <td>Returns an immutable byte array that contains the receiver's data.</td>
- *  </tr>
- *  <tr>
- *     <td><code>immutableRange</code></td>
- *     <td>Returns an immutable NSRange object that specifies the receiver's length.</td>
- *  </tr>
- *  <tr>
- *     <td><code>rangeNoCopy</code></td>
- *     <td>Returns the internal NSRange object that specifies the receiver's length. Used by mutable subclasses of NSData.</td>
- *  </tr>
- *  </table>
- * </p><p>
- * To extract a data object that contains a subset of the bytes in another data object, use subdataWithRange.
- * To determine if two data objects are equal, use isEqualToData, which does a byte-for-byte comparison.
- * <code>writeToStream lets you write the contents of a data object to a stream (a java.io.OutputStream object).
- * </p>
- * @see NSData.bytesNoCopy
- * @see NSData.immutableBytes
- * @see NSData.immutableRange
- * @see NSData.rangeNoCopy
- * @see NSData.isEqualToData(NSData otherData)
- * @see NSData.subdataWithRange(NSRange range)
- * @see NSData.writeToStream(java.io.OutputStream outputStream)
+ * NSData and its subclass NSMutableData provide data objects, object-oriented wrappers for byte buffers. Data objects let byte arrays take on the behavior of Foundation objects. NSData creates static data objects, and NSMutableData creates dynamic data objects.
+ * Data objects can wrap data of any size. The object contains no information about the data itself (such as its type); the responsibility for deciding how to use the data lies with the client. In particular, it will not handle byte-order swapping when distributed between big-endian and little-endian machines.
+ * The following table describes the NSData methods that provide the basis for all NSData's other methods; that is, all other methods are implemented in terms of these four. If you create a subclass of NSData, you need to ensure that only these base methods work properly. Having done so, you can be sure that all the subclass's inherited methods operate properly.
+ * NSData's Base API Method Description bytesNoCopy Returns the internal byte array that contains the receiver's data. Used by mutable subclasses of NSData. immutableBytes Returns an immutable byte array that contains the receiver's data. immutableRange Returns an immutable NSRange object that specifies the receiver's length. rangeNoCopy Returns the internal NSRange object that specifies the receiver's length. Used by mutable subclasses of NSData.
+ * To extract a data object that contains a subset of the bytes in another data object, use subdataWithRange. To determine if two data objects are equal, use isEqualToData, which does a byte-for-byte comparison.
+ * writeToStream lets you write the contents of a data object to a stream (a java.io.OutputStream object).
+ * See Also:NSData.bytesNoCopy(), NSData.immutableBytes(), NSData.immutableRange(), NSData.rangeNoCopy(), NSData.isEqualToData(NSData otherData), NSData.subdataWithRange(NSRange range), NSData.writeToStream(java.io.OutputStream outputStream), Serialized Form
  */
-public class NSData implements Cloneable, Serializable, NSCoding {
+public class NSData implements java.lang.Cloneable, java.io.Serializable, com.webobjects.foundation.NSCoding{
+    /**
+     * An empty data object, which can be shared to save memory.
+     */
+    public static final com.webobjects.foundation.NSData EmptyData=null;
 
     /**
      * Creates an empty data object.
      */
-    public NSData() { return null; }
+    public NSData(){
+         //TODO codavaj!!
+    }
 
     /**
-     * Creates a data object with all the data in the byte array <code>bytes</code>.
-     * @param bytes - input byte array
+     * Creates a data object with all the data in the byte array bytes.
+     * Parameters:bytes - input byte array
      */
-    public NSData(byte bytes[]) { return null; }
+    public NSData(byte[] bytes){
+         //TODO codavaj!!
+    }
 
     /**
-     * Creates a data object with the bytes from the byte array <code>bytes</code> that fall in the range
-     * specified by <code>range</code>.
-     * @param bytes - input byte array
-     * @param range - subrange of data within array
+     * Creates a data object with the bytes from the byte array bytes that fall in the range specified by offset and count.
+     * Parameters:bytes - input byte arrayoffset - offset of start of data within byte arraycount - length of data starting at offset
      */
-    public NSData(byte bytes[], NSRange range) { return null; }
+    public NSData(byte[] bytes, int offset, int count){
+         //TODO codavaj!!
+    }
 
-   /**
-    * Creates a data object with the bytes from the byte array bytes that fall in the range specified by
-    * offset and count.
-    * @param bytes - input byte array
-    * @param offset - offset of start of data within byte array
-    * @param count - length of data starting at offset
-    */
-    public NSData(byte bytes[], int offset, int count) { return null; }
-
-    /** 
-     * Creates a data object with the bytes from the byte array bytes that fall in the range specified
-     * by range. The noCopy parameter specifies whether or not a copy of bytes is made.
-     * @param bytes - input byte array
-     * @param range - range of data in byte array
-     * @param noCopy - specifies whether or not a copy of bytes is made
+    /**
+     * Creates a data object with the bytes from the byte array bytes that fall in the range specified by range.
+     * Parameters:bytes - input byte arrayrange - subrange of data within array
      */
-    public NSData(byte bytes[], NSRange range, boolean noCopy) { return null; }
+    public NSData(byte[] bytes, com.webobjects.foundation.NSRange range){
+         //TODO codavaj!!
+    }
+
+    /**
+     * Creates a data object with the bytes from the byte array bytes that fall in the range specified by range. The noCopy parameter specifies whether or not a copy of bytes is made.
+     * Parameters:bytes - input byte arrayrange - range of data in byte arraynoCopy - specifies whether or not a copy of bytes is made
+     */
+    public NSData(byte[] bytes, com.webobjects.foundation.NSRange range, boolean noCopy){
+         //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * Throws: IOException IllegalArgumentExceptionSee Also:NSData.NSData(InputStream inputStream, int chunkSize)
+     */
+    public NSData(java.io.File file) throws java.io.IOException{
+         //TODO codavaj!!
+    }
+
+    /**
+     * Creates a data object with the data from the stream specified by inputStream. The chunkSize parameter specifies the size, in bytes, of the block that the input stream returns when it reads. For maximum performance, you should set the chunk size to the approximate size of the data. This constructor reads the stream until it detects an end of file or encounters an exception, but it does not close the stream.
+     * Parameters:inputStream - data object with the data from the stream specified by inputStreamchunkSize - specifies the size, in bytes, of the block that the input stream returns Throws: IOException
+     */
+    public NSData(java.io.InputStream inputStream, int chunkSize) throws java.io.IOException{
+         //TODO codavaj!!
+    }
 
     /**
      * Creates a data object containing the contents of another data object, otherData.
-     * @param otherData - data object to be copied
+     * Parameters:otherData - data object to be copied
      */
-    public NSData(NSData otherData) { return null; }
+    public NSData(com.webobjects.foundation.NSData otherData){
+         //TODO codavaj!!
+    }
 
     /**
-     * Creates a data object with the data from the stream specified by inputStream. The chunkSize
-     * parameter specifies the size, in bytes, of the block that the input stream returns when it
-     * reads. For maximum performance, you should set the chunk size to the approximate size of the
-     * data. This constructor reads the stream until it detects an end of file or encounters an
-     * exception, but it does not close the stream.
-     * @param inputStream - data object with the data from the stream specified by inputStream
-     * @param chunkSize - specifies the size, in bytes, of the block that the input stream returns
-     * @throws java.io.IOException
+     * Deprecated.
+     * This method is deprecated in the Java Foundation Framework.
+     * Parameters:value - input value as StringSee Also:NSData.NSData(InputStream inputStream, int chunkSize)
      */
-    public NSData(InputStream inputStream, int chunkSize) throws IOException { return null; }
+    public NSData(java.lang.String value){
+         //TODO codavaj!!
+    }
 
     /**
-     * @throws java.io.IOException
-     * @throws java.lang.IllegalArgumentException
-     * @see NSData.NSData(InputStream inputStream, int chunkSize)
-     * @deprecated
+     * This constructor creates a new NSData object from a String
+     * Parameters:value - The textual data to useencoding - The encoding type used to create the bytes.
      */
-    public NSData(File file) throws IOException { return null; }
+    public NSData(java.lang.String value, java.lang.String encoding){
+         //TODO codavaj!!
+    }
 
     /**
      * Creates a new NSData from the contents of url.
-     * @param url - input url
-     * throws java.io.IOException
+     * Parameters:url - input url Throws: IOException
      */
-    public NSData(URL url) throws IOException { return null; }
+    public NSData(java.net.URL url) throws java.io.IOException{
+         //TODO codavaj!!
+    }
+
+    byte[] bytes(){
+        return null; //TODO codavaj!!
+    }
+
+    byte[] bytes(int offset, int length){
+        return null; //TODO codavaj!!
+    }
+
+    byte[] bytes(com.webobjects.foundation.NSRange range){
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * @param value - input value as String
-     * @see NSData.NSData(InputStream inputStream, int chunkSize)
-     * @deprecated
+     * Due to the internal implementation of NSData, the array returned by this primitive method may contain bytes that are not actually a part of the receiver's data. The receiver's actual data is composed of the returned array's bytes that lie in the range returned by rangeNoCopy. It is used by mutable subclasses of NSData.
      */
-    public NSData(String value) { return null; }
-
-    /**
-     * This constructor creates a new NSData object from a String.
-     * @param value - the textual data to use
-     * @param encoding - the encoding type used to create the bytes.
-     */
-    public NSData(String value, String encoding) { return null; }
-
-    private void initFromBytes(byte bytes[], NSRange range, boolean noCopy) {}
-
-    protected void _createBytesFromInputStream(InputStream inputStream, int length, boolean closeInputStream) throws IOException {}
-
-    /**
-     * Due to the internal implementation of NSData, the array returned by this primitive method may contain bytes that
-     * are not actually a part of the receiver's data. The receiver's actual data is composed of the returned array's
-     * bytes that lie in the range returned by rangeNoCopy. It is used by mutable subclasses of NSData.
-     * @return returns the internal byte array that contains the receiver's data
-     * @see NSData.rangeNoCopy
-     */
-    protected byte[] bytesNoCopy() { return null; }
-
-    /**
-     * Primitive method used by mutable subclasses of NSData.
-     * @return the internal NSRange object that specifies the offset and length of the receiver's data relative to the internal
-     *         byte array (as returned by bytesNoCopy)
-     * @see NSData.bytesNoCopy
-     * @see NSData.bytesNoCopy(NSMutableRange dataRange)
-     */
-    protected NSRange rangeNoCopy() { return null; }
-
-    /**
-     * Primitive method that returns the receiver's data.
-     * @return an immutable byte array that contains the receiver's data
-     */
-    protected byte[] immutableBytes() { return null; }
-
-    /**
-     * Primitive method that returns the receiver's range.
-     * @return an immutable NSRange object that specifies the receiver's length.
-     */
-    protected NSRange immutableRange() { return null; }
+    protected byte[] bytesNoCopy(){
+        return null; //TODO codavaj!!
+    }
 
     /**
      * The receiver's actual data is composed of the returned array's bytes that lie within range.
-     * <strong>WARNING</strong> NSData assumes the internal byte array is immutable. You should not change
-     * contents of this array.
-     * @param range - input mutable range specified by range
-     * @return the internal byte array that contains the receiver's data and sets range's offset and length
-     *         to those of the receiver's internal NSRange object
      */
-    public byte[] bytesNoCopy(NSMutableRange range) { return null; }
+    public byte[] bytesNoCopy(com.webobjects.foundation.NSMutableRange range){
+        return null; //TODO codavaj!!
+    }
+
+    java.lang.Class classForCoder(){
+        return null; //TODO codavaj!!
+    }
+
+    java.lang.Object clone(){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSData dataWithContentsOfFile(java.io.File file){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSData dataWithContentsOfFile(java.lang.String path){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSData dataWithContentsOfMappedFile(java.io.File file){
+        return null; //TODO codavaj!!
+    }
+
+    java.lang.Object decodeObject(com.webobjects.foundation.NSCoder coder){
+        return null; //TODO codavaj!!
+    }
+
+    void encodeWithCoder(com.webobjects.foundation.NSCoder coder){
+        return; //TODO codavaj!!
+    }
+
+    boolean equals(java.lang.Object object){
+        return false; //TODO codavaj!!
+    }
+
+    int hashCode(){
+        return 0; //TODO codavaj!!
+    }
 
     /**
-     * Creates a data object containing a copy of the receiver's bytes that fall within the range specified by range.
-     * @param range - input range
-     * @return a data object containing a copy of the receiver's bytes that fall within the range specified by range
-     * @throws RangeException - if range isn't within the receiver's range of bytes (XXX RangeException ???)
-    public NSData subdataWithRange(NSRange range) { return null; }
+     * Privitive method that returns the receiver's data.
+     */
+    protected byte[] immutableBytes(){
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * Use the following code instead.
-     * <code><pre>
-     * myData = new NSData(new FileInputStream(file), chunkSize);
-     * </pre></code>
-     * @param file - input java.io.File object
-     * @return an NSData object initialized with the contents of file
-     * @throws java.io.IOException
-     * @deprecated
+     * Privitive method that returns the receiver's range.
      */
-    public static NSData dataWithContentsOfMappedFile(File file) throws IOException { return null; }
+    protected com.webobjects.foundation.NSRange immutableRange(){
+        return null; //TODO codavaj!!
+    }
+
+    boolean isEqualToData(com.webobjects.foundation.NSData otherData){
+        return false; //TODO codavaj!!
+    }
+
+    int length(){
+        return 0; //TODO codavaj!!
+    }
 
     /**
-     * Use the following code instead:
-     * <code><pre>
-     * myData = new NSData(new FileInputStream(file), chunkSize);
-     * </pre></code>
-     * @param file - input java.io.File object
-     * @return an NSData object initialized with the contents of file
-     * @throws java.io.IOException
-     * @deprecated
+     * Primitive method used by mutable subclasses of NSData.
      */
-    public static NSData dataWithContentsOfFile(File file) throws IOException { return null; }
+    protected com.webobjects.foundation.NSRange rangeNoCopy(){
+        return null; //TODO codavaj!!
+    }
 
-    /**
-     * Use the following code instead:
-     * <code><pre>
-     * myData = new NSData(new FileInputStream(file), chunkSize);
-     * </pre></code>
-     * @param file - input java.io.File object
-     * @return an NSData object initialized with the contents of file
-     * @throws java.io.IOException
-     * @deprecated
-     */
-    public static NSData dataWithContentsOfFile(String path) throws IOException { return null; }
+    java.io.ByteArrayInputStream stream(){
+        return null; //TODO codavaj!!
+    }
 
-    /**
-     * Returns the number of bytes contained by the receiver.
-     * @return the number of bytes contained by the receiver
-     */
-    public int length() { return 0; }
+    com.webobjects.foundation.NSData subdataWithRange(com.webobjects.foundation.NSRange range){
+        return null; //TODO codavaj!!
+    }
 
-    public int _offset() { return 0; }
+    java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    public byte[] _bytesNoCopy() { return null; }
+    boolean writeToFile(java.lang.String path){
+        return false; //TODO codavaj!!
+    }
 
-    private byte[] _bytes(int offset, int length) { return null; }
+    void writeToStream(java.io.OutputStream stream){
+        return; //TODO codavaj!!
+    }
 
-    /**
-     * Returns a byte array containing all of the receiver's contents.
-     * @return a byte array containing all of the receiver's contents
-     */
-    public byte[] bytes() { return null; }
+    boolean writeToURL(java.net.URL url, boolean atomically){
+        return false; //TODO codavaj!!
+    }
 
-    /**
-     * Returns a byte array containing all of the receiver's contents.
-     * @param offset - input range specified by <code>offset</code>
-     * @param length - number of bytes following <code>offset</code> to return
-     * @return a byte array containing the receiver's contents that fall within the range specified by <code>offset</code> and <code>length</code>
-     */
-    public byte[] bytes(int offset, int length) { return null; }
-
-    /**
-     * Returns a byte array containing all of the receiver's contents.
-     * @param range - input range specified by range
-     * @return a byte array containing the receiver's contents that fall within the range specified by range
-     */
-    public byte[] bytes(NSRange range) { return null; }
-
-    /**
-     * This method will be replaced by following code:
-     * <code><pre>
-     *   try {
-     *       FileOutputStream fileOutputStream = new FileOutputStream(url.getFile());
-     *       myData.writeToStream(fileOutputStream);
-     *       fileOutputStream.close();
-     *   }
-     *   catch (java.io.IOException exception) {
-     *       // Do something with the exception
-     *   }
-     * </pre></code>
-     * @param url - input url
-     * @param atomically - this parameter is ignored
-     * @return returns true if write to URL succeeds
-     * @see NSData.writeToStream(java.io.OutputStream outputStream)
-     * @deprecated
-     */
-    public boolean writeToURL(URL url, boolean atomically) { return true; }
-
-    /**
-     * This method will be replaced by following code:
-     * <code><pre>
-     * try {
-     *     FileOutputStream fileOutputStream = new FileOutputStream(path);
-     *     myData.writeToStream(fileOutputStream);
-     *     fileOutputStream.close();
-     *  } catch (java.io.IOException exception) {
-     *     // Do something with the exception
-     *  }
-     * </pre></code>
-     * @param path - input path of the file
-     * @return returns true if write to file succeeds
-     * @deprecated
-     */
-    public boolean writeToFile(String path) { return true; }
-
-    /**
-     * Compares the receiving data object to <code>otherData</code>. Two data objects are equal if they hold
-     * the same number of bytes, and if the bytes at the same position in the objects are the same.
-     * @param otherData - input data object of type NSData
-     * @return true if the contents of <code>otherData</code> are equal to the contents of the receiver, <code>false</code>
-     */
-    public boolean isEqualToData(NSData otherData) { return true; }
-
-    /**
-     * Returns a stream containing the receiver's data.
-     * @return a <code>java.io.ByteArrayInputStream</code> containing the receiver's data
-     */
-    public ByteArrayInputStream stream() { return null; }
-
-    /**
-     * Writes the bytes in the receiver contents to the <code>stream</code>.
-     * @param stream - the input bytes in the receiver
-     * @throws java.io.IOException - if the write fails for any reason.
-     */
-    public void writeToStream(OutputStream stream) throws IOException {}
-
-    public static final Class _CLASS;
-
-    /**
-     * An empty data object, which can be shared to save memory.
-     */
-    public static final NSData EmptyData;
-
-    private static final String SerializationBytesFieldKey = "bytes";
-
-    protected byte _bytes[];
-
-    protected transient NSRange _range;
-
-    protected transient int _hashCache;
-
-    private transient boolean _recomputeHashCode;
-
-    private static final char _nibbleToHex[];
-
-    private static final ObjectStreamField serialPersistentFields[];
-
-    //
-    // inherited methods - do not add extra comments.
-    //
-
-    public boolean equals(Object object) { return true; }
-
-    public Class classForCoder() { return null; }
-
-    public static Object decodeObject(NSCoder coder) { return null; }
-
-    public void encodeWithCoder(NSCoder coder) {}
-
-    public int hashCode() { return 0; }
-
-    public Object clone() { return null; }
-
-    public String toString() { return null; }
-
-    public String _hexString() { return null; }
-
-    protected boolean _mustRecomputeHash() { return true; }
-
-    protected void _setMustRecomputeHash(boolean change) {}
-
-    private void writeObject(ObjectOutputStream s) throws IOException {}
-
-    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException {}
-
-    private Object readResolve() throws ObjectStreamException { return null; }
 }

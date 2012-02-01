@@ -1,127 +1,194 @@
-
 package com.webobjects.jndiadaptor;
-
-import com.webobjects.eoaccess.EOAdaptor;
-import com.webobjects.eoaccess.EOAdaptorContext;
-import com.webobjects.eoaccess.EOModel;
-import com.webobjects.eoaccess.EOSQLExpressionFactory;
-import com.webobjects.eoaccess.EOUtilities;
-import com.webobjects.eoaccess.synchronization.EOSchemaGeneration;
-import com.webobjects.eocontrol.EOEditingContext;
-import com.webobjects.eocontrol.EOObjectStoreCoordinator;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation.NSDictionary;
-import com.webobjects.foundation.NSLog;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import javax.naming.CommunicationException;
-
-
-public class JNDIAdaptor extends EOAdaptor {
-    class _ContextFactory extends _EOCachedObjectFactory {
-
-
-        _ContextFactory() { return null; }
-
-        private JNDIContext _cachedContext() { return null; }
-
-        public JNDIContext createContext() { return null; }
-
-        public JNDIContext createCachedContext() { return null; }
-
-        public synchronized void clearCache() { return null; }
-
-        protected Object doCreate() { return null; }
-
-        final JNDIAdaptor this$0;
-
-    }
-
-    class _Environment {
-
-
-        public _Environment() { return null; }
-
-        public String authenticationMethod() { return null; }
-
-        public int defaultScope() { return 0; }
-
-        public String initialContextFactory() { return null; }
-
-        public String password() { return null; }
-
-        public String plugInClassName() { return null; }
-
-        public String serverUrl() { return null; }
-
-        public int timeout() { return 0; }
-
-        public String username() { return null; }
-
-        public String toString() { return null; }
-
-        private String _stringForKey(String key) { return null; }
-
-        final JNDIAdaptor this$0;
-
-    }
-
-
-
-    public JNDIAdaptor(String name) { return null; }
-
-    synchronized _Environment _environment() { return null; }
-
-    public synchronized JNDIPlugIn plugIn() { return null; }
-
-    private JNDIPlugIn _createPlugIn() { return null; }
-
-    public EOSQLExpressionFactory expressionFactory() { return null; }
-
-    public EOSchemaGeneration schemaSynchronizationFactory() { return null; }
+/**
+ * The JNDIAdaptor class represents a Java Naming and Directory Interface service.
+ */
+public class JNDIAdaptor extends com.webobjects.eoaccess.EOAdaptor{
+    /**
+     * A connection dictionary key representing the authentication method.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String AuthenticationMethodKey="authenticationMethod";
 
     /**
-     * @deprecated Method synchronizationFactory is deprecated
+     * A connection dictionary key representing the default scope.
+     * See Also:Constant Field Values
      */
+    public static final java.lang.String DefaultScopeKey="defaultScope";
 
-    public com.webobjects.eoaccess.EOSchemaGeneration synchronizationFactory() { return null; }
+    /**
+     * A connection dictionary key representing the initial context factory.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String InitialContextFactoryKey="initialContextFactory";
 
-    public EOAdaptorContext createAdaptorContext() { return null; }
+    /**
+     * A connection dictionary value representing no authentication method.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String NoneKey="none";
 
-    protected JNDIContext _createCachedAdaptorContext() { return null; }
+    /**
+     * A connection dictionary value representing object scope.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String ObjectKey="Object";
 
-    JNDIContext _doCreateAdaptorContext() { return null; }
+    /**
+     * A connection dictionary value representing one-level scope.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String OneLevelKey="One Level";
 
-    public Class defaultExpressionClass() { return null; }
+    /**
+     * A connection dictionary key representing the password.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String PasswordKey="password";
 
-    public boolean isValidQualifierType(String typeName, EOModel model) { return true; }
+    /**
+     * A connection dictionary key representing the plug-in class name.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String PlugInClassNameKey="plugInClassName";
 
-    public void assertConnectionDictionaryIsValid() {}
+    /**
+     * A connection dictionary key representing the server URL.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String ServerUrlKey="serverUrl";
 
-    public synchronized void setConnectionDictionary(NSDictionary dictionary) { return null; }
+    /**
+     * A connection dictionary value representing subtree scope.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String SubtreeKey="Subtree";
 
-    public boolean isDroppedConnectionException(Exception exception) { return true; }
+    /**
+     * A connection dictionary key representing the timeout.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String TimeoutKey="timeout";
 
-    public NSArray externalTypesWithModel(EOModel model) { return null; }
+    /**
+     * A connection dictionary key representing the username.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String UsernameKey="username";
 
-    public void assignExternalInfoForEntireModel(EOModel eomodel) {}
+    /**
+     * Creates a new instance of JNDIAdaptor.
+     * Parameters:name - - name of adaptorSee Also:EOAdaptor.EOAdaptor(String)
+     */
+    public JNDIAdaptor(java.lang.String name){
+         //TODO codavaj!!
+    }
 
-    public static EOEditingContext createEditingContext(String modelName, String serverUrl, String username, String password) { return null; }
+    /**
+     * Description copied from class:
+     * An abstract method that should be implemented by subclasses to verify that the adaptor can connect to the database server with its connection dictionary. Should briefly form a connection to the server to validate the connection dictionary and then close the connection. This method should throw a runtime exception if the connection dictionary contains invalid information, or if any error occurs.
+     * An actual connection is made when the first adaptor channel is sent an openChannel message.
+     */
+    public void assertConnectionDictionaryIsValid(){
+        return; //TODO codavaj!!
+    }
 
-    public static final String AuthenticationMethodKey = "authenticationMethod";
-    public static final String DefaultScopeKey = "defaultScope";
-    public static final String InitialContextFactoryKey = "initialContextFactory";
-    public static final String PasswordKey = "password";
-    public static final String PlugInClassNameKey = "plugInClassName";
-    public static final String ServerUrlKey = "serverUrl";
-    public static final String TimeoutKey = "timeout";
-    public static final String UsernameKey = "username";
-    public static final String NoneKey = "none";
-    public static final String ObjectKey = "Object";
-    public static final String OneLevelKey = "One Level";
-    public static final String SubtreeKey = "Subtree";
-    private final _ContextFactory _contextFactory;
-    private final _Environment _environment;
-    private JNDIPlugIn _plugIn;
+    /**
+     * Description copied from class:
+     * Assigns database-specific characteristics to model. Used in EOModeler to switch a model's adaptor. This method examines each entity in model. If an entity's external name is not set and all of the entity's attribute's external names are not set, then this method uses assignExternalInfoForEntity and assignExternalInfoForAttribute to assign external names. If the entity's external name is set or if any of the entity's attributes' external names are set, then the method doesn't assign external names to the entity or any of its attributes. Regardless, this method assigns external types for all the model's attributes. Recurses through entities and their attributes calling the conversion methods above.
+     * A subclass of EOAdaptor doesn't need to implement this method.
+     */
+    public void assignExternalInfoForEntireModel(com.webobjects.eoaccess.EOModel model){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * An abstract method that should be implemented by subclasses to create and return a new EOAdaptorContext, or null if a new context can't be created. A newly created EOAdaptor has no contexts.
+     */
+    public com.webobjects.eoaccess.EOAdaptorContext createAdaptorContext(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Creates a new instance of EOEditingContext with the specified model, server URL, username, and password.
+     */
+    public static com.webobjects.eocontrol.EOEditingContext createEditingContext(java.lang.String modelName, java.lang.String serverUrl, java.lang.String username, java.lang.String password){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * An abstract method that should be implemented by subclasses to return the subclass of EOSQLExpression used as the default expression class for the adaptor. You won't ordinarily invoke this method directly. It is invoked automatically to determine which class should be used to represent query language expressions.
+     */
+    public java.lang.Class defaultExpressionClass(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * An abstract method that supports changes made to EOSQLExpression and related classes and interfaces. Subclass implementations return the EOExpressionFactory for the adaptor.
+     */
+    public com.webobjects.eoaccess.EOSQLExpressionFactory expressionFactory(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * The default implementation returns an empty array. This method can be overridden by subclasses to return the names of the database types for use with the adaptor.
+     * model is an optional argument that can be used to supplement the adaptor's set of database types with additional, user-defined database types. Refer to your adaptor's documentation to determine whether, and how, it uses the model for type mapping.
+     */
+    public com.webobjects.foundation.NSArray externalTypesWithModel(com.webobjects.eoaccess.EOModel model){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * The default implementation returns false. Subclasses that support database reconnection should implement this method to allow for automatic database reconnection. This method should return true if the exception is one that the adaptor can attempt to recover from by reconnecting to the database, false otherwise.
+     * Invoked if an exception is thrown during fetching or saving. If the adaptor returns true, it then attempts to reconnect to the database and retries the operation. If the reconnection attempt fails, the exception from the failure is thrown as usual. If the adaptor returns false, reconnection isn't attempted and the exception is thrown.
+     */
+    public boolean isDroppedConnectionException(java.lang.Exception exception){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * An abstract method that should be implemented by subclasses to return true if an attribute of type typeName can be used in a qualifier (an SQL WHERE clause) sent to the database server, false otherwise. typeName is the name of a type as required by the database server. model is an optional argument that can be used to supplement the adaptor's set of type mappings with additional mappings for user-defined database types.
+     */
+    public boolean isValidQualifierType(java.lang.String typeName, com.webobjects.eoaccess.EOModel model){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Gets the instance of the plug-in class name specified in the connection dictionary.
+     */
+    public com.webobjects.jndiadaptor.JNDIPlugIn plugIn(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * An abstract method that supports changes made to EOSQLExpression and related classes and interfaces. Subclass implementations return the EOSchemaGeneration for the adaptor.
+     */
+    public com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationFactory schemaSynchronizationFactory(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * Sets the adaptor's connection dictionary to dictionary, which must only contain String, NSData, NSDictionary, and NSArray objects. Connection information can not be changed while the adaptor is connected. Throws an exception if there are any open channels when this method is invoked.
+     * Subclasses of EOAdaptor don't need to override this method. A subclass that does override this method must incorporate the superclass's version by calling super.
+     */
+    public void setConnectionDictionary(com.webobjects.foundation.NSDictionary dictionary){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * Description copied from class:
+     * An abstract method that supports changes made to EOSQLExpression and related classes and interfaces. Subclass implementations return the EOSynchronizationFactory for the adaptor.
+     */
+    public com.webobjects.eoaccess.EOSchemaGeneration synchronizationFactory(){
+        return null; //TODO codavaj!!
+    }
 
 }

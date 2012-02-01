@@ -1,115 +1,152 @@
-
 package com.webobjects.eoapplication;
+public abstract class EOSimpleWindowController extends com.webobjects.eoapplication.EOWindowController implements java.awt.event.WindowListener, java.awt.event.ComponentListener, com.webobjects.eoapplication.EOComponentController.ResetUserInterface{
+    public EOSimpleWindowController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.JComponent;
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOSimpleWindowController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public void activateWindow(){
+        return; //TODO codavaj!!
+    }
 
-public abstract class EOSimpleWindowController extends EOWindowController
-    implements WindowListener, ComponentListener, EOComponentController.ResetUserInterface {
+    protected void addComponentOfSubcontroller(com.webobjects.eoapplication.EOComponentController controller){
+        return; //TODO codavaj!!
+    }
 
+    public boolean closeWindow(){
+        return false; //TODO codavaj!!
+    }
 
-    public static void _runControllerInNewWindow(Class windowControllerClass, EOComponentController controller, boolean disposeIfDeactivated, String windowTitle) { return null; }
+    protected void componentDidBecomeInvisible(){
+        return; //TODO codavaj!!
+    }
 
-    public EOSimpleWindowController() { return null; }
+    protected void componentDidBecomeVisible(){
+        return; //TODO codavaj!!
+    }
 
-    public EOSimpleWindowController(EOXMLUnarchiver unarchiver) { return null; }
+    public void componentHidden(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    public void componentMoved(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public void dispose() {}
+    public void componentResized(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void addComponentOfSubcontroller(EOComponentController controller) {}
+    public void componentShown(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public boolean _shouldAddSubcontrollerComponents() { return true; }
+    public void deactivateWindow(){
+        return; //TODO codavaj!!
+    }
 
-    protected Window newWindow() { return null; }
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-    public void resetUserInterface() {}
+    public boolean disposeIfDeactivated(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setLabel(String string) {}
+    protected void integrationComponentDidBecomeInvisible(){
+        return; //TODO codavaj!!
+    }
 
-    public void activateWindow() {}
+    protected void integrationComponentDidBecomeVisible(){
+        return; //TODO codavaj!!
+    }
 
-    public void deactivateWindow() {}
+    public boolean makeVisible(){
+        return false; //TODO codavaj!!
+    }
 
-    public void subcontrollerMinimumSizeDidChange(EOComponentController controller, JComponent component, Dimension updateMinimumSize) {}
+    protected java.awt.Window newWindow(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setDisposeIfDeactivated(boolean flag) {}
+    protected abstract java.awt.Window newWindow(javax.swing.JComponent component);
 
-    public boolean disposeIfDeactivated() { return true; }
+    public void resetUserInterface(){
+        return; //TODO codavaj!!
+    }
 
-    private void _layoutWindow(Window window) {}
+    public void setDisposeIfDeactivated(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    protected void integrationComponentDidBecomeVisible() {}
+    public void setLabel(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    protected void integrationComponentDidBecomeInvisible() {}
+    public void setWindow(java.awt.Window window){
+        return; //TODO codavaj!!
+    }
 
-    protected void _integrationComponentWouldHaveBecomeInvisibleIfAvailable() {}
+    protected abstract void setWindowResizable(java.awt.Window window, boolean flag);
 
-    protected void componentDidBecomeVisible() {}
+    protected abstract void setWindowTitle(java.awt.Window window, java.lang.String title);
 
-    protected void componentDidBecomeInvisible() {}
+    protected void startListeningToWindow(){
+        return; //TODO codavaj!!
+    }
 
-    public boolean makeVisible() { return true; }
+    protected void stopListeningToWindow(){
+        return; //TODO codavaj!!
+    }
 
-    public void subcontrollerEditedDidChange(EOController controller) {}
+    public void subcontrollerEditedDidChange(com.webobjects.eoapplication.EOController controller){
+        return; //TODO codavaj!!
+    }
 
-    protected abstract Window newWindow(JComponent jcomponent);
+    public void subcontrollerMinimumSizeDidChange(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent component, java.awt.Dimension updateMinimumSize){
+        return; //TODO codavaj!!
+    }
 
-    protected Dimension verifyContentMinimumSize(Window window, Dimension size) { return null; }
+    protected java.awt.Dimension verifyContentMinimumSize(java.awt.Window window, java.awt.Dimension size){
+        return null; //TODO codavaj!!
+    }
 
-    protected abstract void setWindowResizable(Window window1, boolean flag);
+    public java.awt.Window window(){
+        return null; //TODO codavaj!!
+    }
 
-    private void _updateResizing(Window window, JComponent component) {}
+    public void windowActivated(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected abstract void setWindowTitle(Window window1, String s);
+    public void windowClosed(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    private void _updateWindowEditedState(Window window) {}
+    public void windowClosing(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void startListeningToWindow() {}
+    public void windowDeactivated(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void stopListeningToWindow() {}
+    public void windowDeiconified(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public void setWindow(Window window) {}
+    public void windowIconified(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public Window window() { return null; }
-
-    public boolean closeWindow() { return true; }
-
-    public void windowOpened(WindowEvent windowevent) {}
-
-    public void windowClosing(WindowEvent event) {}
-
-    public void windowClosed(WindowEvent windowevent) {}
-
-    public void windowActivated(WindowEvent windowevent) {}
-
-    public void windowDeactivated(WindowEvent windowevent) {}
-
-    public void windowDeiconified(WindowEvent windowevent) {}
-
-    public void windowIconified(WindowEvent windowevent) {}
-
-    public void componentHidden(ComponentEvent componentevent) {}
-
-    public void componentMoved(ComponentEvent event) {}
-
-    public void componentResized(ComponentEvent event) {}
-
-    public void componentShown(ComponentEvent componentevent) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    public static final String _WindowEditedPrefix = "* ";
-    private Window _window;
-    private boolean _disposeOnWindowClose;
-    private boolean _windowRegisteredInWindowObserver;
-    private boolean _ignoreVisibilityNotifications;
+    public void windowOpened(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
 }

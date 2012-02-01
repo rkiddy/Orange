@@ -1,101 +1,29 @@
-
 package com.webobjects.eoapplication;
-
-import com.webobjects.foundation.*;
-import java.io.*;
-import java.net.URL;
-import java.util.*;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-
-
-public class EOResourceBundle extends ResourceBundle
-    implements EOUserInterfaceParameters._IconHandler {
-    private static class _Enumeration
-        implements Enumeration {
-
-
-        public _Enumeration(NSArray stringKeys, NSArray imageKeys) { return null; }
-
-        public boolean hasMoreElements() { return true; }
-
-        public Object nextElement() { return null; }
-
-        int index;
-        private NSMutableArray _keys;
-
+/**
+ * EOResourceBundles are registered with EOUserInterfaceParameters to localize icons and strings. EOResourceBundles search the application's bundles for all available icons (gif, jpg, jpeg, png) and string tables (plist files in Unicode) and loads the resources on demand. All string tables are merged together, so if you place multiple string tables in your frameworks and applications, all strings from all string tables will be available on the client.
+ * User preferred language and platform information is used to find the appropriate resources/strings for the client if multiple choices are available. You create platform and language variants of resources in Xcode (which basically means that you create copies of the resources in .lproj directories with names that indicate the platform). For example you can have an icon Apple.gif in multiple variants, English.lproj/Apple.gif, English.lproj/Apple-macos.gif, German.lproj/Apple.gif, German.lproj/Apple-macos.gif and EODefaultResourceBundle will use the right version for the client by checking the user preferred languages and the platform the client is running on.
+ * Also, if an icon is available with the same name in multiple bundles, the version in the main bundle (the application bundle itself) is preferred over a version in the frameworks. So by placing an icon "ActionIconInspect.gif" in your application, you can "override" the default inspect icon provided by the WebObjects frameworks.
+ */
+public class EOResourceBundle extends java.util.ResourceBundle{
+    /**
+     * Default constructor. Calls super's implementation.
+     */
+    public EOResourceBundle(){
+         //TODO codavaj!!
     }
 
-    private static class _ResourceInfo {
-
-
-        public _ResourceInfo(NSBundle bundle, String resourcePath) { return null; }
-
-        public String resourcePath() { return null; }
-
-        public NSBundle bundle() { return null; }
-
-        public boolean equals(Object object) { return true; }
-
-        public String toString() { return null; }
-
-        private NSBundle _bundle;
-        private String _resourcePath;
-
+    /**
+     * Returns an enumeration of all available keys registered in the resource bundle.
+     */
+    public java.util.Enumeration getKeys(){
+        return null; //TODO codavaj!!
     }
 
-
-
-    public static NSArray _ignoreResourceBundleNames() { return null; }
-
-    public static NSArray _resourceBundles() { return null; }
-
-    public static NSDictionary _resourceBundlesToResourcePathsMapTable(String extensions[]) { return null; }
-
-    public static String _stringFromBundleResource(NSBundle bundle, String resourcePath) throws IOException { return null; }
-
-    public EOResourceBundle() { return null; }
-
-    private static boolean _shouldIgnoreResourcePath(String resourcePath) { return null; }
-
-    private NSArray _platformSensitiveResourcePathsFromBundle(NSBundle bundle, String extension, boolean onlyPlatformIndependentResourceNames) { return null; }
-
-    private NSArray _availableIconNames(NSArray bundles) { return null; }
-
-    public NSDictionary _iconInfos(NSDictionary bundlesMapTable, NSArray bundles, NSArray localeIndicators, NSArray platformIndicators) { return null; }
-
-    public NSArray _stringTableInfos(NSDictionary bundlesMapTable, NSArray bundles, NSArray localeIndicators, NSArray platformIndicators) { return null; }
-
-    private NSDictionary _stringTableFromInfo(_ResourceInfo stringTableInfo) { return null; }
-
-    public ImageIcon _iconFromURL(String url) { return null; }
-
-    private ImageIcon _iconFromInfo(_ResourceInfo iconInfo) { return null; }
-
-    private void _generateValues() {}
-
-    private NSDictionary _stringToLocalizedStringMapTable() { return null; }
-
-    private NSDictionary _iconNameToIconInfoMapTable() { return null; }
-
-    public String _nameForLocalizedIcon(Icon icon) { return null; }
-
-    protected Object handleGetObject(String key) throws MissingResourceException { return null; }
-
-    public Enumeration getKeys() { return null; }
-
-    static  {}
-
-    public static final String _EOIconFileExtensions[];
-    public static final String _EOStringTableFileExtension = "strings";
-    public static final String _EOAllResourcesFileExtensions[];
-    public static final String _NonLocalizedResourcePath;
-    public static final String _ResourcePathLanguageExtension;
-    private static final String _EONoResourceFrameworksKey = "_EONoResourceFrameworks";
-    private static NSMutableArray _bundles;
-    private NSArray _stringTableInfos;
-    private NSDictionary _iconNameToIconInfoMapTable;
-    private NSMutableDictionary _stringToLocalizedStringMapTable;
-    private NSMutableDictionary _iconNameToLocalizedIconMapTable;
+    /**
+     * Returns the localized resource (a string or an icon) which is registered with the key key in the resource bundle. Throws a MissingResourceException if the resource is not found.
+     */
+    protected java.lang.Object handleGetObject(java.lang.String key) throws java.util.MissingResourceException{
+        return null; //TODO codavaj!!
+    }
 
 }

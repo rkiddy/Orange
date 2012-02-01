@@ -1,240 +1,200 @@
-
 package com.webobjects.eoaccess;
+/**
+ * An EOModel represents a mapping between a database schema and a set of classes based on the entity-relationship model for an application. The model contains a number of EOEntity objects representing the tables (entities) of the database schema. Each EOEntity object has a number of EOAttribute and EORelationship objects representing the properties (columns or fields) of the table (entity) in the database schema.
+ * An EOModel maintains a mapping between each of its EOEntity objects and a corresponding Enterprise Object class for use with the database level of the Enterprise Objects Framework. You can determine the EOEntity for a particular Enterprise Object with the entityForObject method.
+ * An EOModel is specific to a particular database server, and can store information needed to connect to that server as well as the name of an adaptor framework to load so that the Enterprise Objects Framework can communicate with the database.
+ * Models can be organized into model groups and may have relationships that reference other models in the same model group. The other models may map to different databases and types of servers.
+ * EOModel files are usually built using the EOModeler application, but it is possible to build an EOModel file programmatically if needed. The EOAdaptorChannel class declares methods for reading basic schema information from a relational database. You can use this information to build up an EOModel programmatically, and then enhance that model by defining extra relationships, flattening attributes, and so on.
+ * EOModel files are typically stored in a project or a framework. To load an EOModel, provide a model file's path to the constructor. Note that loading an EOModel doesn't have the effect of loading all of its entities. EOModel files can be quite large, so to reduce start-up time, entity definitions are only loaded as needed. This incremental model loading is possible because an EOModel actually consists of one index file and two files for each entity. Models have an .eomodeld file wrapper ( which is actually a directory), and the individual entity files within the model are in ASCII format. The index file has the name index.eomodeld, and it contains the connection dictionary, the adaptor name, and a list of all of the entities in the model. This is the file that is loaded when you create a new model from a path.
+ * The two entity files consist of a property list (.plist) file that describes the entity and a fetch specification (.fspec) file that describes any named fetch specifications for that entity.
+ * When an entity is loaded, EOModel posts an EntityLoadedNotification.
+ * See Also:EOModel.entityForObject(EOEnterpriseObject object)
+ */
+public class EOModel implements com.webobjects.foundation.NSDisposable{
+    /**
+     * The notification posted after an EOEntity is loaded into memory. This notification contains:
+     */
+    public static final java.lang.String EntityLoadedNotification="EOEntityLoadedNotification";
 
-import com.webobjects.eocontrol.*;
-import com.webobjects.foundation.*;
-import java.io.*;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.*;
-import java.util.concurrent.locks.ReentrantLock;
-
-
-public class EOModel
-    implements NSDisposable {
-    public static class _DefaultModelCreator {
-
-
-        static void _registerDefaultModelCreator() {}
-
-        static void _unregisterDefaultModelCreator() {}
-
-        _DefaultModelCreator() { return null; }
-
-        public void _classDescriptionNeeded(NSNotification notification) {}
-
-        static  {}
-
-        private static _DefaultModelCreator _defaultModelCreator;
-
+    EOModel(){
+         //TODO codavaj!!
     }
 
-    protected static class EOModelFileNameFilter
-        implements FilenameFilter {
-
-        protected EOModelFileNameFilter() { return null; }
-
-        public boolean accept(File dir, String name) { return true; }
+    EOModel(com.webobjects.foundation.NSDictionary propertyList, java.lang.String path){
+         //TODO codavaj!!
     }
 
+    EOModel(com.webobjects.foundation.NSDictionary propertyList, java.net.URL url){
+         //TODO codavaj!!
+    }
 
+    EOModel(java.lang.String path){
+         //TODO codavaj!!
+    }
 
-    public void dispose() {}
+    EOModel(java.net.URL url){
+         //TODO codavaj!!
+    }
 
-    public EOModel() { return null; }
+    java.lang.String adaptorName(){
+        return null; //TODO codavaj!!
+    }
 
-    void init() { return null; }
+    void addEntity(com.webobjects.eoaccess.EOEntity entity){
+        return; //TODO codavaj!!
+    }
 
-    public String toString() { return null; }
+    void addStoredProcedure(com.webobjects.eoaccess.EOStoredProcedure storedProcedure){
+        return; //TODO codavaj!!
+    }
 
-    public String _toString(int indent) { return null; }
+    com.webobjects.foundation.NSArray availablePrototypeAttributeNames(){
+        return null; //TODO codavaj!!
+    }
 
-    public String name() { return null; }
+    void beautifyNames(){
+        return; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSDictionary connectionDictionary(){
+        return null; //TODO codavaj!!
+    }
+
+    void dispose(){
+        return; //TODO codavaj!!
+    }
+
+    void encodeTableOfContentsIntoPropertyList(com.webobjects.foundation.NSMutableDictionary result){
+        return; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSArray entities(){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSArray entitiesWithSharedObjects(){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.eoaccess.EOEntity entityForObject(com.webobjects.eocontrol.EOEnterpriseObject object){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.eoaccess.EOEntity entityNamed(java.lang.String name){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSArray entityNames(){
+        return null; //TODO codavaj!!
+    }
+
+    java.lang.String entityPrototypeNameForAdaptor(com.webobjects.eoaccess.EOAdaptor adaptor){
+        return null; //TODO codavaj!!
+    }
+
+    java.lang.String entityPrototypePlugInNameForAdaptor(com.webobjects.eoaccess.EOAdaptor adaptor){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSArray externalModelsReferenced(){
+        return null; //TODO codavaj!!
+    }
+
+    void loadAllModelObjects(){
+        return; //TODO codavaj!!
+    }
+
+    com.webobjects.eoaccess.EOModelGroup modelGroup(){
+        return null; //TODO codavaj!!
+    }
+
+    java.lang.String name(){
+        return null; //TODO codavaj!!
+    }
+
+    java.lang.String path(){
+        return null; //TODO codavaj!!
+    }
+
+    java.net.URL pathURL(){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.eoaccess.EOAttribute prototypeAttributeNamed(java.lang.String name){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSArray referencesToProperty(java.lang.Object property){
+        return null; //TODO codavaj!!
+    }
+
+    void removeEntity(com.webobjects.eoaccess.EOEntity entity){
+        return; //TODO codavaj!!
+    }
+
+    void removeEntityAndReferences(com.webobjects.eoaccess.EOEntity entity){
+        return; //TODO codavaj!!
+    }
+
+    void removeStoredProcedure(com.webobjects.eoaccess.EOStoredProcedure storedProcedure){
+        return; //TODO codavaj!!
+    }
+
+    void setAdaptorName(java.lang.String adaptorName){
+        return; //TODO codavaj!!
+    }
+
+    void setConnectionDictionary(com.webobjects.foundation.NSDictionary connectionDictionary){
+        return; //TODO codavaj!!
+    }
+
+    void setModelGroup(com.webobjects.eoaccess.EOModelGroup group){
+        return; //TODO codavaj!!
+    }
+
+    void setName(java.lang.String newName){
+        return; //TODO codavaj!!
+    }
+
+    void setUserInfo(com.webobjects.foundation.NSDictionary dictionary){
+        return; //TODO codavaj!!
+    }
+
+    com.webobjects.eoaccess.EOStoredProcedure storedProcedureNamed(java.lang.String name){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSArray storedProcedureNames(){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSArray storedProcedures(){
+        return null; //TODO codavaj!!
+    }
+
+    java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
+
+    com.webobjects.foundation.NSDictionary userInfo(){
+        return null; //TODO codavaj!!
+    }
+
+    void writeToFile(java.lang.String path){
+        return; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method path is deprecated
+     * Used to filter out all the EOModel managed file and copy teh rest of the file over to the new model. The main purpose is to copy cvs and svn files.
      */
-
-    public String path() { return null; }
-
-    public URL pathURL() { return null; }
-
-    public NSArray entityNames() { return null; }
-
-    public EOEntity entityNamed(String name) { return null; }
-
-    public NSArray entities() { return null; }
-
-    public EOEntity entityForObject(EOEnterpriseObject object) { return null; }
-
-    public String adaptorName() { return null; }
-
-    public NSDictionary connectionDictionary() { return null; }
-
-    public NSDictionary userInfo() { return null; }
-
-    public NSArray entitiesWithSharedObjects() { return null; }
-
-    public NSDictionary _internalInfo() { return null; }
-
-    public EOModelGroup modelGroup() { return null; }
-
-    public NSArray storedProcedureNames() { return null; }
-
-    public EOStoredProcedure storedProcedureNamed(String name) { return null; }
-
-    public NSArray storedProcedures() { return null; }
-
-    public static String entityPrototypeNameForAdaptor(EOAdaptor adaptor) { return null; }
-
-    public static String entityPrototypePlugInNameForAdaptor(EOAdaptor adaptor) { return null; }
-
-    private void addAttributesToPrototypesCache(NSArray attributes) {}
-
-    private void removeAttributesToPrototypesCache(NSArray attributes) {}
-
-    private void createPrototypeCache() {}
-
-    public EOAttribute prototypeAttributeNamed(String name) { return null; }
-
-    public NSArray availablePrototypeAttributeNames() { return null; }
-
-    /**
-     * @deprecated Method EOModel is deprecated
-     */
-
-    public EOModel(String path) { return null; }
-
-    public EOModel(URL url) { return null; }
-
-    public String _filenameForFetchSpecificationDictionaryForEntityNamedWithModelPath(String entityName, String modelPath) { return null; }
-
-    public boolean _writeFetchSpecificationDictionaryForEntityNamedToModelPath(NSDictionary fetchSpecDict, String entityName, String modelPath) { return true; }
-
-    private void write() {}
-
-    public void writeToFile(String path) {}
-
-    public NSMutableDictionary _loadFetchSpecificationDictionaryForEntityNamed(String entityName) { return null; }
-
-    protected EOModel(NSDictionary propertyList, String path) { return null; }
-
-    protected EOModel(NSDictionary propertyList, URL url) { return null; }
-
-    protected void _initWithTableOfContentsPropertyListPathURL(NSDictionary propertyList, URL url) {}
-
-    public void encodeTableOfContentsIntoPropertyList(NSMutableDictionary result) {}
-
-    EOModel(NSDictionary propertyList, Object owner) { return null; }
-
-    void _initializeInfo(NSDictionary propertyList) { return null; }
-
-    public void _initWithPropertyListOwner(NSDictionary propertyList, Object owner) {}
-
-    void awakeWithPropertyList(NSDictionary nsdictionary) { return null; }
-
-    void encodeIntoPropertyList(NSMutableDictionary result) { return null; }
-
-    public void _setEntityForEntityNameClassName(Object entity, String entityName, String className) {}
-
-    public EOEntity _addEntity(EOEntity anEntity) { return null; }
-
-    public void _addFakeEntityWithPropertyList(NSDictionary propertyList) {}
-
-    public Object _addEntityWithPropertyList(Object propertyList) throws InstantiationException, IllegalAccessException { return null; }
-
-    public void _removeEntity(Object entity) {}
-
-    public void _setInheritanceLinks(NSDictionary pl) {}
-
-    public void _registerChildForParent(String child, String parent) {}
-
-    public NSArray _childrenForEntityNamed(String entity) { return null; }
-
-    protected EOEntity _entityForClass(Class aClass) { return null; }
-
-    protected void _setPathURL(URL url) {}
-
-    static String _canonicalPath(String path) { return null; }
-
-    public NSArray _instantiatedEntities() { return null; }
-
-    public void _classDescriptionNeededForEntityName(NSNotification notification) {}
-
-    public void _classDescriptionNeededForClass(NSNotification notification) {}
-
-    public static boolean _isPrototypesEntity(EOEntity entity) { return null; }
-
-    public void _resetPrototypeCache() {}
-
-    public void setName(String newName) {}
-
-    public void setAdaptorName(String adaptorName) {}
-
-    public void setConnectionDictionary(NSDictionary connectionDictionary) {}
-
-    public void setUserInfo(NSDictionary dictionary) {}
-
-    public void _setEntitiesWithSharedObjects(NSArray entities) {}
-
-    public void _setInternalInfo(NSDictionary dictionary) {}
-
-    public void addEntity(EOEntity entity) {}
-
-    protected void _removePropertiesReferencingEntity(EOEntity entity) {}
-
-    public void removeEntity(EOEntity entity) {}
-
-    public void removeEntityAndReferences(EOEntity entity) {}
-
-    public void addStoredProcedure(EOStoredProcedure storedProcedure) {}
-
-    public void removeStoredProcedure(EOStoredProcedure storedProcedure) {}
-
-    public void setModelGroup(EOModelGroup group) {}
-
-    public void loadAllModelObjects() {}
-
-    public NSArray referencesToProperty(Object property) { return null; }
-
-    public NSArray externalModelsReferenced() { return null; }
-
-    public void beautifyNames() {}
-
-    protected NSArray _externalModelsReferencedByEntities(NSArray entities) { return null; }
-
-    NSArray externalModelsCurrentlyReferenced() { return null; }
-
-    void unbindFromExternalReferences() { return null; }
-
-    static  {}
-
-    protected EOModelGroup _group;
-    protected String _name;
-    protected URL _url;
-    protected NSDictionary _userInfo;
-    protected NSDictionary _internalInfo;
-    protected NSDictionary _connectionDictionary;
-    protected String _adaptorName;
-    protected NSMutableDictionary _entitiesByName;
-    protected NSMutableDictionary _entitiesByClass;
-    protected NSMutableArray _storedProcedures;
-    protected NSArray _entities;
-    protected NSArray _sharedObjectEntities;
-    protected NSMutableDictionary _subEntitiesCache;
-    protected NSMutableDictionary _prototypesByName;
-    protected int _extraRefCount;
-    static final String CURRENT_EOMODEL_VERSION = "2.1";
-    public static final String EntityLoadedNotification = "EOEntityLoadedNotification";
-    static final String ModelExtension = "eomodeld";
-    static final String IndexFilename = "index.eomodeld";
-    private static final NSSelector _classDescriptionNeededForClassSelector;
-    private static final NSSelector _classDescriptionNeededForEntityNameSelector;
-    private static final NSSelector _storedProcedureNamedSelector;
-    static final NSSelector _classDescriptionNeededSelector;
-    protected static ReentrantLock _EOGlobalModelLock;
-    static final String prototypesKeyPrefix = "EO";
-    static final String prototypesKeySuffix = "Prototypes";
-    static final String prototypesToHideKey = "EOPrototypesToHide";
-
+    protected static class EOModelFileNameFilter implements java.io.FilenameFilter{
+        protected EOModelFileNameFilter(){
+             //TODO codavaj!!
+        }
+
+        public boolean accept(java.io.File dir, java.lang.String name){
+            return false; //TODO codavaj!!
+        }
+
+    }
 }

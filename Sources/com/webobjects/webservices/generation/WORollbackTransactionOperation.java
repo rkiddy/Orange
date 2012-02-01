@@ -1,20 +1,21 @@
-
 package com.webobjects.webservices.generation;
+/**
+ * See Also:Serialized Form
+ */
+public class WORollbackTransactionOperation extends com.webobjects.webservices.generation.WOOperation{
+    public WORollbackTransactionOperation(com.webobjects.appserver.WOContext context){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOContext;
-import com.webobjects.appserver.WOSession;
-import com.webobjects.eocontrol.EOEditingContext;
+    /**
+     * Closes a transaction by resetting the shared operation editing context.
+     */
+    public java.lang.Object invoke(){
+        return null; //TODO codavaj!!
+    }
 
-
-public class WORollbackTransactionOperation extends WOOperation {
-
-
-    public WORollbackTransactionOperation(WOContext context) { return null; }
-
-    public static boolean requiresEntity() { return null; }
-
-    public Object invoke() { return null; }
-
-    private static final long serialVersionUID = 0x131ec55eL;
+    public static boolean requiresEntity(){
+        return false; //TODO codavaj!!
+    }
 
 }

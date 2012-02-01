@@ -1,19 +1,23 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLPosition{
+    public int endColumnNumber;
 
+    public int endLineNumber;
 
-public class WOMLPosition {
-
-
-    public WOMLPosition(int lineNumber, int columnNumber) { return null; }
-
-    public WOMLPosition(int startLineNumber, int startColumnNumber, int endLineNumber, int endColumnNumber) { return null; }
-
-    public String toString() { return null; }
+    public int startColumnNumber;
 
     public int startLineNumber;
-    public int endLineNumber;
-    public int startColumnNumber;
-    public int endColumnNumber;
+
+    public WOMLPosition(int lineNumber, int columnNumber){
+         //TODO codavaj!!
+    }
+
+    public WOMLPosition(int startLineNumber, int startColumnNumber, int endLineNumber, int endColumnNumber){
+         //TODO codavaj!!
+    }
+
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

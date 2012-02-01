@@ -1,41 +1,35 @@
-
 package com.webobjects.eogeneration;
+public class EOImageViewController extends com.webobjects.eogeneration.EOValueAndURLController{
+    public EOImageViewController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.EOImageView;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import javax.swing.JComponent;
+    public EOImageViewController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public int imageScaling(){
+        return 0; //TODO codavaj!!
+    }
 
-public class EOImageViewController extends EOValueAndURLController {
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOImageViewController() { return null; }
+    public int scalingHints(){
+        return 0; //TODO codavaj!!
+    }
 
-    public EOImageViewController(EOXMLUnarchiver unarchiver) { return null; }
+    public void setImageScaling(int imageScaling){
+        return; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
-
-    protected boolean _preferredCanResizeVertically() { return true; }
-
-    public void setImageScaling(int imageScaling) {}
-
-    public int imageScaling() { return 0; }
-
-    public void setScalingHints(int scalingHints) {}
-
-    public int scalingHints() { return 0; }
-
-    protected JComponent newWidget() { return null; }
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private int _imageScaling;
-    private int _scalingHints;
+    public void setScalingHints(int scalingHints){
+        return; //TODO codavaj!!
+    }
 
 }

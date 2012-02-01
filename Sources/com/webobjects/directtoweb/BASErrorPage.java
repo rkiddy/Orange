@@ -1,14 +1,10 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOContext;
-
-
-public class BASErrorPage extends D2WErrorPage {
-
-
-    public BASErrorPage(WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0x380b5dbL;
+/**
+ * See Also:Serialized Form
+ */
+public class BASErrorPage extends com.webobjects.directtoweb.D2WErrorPage{
+    public BASErrorPage(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
 }

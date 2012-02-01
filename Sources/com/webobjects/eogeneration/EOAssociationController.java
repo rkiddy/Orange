@@ -1,109 +1,175 @@
-
 package com.webobjects.eogeneration;
+public abstract class EOAssociationController extends com.webobjects.eogeneration.EOWidgetController implements com.webobjects.eoapplication.EOEditable, com.webobjects.eoapplication.EOAssociationConnector{
+    public static final java.lang.String ControllerDisplayGroupProviderMethodName="controllerDisplayGroup";
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.*;
-import com.webobjects.foundation.*;
-import java.text.Format;
-import javax.swing.JComponent;
+    public EOAssociationController(){
+         //TODO codavaj!!
+    }
 
+    public EOAssociationController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
-public abstract class EOAssociationController extends EOWidgetController
-    implements EOEditable, EOAssociationConnector {
+    public com.webobjects.eointerface.EOAssociation association(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Invoked from breakConnection to notify the receiver that its connection to its supercontroller has been broken, giving the receiver the opportunity to clean up after its become idle.
+     */
+    protected void connectionWasBroken(){
+        return; //TODO codavaj!!
+    }
 
-    static Format _formatForAssociation(EOController controller, Class formatClass, String formatPattern, EOWidgetController widgetController, String key) { return null; }
+    /**
+     * Description copied from class:
+     * Invoked from establishConnection to notify the receiver that its connection to the controller hierarchy has been established, giving the receiver the opportunity to prepare itself (for example, setting delegates).
+     */
+    protected void connectionWasEstablished(){
+        return; //TODO codavaj!!
+    }
 
-    static EODisplayGroup _displayGroupWithProviderMethodName(EOController controller, String providerMethodName) { return null; }
+    public com.webobjects.eointerface.EODisplayGroup controllerDisplayGroup(){
+        return null; //TODO codavaj!!
+    }
 
-    static EOAssociationConnector _associationConnector(EOController controller) { return null; }
+    public com.webobjects.eointerface.EODisplayGroup displayGroup(){
+        return null; //TODO codavaj!!
+    }
 
-    static void _registerAssociationForConnectingInSupercontroller(EOController controller, EOAssociationConnector associationConnector, EOAssociation association) {}
+    public java.lang.String displayGroupProviderMethodName(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOAssociationController() { return null; }
+    /**
+     * Description copied from class:
+     * Prepares the receiver so it is disposed when Java performs garbage collection.
+     */
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-    public EOAssociationController(EOXMLUnarchiver unarchiver) { return null; }
+    protected void disposeAssociations(){
+        return; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    /**
+     * Description copied from class:
+     * Disposes the receiver if it's transient, first removing it from its supercontroller with removeTransientSubcontroller If the receiver's supercontroller is non-null, this method also attempts to dispose of the supercontroller if it's transient. Supercontrollers can prevent a controller from becoming transient, in which case this method returns false. Subclasses should first invoke the super implementation and only continue disposing if the super implementation returns true.
+     */
+    protected boolean disposeIfTransient(){
+        return false; //TODO codavaj!!
+    }
 
-    protected void disposeAssociations() {}
+    /**
+     * Description copied from interface:
+     * Returns the editability of the receiver. The default behavior should be to return EOEditable.IfSupercontrollerEditable.
+     */
+    public int editability(){
+        return 0; //TODO codavaj!!
+    }
 
-    public void dispose() {}
+    public com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup(){
+        return null; //TODO codavaj!!
+    }
 
-    protected boolean disposeIfTransient() { return true; }
+    public java.lang.String enabledDisplayGroupProviderMethodName(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void connectionWasEstablished() {}
+    public java.lang.String enabledKey(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void connectionWasBroken() {}
+    /**
+     * Description copied from interface:
+     * Returns whether the receiver is currently editable. A receiver is editable if its editability is EOEditable.AlwaysEditable or its editability is EOEditable.IfSupercontrollerEditable and sending EOEditable.isEditable to the first EOEditable supercontroller of the receiver returns true.
+     */
+    public boolean isEditable(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setSuppressesAssociation(boolean flag) {}
+    protected abstract com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup);
 
-    public boolean suppressesAssociation() { return true; }
+    public boolean prefersContinuousChangeNotification(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setPrefersContinuousChangeNotification(boolean flag) {}
+    public void setAssociation(com.webobjects.eointerface.EOAssociation association){
+        return; //TODO codavaj!!
+    }
 
-    public boolean prefersContinuousChangeNotification() { return true; }
+    public void setDisplayGroup(com.webobjects.eointerface.EODisplayGroup displayGroup){
+        return; //TODO codavaj!!
+    }
 
-    public void setDisplayGroupProviderMethodName(String string) {}
+    public void setDisplayGroupProviderMethodName(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public String displayGroupProviderMethodName() { return null; }
+    /**
+     * Description copied from interface:
+     * Sets the editability of the receiver to editability. See the method description of setEditability in the interface specification for EOEditable.
+     */
+    public void setEditability(int editability){
+        return; //TODO codavaj!!
+    }
 
-    public void setEnabledDisplayGroupProviderMethodName(String string) {}
+    public void setEnabledDisplayGroup(com.webobjects.eointerface.EODisplayGroup displayGroup){
+        return; //TODO codavaj!!
+    }
 
-    public String enabledDisplayGroupProviderMethodName() { return null; }
+    public void setEnabledDisplayGroupProviderMethodName(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void setEnabledKey(String string) {}
+    public void setEnabledKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public String enabledKey() { return null; }
+    public void setPrefersContinuousChangeNotification(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    private void _updateEditability() {}
+    public void setSuppressesAssociation(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public void setEditability(int editability) {}
+    /**
+     * Description copied from interface:
+     * Invoked to notify the receiver that the editability of its supercontroller changed, giving the receiver the opportunity to update its user interface to match the editability of the supercontroller. This method is only sent to connected subcontrollers whose editability is EOEditable.IfSupercontrollerEditable.
+     */
+    public void supercontrollerEditabilityDidChange(){
+        return; //TODO codavaj!!
+    }
 
-    public int editability() { return 0; }
+    public boolean suppressesAssociation(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean isEditable() { return true; }
+    /**
+     * Description copied from interface:
+     * Invoked when one of the receiver's subcontrollers is disposed as a transient controller. This method instructs the receiver to assume responsibility for managing the editability of the subcontroller's EOAssociation, association.
+     */
+    public void takeResponsibilityForEditabilityOfAssociation(com.webobjects.eointerface.EOAssociation association){
+        return; //TODO codavaj!!
+    }
 
-    public void supercontrollerEditabilityDidChange() {}
+    /**
+     * Description copied from interface:
+     * Invoked when one of the receiver's subcontrollers is disposed as a transient controller. Instructs the receiver to assume responsibility for managing the subcontroller's EOAssociation, association.
+     */
+    public void takeResposibilityForConnectionOfAssociation(com.webobjects.eointerface.EOAssociation association){
+        return; //TODO codavaj!!
+    }
 
-    public void takeResponsibilityForEditabilityOfAssociation(EOAssociation association) {}
-
-    protected EODisplayGroup _defaultDisplayGroup() { return null; }
-
-    public EODisplayGroup controllerDisplayGroup() { return null; }
-
-    public void setDisplayGroup(EODisplayGroup displayGroup) {}
-
-    public EODisplayGroup displayGroup() { return null; }
-
-    public void setEnabledDisplayGroup(EODisplayGroup displayGroup) {}
-
-    public EODisplayGroup enabledDisplayGroup() { return null; }
-
-    public void takeResposibilityForConnectionOfAssociation(EOAssociation association) {}
-
-    protected abstract EOAssociation newAssociation(JComponent jcomponent, EODisplayGroup eodisplaygroup, String s, EODisplayGroup eodisplaygroup1);
-
-    public void setAssociation(EOAssociation association) {}
-
-    public EOAssociation association() { return null; }
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    public static final String ControllerDisplayGroupProviderMethodName = "controllerDisplayGroup";
-    private boolean _suppressesAssociation;
-    private boolean _prefersContinuousChangeNotification;
-    private String _displayGroupProviderMethodName;
-    private String _enabledDisplayGroupProviderMethodName;
-    private EODisplayGroup _displayGroup;
-    private EODisplayGroup _enabledDisplayGroup;
-    private String _enabledKey;
-    private EOAssociation _association;
-    private int _editability;
-    private NSMutableArray _editabilityAssociations;
-    private NSMutableArray _connectionAssociations;
+    /**
+     * Description copied from class:
+     * Returns the receiver as a string that states the receiver's class name and type name, whether the receiver is connected, the number of subcontrollers, whether or not the receiver has been prepared, whether or not the receiver is visible, information about widget sizing and alignment behavior, and so on.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

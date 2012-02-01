@@ -1,62 +1,51 @@
-
 package com.webobjects.eogeneration;
+public class EOOneValueEnumerationController extends com.webobjects.eogeneration.EOEnumerationController implements java.awt.event.ActionListener, com.webobjects.eogeneration.EOWidgetController.QueryWidget{
+    public EOOneValueEnumerationController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eocontrol.*;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.*;
+    public EOOneValueEnumerationController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public void actionPerformed(java.awt.event.ActionEvent event){
+        return; //TODO codavaj!!
+    }
 
-public class EOOneValueEnumerationController extends EOEnumerationController
-    implements ActionListener, EOWidgetController.QueryWidget {
+    /**
+     * Description copied from interface:
+     * Returns true if the receiver can perform the action method (sent by an EOAction object) named actionName, false otherwise. An EOController's implementation of this method generally returns false if the receiver doesn't have an action named actionName or if the actionName action is explicitly disabled.
+     */
+    public boolean canPerformActionNamed(java.lang.String actionName){
+        return false; //TODO codavaj!!
+    }
 
+    public void deselect(){
+        return; //TODO codavaj!!
+    }
 
-    public EOOneValueEnumerationController() { return null; }
+    public boolean isQueryWidget(){
+        return false; //TODO codavaj!!
+    }
 
-    public EOOneValueEnumerationController(EOXMLUnarchiver unarchiver) { return null; }
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void _updateUserInterface() {}
+    public void setIsQueryWidget(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    protected boolean _needsUserInterfaceUpdateNotifications() { return true; }
+    protected void startListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    public void setIsQueryWidget(boolean flag) {}
-
-    public boolean isQueryWidget() { return true; }
-
-    protected JComponent newWidget() { return null; }
-
-    protected void startListeningToWidget() {}
-
-    protected void stopListeningToWidget() {}
-
-    protected EOEditingContext _defaultEditingContext() { return null; }
-
-    protected EODisplayGroup _defaultDisplayGroup() { return null; }
-
-    protected String _associationRelationshipPath() { return null; }
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    public boolean canPerformActionNamed(String actionName) { return true; }
-
-    public void deselect() {}
-
-    public void actionPerformed(ActionEvent event) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private JComboBox _comboBox;
-    private JButton _deselectButton;
-    private boolean _isQueryWidget;
+    protected void stopListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
 }

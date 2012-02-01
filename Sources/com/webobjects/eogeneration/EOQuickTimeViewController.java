@@ -1,47 +1,59 @@
-
 package com.webobjects.eogeneration;
+public class EOQuickTimeViewController extends com.webobjects.eogeneration.EOAssociationController{
+    public EOQuickTimeViewController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.EOQuickTimeView;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import javax.swing.JComponent;
+    public EOQuickTimeViewController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Returns whether the controller can be transient. By default, a component controller is transient only if it's an instance of EOComponentController, not an instance of a subclass.
+     */
+    public boolean canBeTransient(){
+        return false; //TODO codavaj!!
+    }
 
-public class EOQuickTimeViewController extends EOAssociationController {
+    /**
+     * Description copied from interface:
+     * Returns whether the receiver is currently editable. A receiver is editable if its editability is EOEditable.AlwaysEditable or its editability is EOEditable.IfSupercontrollerEditable and sending EOEditable.isEditable to the first EOEditable supercontroller of the receiver returns true.
+     */
+    public boolean isEditable(){
+        return false; //TODO codavaj!!
+    }
 
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
-    public EOQuickTimeViewController() { return null; }
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOQuickTimeViewController(EOXMLUnarchiver unarchiver) { return null; }
+    public int quickTimeCanvasResizing(){
+        return 0; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    public void setQuickTimeCanvasResizing(int quickTimeCanvasResizing){
+        return; //TODO codavaj!!
+    }
 
-    public boolean canBeTransient() { return true; }
+    public void setURLKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void setURLKey(String string) {}
+    /**
+     * Description copied from class:
+     * Returns the receiver as a string that states the receiver's class name and type name, whether the receiver is connected, the number of subcontrollers, whether or not the receiver has been prepared, whether or not the receiver is visible, information about widget sizing and alignment behavior, and so on.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    public String URLKey() { return null; }
-
-    public void setQuickTimeCanvasResizing(int quickTimeCanvasResizing) {}
-
-    public int quickTimeCanvasResizing() { return 0; }
-
-    protected String _derivedLabel() { return null; }
-
-    protected JComponent newWidget() { return null; }
-
-    public boolean isEditable() { return true; }
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private String _urlKey;
-    private int _quickTimeCanvasResizing;
+    public java.lang.String URLKey(){
+        return null; //TODO codavaj!!
+    }
 
 }

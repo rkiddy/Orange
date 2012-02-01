@@ -1,60 +1,110 @@
-
 package com.webobjects.eoaccess.synchronization;
+/**
+ * A wrapper object for relational database table information used for schema synchronization. This encapsulates column, index, relationship and foreign key constraint information.
+ * Since: 5.4 See Also:EOSchemaColumnDescription, EOSchemaForeignKeyConstraintDescription, EOSchemaIndexDescription, EOSchemaSynchronizationFactory
+ */
+public class EOSchemaTableDescription extends com.webobjects.eoaccess.synchronization.EOSchemaPropertyDescription{
+    public static final com.webobjects.eoaccess.synchronization.EOSchemaTableDescription EmptyDescription=null;
 
-import com.webobjects.foundation.NSArray;
-import java.util.*;
+    protected EOSchemaTableDescription(){
+         //TODO codavaj!!
+    }
 
+    protected void addToColumns(com.webobjects.eoaccess.synchronization.EOSchemaColumnDescription value){
+        return; //TODO codavaj!!
+    }
 
-public class EOSchemaTableDescription extends EOSchemaPropertyDescription {
+    protected void addToForeignKeyConstraints(com.webobjects.eoaccess.synchronization.EOSchemaForeignKeyConstraintDescription value){
+        return; //TODO codavaj!!
+    }
 
+    protected void addToIndexes(com.webobjects.eoaccess.synchronization.EOSchemaIndexDescription value){
+        return; //TODO codavaj!!
+    }
 
-    protected EOSchemaTableDescription() { return null; }
+    public java.util.Iterator columnIterator(){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean isEmpty() { return true; }
+    public com.webobjects.foundation.NSArray columns(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSchemaColumnDescription newColumnDescription() { return null; }
+    /**
+     * Description copied from class:
+     * Adds the fields for each subclass. Subclasses must override this method and call super first if they have specific fields to display.
+     */
+    protected void fieldsToString(java.lang.StringBuilder aLog){
+        return; //TODO codavaj!!
+    }
 
-    public NSArray columns() { return null; }
+    public java.util.Iterator foreignKeyConstraintIterator(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSchemaColumnDescription getColumnByName(String value) { return null; }
+    public com.webobjects.foundation.NSArray foreignKeyConstraints(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void addToColumns(EOSchemaColumnDescription value) {}
+    public com.webobjects.eoaccess.synchronization.EOSchemaColumnDescription getColumnByName(java.lang.String value){
+        return null; //TODO codavaj!!
+    }
 
-    protected void removeFromColumns(EOSchemaColumnDescription value) {}
+    public com.webobjects.eoaccess.synchronization.EOSchemaForeignKeyConstraintDescription getForeignKeyConstraintByName(java.lang.String value){
+        return null; //TODO codavaj!!
+    }
 
-    public Iterator columnIterator() { return null; }
+    public com.webobjects.eoaccess.synchronization.EOSchemaIndexDescription getIndexByName(java.lang.String value){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSchemaIndexDescription newIndexDescription() { return null; }
+    public com.webobjects.foundation.NSArray indexes(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSArray indexes() { return null; }
+    public java.util.Iterator indexIterator(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSchemaIndexDescription getIndexByName(String value) { return null; }
+    /**
+     * Description copied from class:
+     * Returns true is the property description is empty
+     */
+    public boolean isEmpty(){
+        return false; //TODO codavaj!!
+    }
 
-    protected void addToIndexes(EOSchemaIndexDescription value) {}
+    /**
+     * Returns a newly initialized column description object. This object is not inserted in the description list. This is to facilitate subclassing.
+     */
+    public com.webobjects.eoaccess.synchronization.EOSchemaColumnDescription newColumnDescription(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void removeFromIndexes(EOSchemaIndexDescription value) {}
+    /**
+     * Returns a newly initialized foreign key constraint description object. This object is not inserted in the description list. This is to facilitate subclassing.
+     */
+    public com.webobjects.eoaccess.synchronization.EOSchemaForeignKeyConstraintDescription newForeignKeyConstraintDescription(){
+        return null; //TODO codavaj!!
+    }
 
-    public Iterator indexIterator() { return null; }
+    /**
+     * Returns a newly initialized index description object. This object is not inserted in the description list. This is to facilitate subclassing.
+     */
+    public com.webobjects.eoaccess.synchronization.EOSchemaIndexDescription newIndexDescription(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSchemaForeignKeyConstraintDescription newForeignKeyConstraintDescription() { return null; }
+    protected void removeFromColumns(com.webobjects.eoaccess.synchronization.EOSchemaColumnDescription value){
+        return; //TODO codavaj!!
+    }
 
-    public NSArray foreignKeyConstraints() { return null; }
+    protected void removeFromForeignKeyConstraints(com.webobjects.eoaccess.synchronization.EOSchemaForeignKeyConstraintDescription value){
+        return; //TODO codavaj!!
+    }
 
-    public EOSchemaForeignKeyConstraintDescription getForeignKeyConstraintByName(String value) { return null; }
-
-    protected void addToForeignKeyConstraints(EOSchemaForeignKeyConstraintDescription value) {}
-
-    protected void removeFromForeignKeyConstraints(EOSchemaForeignKeyConstraintDescription value) {}
-
-    public Iterator foreignKeyConstraintIterator() { return null; }
-
-    protected void fieldsToString(StringBuilder aLog) {}
-
-    static  {}
-
-    protected List _columns;
-    protected List _indexes;
-    protected List _foreignKeyConstraints;
-    public static final EOSchemaTableDescription EmptyDescription;
+    protected void removeFromIndexes(com.webobjects.eoaccess.synchronization.EOSchemaIndexDescription value){
+        return; //TODO codavaj!!
+    }
 
 }

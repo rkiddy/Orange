@@ -1,38 +1,29 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOGlobalIDDeserializer deserializes instances of EOGlobalID.
+ * See Also:Serialized Form
+ */
+public class WOGlobalIDDeserializer extends org.apache.axis.encoding.DeserializerImpl implements org.apache.axis.encoding.Deserializer, com.webobjects.webservices.support.xml.WOSoapConstants{
+    public byte[] data;
 
-import com.webobjects.eocontrol.EOKeyGlobalID;
-import com.webobjects.eocontrol.EOTemporaryGlobalID;
-import java.util.Hashtable;
-import javax.xml.namespace.QName;
-import org.apache.axis.Constants;
-import org.apache.axis.encoding.*;
-import org.apache.axis.message.SOAPHandler;
-import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
+    public java.lang.String entityName;
 
+    public java.lang.String guessedEntityName;
 
-public class WOGlobalIDDeserializer extends DeserializerImpl
-    implements Deserializer, WOSoapConstants {
+    public java.lang.Object[] primaryKeys;
 
+    public java.lang.String subEntityName;
 
-    public WOGlobalIDDeserializer() { return null; }
+    public WOGlobalIDDeserializer(){
+         //TODO codavaj!!
+    }
 
-    public SOAPHandler onStartChild(String namespace, String localName, String prefix, Attributes attributes, DeserializationContext context) throws SAXException { return null; }
+    public void onEndElement(java.lang.String namespace, java.lang.String localName, org.apache.axis.encoding.DeserializationContext context) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void onEndElement(String namespace, String localName, DeserializationContext context) throws SAXException {}
-
-    private static final long serialVersionUID = 0x82b0b092L;
-    private static final String NAME_MEMBER = "entityName";
-    private static final String SUBENTITY_MEMBER = "subEntityName";
-    private static final String GUESSEDENTITY_MEMBER = "guessedEntityName";
-    private static final String PKS_MEMBER = "primaryKeys";
-    private static final String DATA_MEMBER = "data";
-    private Hashtable typesByMemberName;
-    public String entityName;
-    public String subEntityName;
-    public String guessedEntityName;
-    public Object primaryKeys[];
-    public byte data[];
+    public org.apache.axis.message.SOAPHandler onStartChild(java.lang.String namespace, java.lang.String localName, java.lang.String prefix, org.xml.sax.Attributes attributes, org.apache.axis.encoding.DeserializationContext context) throws org.xml.sax.SAXException{
+        return null; //TODO codavaj!!
+    }
 
 }

@@ -1,38 +1,27 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOTimeZoneDeserializer deserializes instances of NSTimeZone.
+ * See Also:Serialized Form
+ */
+public class WOTimeZoneDeserializer extends org.apache.axis.encoding.DeserializerImpl implements org.apache.axis.encoding.Deserializer, com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WOTimeZoneDeserializer(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.NSData;
-import com.webobjects.foundation.NSTimeZone;
-import java.util.Hashtable;
-import javax.xml.namespace.QName;
-import org.apache.axis.Constants;
-import org.apache.axis.encoding.*;
-import org.apache.axis.message.SOAPHandler;
-import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
+    public void onEndElement(java.lang.String namespace, java.lang.String localName, org.apache.axis.encoding.DeserializationContext context) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
+    public org.apache.axis.message.SOAPHandler onStartChild(java.lang.String namespace, java.lang.String localName, java.lang.String prefix, org.xml.sax.Attributes attributes, org.apache.axis.encoding.DeserializationContext context) throws org.xml.sax.SAXException{
+        return null; //TODO codavaj!!
+    }
 
-public class WOTimeZoneDeserializer extends DeserializerImpl
-    implements Deserializer, WOSoapConstants {
+    public void setData(byte[] nb){
+        return; //TODO codavaj!!
+    }
 
-
-    public WOTimeZoneDeserializer() { return null; }
-
-    public SOAPHandler onStartChild(String namespace, String localName, String prefix, Attributes attributes, DeserializationContext context) throws SAXException { return null; }
-
-    public void onEndElement(String namespace, String localName, DeserializationContext context) throws SAXException {}
-
-    public void setName(String nn) {}
-
-    public void setData(byte nb[]) {}
-
-    private String setterForProperty(String name) { return null; }
-
-    private static final long serialVersionUID = 0x4419225bL;
-    private static final String NAME_MEMBER = "name";
-    private static final String DATA_MEMBER = "data";
-    private Hashtable typesByMemberName;
-    private String currentName;
-    private byte currentData[];
+    public void setName(java.lang.String nn){
+        return; //TODO codavaj!!
+    }
 
 }

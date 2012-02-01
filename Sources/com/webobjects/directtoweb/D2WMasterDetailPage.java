@@ -1,70 +1,76 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.*;
-import com.webobjects.directtoweb.generation.DTWTemplate;
-import com.webobjects.eocontrol.EOEditingContext;
-import com.webobjects.eocontrol.EOEnterpriseObject;
-
-
-public class D2WMasterDetailPage extends D2WPage
-    implements ListPageInterface {
-    class SelectPageDelegate
-        implements NextPageDelegate, DelegateGeneration {
-
-
-        SelectPageDelegate() { return null; }
-
-        public WOComponent nextPage(WOComponent sender) { return null; }
-
-        public String generationString() { return null; }
-
-        final D2WMasterDetailPage this$0;
-
-    }
-
-
-
-    public D2WMasterDetailPage(WOContext aContext) { return null; }
-
-    public NextPageDelegate selectPageDelegate() { return null; }
-
-    public void setSelectPageDelegate(Object obj) {}
-
-    public NextPageDelegate masterDetailPageDelegate() { return null; }
-
-    public void setEditPageDelegate(Object obj) {}
-
-    public boolean isObjectSelected() { return true; }
+/**
+ * The D2WMasterDetailPage class provides the behavior for the master-detail page Direct to Web templates, specifically BASMasterDetailPage, NEUMasterDetailPage, and WOLMasterDetailPage. The classes for these pages inherit directly from D2WMasterDetailPage and define no additional methods or variables.
+ * Most methods are accessed, via the EOKeyValueCoding interface defined in the EOControl framework, from the bindings (.wod) file of the Direct to Web template. If you create a Direct to Web template from a master-detail page, you can invoke the methods in this class in the same way.
+ * See Also:Serialized Form
+ */
+public class D2WMasterDetailPage extends com.webobjects.directtoweb.D2WPage implements com.webobjects.directtoweb.ListPageInterface{
+    public com.webobjects.eocontrol.EOEnterpriseObject selectedObject;
 
     /**
-     * @deprecated Method backAction is deprecated
+     * Constructs a D2WMasterDetailPage with the specified context.
+     * Parameters:aContext - - the WOContext.
      */
+    public D2WMasterDetailPage(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
-    public WOComponent backAction() { return null; }
+    /**
+     * Deprecated.
+     * Use listReturnAction instead.
+     */
+    public com.webobjects.appserver.WOComponent backAction(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOComponent listReturnAction() { return null; }
+    /**
+     * Returns whether the user has selected an object in the select component of the master-detail page. When this condition is true, the edit component appears in the lower half of the master-detail page.
+     */
+    public boolean isObjectSelected(){
+        return false; //TODO codavaj!!
+    }
 
-    public WOAssociation replacementAssociationForAssociation(WOAssociation oldAssociation, String oldBinding, DTWTemplate aTemplate, WOContext aContext) { return null; }
+    /**
+     * Is invoked when the user clicks Return in the master-detail page. Override nextPage to specify the component this action displays. You can also specify custom behavior for this action by overriding nextPageDelegate; in this case, nextPage is ignored.
+     */
+    public com.webobjects.appserver.WOComponent listReturnAction(){
+        return null; //TODO codavaj!!
+    }
 
-    private static final long serialVersionUID = 0xebdc4f78L;
-    public EOEnterpriseObject selectedObject;
-    private boolean _wasGenerated;
+    /**
+     * Returns the next page delegate for the edit component on the master-detail page. Direct to Web invokes the nextPage method on this object when the user clicks Cancel in the edit component.
+     */
+    public com.webobjects.directtoweb.NextPageDelegate masterDetailPageDelegate(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public com.webobjects.appserver.WOAssociation replacementAssociationForAssociation(com.webobjects.appserver.WOAssociation oldAssociation, java.lang.String oldBinding, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return null; //TODO codavaj!!
+    }
 
-    // Unreferenced inner class com/webobjects/directtoweb/D2WMasterDetailPage$1
+    /**
+     * Returns the next page delegate, an object implementing the NextPageDelegate interface, for the select component on the master-detail page. Direct to Web invokes the nextPage method on this object when the user selects the record to edit.
+     */
+    public com.webobjects.directtoweb.NextPageDelegate selectPageDelegate(){
+        return null; //TODO codavaj!!
+    }
 
-/* anonymous class */
-    class _cls1
-        implements NextPageDelegate {
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public void setEditPageDelegate(java.lang.Object newValue){
+        return; //TODO codavaj!!
+    }
 
-
-        _cls1() { return null; }
-
-        public WOComponent nextPage(WOComponent sender) { return null; }
-
-        final D2WMasterDetailPage this$0;
-
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public void setSelectPageDelegate(java.lang.Object newValue){
+        return; //TODO codavaj!!
     }
 
 }

@@ -1,13 +1,11 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLDefaultEntityResolver implements org.xml.sax.EntityResolver{
+    public WOMLDefaultEntityResolver(){
+         //TODO codavaj!!
+    }
 
-import java.io.IOException;
-import org.xml.sax.*;
+    public org.xml.sax.InputSource resolveEntity(java.lang.String publicId, java.lang.String systemId) throws org.xml.sax.SAXException, java.io.IOException{
+        return null; //TODO codavaj!!
+    }
 
-public class WOMLDefaultEntityResolver
-    implements EntityResolver {
-
-    public WOMLDefaultEntityResolver() { return null; }
-
-    public InputSource resolveEntity(String publicId, String systemId) throws SAXException, IOException { return null; }
 }

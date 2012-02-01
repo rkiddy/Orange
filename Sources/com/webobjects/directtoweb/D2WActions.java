@@ -1,18 +1,23 @@
-
 package com.webobjects.directtoweb;
+public class D2WActions extends com.webobjects.appserver.WODirectAction{
+    public D2WActions(com.webobjects.appserver.WORequest request){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.foundation.NSLog;
-import java.io.IOException;
+    /**
+     * Description copied from class:
+     * Returns a WOActionResults object that is the result of sending generateResponse() to the page named "Main".
+     */
+    public com.webobjects.appserver.WOActionResults defaultAction(){
+        return null; //TODO codavaj!!
+    }
 
+    public com.webobjects.appserver.WOComponent openServerSideWebAssistantAction() throws java.io.IOException{
+        return null; //TODO codavaj!!
+    }
 
-public class D2WActions extends WODirectAction {
+    public com.webobjects.appserver.WOComponent openWebAssistantAction(){
+        return null; //TODO codavaj!!
+    }
 
-    public D2WActions(WORequest request) { return null; }
-
-    public WOActionResults defaultAction() { return null; }
-
-    public WOComponent openWebAssistantAction() { return null; }
-
-    public WOComponent openServerSideWebAssistantAction() throws IOException { return null; }
 }

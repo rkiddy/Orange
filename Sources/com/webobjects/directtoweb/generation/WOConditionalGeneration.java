@@ -1,14 +1,11 @@
-
 package com.webobjects.directtoweb.generation;
+public class WOConditionalGeneration{
+    public WOConditionalGeneration(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.appserver._private.WOGenerationSupport;
-import com.webobjects.foundation.NSDictionary;
+    public static void appendToTemplate(com.webobjects.appserver.WOElement element, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
-
-public class WOConditionalGeneration {
-
-    public WOConditionalGeneration() { return null; }
-
-    public static void appendToTemplate(WOElement element, DTWTemplate aTemplate, WOContext aContext) { return null; }
 }

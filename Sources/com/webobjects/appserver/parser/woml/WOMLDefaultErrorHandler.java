@@ -1,17 +1,19 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLDefaultErrorHandler implements org.xml.sax.ErrorHandler{
+    public WOMLDefaultErrorHandler(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.NSLog;
-import org.xml.sax.*;
+    public void error(org.xml.sax.SAXParseException exception) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-public class WOMLDefaultErrorHandler
-    implements ErrorHandler {
+    public void fatalError(org.xml.sax.SAXParseException exception) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public WOMLDefaultErrorHandler() { return null; }
+    public void warning(org.xml.sax.SAXParseException exception) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void error(SAXParseException exception) throws SAXException {}
-
-    public void fatalError(SAXParseException exception) throws SAXException {}
-
-    public void warning(SAXParseException exception) throws SAXException {}
 }

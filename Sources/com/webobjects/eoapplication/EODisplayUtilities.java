@@ -1,165 +1,97 @@
-
 package com.webobjects.eoapplication;
+public class EODisplayUtilities{
+    public static final java.lang.String ComponentAlignmentContainerMarker="ComponentAlignmentContainerMarker";
 
-import com.webobjects.eointerface.swing.*;
-import com.webobjects.foundation.*;
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.text.JTextComponent;
+    public static final java.lang.String ComponentAlignmentLabelMarker="ComponentAlignmentLabelMarker";
 
+    public static final java.lang.String ComponentAlignmentMinimumWidthKey="ComponentAlignmentMinimumWidth";
 
-public class EODisplayUtilities {
-    private static class _FocusComponentActivation
-        implements Runnable {
-
-
-        public _FocusComponentActivation(JComponent component) { return null; }
-
-        public void run() {}
-
-        JComponent _component;
-
+    public EODisplayUtilities(){
+         //TODO codavaj!!
     }
 
+    public static void activateWindow(java.awt.Window window, boolean tryActivatingDelayed){
+        return; //TODO codavaj!!
+    }
 
+    public static boolean activateWindowIfVisible(java.awt.Window window){
+        return false; //TODO codavaj!!
+    }
 
-    public EODisplayUtilities() { return null; }
+    public static boolean componentPrefersHorizontalResizing(javax.swing.JComponent component){
+        return false; //TODO codavaj!!
+    }
 
-    public static String displayLabelForString(String string) { return null; }
+    public static boolean componentPrefersVerticalResizing(javax.swing.JComponent component){
+        return false; //TODO codavaj!!
+    }
 
-    public static String localizedDisplayLabelForString(String string) { return null; }
+    public static java.lang.String displayLabelForString(java.lang.String string){
+        return null; //TODO codavaj!!
+    }
 
-    public static Dimension unionSize(Dimension size, Dimension anotherSize) { return null; }
+    public static void fillTargetSizeWithUnionSize(java.awt.Dimension targetSize, java.awt.Dimension size, java.awt.Dimension anotherSize){
+        return; //TODO codavaj!!
+    }
 
-    public static Dimension unionSize(int width, int height, int anotherWidth, int anotherHeight) { return null; }
+    public static boolean fillTargetSizeWithUnionSize(java.awt.Dimension targetSize, int anotherWidth, int anotherHeight){
+        return false; //TODO codavaj!!
+    }
 
-    public static Dimension _unionSizeNoNewDimensionNeeded(Dimension size, Dimension anotherSize) { return null; }
+    public static void integrateTransientSubcontrollerComponentForController(com.webobjects.eoapplication.EOComponentController controller, com.webobjects.eoapplication.EOComponentController subcontroller, java.awt.Dimension minimumSubcontrollerAreaSizeBeforeForgettingTransientController, boolean layoutIsHorizontal){
+        return; //TODO codavaj!!
+    }
 
-    public static Dimension _unionSizeNoNewDimensionNeeded(Dimension size, int anotherWidth, int anotherHeight) { return null; }
+    public static java.lang.String localizedDisplayLabelForString(java.lang.String string){
+        return null; //TODO codavaj!!
+    }
 
-    public static void fillTargetSizeWithUnionSize(Dimension targetSize, Dimension size, Dimension anotherSize) { return null; }
+    public static void locateWindow(java.awt.Window window, java.awt.Dimension size, int windowPosition, int numberOfOffsets){
+        return; //TODO codavaj!!
+    }
 
-    public static boolean fillTargetSizeWithUnionSize(Dimension targetSize, int anotherWidth, int anotherHeight) { return null; }
+    public static void locateWindow(java.awt.Window window, java.awt.Dimension size, java.awt.Point location){
+        return; //TODO codavaj!!
+    }
 
-    private static int _emptyAdjustableSpaceForLabelComponent(Component labelComponent, NSArray dependentComponents, int spaceNeeded) { return null; }
+    public static java.awt.Dimension minimumComponentSizeWithIntegratedComponents(com.webobjects.eoapplication.EOComponentController controller, java.awt.Dimension minimumComponentSizeWithoutIntegratedComponents, java.awt.Dimension minimumSubcontrollerAreaSize, com.webobjects.foundation.NSArray integratedComponentSizes){
+        return null; //TODO codavaj!!
+    }
 
-    private static int _adjustableSpaceForLabelComponent(Component labelComponent, NSArray dependentComponents, int spaceNeeded) { return null; }
+    public static java.awt.Dimension minimumComponentSizeWithIntegratedComponents(com.webobjects.eoapplication.EOComponentController controller, java.awt.Dimension minimumComponentSizeWithoutIntegratedComponents, java.awt.Dimension minimumSubcontrollerAreaSize, com.webobjects.foundation.NSArray integratedComponentSizes, boolean layoutIsHorizontal){
+        return null; //TODO codavaj!!
+    }
 
-    private static int _adjustSpaceByShrinkingComponents(Component labelComponent, NSArray dependentComponents, int spaceNeeded, int shrinkingHint) { return null; }
+    public static java.awt.Dimension minimumSubcontrollerAreaSizeWithIntegratedComponents(java.awt.Dimension minimumSubcontrollerAreaSize, com.webobjects.foundation.NSArray integratedComponentSizes, boolean layoutIsHorizontal){
+        return null; //TODO codavaj!!
+    }
 
-    private static int _adjustSpaceForLabelComponent(Component labelComponent, NSArray dependentComponents, int spaceNeeded) { return null; }
+    public static void relocateWindow(java.awt.Window window, java.awt.Dimension size, int windowPosition){
+        return; //TODO codavaj!!
+    }
 
-    public static boolean _fillMapTablesForLabelComponents(Container container, _NSMutableIntegerDictionary labelToLeftXCoordinateOffsetMapTable, _NSMutableIntegerDictionary labelToRightXCoordinateOffsetMapTable, _NSMutableIntegerKeyDictionary xCoordinateToAlignmentWidthMapTable, _NSMutableIntegerKeyDictionary xCoordinateToLabelMapTable, int leftXCoordinateOffset, int rightXCoordinateOffset) { return null; }
+    public static void removeComponentFromParentContainer(java.awt.Component component){
+        return; //TODO codavaj!!
+    }
 
-    public static void _fillDependentComponentsArray(Component labelComponent, NSMutableArray dependentComponents) { return null; }
+    public static void tryToRemoveComponent(java.awt.Component component){
+        return; //TODO codavaj!!
+    }
 
-    private static boolean _tryResizingParentComponent(Component labelComponent, NSArray labelDependentComponents, Container container, int additionalSpaceNeeded) { return null; }
+    public static java.awt.Dimension unionSize(java.awt.Dimension size, java.awt.Dimension anotherSize){
+        return null; //TODO codavaj!!
+    }
 
-    public static void _alignComponentsInContainerOfController(EOComponentController controller, JComponent container, boolean updateComponentMinimumSize, boolean updateSubcontrollerAreaMinimumSize) { return null; }
+    public static java.awt.Dimension unionSize(int width, int height, int anotherWidth, int anotherHeight){
+        return null; //TODO codavaj!!
+    }
 
-    public static void _alignComponentsForController(EOComponentController controller, JComponent component) { return null; }
+    public static void updateComponentInContainer(com.webobjects.eoapplication.EOComponentController controllerProvidingSizeInformation, javax.swing.JComponent updateComponent, java.awt.Dimension updateMinimumSize, boolean prefersHorizontalResizing, boolean prefersVerticalResizing, javax.swing.JComponent container, boolean layoutIsHorizontal){
+        return; //TODO codavaj!!
+    }
 
-    public static void _relocateComponents(Container component, Point location, Point originalLocation, Dimension size, Dimension originalSize, Container parent, Dimension parentSize, Dimension originalParentSize, 
-            boolean revertParentSizeToOriginalSize) { return null; }
-
-    private static boolean _componentPrefersResizing(JComponent component, int autosizingMask) { return null; }
-
-    public static boolean componentPrefersHorizontalResizing(JComponent component) { return null; }
-
-    public static boolean componentPrefersVerticalResizing(JComponent component) { return null; }
-
-    private static NSArray _resizingComponentsPresentInContainer(Container container, int autosizingMask) { return null; }
-
-    private static NSArray _horizontallyResizingComponentsPresentInContainer(Container container) { return null; }
-
-    private static NSArray _verticallyResizingComponentsPresentInContainer(Container container) { return null; }
-
-    private static int _integrationSpaceInContainer(Container container, boolean checkHorizontalSpace) { return null; }
-
-    private static int _horizontalIntegrationSpaceInContainer(Container container) { return null; }
-
-    private static int _verticalIntegrationSpaceInContainer(Container container) { return null; }
-
-    private static void _moveComponentWithGreaterCoordinate(Component components[], int coordinate, int delta, Component ignoreComponent, boolean moveHorizontally) { return null; }
-
-    private static int _provideSpaceByShrinkingComponents(EOComponentController controllerProvidingSizeInformation, JComponent component, int spaceNeeded, JComponent componentSpaceIsNeededFor, boolean shrinkHorizontally) { return null; }
-
-    private static int _provideHorizontalSpaceByShrinkingComponents(EOComponentController controllerProvidingSizeInformation, JComponent component, int spaceNeeded, JComponent componentSpaceIsNeededFor) { return null; }
-
-    private static int _provideVerticalSpaceByShrinkingComponents(EOComponentController controllerProvidingSizeInformation, JComponent component, int spaceNeeded, JComponent componentSpaceIsNeededFor) { return null; }
-
-    private static void _updateComponentDimensionInContainer(EOComponentController controllerProvidingSizeInformation, JComponent container, JComponent component, int updateSize, boolean updateHorizontally) { return null; }
-
-    private static Dimension _updateComponentInContainer(EOComponentController controllerProvidingSizeInformation, JComponent container, JComponent component, Dimension componentMinimumSize, boolean prefersHorizontalResizing, boolean prefersVerticalResizing, boolean revertContainerSizeToOriginalSize) { return null; }
-
-    private static Dimension _integrateComponentIntoContainerByLayingOutHorizontally(EOComponentController controllerProvidingSizeInformation, JComponent container, boolean insertDelimitingSpace, JComponent component, Dimension componentMinimumSize, boolean prefersHorizontalResizing, boolean prefersVerticalResizing, boolean revertContainerSizeToOriginalSize) { return null; }
-
-    private static Dimension _integrateComponentIntoContainerByLayingOutVertically(EOComponentController controllerProvidingSizeInformation, JComponent container, boolean insertDelimitingSpace, JComponent component, Dimension componentMinimumSize, boolean prefersHorizontalResizing, boolean prefersVerticalResizing, boolean revertContainerSizeToOriginalSize) { return null; }
-
-    public static void updateComponentInContainer(EOComponentController controllerProvidingSizeInformation, JComponent updateComponent, Dimension updateMinimumSize, boolean prefersHorizontalResizing, boolean prefersVerticalResizing, JComponent container, boolean layoutIsHorizontal) { return null; }
-
-    public static void updateComponentInController(EOComponentController controller, JComponent updateComponent, Dimension updateMinimumSize, boolean prefersHorizontalResizing, boolean prefersVerticalResizing, boolean useSubcontrollerArea, boolean layoutIsHorizontal) { return null; }
-
-    public static Dimension minimumComponentSizeWithIntegratedComponents(EOComponentController controller, Dimension minimumComponentSizeWithoutIntegratedComponents, Dimension minimumSubcontrollerAreaSize, NSArray integratedComponentSizes, boolean layoutIsHorizontal) { return null; }
-
-    public static Dimension minimumComponentSizeWithIntegratedComponents(EOComponentController controller, Dimension minimumComponentSizeWithoutIntegratedComponents, Dimension minimumSubcontrollerAreaSize, NSArray integratedComponentSizes) { return null; }
-
-    public static Dimension minimumSubcontrollerAreaSizeWithIntegratedComponents(Dimension minimumSubcontrollerAreaSize, NSArray integratedComponentSizes, boolean layoutIsHorizontal) { return null; }
-
-    public static void integrateTransientSubcontrollerComponentForController(EOComponentController controller, EOComponentController subcontroller, Dimension minimumSubcontrollerAreaSizeBeforeForgettingTransientController, boolean layoutIsHorizontal) { return null; }
-
-    public static void removeComponentFromParentContainer(Component component) { return null; }
-
-    public static void tryToRemoveComponent(Component component) { return null; }
-
-    public static void _activateFocusComponent(JComponent component, boolean delayed) { return null; }
-
-    public static String _titleOfWindow(Object window) { return null; }
-
-    public static void _activateWindow(Window window) { return null; }
-
-    public static void activateWindow(Window window, boolean tryActivatingDelayed) { return null; }
-
-    public static boolean activateWindowIfVisible(Window window) { return null; }
-
-    private static int _windowOffsetSize() { return null; }
-
-    public static void locateWindow(Window window, Dimension size, Point location) { return null; }
-
-    public static void locateWindow(Window window, Dimension size, int windowPosition, int numberOfOffsets) { return null; }
-
-    public static void relocateWindow(Window window, Dimension size, int windowPosition) { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    public static final String ComponentAlignmentLabelMarker = "ComponentAlignmentLabelMarker";
-    public static final String ComponentAlignmentContainerMarker = "ComponentAlignmentContainerMarker";
-    public static final String ComponentAlignmentMinimumWidthKey = "ComponentAlignmentMinimumWidth";
-    private static final int _MinimumWindowOffsetSize = 10;
-    private static int _windowOffsetSize;
-    public static final Point _nullPoint;
-    public static final Dimension _nullSize;
-    public static final Insets _nullInsets;
-    public static final int _MaxYMargin_MaxXMargin = 5;
-    public static final int _MaxYMargin_MinXMargin = 6;
-    public static final int _MaxYMargin_MinXMargin_MaxXMargin = 7;
-    public static final int _MaxYMargin_WidthSizable = 20;
-    public static final int _MinYMargin_MaxXMargin = 9;
-    public static final int _MinYMargin_MinXMargin = 10;
-    public static final int _MinYMargin_WidthSizable = 24;
-    public static final int _MinYMargin_HeightSizable = 40;
-    public static final int _MaxXMargin_HeightSizable = 33;
-    public static final int _MaxXMargin_WidthSizable = 17;
-    public static final int _MaxXMargin_MinYMargin_MaxYMargin = 13;
-    public static final int _MinXMargin_HeightSizable = 34;
-    public static final int _MinXMargin_WidthSizable = 18;
-    public static final int _MinYMargin_MaxYMargin = 12;
-    public static final int _MinXMargin_MaxXMargin = 3;
-    public static final int _MaxXMargin_WidthSizable_HeightSizable = 49;
-    public static final int _MinXMargin_WidthSizable_HeightSizable = 50;
-    public static final int _MinXMargin_MaxXMargin_MinYMargin = 11;
-    public static final int _MinXMargin_MaxXMargin_MaxYMargin = 7;
-    private static final NSSelector _activateWindowSelector;
+    public static void updateComponentInController(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent updateComponent, java.awt.Dimension updateMinimumSize, boolean prefersHorizontalResizing, boolean prefersVerticalResizing, boolean useSubcontrollerArea, boolean layoutIsHorizontal){
+        return; //TODO codavaj!!
+    }
 
 }

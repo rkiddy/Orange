@@ -1,40 +1,48 @@
-
 package com.webobjects.eogeneration;
+public class EOTableColumnController extends com.webobjects.eogeneration.EOFormatValueController{
+    public EOTableColumnController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.EOXMLUnarchiver;
-import com.webobjects.eoapplication._EOWidgetUtilities;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.EOTable;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Dimension;
-import javax.swing.JComponent;
-import javax.swing.table.TableColumn;
+    public EOTableColumnController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Returns whether the controller can be transient. By default, a component controller is transient only if it's an instance of EOComponentController, not an instance of a subclass.
+     */
+    public boolean canBeTransient(){
+        return false; //TODO codavaj!!
+    }
 
-public class EOTableColumnController extends EOFormatValueController {
+    /**
+     * Description copied from class:
+     * Invoked when it's necessary to create the receiver's component, including setting up the subcontroller area. Subclass implementations of this method usually invoke setComponent and if necessary setSubcontrollerArea. EOComponentController's default implementation creates an empty EOView to hold subcontroller components.
+     * The layout mechanisms used to integrate the components of controllers expect that the component is generated with the minimum size possible.
+     */
+    protected void generateComponent(){
+        return; //TODO codavaj!!
+    }
 
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
-    public EOTableColumnController() { return null; }
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOTableColumnController(EOXMLUnarchiver unarchiver) { return null; }
+    public void setTableColumn(javax.swing.table.TableColumn tableColumn){
+        return; //TODO codavaj!!
+    }
 
-    public boolean canBeTransient() { return true; }
+    protected com.webobjects.eointerface.swing.EOTable table(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void generateComponent() {}
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    protected JComponent newWidget() { return null; }
-
-    protected EOTable table() { return null; }
-
-    public void setTableColumn(TableColumn tableColumn) {}
-
-    public TableColumn tableColumn() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private TableColumn _tableColumn;
+    public javax.swing.table.TableColumn tableColumn(){
+        return null; //TODO codavaj!!
+    }
 
 }

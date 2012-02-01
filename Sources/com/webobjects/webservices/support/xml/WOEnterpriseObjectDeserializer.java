@@ -1,53 +1,45 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOEnterpriseObjectDeserializer deserializes instances of classes implementing EOEnterpriseObject. Users must register a separate WOEnterpriseObjectDeserializer for every class implementing WOEnterpriseObjectDeserializer which is not a subclass of EOGenericRecord or EOCustomRecord.
+ * See Also:Serialized Form
+ */
+public class WOEnterpriseObjectDeserializer extends org.apache.axis.encoding.DeserializerImpl implements org.apache.axis.encoding.Deserializer, com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WOEnterpriseObjectDeserializer(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eocontrol.EOEditingContext;
-import com.webobjects.eocontrol.EOGlobalID;
-import com.webobjects.foundation._NSStringUtilities;
-import java.util.*;
-import javax.xml.namespace.QName;
-import org.apache.axis.Constants;
-import org.apache.axis.encoding.*;
-import org.apache.axis.message.SOAPHandler;
-import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
+    protected java.lang.Object mergeProperties(java.lang.Object subject, com.webobjects.webservices.support.xml.WOStringKeyMap properties, java.lang.String keyPathPrefix, com.webobjects.webservices.support.xml.WOEnterpriseObjectSerializationStrategy strategy){
+        return null; //TODO codavaj!!
+    }
 
+    public void onEndElement(java.lang.String namespace, java.lang.String localName, org.apache.axis.encoding.DeserializationContext context) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-public class WOEnterpriseObjectDeserializer extends DeserializerImpl
-    implements Deserializer, WOSoapConstants {
+    public org.apache.axis.message.SOAPHandler onStartChild(java.lang.String namespace, java.lang.String localName, java.lang.String prefix, org.xml.sax.Attributes attributes, org.apache.axis.encoding.DeserializationContext context) throws org.xml.sax.SAXException{
+        return null; //TODO codavaj!!
+    }
 
+    public void onStartElement(java.lang.String namespace, java.lang.String localName, java.lang.String prefix, org.xml.sax.Attributes attributes, org.apache.axis.encoding.DeserializationContext context) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public WOEnterpriseObjectDeserializer() { return null; }
+    /**
+     * Set the name of the class to which an element will be deserialized.
+     */
+    public void setEntityName(java.lang.Object name) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void onStartElement(String namespace, String localName, String prefix, Attributes attributes, DeserializationContext context) throws SAXException {}
+    /**
+     * Set the globalID of the object to be instantiated.
+     */
+    public void setGlobalID(java.lang.Object gid) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public SOAPHandler onStartChild(String namespace, String localName, String prefix, Attributes attributes, DeserializationContext context) throws SAXException { return null; }
-
-    public void onEndElement(String namespace, String localName, DeserializationContext context) throws SAXException {}
-
-    private void _attemptValueCreation() {}
-
-    protected Object mergeProperties(Object subject, WOStringKeyMap properties, String keyPathPrefix, WOEnterpriseObjectSerializationStrategy strategy) { return null; }
-
-    public void setEntityName(Object name) throws SAXException {}
-
-    public void setGlobalID(Object gid) throws SAXException {}
-
-    public void setProperties(Object map) throws SAXException {}
-
-    private String setterForProperty(String name) throws SAXException { return null; }
-
-    private static final long serialVersionUID = 0xca62adcL;
-    private static final String GLOBALID_MEMBER = "globalID";
-    private static final String ENTITYNAME_MEMBER = "entityName";
-    private static final String PROPERTIES_MEMBER = "properties";
-    private Hashtable typesByMemberName;
-    private EOGlobalID _gid;
-    private String _entity;
-    private WOStringKeyMap _properties;
-    private WOEnterpriseObjectSerializationStrategy _strategy;
-    private EOEditingContext _ec;
-    private DeserializationContext _currentContext;
-    private String _myID;
+    public void setProperties(java.lang.Object map) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
 }

@@ -1,113 +1,195 @@
-
 package com.webobjects.eoapplication;
-
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.foundation.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.*;
-
-
-public abstract class EOWindowController extends EOComponentController
-    implements ActionListener, EOComponentController.Activation {
-    public static interface _Toobar {
-
-
-        public abstract boolean _isToolbar();
-
-
-
-        public static final Class _CLASS = null;
-
+/**
+ * EOWindowController extends EOComponentController for windows and dialogs. It is a common superclass for more specific controllers, providing common behavior for controllers which handle different kinds of windows. There are methods to deal with the border size, the activation button, user defaults and others.
+ */
+public abstract class EOWindowController extends com.webobjects.eoapplication.EOComponentController implements java.awt.event.ActionListener, com.webobjects.eoapplication.EOComponentController.Activation{
+    /**
+     * The (plain) constructor for EOWindowController.
+     */
+    public EOWindowController(){
+         //TODO codavaj!!
     }
 
+    /**
+     * A constructor for EOWindowController (re-)creating an EOWindowController from the definitions stored in an EOXMLUnarchiver.
+     * Parameters:unarchiver - the unarchiver with the stored definitions
+     */
+    public EOWindowController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Called to notify this controller that the specified ActionEvent has been handled. It will activate the window and call EOSwingUtilities.eventEnded().
+     */
+    public void actionPerformed(java.awt.event.ActionEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected static Dimension generateBorderSizeForRootPaneContainerClass(Class rootPaneContainerWindowClass, boolean useMenuBar) { return null; }
+    /**
+     * This implementation of activate calls activateWindow and returns true.
+     */
+    public boolean activate(){
+        return false; //TODO codavaj!!
+    }
 
-    protected static void _windowRepresentationChanged(Window window) { return null; }
-
-    public EOWindowController() { return null; }
-
-    public EOWindowController(EOXMLUnarchiver unarchiver) { return null; }
-
-    public NSMutableDictionary _xmlParameters() { return null; }
-
-    public void dispose() {}
-
-    protected boolean removeTransientSubcontroller(EOController controller) { return true; }
-
-    public void setUsesActivationButton(boolean flag) {}
-
-    public boolean usesActivationButton() { return true; }
-
-    public void setUsesActivationAction(boolean flag) {}
-
-    public boolean usesActivationAction() { return true; }
-
-    public void setWindowPosition(int position) {}
-
-    public int windowPosition() { return 0; }
-
-    public void setUsesUserDefaultsWindowSize(boolean flag) {}
-
-    public boolean usesUserDefaultsWindowSize() { return true; }
-
-    public void setUsesUserDefaultsWindowLocation(boolean flag) {}
-
-    public boolean usesUserDefaultsWindowLocation() { return true; }
-
-    protected Insets _preferredInsets() { return null; }
-
-    protected void componentDidBecomeInvisible() {}
-
-    protected void generateComponent() {}
-
-    protected boolean componentShouldBeResizable(JComponent component) { return true; }
-
-    public JComponent integrationComponent() { return null; }
-
-    public Dimension minimumIntegrationComponentSize() { return null; }
-
-    protected Dimension windowBorderSize() { return null; }
-
-    public Dimension borderSize() { return null; }
-
-    public Dimension borderedSizeForComponentSize(Dimension componentSize) { return null; }
-
-    public Dimension componentSizeForBorderedSize(Dimension componentSize) { return null; }
-
-    protected NSArray defaultActions() { return null; }
-
+    /**
+     * Activates the controller's window.
+     */
     public abstract void activateWindow();
 
-    private void startListeningToButton() {}
+    /**
+     * Returns the total size including the border for a specific component size.
+     */
+    public java.awt.Dimension borderedSizeForComponentSize(java.awt.Dimension componentSize){
+        return null; //TODO codavaj!!
+    }
 
-    private void stopListeningToButton() {}
+    public java.awt.Dimension borderSize(){
+        return null; //TODO codavaj!!
+    }
 
-    private void setButton(JButton button) {}
+    /**
+     * Notification method which is called when this controller's component bomes invisible. Usually called and handled internally.
+     */
+    protected void componentDidBecomeInvisible(){
+        return; //TODO codavaj!!
+    }
 
-    private JButton button() { return null; }
+    /**
+     * Returns whether the component should be configured as being resizable.
+     */
+    protected boolean componentShouldBeResizable(javax.swing.JComponent component){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean activate() { return true; }
+    /**
+     * Calculates the component size implied by the specified size including the border.
+     */
+    public java.awt.Dimension componentSizeForBorderedSize(java.awt.Dimension componentSize){
+        return null; //TODO codavaj!!
+    }
 
-    public void actionPerformed(ActionEvent event) {}
+    /**
+     * Returns the array of default actions.
+     */
+    protected com.webobjects.foundation.NSArray defaultActions(){
+        return null; //TODO codavaj!!
+    }
 
-    static  {}
+    /**
+     * Called when this controller isn't needed anymore. Removes any listeners in static lists, for example.
+     */
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-    public static final Class _CLASS = null;
-    public static final String _PersistentWindowXParameter = "_EOWindowX";
-    public static final String _PersistentWindowYParameter = "_EOWindowY";
-    public static final String _PersistentWindowWidthParameter = "_EOWindowWidth";
-    public static final String _PersistentWindowHeightParameter = "_EOWindowHeight";
-    private static NSMutableDictionary _windowClassToBorderSizeMapTable;
-    private boolean _usesActivationButton;
-    private boolean _usesActivationAction;
-    private JButton _button;
-    private int _windowPosition;
-    private Dimension _borderSize;
-    private boolean _usesUserDefaultsWindowSize;
-    private boolean _usesUserDefaultsWindowLocation;
+    /**
+     * Returns the border size for a specific window class, which is the difference between the outer and inner size of the window.
+     */
+    protected static java.awt.Dimension generateBorderSizeForRootPaneContainerClass(java.lang.Class rootPaneContainerWindowClass, boolean useMenuBar){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Actually creates the component for this controller.
+     */
+    protected void generateComponent(){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Returns the integeration component. Often the same as the component.
+     */
+    public javax.swing.JComponent integrationComponent(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Returns the minimum size for the integration component.
+     */
+    public java.awt.Dimension minimumIntegrationComponentSize(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * See the method description in the superclass EOController specification. EOWindowController's implementation simply returns false since its subcontroller is not allowed to become transient.
+     */
+    protected boolean removeTransientSubcontroller(com.webobjects.eoapplication.EOController controller){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Sets whether the activation action is to be used The activation action usually appears within another window's toolbar or menu and will open a new window controlled by this controller.
+     */
+    public void setUsesActivationAction(boolean flag){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Sets the flag whether an activation button is used for this window (controller). The activation button appears within another window and will open a new window controlled by this controller.
+     */
+    public void setUsesActivationButton(boolean flag){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Sets the flag whether this window will use user-defaults for its window location.
+     */
+    public void setUsesUserDefaultsWindowLocation(boolean flag){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Sets the flag whether this window will use user-defaults for its window size.
+     */
+    public void setUsesUserDefaultsWindowSize(boolean flag){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Sets the window position, as defined by the constants in EOComponentController, for example Left or Center.
+     */
+    public void setWindowPosition(int position){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Returns whether the activation action is used The activation action usually appears within another window's toolbar or menu and will open a new window controlled by this controller.
+     */
+    public boolean usesActivationAction(){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Returns whether an activation button is used for this window (controller). The activation button appears within another window and will open a new window controlled by this controller.
+     */
+    public boolean usesActivationButton(){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Returns whether this window uses user-defaults for its window location.
+     */
+    public boolean usesUserDefaultsWindowLocation(){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Returns whether this window uses user-defaults for its window size.
+     */
+    public boolean usesUserDefaultsWindowSize(){
+        return false; //TODO codavaj!!
+    }
+
+    protected java.awt.Dimension windowBorderSize(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Returns the window positionas defined by the constants in EOComponentController, for example Left or Center.
+     */
+    public int windowPosition(){
+        return 0; //TODO codavaj!!
+    }
 
 }

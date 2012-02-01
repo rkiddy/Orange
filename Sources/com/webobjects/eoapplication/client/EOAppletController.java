@@ -1,32 +1,42 @@
-
 package com.webobjects.eoapplication.client;
+/**
+ * EOAppletControllers represent applets in the controller hierarchy.
+ */
+public class EOAppletController extends com.webobjects.eoapplication.EOComponentController{
+    /**
+     * Creates an applet controller for an EOApplet.
+     * Parameters:applet - the applet
+     */
+    public EOAppletController(com.webobjects.eoapplication.client.EOApplet applet){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.EOComponentController;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Container;
-import javax.swing.JComponent;
+    /**
+     * Returns the receiver's applet.
+     */
+    public com.webobjects.eoapplication.client.EOApplet applet(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Sets the receiver's applet.
+     */
+    protected void setApplet(com.webobjects.eoapplication.client.EOApplet applet){
+        return; //TODO codavaj!!
+    }
 
-public class EOAppletController extends EOComponentController {
+    /**
+     * Sets the visibility of the applet according to flag. Since applets can not be made invisible, this method is overridden to do nothing if visible is false.
+     */
+    public void setVisible(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-
-    public EOAppletController(EOApplet applet) { return null; }
-
-    protected boolean _preferredCanResizeHorizontally() { return true; }
-
-    protected boolean _preferredCanResizeVertically() { return true; }
-
-    public void setVisible(boolean flag) {}
-
-    public boolean showInSupercontroller() { return true; }
-
-    protected void setApplet(EOApplet applet) {}
-
-    public EOApplet applet() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private EOApplet _applet;
+    /**
+     * Properly integrates the content of the applet (the components of its subcontrollers, which are usually EOInterfaceControllers).
+     */
+    public boolean showInSupercontroller(){
+        return false; //TODO codavaj!!
+    }
 
 }

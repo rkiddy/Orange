@@ -1,151 +1,52 @@
-
 package com.webobjects.appserver;
-
-import com.webobjects.appserver._private.WOCaseInsensitiveDictionary;
-import com.webobjects.appserver._private.WOFileUploadSupport;
-import com.webobjects.appserver._private.WOHTTPHeaderValue;
-import com.webobjects.appserver._private.WOHTTPHeadersDictionary;
-import com.webobjects.appserver._private.WOHttpIO;
-import com.webobjects.appserver._private.WOInputStreamData;
-import com.webobjects.appserver._private.WONoCopyPushbackInputStream;
-import com.webobjects.foundation.*;
-import java.io.IOException;
-import java.io.InputStream;
-import java.text.ParseException;
-import java.util.LinkedList;
-
-
-public class WOMultipartIterator {
-    public class WOFormData {
-        protected class _WOFormDataInputStream extends InputStream {
-
-
-            protected _WOFormDataInputStream() { return null; }
-
-            public int available() { return 0; }
-
-            public void close() throws IOException {}
-
-            public int read() throws IOException { return 0; }
-
-            public int read(byte b[]) throws IOException { return 0; }
-
-            public int read(byte b[], int off, int len) throws IOException { return 0; }
-
-            public long skip(long n) throws IOException { return 0L; }
-
-            public boolean isClosed() { return true; }
-
-            private boolean _streamClosed;
-            private byte _oneByteArray[];
-            private byte _drainBuffer[];
-            private int _drainBufferLength;
-            final WOFormData this$1;
-
-        }
-
-
-
-        protected WOFormData() { return null; }
-
-        protected WOFormData(String filePath) { return null; }
-
-        private void _initHeaders() {}
-
-        public boolean isFileUpload() { return true; }
-
-        public NSDictionary headers() { return null; }
-
-        public NSDictionary contentDispositionHeaders() { return null; }
-
-        public String name() { return null; }
-
-        public InputStream formDataInputStream() { return null; }
-
-        public NSData formData() throws IOException { return null; }
-
-        public NSData formData(int bufferSize) throws IOException { return null; }
-
-        public boolean isStreamAvailable() { return true; }
-
-        public String formValue() throws IOException { return null; }
-
-        protected void _addToFormValues(NSMutableDictionary formValues) throws IOException {}
-
-        protected void _legacyFormValues(NSMutableDictionary aFormValues) throws IOException {}
-
-        public Number numericFormValue(NSNumberFormatter numericFormatter) throws IOException { return null; }
-
-        public NSTimestamp dateFormValue(NSTimestampFormatter dateFormatter) throws IOException { return null; }
-
-        void _invalidate() { return null; }
-
-        public boolean isStreamValid() { return true; }
-
-        public String toString() { return null; }
-
-        NSDictionary _headers;
-        _WOFormDataInputStream _fdstream;
-        NSData _data;
-        NSDictionary _cdHeaders;
-        NSData _cdData;
-        int _index;
-        boolean _isTheLast;
-        boolean _isFileUpload;
-        boolean _streamWasCalled;
-        boolean _dataWasCalled;
-        String _formValueString;
-        final WOMultipartIterator this$0;
-
+/**
+ * This class represents the content of a multipart/form-data HTTP request. You get the iterator for such a request by calling multipartIterator on the WORequest object. Once you have this object, you get WOFormData objects by repeatedly calling nextFormData, until it returns null. Each WOFormData allows you to introspect the sub-headers, as well as either look at the form value(s) or grab the entire content of the part as an InputStream subclass. The InputStream subclass is a WOFormDataInpuStream and can be used to stream large file uploads to disk (or elsewhere). The WOMultipartIterator should NOT be used with WOFileUpload component actions. It may be used with component actions where there is no WOFileUpload, and it may be used in DirectActions.
+ */
+public class WOMultipartIterator{
+    protected WOMultipartIterator(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Intentionally Undocumented
+     */
+    public WOMultipartIterator(com.webobjects.appserver.WORequest aRequest){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Returns the boundary from the content-type header of the WORequest. If this boundary doesn't exist, the iterator attempts to find one by looking at the first part of the content itself.
+     */
+    public java.lang.String boundary(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMultipartIterator(WORequest aRequest) { return null; }
+    /**
+     * Returns the number of bytes left to be read from the request content stream. Note that this includes all delimiter information, some padding characters around each delimiter, headers for each form element and the content of each form element as well. Also note that non-file upload elements are often pre-read, and so this number represents the number of bytes actually left on the client and in the socket/stream buffers. If the underlying stream has been closed, this number cannot be depended upon.
+     */
+    public int contentLengthRemaining(){
+        return 0; //TODO codavaj!!
+    }
 
-    protected WOMultipartIterator() { return null; }
+    /**
+     * Returns true if the underlying content stream terminated early. This implies that any subsequent form-elements are invalid, and cannot be relied upon to have consistent or useful data. Typically, you would check this after getting an IOException while reading from the InputStream returned by a WOFormData This API may be used to determine if the user canceled the upload.
+     */
+    public boolean didContentTerminatePrematurely(){
+        return false; //TODO codavaj!!
+    }
 
-    public String boundary() { return null; }
+    /**
+     * Returns the parsed values from the content-type header of the WORequest.
+     */
+    public com.webobjects.foundation.NSDictionary multipartHeaders(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSDictionary multipartHeaders() { return null; }
-
-    protected void _initSeparator() {}
-
-    public boolean didContentTerminatePrematurely() { return true; }
-
-    public int contentLengthRemaining() { return 0; }
-
-    public int _estimatedContentLength(int numFileUploads, int numNonFileUploads) { return 0; }
-
-    public WOFormData nextFormData() { return null; }
-
-    protected void _invalidateFormData(WOFormData data) {}
-
-    protected WOFormData _currentFormData() { return null; }
-
-    protected WOFormData _nextFormData() { return null; }
-
-    private WOFormData _nextFormDataInList() { return null; }
-
-    protected void _pushFormData(WOFormData newData) {}
-
-    protected void _addFormData(WOFormData newData) {}
-
-    static  {}
-
-    private LinkedList _formDataList;
-    private LinkedList _formDataStack;
-    int _formDataIndex;
-    private int _nextFormDataIndex;
-    boolean _closed;
-    boolean _isFirstFormData;
-    boolean _prematureTermination;
-    protected String _boundary;
-    byte _separator[];
-    private WOCaseInsensitiveDictionary _multipartHeaders;
-    protected WORequest _request;
-    WONoCopyPushbackInputStream _bis;
-    static byte dashDash[];
-    static byte CRLF[];
+    /**
+     * This is the primary method for the iterator. By calling this method, the next form data element is returned, wrapped in a WOFormData object. When the end of the content data is reached, this method returns null. Note that each time this method is invoked, it looks at the previously returned object. If that object represents a file upload, by having the filename sub-header in its content-disposition headers, it will have the file data set to null. Thus, if you are using this method to upload files, you must use up the file data as you get the WOFormData objects. If the previous object was a file upload, even if you have a reference to the InputStream, it is summarily closed once nextFormData is called again.
+     */
+    public com.webobjects.appserver.WOMultipartIterator.WOFormData nextFormData(){
+        return null; //TODO codavaj!!
+    }
 
 }

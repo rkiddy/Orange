@@ -1,155 +1,62 @@
-
 package com.webobjects.eoapplication;
+/**
+ * The EODialogs class offers several static methods which can be used to run alert panels and dialogs.
+ */
+public class EODialogs{
+    public static final int AnyValueAllowed=0;
 
-import com.webobjects.eointerface.swing.*;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.text.Document;
+    public static final int CancelOperation=2;
 
+    public static final int DefaultOperation=0;
 
-public class EODialogs {
-    private static class _StringInputHandler {
-        public class _OperationListener
-            implements ActionListener {
+    public static final int NoWhitespaceAllowed=1;
 
+    public static final int OnlyJavaIdentifiersAllowed=2;
 
-            public _OperationListener(int operation) { return null; }
+    public static final int OptionalOperation=1;
 
-            public void actionPerformed(ActionEvent event) {}
-
-            private int _listenerOperation;
-            final _StringInputHandler this$0;
-
-        }
-
-        public class _DocumentListener
-            implements DocumentListener {
-
-
-            public _DocumentListener() { return null; }
-
-            public void _updateEnabling() {}
-
-            public void changedUpdate(DocumentEvent event) {}
-
-            public void insertUpdate(DocumentEvent event) {}
-
-            public void removeUpdate(DocumentEvent event) {}
-
-            final _StringInputHandler this$0;
-
-        }
-
-
-
-        public _StringInputHandler(String suggestedValue, String defaultsIdentifier, boolean allowEmptyString, int validationStrategy) { return null; }
-
-        private void _runDialog(String title, String message, String operation, String optionalOperation, String alternateOperation, int minimumInputFieldWidth) {}
-
-        public String value(String title, String message, String operation, String alternateOperation, int minimumInputFieldWidth) { return null; }
-
-        public _InputData inputData(String title, String message, String operation, String optionalOperation, int minimumInputFieldWidth) { return null; }
-
-        static JTextField access$000(_StringInputHandler x0) { return null; }
-
-        static boolean access$100(_StringInputHandler x0) { return true; }
-
-        static int access$200(_StringInputHandler x0) { return 0; }
-
-        static JButton access$300(_StringInputHandler x0) { return null; }
-
-        static JButton access$400(_StringInputHandler x0) { return null; }
-
-        static JLabel access$500(_StringInputHandler x0) { return null; }
-
-        static String access$602(_StringInputHandler x0, String x1) { return null; }
-
-        static int access$702(_StringInputHandler x0, int x1) { return 0; }
-
-        static JDialog access$800(_StringInputHandler x0) { return null; }
-
-        private String _defaultsIdentifier;
-        private String _suggestedValue;
-        private boolean _allowEmptyString;
-        private int _validationStrategy;
-        private String _value;
-        private int _operation;
-        private JDialog _dialog;
-        private JTextField _textField;
-        private JButton _operationButton;
-        private JButton _optionalOperationButton;
-        private JButton _alternateOperationButton;
-        private JLabel _invalidWarningField;
-
-
-        static JTextField access$000(_StringInputHandler x0) { return null; }
-
-        static boolean access$100(_StringInputHandler x0) { return true; }
-
-        static int access$200(_StringInputHandler x0) { return 0; }
-
-        static JButton access$300(_StringInputHandler x0) { return null; }
-
-        static JButton access$400(_StringInputHandler x0) { return null; }
-
-        static JLabel access$500(_StringInputHandler x0) { return null; }
-
-        static String access$602(_StringInputHandler x0, String x1) { return null; }
-
-        static int access$702(_StringInputHandler x0, int x1) { return 0; }
-
-        static JDialog access$800(_StringInputHandler x0) { return null; }
+    public EODialogs(){
+         //TODO codavaj!!
     }
 
-    public static class _InputData {
-
-
-        public _InputData(String value, int operation) { return null; }
-
-        public String value() { return null; }
-
-        public int operation() { return 0; }
-
-        private String _value;
-        private int _operation;
-
+    /**
+     * Shows a panel with the title title and the message message. The user has three choices: The default choice described by defaultOperation, a second option by optionalOperation, and the third choice is "Cancel" (a localized string). If title is not specified, "Alert" (localized) is used.
+     * Returns EODialogs.DefaultOperation if the user chooses the default operation, EODialogs.OptionalOperation if the user chooses the second option, and EODialogs.CancelOperation if the user chooses the "Cancel" option.
+     */
+    public static int runChooseOperationDialog(java.lang.String title, java.lang.String message, java.lang.String defaultOperation, java.lang.String optionalOperation){
+        return 0; //TODO codavaj!!
     }
 
+    /**
+     * Shows a panel with the title title and the message message. The user has two choices: The default choice described by operation, and the second choice is "Cancel" (a localized string). If title is not specified, "Alert" (localized) is used. Returns true if the user chooses the default operation, and false if the user chooses the "Cancel" option. You typically use this method for dialogs of the type "Do you really want to perform this operation?"
+     */
+    public static boolean runConfirmOperationDialog(java.lang.String title, java.lang.String message, java.lang.String operation){
+        return false; //TODO codavaj!!
+    }
 
+    /**
+     * Shows a panel with the title title and the message message. The user has two choices: The default choice described by operation, and the second choice described by alternateOperation (and defaults to a "Cancel" (a localized string) operation if not specified). If title is not specified, "Alert" (localized) is used. Returns true if the user chooses the default operation, and false if the user chooses the alternate ("Cancel") option. You typically use this method for "Do Something/Don't Something" dialogs.
+     */
+    public static boolean runConfirmOperationDialog(java.lang.String title, java.lang.String message, java.lang.String operation, java.lang.String alternateOperation){
+        return false; //TODO codavaj!!
+    }
 
-    public EODialogs() { return null; }
+    /**
+     * Shows an error panel with the title title and the message message. The user confirms the dialog with an "Ok" button. If title is not specified, "Error" (localized) is used.
+     */
+    public static void runErrorDialog(java.lang.String title, java.lang.String message){
+        return; //TODO codavaj!!
+    }
 
-    private static int _runOptionsDialog(JOptionPane optionPane, String title, Object options[], int values[]) { return null; }
+    /**
+     * Shows an information panel with the title title and the message message. The user confirms the dialog with an "Ok" button. If title is not specified, "Information" (localized) is used.
+     */
+    public static void runInformationDialog(java.lang.String title, java.lang.String message){
+        return; //TODO codavaj!!
+    }
 
-    public static int runChooseOperationDialog(String title, String message, String defaultOperation, String optionalOperation) { return null; }
-
-    public static boolean runConfirmOperationDialog(String title, String message, String operation) { return null; }
-
-    public static boolean runConfirmOperationDialog(String title, String message, String operation, String alternateOperation) { return null; }
-
-    public static void runInformationDialog(String title, String message) { return null; }
-
-    public static void runErrorDialog(String title, String message) { return null; }
-
-    public static String runStringInputDialog(String title, String message, String operation, String alternateOperation, int minimumInputFieldWidth, String suggestedValue, String defaultsIdentifier, boolean allowEmptyString, 
-            int validationStrategy) { return null; }
-
-    public static _InputData _runChooseStringInputDialog(String title, String message, String operation, String optionalOperation, int minimumInputFieldWidth, String suggestedValue, String defaultsIdentifier, boolean allowEmptyString, 
-            int validationStrategy) { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    public static final int DefaultOperation = 0;
-    public static final int OptionalOperation = 1;
-    public static final int CancelOperation = 2;
-    public static final int AnyValueAllowed = 0;
-    public static final int NoWhitespaceAllowed = 1;
-    public static final int OnlyJavaIdentifiersAllowed = 2;
+    public static java.lang.String runStringInputDialog(java.lang.String title, java.lang.String message, java.lang.String operation, java.lang.String alternateOperation, int minimumInputFieldWidth, java.lang.String suggestedValue, java.lang.String defaultsIdentifier, boolean allowEmptyString, int validationStrategy){
+        return null; //TODO codavaj!!
+    }
 
 }

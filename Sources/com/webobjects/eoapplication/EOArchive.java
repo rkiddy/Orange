@@ -1,89 +1,43 @@
-
 package com.webobjects.eoapplication;
-
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.foundation.*;
-import java.awt.*;
-import java.beans.*;
-import java.io.ByteArrayInputStream;
-import java.io.ObjectInputStream;
-import java.lang.reflect.*;
-import javax.swing.JLayeredPane;
-import javax.swing.JRootPane;
-
-
-public class EOArchive {
-    public static interface _ObjectInstantiationDelegate {
-
-
-        public abstract Object objectForOutletPath(EOArchive eoarchive, String s);
-
-
-
-        public static final Class _CLASS = null;
-        public static final String NullObject = "NullObject";
-
+/**
+ * EOArchive is used to load interface files created with the Interface Builder application. It is important that the file's owner of the interface file is specified correctly in Interface Builder. The class of the file's owner has to be set exactly to the class of the object which is the owner of the archive at runtime, including the full package name.
+ */
+public class EOArchive{
+    /**
+     * Creates a new archive object with the owner owner and the disposably registry registry for the objects loaded from the archive. You never instantiate an EOArchive directly. Rather, you use the loadArchiveNamed methods to load interface files.
+     * Parameters:owner - the owner of the archiveregistry - the disposable registry for the objects loaded from the archive
+     */
+    public EOArchive(java.lang.Object owner, com.webobjects.foundation.NSDisposableRegistry registry){
+         //TODO codavaj!!
     }
 
+    /**
+     * Logs a debug message.
+     */
+    protected void debug(java.lang.String message){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Returns the disposable registry for the objects loaded from the archive. All objects loaded from the archive are added to this registry and are disposed off together with the registry object.
+     */
+    public com.webobjects.foundation.NSDisposableRegistry disposableRegistry(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOArchive(Object owner, NSDisposableRegistry registry) { return null; }
+    /**
+     * Loads an archive. archiveName is the name of the interface file created in Interface Builder, owner is the owner of the archive (the object loading the archive), and archivePackageName is the package name of the owner's class (you can just pass null and this method will find the package name automatically). All objects loaded from the archive will be placed in the disposable registry registry (which can also be null if you don't need a disposable registry), so that you can easily dispose off all the objects loaded by disposing the registry.
+     * If the archive can't be found or there is an error while loading it, this method throws a runtime exception.
+     */
+    public static com.webobjects.foundation.NSDictionary loadArchiveNamed(java.lang.String archiveName, java.lang.Object owner, java.lang.String archivePackageName, com.webobjects.foundation.NSDisposableRegistry registry){
+        return null; //TODO codavaj!!
+    }
 
-    protected void _awaken() {}
-
-    public NSDisposableRegistry disposableRegistry() { return null; }
-
-    protected Method _beansBasedSetterfor(Object receiver, String key) { return null; }
-
-    private static void _addWithPlatformAndLanguageToArchiveClassNames(NSMutableArray classNames, String archiveName, String packageName, String language, String platform) { return null; }
-
-    private static void _addWithLanguageToArchiveClassNames(NSMutableArray classNames, String archiveName, String packageName, String language) { return null; }
-
-    private static NSArray _classNamesForArchiveNamed(String archiveName, String packageName) { return null; }
-
-    private static Class _bestClassForArchiveNamed(String archiveName, String packageName) { return null; }
-
-    protected void _connect(Object source, Object destination, String outlet) {}
-
-    protected void _construct() {}
-
-    protected void debug(String message) {}
-
-    public Object _registered(Object object, String name) { return null; }
-
-    protected Object _owner() { return null; }
-
-    protected void _init() {}
-
-    protected boolean _isContentPane(Component component) { return true; }
-
-    protected Object _javaBeanFromBytes(byte bytes[]) { return null; }
-
-    public static NSDictionary loadArchiveNamed(String archiveName, Object owner, String archivePackageName, NSDisposableRegistry registry) { return null; }
-
-    public NSDictionary namedObjects() { return null; }
-
-    protected Object _newCustomObjectClassNamed(String className) { return null; }
-
-    protected void _setFontForComponent(Component component, String fontName, int size, int style) {}
-
-    protected void _setOwner(Object owner) {}
-
-    protected boolean _setValueForBeanProperty(Object object, Object value, String name) { return true; }
-
-    protected void _setValueForKey(Object object, Object value, String name) {}
-
-    public String _stringForDimension(Dimension dimension) { return null; }
-
-    public String _stringForDimensions(int width, int height) { return null; }
-
-    static  {}
-
-    public static final Class _CLASS = null;
-    private static NSMutableDictionary _archiveNameToClassMap;
-    private Object _owner;
-    private NSDisposableRegistry _disposableRegistry;
-    private NSMutableDictionary _namedObjects;
-    protected NSMutableDictionary _replacedObjects;
+    /**
+     * Returns a dictionary with all named objects loaded from the archive. Not all objects are named. The keys in the dictionary are the names, the values are the objects.
+     */
+    public com.webobjects.foundation.NSDictionary namedObjects(){
+        return null; //TODO codavaj!!
+    }
 
 }

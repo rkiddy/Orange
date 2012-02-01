@@ -1,145 +1,227 @@
-
 package com.webobjects.appserver.xml;
+/**
+ * Use this class to decode an object from XML data. Decoding can take place either with or without a mapping model. The mapping model provides greater control over the decoding process and is typically used when you are encoding and decoding XML that is destined for, or originates from, an external source. When the WOXMLCoder and WOXMLDecoder are used as a simple archiving mechanism, the mapping model is usually not necessary. For more information on the mapping model, see the "The Format of the Mapping Model" in the package description.
+ * See Also:WOXMLCoder, WOXMLCoding, WOXMLDecoder.decodeRootObject(NSData), WOXMLDecoder.decodeRootObject(String), NSKeyValueCoding
+ */
+public class WOXMLDecoder implements com.webobjects.foundation.NSKeyValueCoding{
+    protected WOXMLDecoder(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.xml._private._DecodingContentHandler;
-import com.webobjects.appserver.xml._private._DecodingHandler;
-import com.webobjects.appserver.xml._private._DecodingNode;
-import com.webobjects.appserver.xml._private._WOXMLMappingDecoder;
-import com.webobjects.eocontrol.*;
-import com.webobjects.foundation.*;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.text.SimpleDateFormat;
-import java.util.Stack;
-import java.util.TimeZone;
-import org.apache.xerces.impl.dv.util.Base64;
-import org.xml.sax.*;
+    protected void addObjectToCache(com.webobjects.appserver.xml._private._DecodingNode childNode, java.lang.Object anObject){
+        return; //TODO codavaj!!
+    }
 
-
-public class WOXMLDecoder
-    implements NSKeyValueCoding {
-
-
-    public String toString() { return null; }
-
-    public void _setDecodingStack(Stack aStack) {}
-
-    public void _setUseTopOfStack(boolean yn) {}
-
-    private _DecodingNode _elementForKey(String aKey) { return null; }
-
-    private Object objectFromCache(_DecodingNode childNode) { return null; }
-
-    protected void addObjectToCache(_DecodingNode childNode, Object anObject) {}
-
-    private Object constructObject(_DecodingNode childNode, Class aClass, Class parameterTypes[], Object constructorArgs[]) { return null; }
-
-    private Object constructFromNodeContent(_DecodingNode childNode, Class aClass) { return null; }
-
-    private Object _decodeNumber(_DecodingNode childNode, Class aClass) { return null; }
-
-    private Object _decodeData(_DecodingNode childNode, Class aClass) { return null; }
-
-    protected Object _decodeString(_DecodingNode childNode, Class aClass) { return null; }
-
-    private Object _decodeBoolean(_DecodingNode childNode, Class aClass) { return null; }
-
-    private Object _decodeDate(_DecodingNode childNode, Class aClass) { return null; }
-
-    private Object _decodeArray(_DecodingNode childNode, Class aClass) { return null; }
-
-    private Object _decodeDictionary(_DecodingNode childNode, Class aClass) { return null; }
-
-    private Object _decodeEO(_DecodingNode childNode, Class aClass) { return null; }
-
-    protected WOXMLDecoder() { return null; }
+    protected com.webobjects.appserver.xml._private._DecodingContentHandler contentHandler(){
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method parserClassName is deprecated
+     * Decodes the XML data in the internal state of this decoder and returns a boolean value based on the key specified. Use this method within the single-argument constructor that follows the protocol described in the class description. It is used to set a boolean instance variable to the value of the key element within the XML being decoded. For example, to extract the marital status from the following XML:
+     * element type=
+     * Person
+     * objectID=
+     * 4
+     * Name type=
+     * java.lang.String
+     * objectID=
+     * 5
+     * John Smith
+     * /Name
+     * MaritalStatus type=
+     * boolean
+     * True
+     * /MaritalStatus
+     * NumberOfChildren type=
+     * int
+     * 2
+     * /NumberOfChildren
+     * /element
+     * You could use something similar to the following:
+     * boolean married = decoder.decodeBooleanForKey(
+     * MaritalStatus
+     * );
      */
-
-    public String parserClassName() { return null; }
+    public boolean decodeBooleanForKey(java.lang.String aKey){
+        return false; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method setParserrClassName is deprecated
+     * Decodes the XML data in the internal state of this decoder and returns a double value based on the key specified. Use this method within the single-argument constructor that follows the protocol described in the class description. It is used to set a double instance variable to the value of the key element within the XML being decoded.
      */
-
-    public void setParserrClassName(String newValue) {}
-
-    public String xmlReaderClassName() { return null; }
-
-    public void setXMLReaderClassName(String newValue) {}
-
-    public static WOXMLDecoder decoder() { return null; }
-
-    public static WOXMLDecoder decoderWithMapping(String mappingModelFile) { return null; }
+    public double decodeDoubleForKey(java.lang.String aKey){
+        return 0.0d; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method handler is deprecated
+     * Decodes the XML data in the internal state of this decoder and returns a float value based on the key specified. Use this method within the single-argument constructor that follows the protocol described in the class description. It is used to set a float instance variable to the value of the key element within the XML being decoded.
      */
-
-    protected _DecodingHandler handler() { return null; }
-
-    protected _DecodingContentHandler contentHandler() { return null; }
+    public float decodeFloatForKey(java.lang.String aKey){
+        return 0.0f; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method parser is deprecated
+     * Decodes the XML data in the internal state of this decoder and returns an int value based on the key specified. Use this method within the single-argument constructor that follows the protocol described in the class description. It is used to set a int instance variable to the value of the key element within the XML being decoded. For example, to extract the number of children from the following XML:
+     * element type=
+     * Person
+     * objectID=
+     * 4
+     * Name type=
+     * java.lang.String
+     * objectID=
+     * 5
+     * John Smith
+     * /Name
+     * MaritalStatus type=
+     * boolean
+     * True
+     * /MaritalStatus
+     * NumberOfChildren type=
+     * int
+     * 2
+     * /NumberOfChildren
+     * /element
+     * You could use something similar to the following:
+     * int children = decoder.decodeIntForKey(
+     * NumberOfChildren
+     * );
      */
-
-    public Parser parser() { return null; }
-
-    public XMLReader xmlReader() { return null; }
-
-    public synchronized void setEncoding(String encoding) { return null; }
-
-    public synchronized String encoding() { return null; }
-
-    public synchronized Object decodeRootObject(String xmlFile) { return null; }
-
-    public synchronized Object decodeRootObject(NSData data) { return null; }
-
-    public synchronized Object decodeRootObject(InputSource is) { return null; }
+    public int decodeIntForKey(java.lang.String aKey){
+        return 0; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method decodeRootObjectWithParser is deprecated
+     * Decodes the XML data in the internal state of this decoder and constructs an object based on the key specified. It is called either implicitly from decodeRootObject or directly from the single-argument constructor that follows the protocol described in the class description. When used in the single-argument constructor, it is used to set up an instance variable to a newly constructed object whose class and content depends upon the value of the key.
      */
+    public java.lang.Object decodeObjectForKey(java.lang.String aKey){
+        return null; //TODO codavaj!!
+    }
 
-    private Object decodeRootObjectWithParser(InputSource is) { return null; }
-
-    private Object decodeRootObjectWithXMLReader(InputSource is) { return null; }
-
-    protected String getChildNodeType(_DecodingNode childNode) { return null; }
-
-    public Object decodeObjectForKey(String aKey) { return null; }
-
-    public boolean decodeBooleanForKey(String aKey) { return true; }
-
-    public int decodeIntForKey(String aKey) { return 0; }
-
-    public float decodeFloatForKey(String aKey) { return null; }
-
-    public double decodeDoubleForKey(String aKey) { return null; }
-
-    public Object valueForKey(String key) { return null; }
-
-    public void takeValueForKey(Object value, String key) {}
-
-    private Stack _decodingStack;
-    private boolean _useTopOfStack;
-    private NSMutableDictionary _decodedObjectCache;
     /**
-     * @deprecated Field _handler is deprecated
+     * Returns a default decoder capable of decoding objects into XML data without using a mapping model. This method corresponds directly with the coder factory method in WOXMLCoder. See class description for details on how this coder can be used.
      */
-    private _DecodingHandler _handler;
-    private _DecodingContentHandler _contentHandler;
-    private String _parserClassName;
+    public static com.webobjects.appserver.xml.WOXMLDecoder decoder(){
+        return null; //TODO codavaj!!
+    }
+
     /**
-     * @deprecated Field _parser is deprecated
+     * Decodes the XML specified by an InputSource is and constructs a corresponding object. You can learn more about org.xml.sax.InputSource from
+     * . The input source can either contain a complete XML document or an XML segment. If decoding an XML segment (where there's no XML declaration), you can change the character encoding of the data) by using setEncoding.
      */
-    private Parser _parser;
-    private XMLReader _xmlReader;
-    private String _encoding;
+    public java.lang.Object decodeRootObject(org.xml.sax.InputSource is){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Decodes the XML specified by an NSData data and constructs a corresponding object. It can either contain a complete XML document or an XML segment. If decoding an XML segment (where there's no XML declaration), you can change the character encoding of the data) by using setEncoding.
+     */
+    public java.lang.Object decodeRootObject(com.webobjects.foundation.NSData data){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Decodes the XML specified by the URL xmlFile and constructs a corresponding object. The file can either contain a complete XML document or an XML segment. If decoding an XML segment (where there's no XML declaration), you can change the character encoding of the data) by using setEncoding.
+     */
+    public java.lang.Object decodeRootObject(java.lang.String xmlFile){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Returns a coder object initialized with the mapping model specified by mappingModelFile. For more information on the mapping model, see the "The Format of the Mapping Model" in the package description. This method corresponds directly with the coderWithMapping factory method in WOXMLCoder. See class description for details on how this coder can be used.
+     */
+    public static com.webobjects.appserver.xml.WOXMLDecoder decoderWithMapping(java.lang.String mappingModelFile){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Gets the character encoding set previously for the decoding process.
+     */
+    public java.lang.String encoding(){
+        return null; //TODO codavaj!!
+    }
+
+    protected java.lang.String getChildNodeType(com.webobjects.appserver.xml._private._DecodingNode childNode){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     */
+    protected com.webobjects.appserver.xml._private._DecodingHandler handler(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * Gets the current parser used for parsing XML data. The default parser can be changed by using setParserClassName.
+     */
+    public org.xml.sax.Parser parser(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * Gets the class name of the current parser used for parsing the XML data. An example is "org.apache.xerces.parsers.SAXParser".
+     */
+    public java.lang.String parserClassName(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Sets the character encoding. The encoding must be a string acceptable for an XML encoding declaration (see section 4.3.3 of the XML 1.0 recommendation). Use judiciously as the encoding overrides the encoding specified in the XML declaration of the data to be parsed.
+     * This method has no effect when the application provides a character stream since by definition, the characters had already been extracted using a particular encoding.
+     */
+    public void setEncoding(java.lang.String encoding){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * Sets the current parser's class name so that a new parser of that class can be used. Unless there is a problem with the default parser, you should not need to change it.
+     * This method must be invoked before the parser is instantiated (by the parser method); once the parser has been instantiated, calling this method has no effect.
+     */
+    public void setParserrClassName(java.lang.String newValue){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Sets the current parser's class name so that a new parser of that class can be used. Unless there is a problem with the default parser, you should not need to change it.
+     * This method must be invoked before the parser is instantiated (by the parser method); once the parser has been instantiated, calling this method has no effect.
+     */
+    public void setXMLReaderClassName(java.lang.String newValue){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Conformance to NSKeyValueCoding.
+     */
+    public void takeValueForKey(java.lang.Object value, java.lang.String key){
+        return; //TODO codavaj!!
+    }
+
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Conformance to NSKeyValueCoding.
+     */
+    public java.lang.Object valueForKey(java.lang.String key){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Gets the current parser used for parsing XML data. The default parser can be changed by using setParserClassName.
+     */
+    public org.xml.sax.XMLReader xmlReader(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Gets the class name of the current parser used for parsing the XML data. An example is "org.apache.xerces.parsers.SAXParser".
+     */
+    public java.lang.String xmlReaderClassName(){
+        return null; //TODO codavaj!!
+    }
 
 }

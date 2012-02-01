@@ -1,20 +1,18 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * See Also:Serialized Form
+ */
+public class WODictionaryDeserializerFactory extends org.apache.axis.encoding.ser.BaseDeserializerFactory{
+    public WODictionaryDeserializerFactory(){
+         //TODO codavaj!!
+    }
 
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.DeserializerFactory;
-import org.apache.axis.encoding.ser.BaseDeserializerFactory;
+    public WODictionaryDeserializerFactory(java.lang.Class aJavaType, javax.xml.namespace.QName anXmlType){
+         //TODO codavaj!!
+    }
 
-
-public class WODictionaryDeserializerFactory extends BaseDeserializerFactory {
-
-
-    public WODictionaryDeserializerFactory() { return null; }
-
-    public WODictionaryDeserializerFactory(Class aJavaType, QName anXmlType) { return null; }
-
-    public static DeserializerFactory create(Class aJavaType, QName anXmlType) { return null; }
-
-    private static final long serialVersionUID = 0xea36c7d7L;
+    public static org.apache.axis.encoding.DeserializerFactory create(java.lang.Class aJavaType, javax.xml.namespace.QName anXmlType){
+        return null; //TODO codavaj!!
+    }
 
 }

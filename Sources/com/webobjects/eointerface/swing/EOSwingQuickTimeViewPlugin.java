@@ -1,32 +1,58 @@
-
 package com.webobjects.eointerface.swing;
+/**
+ * EOSwingQuickTimeViewPlugin is a concrete subclass of EOValueAssociation.ValuePlugin that displays QuickTime content from a URL which is passed in as a value, using an EOQuickTimeView.
+ * Associations classes: EOValueAssociation
+ * Widgets classes: EOQuickTimeView
+ */
+public class EOSwingQuickTimeViewPlugin extends com.webobjects.eointerface.EOValueAssociation.ValuePlugin{
+    /**
+     * Creates a new EOSwingQuickTimeViewPlugin connected to an association and a UI widget.
+     * Parameters:association - EOValueAssociation object for the plugin to usewidget - EOQuickTimeView that the plugin will manage
+     */
+    public EOSwingQuickTimeViewPlugin(com.webobjects.eointerface.EOWidgetAssociation association, java.lang.Object widget){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eointerface.EOValueAssociation;
-import com.webobjects.eointerface.EOWidgetAssociation;
-import com.webobjects.foundation._NSUtilities;
+    /**
+     * Clean up (end) the plugin's connection to its widget. In this case, however, it just re-initializes the URL value.
+     */
+    public void breakConnection(){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Establishes a connection between the plugin and its UI widget. In this case, however, it just re-initializes the URL value.
+     */
+    public void establishConnection(){
+        return; //TODO codavaj!!
+    }
 
-public class EOSwingQuickTimeViewPlugin extends com.webobjects.eointerface.EOValueAssociation.ValuePlugin {
+    /**
+     * Set the URL for the QuickTime movie to be diplayed, and set the enabled state of the view.
+     */
+    public void setValue(java.lang.Object value, boolean isEnabled){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Returns the specific unacceptable aspects for this plugin.
+     */
+    public java.lang.String[] unacceptableAspects(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSwingQuickTimeViewPlugin(EOWidgetAssociation association, Object widget) { return null; }
+    /**
+     * Overrides useURLAsValue to indicate (mainly for internal purposes) that the value is not the data itself, but an URL for some data.
+     */
+    public boolean useURLAsValue(){
+        return false; //TODO codavaj!!
+    }
 
-    public void establishConnection() {}
-
-    public void breakConnection() {}
-
-    public String[] unacceptableAspects() { return null; }
-
-    public boolean useURLAsValue() { return true; }
-
-    public void setValue(Object value, boolean isEnabled) {}
-
-    public Object value() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private static final String _UnacceptableAspects[];
-    private String _url;
+    /**
+     * Returns the value set with setValue as URL for the QuickTime content.
+     */
+    public java.lang.Object value(){
+        return null; //TODO codavaj!!
+    }
 
 }

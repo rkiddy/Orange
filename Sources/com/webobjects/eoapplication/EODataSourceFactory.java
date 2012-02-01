@@ -1,33 +1,25 @@
-
 package com.webobjects.eoapplication;
+public abstract class EODataSourceFactory{
+    public EODataSourceFactory(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eocontrol.*;
-import com.webobjects.foundation._NSUtilities;
+    public static com.webobjects.eoapplication.EODataSourceFactory defaultDataSourceFactory(){
+        return null; //TODO codavaj!!
+    }
 
-public abstract class EODataSourceFactory {
+    public abstract boolean isDetailDataSource(com.webobjects.eocontrol.EODataSource dataSource);
 
+    public abstract boolean isMasterDataSource(com.webobjects.eocontrol.EODataSource dataSource);
 
-    public static void _useDefaultDataSourceFactoryIfNotSpecified(EODataSourceFactory dataSourceFactory) { return null; }
+    public abstract com.webobjects.eocontrol.EODataSource newMasterDataSource(com.webobjects.eocontrol.EOEditingContext editingContext, java.lang.String entityName, com.webobjects.eocontrol.EOFetchSpecification fetchSpecification);
 
-    public static void setDefaultDataSourceFactory(EODataSourceFactory dataSourceFactory) { return null; }
+    public abstract com.webobjects.eocontrol.EODataSource newMasterDataSourceWithFetchSpecificationName(com.webobjects.eocontrol.EOEditingContext editingContext, java.lang.String entityName, java.lang.String fetchSpecificationName);
 
-    public static EODataSourceFactory defaultDataSourceFactory() { return null; }
+    public abstract void setAuxilaryQualifierOnDataSource(com.webobjects.eocontrol.EODataSource dataSource, com.webobjects.eocontrol.EOQualifier qualifier);
 
-    public EODataSourceFactory() { return null; }
-
-    public abstract EODataSource newMasterDataSourceWithFetchSpecificationName(EOEditingContext eoeditingcontext, String s, String s1);
-
-    public abstract EODataSource newMasterDataSource(EOEditingContext eoeditingcontext, String s, EOFetchSpecification eofetchspecification);
-
-    public abstract boolean isMasterDataSource(EODataSource eodatasource);
-
-    public abstract boolean isDetailDataSource(EODataSource eodatasource);
-
-    public abstract void setAuxilaryQualifierOnDataSource(EODataSource eodatasource, EOQualifier eoqualifier);
-
-    static  {}
-
-    public static final Class _CLASS;
-    private static EODataSourceFactory _dataSourceFactory;
+    public static void setDefaultDataSourceFactory(com.webobjects.eoapplication.EODataSourceFactory dataSourceFactory){
+        return; //TODO codavaj!!
+    }
 
 }

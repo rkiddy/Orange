@@ -1,84 +1,130 @@
-
 package com.webobjects.eoaccess.synchronization;
+/**
+ * EOGenerationOptions is a helper class that describe the type of generation that need to be done when generating a new database. Please note that not all options are supported by all databases. Please refer to the plug-in documentation for details.
+ * Since: 5.4
+ */
+public class EOSchemaGenerationOptions{
+    /**
+     * Default constructor
+     */
+    public EOSchemaGenerationOptions(){
+         //TODO codavaj!!
+    }
 
+    public com.webobjects.eoaccess.synchronization.EOSchemaGenerationOptions clone(){
+        return null; //TODO codavaj!!
+    }
 
-public class EOSchemaGenerationOptions {
+    public boolean createDatabase(){
+        return false; //TODO codavaj!!
+    }
 
+    public boolean createIndexes(){
+        return false; //TODO codavaj!!
+    }
 
-    public EOSchemaGenerationOptions() { return null; }
+    public boolean createPrimaryKeySupport(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean createDatabase() { return true; }
+    public boolean createTables(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setCreateDatabase(boolean value) {}
+    public boolean dropDatabase(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean createIndexes() { return true; }
+    public boolean dropIndexes(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setCreateIndexes(boolean value) {}
+    public boolean dropPrimaryKeySupport(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean createPrimaryKeySupport() { return true; }
+    public boolean dropTables(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setCreatePrimaryKeySupport(boolean value) {}
+    public void fieldsToString(java.lang.StringBuilder aLog){
+        return; //TODO codavaj!!
+    }
 
-    public boolean createTables() { return true; }
+    public boolean foreignKeyConstraints(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setCreateTables(boolean value) {}
+    public boolean manageForeignKeyConstraints(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean dropDatabase() { return true; }
+    public boolean managePrimaryKeyConstraints(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setDropDatabase(boolean value) {}
+    public boolean managePrimaryKeySupport(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean dropIndexes() { return true; }
+    public boolean primaryKeyConstraints(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setDropIndexes(boolean value) {}
+    public void setCreateDatabase(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean dropPrimaryKeySupport() { return true; }
+    public void setCreateIndexes(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public void setDropPrimaryKeySupport(boolean value) {}
+    public void setCreatePrimaryKeySupport(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean dropTables() { return true; }
+    public void setCreateTables(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public void setDropTables(boolean value) {}
+    public void setDropDatabase(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean foreignKeyConstraints() { return true; }
+    public void setDropIndexes(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public void setForeignKeyConstraints(boolean value) {}
+    public void setDropPrimaryKeySupport(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean primaryKeyConstraints() { return true; }
+    public void setDropTables(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public void setPrimaryKeyConstraints(boolean value) {}
+    public void setForeignKeyConstraints(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean manageForeignKeyConstraints() { return true; }
+    public void setManageForeignKeyConstraints(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public void setManageForeignKeyConstraints(boolean value) {}
+    public void setManagePrimaryKeyConstraints(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean managePrimaryKeyConstraints() { return true; }
+    public void setManagePrimaryKeySupport(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public void setManagePrimaryKeyConstraints(boolean value) {}
+    public void setPrimaryKeyConstraints(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean managePrimaryKeySupport() { return true; }
-
-    public void setManagePrimaryKeySupport(boolean value) {}
-
-    public EOSchemaGenerationOptions clone() { return null; }
-
-    public String toString() { return null; }
-
-    public void fieldsToString(StringBuilder aLog) {}
-
-    public volatile Object clone() throws CloneNotSupportedException { return null; }
-
-    protected Boolean _createDatabase;
-    protected Boolean _dropDatabase;
-    protected Boolean _createTables;
-    protected Boolean _dropTables;
-    protected Boolean _createPrimaryKeySupport;
-    protected Boolean _dropPrimaryKeySupport;
-    protected Boolean _createIndexes;
-    protected Boolean _dropIndexes;
-    protected Boolean _primaryKeyConstraints;
-    protected Boolean _foreignKeyConstraints;
-    protected Boolean _managePrimaryKeySupport;
-    protected Boolean _managePrimaryKeyConstraints;
-    protected Boolean _manageForeignKeyConstraints;
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

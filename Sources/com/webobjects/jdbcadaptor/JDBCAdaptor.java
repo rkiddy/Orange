@@ -1,130 +1,268 @@
-
 package com.webobjects.jdbcadaptor;
-
-import com.webobjects.eoaccess.*;
-import com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationFactory;
-import com.webobjects.foundation.*;
-import java.util.*;
-
-
-public class JDBCAdaptor extends EOAdaptor {
-
-
-    public JDBCAdaptor(String name) { return null; }
-
-    public void setConnectionDictionary(NSDictionary dictionary) throws IllegalArgumentException {}
-
-    protected NSDictionary jdbcInfo() { return null; }
-
-    protected NSDictionary typeInfo() { return null; }
-
-    public Properties connectionProperties() { return null; }
-
-    public boolean canServiceModel(EOModel model) { return true; }
-
-    protected int varcharMaxLength() { return 0; }
-
-    public void assertConnectionDictionaryIsValid() {}
-
-    private JDBCPlugIn _createPlugIn() { return null; }
-
-    protected JDBCContext _cachedAdaptorContext() { return null; }
-
-    public EOAdaptorContext createAdaptorContext() { return null; }
-
-    public void handleDroppedConnection() {}
-
-    public JDBCPlugIn plugIn() { return null; }
-
-    public String plugInName() { return null; }
-
-    public Class defaultExpressionClass() { return null; }
-
-    public EOSQLExpressionFactory expressionFactory() { return null; }
-
-    public EOSchemaSynchronizationFactory schemaSynchronizationFactory() { return null; }
+/**
+ * JDBCAdaptor is a concrete subclass of EOAdaptor that use JDBC for connecting to a database. It can be customized for a particular database and JDBC driver by using a JDBCPlugIn. Application code rarely needs to interact directly with an adaptor and should not normally use adaptor-specific API. All the useful API resides in EOAdaptor and the other generic EOAccess framework classes.
+ * See Also:EOAdaptor, JDBCPlugIn
+ */
+public class JDBCAdaptor extends com.webobjects.eoaccess.EOAdaptor{
+    /**
+     * Key for JNDI datasource name
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String DataSourceJndiNameKey="DataSourceJndiName";
 
     /**
-     * @deprecated Method synchronizationFactory is deprecated
+     * Key labeling the JDBC driver class name in the connection dictionary.
+     * See Also:Constant Field Values
      */
+    public static final java.lang.String DriverKey="driver";
 
-    public EOSchemaGeneration synchronizationFactory() { return null; }
+    /**
+     * Connection dictionary key labeling database-specific information contained in an NSDictionary, commonly referred to as "JDBC info".
+     * See Also:JDBCAdaptor.jdbcInfo(), Constant Field Values
+     */
+    public static final java.lang.String JDBCInfoKey="jdbc2Info";
 
-    public Object fetchedValueForValue(Object value, EOAttribute attribute) { return null; }
+    /**
+     * Key labeling the password in the connection dictionary.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String PasswordKey="password";
 
-    public NSArray externalTypesWithModel(EOModel model) { return null; }
+    /**
+     * Key labeling the plugin class name in the connection dictionary.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String PlugInKey="plugin";
 
-    public String externalTypeForJDBCType(int type) { return null; }
+    /**
+     * Key labeling the NSDictionary of external type information in the JDBC info dictionary.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String TypeInfoKey="typeInfo";
 
-    public boolean isValidQualifierType(String typeName, EOModel model) { return true; }
+    /**
+     * Key labeling the JDBC URL String in the connection dictionary.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String URLKey="URL";
 
-    protected String connectionDictionaryURL() { return null; }
+    /**
+     * Key labeling the user name in the connection dictionary.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String UsernameKey="username";
 
-    public String connectionURL() { return null; }
+    /**
+     * Create a JDBCAdaptor. User code should not normally create an adaptor with this constructor.
+     * See Also:EOAdaptor.adaptorWithModel(com.webobjects.eoaccess.EOModel), EOAdaptor.adaptorWithName(java.lang.String)
+     */
+    public JDBCAdaptor(java.lang.String name){
+         //TODO codavaj!!
+    }
 
-    public String username() { return null; }
+    /**
+     * Checks that the connectionary dictionary is valid by attempting to make a connection. If it fails, a JDBCAdaptorException is thrown.
+     */
+    public void assertConnectionDictionaryIsValid(){
+        return; //TODO codavaj!!
+    }
 
-    public String password() { return null; }
+    /**
+     * Assigns an appropriate external type to the attribute. The attribute should already have a value class, scale and precision. This method is invoked when reverse engineering or switching adaptors.
+     */
+    public void assignExternalTypeForAttribute(com.webobjects.eoaccess.EOAttribute attribute){
+        return; //TODO codavaj!!
+    }
 
-    public String driverName() { return null; }
+    /**
+     * Returns true if the adaptor is compatible with the model; false otherwise. The decision is made by matching the connection dictionary of the adaptor against that of the model considering the following keys: URLKey, UsernameKey, PasswordKey, DriverKey, and PlugInKey.
+     */
+    public boolean canServiceModel(com.webobjects.eoaccess.EOModel model){
+        return false; //TODO codavaj!!
+    }
 
-    private static String _objcClassNameForType(int columnType, int precision, int scale) { return null; }
+    /**
+     * Returns the JDBC URL from the adaptor's connection dictionary.
+     */
+    protected java.lang.String connectionDictionaryURL(){
+        return null; //TODO codavaj!!
+    }
 
-    private static String _javaClassNameForType(int columnType, int precision, int scale) { return null; }
+    /**
+     * Returns a Properties object specifying connection information.
+     */
+    public java.util.Properties connectionProperties(){
+        return null; //TODO codavaj!!
+    }
 
-    private static String _valueType(int columnType, int precision, int scale) { return null; }
+    /**
+     * Returns the JDBC URL that should be used for connecting to the database as specified by the plugin.
+     */
+    public java.lang.String connectionURL(){
+        return null; //TODO codavaj!!
+    }
 
-    protected static char _valueTypeCharForAttribute(EOAttribute attr) { return null; }
+    /**
+     * Returns a new JDBCContext for this adaptor.
+     */
+    public com.webobjects.eoaccess.EOAdaptorContext createAdaptorContext(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOAttribute createAttribute(String name, String columnName, int columnType, String externalType, int precision, int scale, int isNullable) { return null; }
+    /**
+     * Returns a new EOAttribute based on the arguments. This method is called during reverse engineering.
+     */
+    public com.webobjects.eoaccess.EOAttribute createAttribute(java.lang.String name, java.lang.String columnName, int columnType, java.lang.String externalType, int precision, int scale, int isNullable){
+        return null; //TODO codavaj!!
+    }
 
-    protected static NSDictionary typeInfoForModel(EOModel model) { return null; }
+    /**
+     * Returns the expression class to use for this adaptor. The expression class is normally determined by the plugin. It should be a subclass of JDBCExpression.
+     */
+    public java.lang.Class defaultExpressionClass(){
+        return null; //TODO codavaj!!
+    }
 
-    protected static NSDictionary getJDBCInfoWithConnectionDictionary(NSDictionary connectionDictionary) throws JDBCAdaptorException { return null; }
+    /**
+     * Returns the JDBC driver's name.
+     */
+    public java.lang.String driverName(){
+        return null; //TODO codavaj!!
+    }
 
-    public static String stringRepresentationForJDBCType(int columnType) { return null; }
+    /**
+     * Returns the expression factory to use for this adaptor. The expression factory is normally determined by the plugin. It should be a subclass of JDBCExpressionFactory.
+     */
+    public com.webobjects.eoaccess.EOSQLExpressionFactory expressionFactory(){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean isDroppedConnectionException(Exception exception) { return true; }
+    /**
+     * Returns the name of an external type that matches the given JDBC type type.
+     */
+    public java.lang.String externalTypeForJDBCType(int type){
+        return null; //TODO codavaj!!
+    }
 
-    private String _externalTypeForJDBCType(int type) { return null; }
+    /**
+     * Returns an NSArray of external type names for the model. This information is often cached in the connection dictionary of the model, but the adaptor can also fetch it at runtime.
+     */
+    public com.webobjects.foundation.NSArray externalTypesWithModel(com.webobjects.eoaccess.EOModel model){
+        return null; //TODO codavaj!!
+    }
 
-    private static int _intForKey(NSDictionary dict, String key) { return null; }
+    /**
+     * Calls super with the result of the plugIn's plugInValueForValue. This allows a PlugIn to influence the value. The basic behavior is the same as EOAdaptor.fetchedValueForValue.
+     */
+    public java.lang.Object fetchedValueForValue(java.lang.Object value, com.webobjects.eoaccess.EOAttribute attribute){
+        return null; //TODO codavaj!!
+    }
 
-    private static int _prependPreferredSQLTypes(int sqlTypeArray[], EOAttribute attribute) { return null; }
+    protected static com.webobjects.foundation.NSDictionary getJDBCInfoWithConnectionDictionary(com.webobjects.foundation.NSDictionary connectionDictionary) throws com.webobjects.jdbcadaptor.JDBCAdaptorException{
+        return null; //TODO codavaj!!
+    }
 
-    public void assignExternalTypeForAttribute(EOAttribute attribute) {}
+    /**
+     * Handles cleaning up when a connection is dropped. Usually not called directly.
+     */
+    public void handleDroppedConnection(){
+        return; //TODO codavaj!!
+    }
 
-    static  {}
+    /**
+     * Returns true if exception is a JDBCAdaptorException and it is considered a "dropped" connection; otherwise false. The adaptor will try to reconnect automatically from a dropped connection. The decision is based on the SQLState of the underlying SQLException that is wrapped by the JDBCAdaptorException. For any other type of Exception, this method returns false.
+     * This method defer the decision to the plug-in so that each database vendor can customize teh error detection.
+     */
+    public boolean isDroppedConnectionException(java.lang.Exception exception){
+        return false; //TODO codavaj!!
+    }
 
-    public static final String JDBCInfoKey = "jdbc2Info";
-    public static final String DataSourceJndiNameKey = "DataSourceJndiName";
-    public static final String TypeInfoKey = "typeInfo";
-    public static final String UsernameKey = "username";
-    public static final String PasswordKey = "password";
-    public static final String DriverKey = "driver";
-    public static final String PlugInKey = "plugin";
-    public static final String URLKey = "URL";
-    protected EOSQLExpressionFactory _expressionFactory;
-    protected JDBCPlugIn _plugin;
-    protected NSDictionary _jdbcInfo;
-    protected JDBCContext _cachedContext;
-    protected int _varcharMaxLength;
-    private String _driverName;
-    private static final String CN_JavaString = "java.lang.String";
-    private static final String CN_JavaNumber = "java.lang.Number";
-    private static final String CN_JavaBigDecimal = "java.math.BigDecimal";
-    private static final String CN_JavaNSTimestamp = "com.webobjects.foundation.NSTimestamp";
-    private static final String CN_JavaNSData = "com.webobjects.foundation.NSData";
-    private static final String CN_NSString = "NSString";
-    private static final String CN_NSNumber = "NSNumber";
-    private static final String CN_NSDecimalNumber = "NSDecimalNumber";
-    private static final String CN_NSCalendarDate = "NSCalendarDate";
-    private static final String CN_NSData = "NSData";
-    static final int OracleRefCursor = -10;
-    static final String CN_JavaResultSet = "java.sql.ResultSet";
-    static final String OracleRefCursorName = "REF CURSOR";
-    private boolean hasWarnedNoJDBCInfo;
-    private final Set warnedExternalTypes;
-    private static final String _serviceKeys[];
+    /**
+     * Description copied from class:
+     * An abstract method that should be implemented by subclasses to return true if an attribute of type typeName can be used in a qualifier (an SQL WHERE clause) sent to the database server, false otherwise. typeName is the name of a type as required by the database server. model is an optional argument that can be used to supplement the adaptor's set of type mappings with additional mappings for user-defined database types.
+     */
+    public boolean isValidQualifierType(java.lang.String typeName, com.webobjects.eoaccess.EOModel model){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Returns an NSDictionary of database-specific information.
+     */
+    protected com.webobjects.foundation.NSDictionary jdbcInfo(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Returns the password from the adaptor's connection dictionary.
+     */
+    public java.lang.String password(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Returns the JDBCPlugIn to use with this adaptor's connection dictionary.
+     */
+    public com.webobjects.jdbcadaptor.JDBCPlugIn plugIn(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Returns the adaptor's plug-in name. Subclasses of EOAdaptor need to override this method if they support a plug-in achitecture.
+     */
+    public java.lang.String plugInName(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * An abstract method that supports changes made to EOSQLExpression and related classes and interfaces. Subclass implementations return the EOSchemaGeneration for the adaptor.
+     */
+    public com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationFactory schemaSynchronizationFactory(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * Sets the adaptor's connection dictionary to dictionary, which must only contain String, NSData, NSDictionary, and NSArray objects. Connection information can not be changed while the adaptor is connected. Throws an exception if there are any open channels when this method is invoked.
+     * Subclasses of EOAdaptor don't need to override this method. A subclass that does override this method must incorporate the superclass's version by calling super.
+     */
+    public void setConnectionDictionary(com.webobjects.foundation.NSDictionary dictionary) throws java.lang.IllegalArgumentException{
+        return; //TODO codavaj!!
+    }
+
+    public static java.lang.String stringRepresentationForJDBCType(int columnType){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * Description copied from class:
+     * An abstract method that supports changes made to EOSQLExpression and related classes and interfaces. Subclass implementations return the EOSynchronizationFactory for the adaptor.
+     */
+    public com.webobjects.eoaccess.EOSchemaGeneration synchronizationFactory(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Returns an NSDictionary of external type information.
+     */
+    protected com.webobjects.foundation.NSDictionary typeInfo(){
+        return null; //TODO codavaj!!
+    }
+
+    protected static com.webobjects.foundation.NSDictionary typeInfoForModel(com.webobjects.eoaccess.EOModel model){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Returns the user name from the adaptor's connection dictionary.
+     */
+    public java.lang.String username(){
+        return null; //TODO codavaj!!
+    }
+
+    protected int varcharMaxLength(){
+        return 0; //TODO codavaj!!
+    }
 
 }

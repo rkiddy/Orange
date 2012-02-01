@@ -1,178 +1,175 @@
-
 package com.webobjects.eogeneration;
-
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.EOSwingTreePlugin;
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.foundation.*;
-import java.util.Enumeration;
-import javax.swing.*;
-import javax.swing.event.TreeSelectionEvent;
-import javax.swing.event.TreeSelectionListener;
-import javax.swing.tree.*;
-
-
-public class EOTreeController extends EODefaultActionTrigger
-    implements TreeSelectionListener {
-    public static class _SelectionUtilities extends JTree {
-
-        public _SelectionUtilities() { return null; }
-
-        public static JTree treeView(JScrollPane scrollPane) { return null; }
-
-        public static boolean isEmpty(TreeSelectionModel treeSelectionModel) { return null; }
-
-        public static Object objectWithPath(TreePath path) { return null; }
-
-        public static NSArray objectsWithPaths(TreePath paths[]) { return null; }
-
-        public static NSArray objectPathForPath(TreePath path) { return null; }
-
-        public static NSArray objectPathsForPaths(TreePath paths[]) { return null; }
-
-        protected static Object userObject(Object lastComponent) { return null; }
-
-        public static TreePath pathForNumericPath(JTree tree, NSArray numericPath) { return null; }
-
-        public static TreePath[] pathsForNumericPaths(JTree tree, NSArray numericPaths) { return null; }
-
-        public static TreePath pathForObjectPath(JTree tree, NSArray objectPath) { return null; }
-
-        public static TreePath[] pathsForObjectPaths(JTree tree, NSArray objectPaths) { return null; }
-
-        public static TreePath pathForObject(JTree tree, Object object) { return null; }
-
-        public static TreePath[] pathsForObjects(JTree tree, NSArray objects) { return null; }
-
-        public static TreePath pathForObjectWithParentKey(JTree tree, Object object, String parentKey) { return null; }
-
-        public static TreePath[] pathsForObjectsWithParentKey(JTree tree, NSArray objects, String parentKey) { return null; }
-
-        protected static int length(Object objects[]) { return null; }
-
-        protected static boolean isEmpty(NSArray a) { return null; }
-
-        protected static TreePath[] emptyPaths(JTree tree, NSArray objects) { return null; }
-
-        protected static NSArray reverse(NSArray a) { return null; }
+public class EOTreeController extends com.webobjects.eogeneration.EODefaultActionTrigger implements javax.swing.event.TreeSelectionListener{
+    public EOTreeController(){
+         //TODO codavaj!!
     }
 
+    public EOTreeController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public boolean allowsDiscontiguousSelection(){
+        return false; //TODO codavaj!!
+    }
 
-    public EOTreeController() { return null; }
+    public boolean allowsMultipleSelection(){
+        return false; //TODO codavaj!!
+    }
 
-    public EOTreeController(EOXMLUnarchiver unarchiver) { return null; }
+    public java.lang.String childrenKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    public java.lang.String expandedIconKey(){
+        return null; //TODO codavaj!!
+    }
 
-    private static Boolean _booleanObject(boolean b) { return null; }
+    public java.lang.String iconKey(){
+        return null; //TODO codavaj!!
+    }
 
-    private static boolean _isEmpty(String s) { return null; }
+    public java.lang.String isLeafKey(){
+        return null; //TODO codavaj!!
+    }
 
-    protected int _labelComponentVerticalOffset() { return 0; }
+    public boolean isRootVisible(){
+        return false; //TODO codavaj!!
+    }
 
-    protected int preferredLabelComponentPosition() { return 0; }
+    protected javax.swing.JComponent mouseListenerViewInWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    protected boolean preferredUsesLabelComponent() { return true; }
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
-    protected int preferredWidgetAutosizingMask() { return 0; }
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    protected boolean _preferredCanResizeVertically() { return true; }
+    public java.lang.String parentKey(){
+        return null; //TODO codavaj!!
+    }
 
-    protected String _derivedLabel() { return null; }
+    protected int preferredLabelComponentPosition(){
+        return 0; //TODO codavaj!!
+    }
 
-    public void setChildrenKey(String string) {}
+    protected boolean preferredUsesLabelComponent(){
+        return false; //TODO codavaj!!
+    }
 
-    public String childrenKey() { return null; }
+    protected int preferredWidgetAutosizingMask(){
+        return 0; //TODO codavaj!!
+    }
 
-    public void setParentKey(String string) {}
+    public java.lang.String rootKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public String parentKey() { return null; }
+    public com.webobjects.foundation.NSArray selectedObjectPaths(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setIsLeafKey(String string) {}
+    public com.webobjects.foundation.NSArray selectedObjects(){
+        return null; //TODO codavaj!!
+    }
 
-    public String isLeafKey() { return null; }
+    protected void selectionDidChange(com.webobjects.foundation.NSArray addedObjects, com.webobjects.foundation.NSArray removedObjects){
+        return; //TODO codavaj!!
+    }
 
-    public void setRootKey(String string) {}
+    public void setAllowsDiscontiguousSelection(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public String rootKey() { return null; }
+    public void setAllowsMultipleSelection(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public void setValueKey(String string) {}
+    public void setChildrenKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public String valueKey() { return null; }
+    public void setExpandedIconKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void setIconKey(String string) {}
+    public void setIconKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public String iconKey() { return null; }
+    public void setIsLeafKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void setExpandedIconKey(String string) {}
+    public void setParentKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public String expandedIconKey() { return null; }
+    public void setRootKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void setRootVisible(boolean flag) {}
+    public void setRootVisible(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public boolean isRootVisible() { return true; }
+    public void setSelectedObject(java.lang.Object newSelectedObject){
+        return; //TODO codavaj!!
+    }
 
-    public void setAllowsMultipleSelection(boolean flag) {}
+    public void setSelectedObjects(com.webobjects.foundation.NSArray newSelectedObjects){
+        return; //TODO codavaj!!
+    }
 
-    public boolean allowsMultipleSelection() { return true; }
+    public void setSelectedObjectsWithNumericPaths(com.webobjects.foundation.NSArray newSelectedNumericPaths){
+        return; //TODO codavaj!!
+    }
 
-    public void setAllowsDiscontiguousSelection(boolean flag) {}
+    public void setSelectedObjectsWithObjectPaths(com.webobjects.foundation.NSArray newSelectedObjectPaths){
+        return; //TODO codavaj!!
+    }
 
-    public boolean allowsDiscontiguousSelection() { return true; }
+    public void setSelectedObjectsWithParentKey(com.webobjects.foundation.NSArray newSelectedObjects){
+        return; //TODO codavaj!!
+    }
 
-    protected void _setSelectionModel() {}
+    public void setSelectedObjectWithNumericPath(com.webobjects.foundation.NSArray newSelectedNumericPath){
+        return; //TODO codavaj!!
+    }
 
-    public NSArray selectedObjects() { return null; }
+    public void setSelectedObjectWithObjectPath(com.webobjects.foundation.NSArray newSelectedObjectPath){
+        return; //TODO codavaj!!
+    }
 
-    public NSArray selectedObjectPaths() { return null; }
+    public void setSelectedObjectWithParentKey(java.lang.Object newSelectedObject){
+        return; //TODO codavaj!!
+    }
 
-    public void setSelectedObjectWithNumericPath(NSArray newSelectedNumericPath) {}
+    public void setValueKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void setSelectedObjectsWithNumericPaths(NSArray newSelectedNumericPaths) {}
+    protected void startListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    public void setSelectedObjectWithObjectPath(NSArray newSelectedObjectPath) {}
+    protected void stopListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    public void setSelectedObjectsWithObjectPaths(NSArray newSelectedObjectPaths) {}
+    public javax.swing.JTree tree(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setSelectedObject(Object newSelectedObject) {}
+    public void valueChanged(javax.swing.event.TreeSelectionEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public void setSelectedObjects(NSArray newSelectedObjects) {}
-
-    public void setSelectedObjectWithParentKey(Object newSelectedObject) {}
-
-    public void setSelectedObjectsWithParentKey(NSArray newSelectedObjects) {}
-
-    protected void selectionDidChange(NSArray nsarray, NSArray nsarray1) {}
-
-    protected JComponent newWidget() { return null; }
-
-    protected void startListeningToWidget() {}
-
-    protected void stopListeningToWidget() {}
-
-    public JTree tree() { return null; }
-
-    protected JComponent mouseListenerViewInWidget() { return null; }
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    public void valueChanged(TreeSelectionEvent event) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private JTree _tree;
-    private String _childrenKey;
-    private String _isLeafKey;
-    private String _rootKey;
-    private String _valueKey;
-    private String _iconKey;
-    private String _expandedIconKey;
-    private String _parentKey;
-    private boolean _isRootVisible;
-    private boolean _allowsMultipleSelection;
-    private boolean _allowsDiscontiguousSelection;
+    public java.lang.String valueKey(){
+        return null; //TODO codavaj!!
+    }
 
 }

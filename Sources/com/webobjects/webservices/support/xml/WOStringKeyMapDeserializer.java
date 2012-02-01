@@ -1,23 +1,19 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOStringKeyMapDeserializer deserializes instances of WOStringKeyMap.
+ * See Also:Serialized Form
+ */
+public class WOStringKeyMapDeserializer extends org.apache.axis.encoding.DeserializerImpl implements org.apache.axis.encoding.Deserializer, com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WOStringKeyMapDeserializer(){
+         //TODO codavaj!!
+    }
 
-import org.apache.axis.encoding.*;
-import org.apache.axis.message.SOAPHandler;
-import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
+    public void onEndElement(java.lang.String namespace, java.lang.String localName, org.apache.axis.encoding.DeserializationContext context) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-
-public class WOStringKeyMapDeserializer extends DeserializerImpl
-    implements Deserializer, WOSoapConstants {
-
-
-    public WOStringKeyMapDeserializer() { return null; }
-
-    public SOAPHandler onStartChild(String namespace, String localName, String prefix, Attributes attributes, DeserializationContext context) throws SAXException { return null; }
-
-    public void onEndElement(String namespace, String localName, DeserializationContext context) throws SAXException {}
-
-    private static final long serialVersionUID = 0x3150df4bL;
-    private WOStringKeyMap _smap;
+    public org.apache.axis.message.SOAPHandler onStartChild(java.lang.String namespace, java.lang.String localName, java.lang.String prefix, org.xml.sax.Attributes attributes, org.apache.axis.encoding.DeserializationContext context) throws org.xml.sax.SAXException{
+        return null; //TODO codavaj!!
+    }
 
 }

@@ -1,23 +1,22 @@
-
 package com.webobjects.eointerface.swing;
+/**
+ * EOMatrix is a class used to group collections of mutually exclusive JRadioButtons and to lay them out on a grid. It is a subclass of EOView that uses a java.awt.GridLayout.
+ * See Also:Serialized Form
+ */
+public class EOMatrix extends com.webobjects.eointerface.swing.EOView{
+    /**
+     * Constructs a new EOMatrix with rows number of rows, columns number of columns, a row spacing of rowSpacing and a column spacing of columnSpacing.
+     * Parameters:rows - the number of rowscolumns - the number of columnscolumnSpacing - the column spacingrowSpacing - the row spacing
+     */
+    public EOMatrix(int rows, int columns, int columnSpacing, int rowSpacing){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Component;
-import java.awt.GridLayout;
-import javax.swing.*;
-
-
-public class EOMatrix extends EOView {
-
-
-    public EOMatrix(int rows, int columns, int columnSpacing, int rowSpacing) { return null; }
-
-    public Component add(Component component) { return null; }
-
-    static  {}
-
-    private static final long serialVersionUID = 0x11f0cce4L;
-    public static final Class _CLASS;
-    private ButtonGroup _buttonGroup;
+    /**
+     * Adds a radio button to the EOMatrix. child has to be a JRadioButton.
+     */
+    public java.awt.Component add(java.awt.Component component){
+        return null; //TODO codavaj!!
+    }
 
 }

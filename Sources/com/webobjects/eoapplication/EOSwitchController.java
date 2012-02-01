@@ -1,96 +1,116 @@
-
 package com.webobjects.eoapplication;
+public abstract class EOSwitchController extends com.webobjects.eoapplication.EOComponentController implements com.webobjects.eoapplication.EOComponentController.ResetUserInterface{
+    public EOSwitchController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.*;
-import java.awt.Dimension;
-import java.awt.Insets;
-import javax.swing.JComponent;
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOSwitchController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    protected abstract void addBorderComponentForControllerToDisplayComponent(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent);
 
-public abstract class EOSwitchController extends EOComponentController
-    implements EOComponentController.ResetUserInterface {
+    protected void addComponentOfSubcontroller(com.webobjects.eoapplication.EOComponentController controller){
+        return; //TODO codavaj!!
+    }
 
+    protected com.webobjects.foundation.NSArray borderComponents(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSwitchController() { return null; }
+    public java.awt.Dimension borderedSizeForComponentSize(java.awt.Dimension componentSize){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSwitchController(EOXMLUnarchiver unarchiver) { return null; }
+    public java.awt.Dimension borderSize(){
+        return null; //TODO codavaj!!
+    }
 
-    public void dispose() {}
+    protected void componentDidBecomeInvisible(){
+        return; //TODO codavaj!!
+    }
 
-    protected void addComponentOfSubcontroller(EOComponentController controller) {}
+    protected void componentDidBecomeVisible(){
+        return; //TODO codavaj!!
+    }
 
-    protected void removeComponentOfSubcontroller(EOComponentController controller) {}
+    public boolean componentShouldChange(int newIndex){
+        return false; //TODO codavaj!!
+    }
 
-    protected boolean removeTransientSubcontroller(EOController controller) { return true; }
+    public java.awt.Dimension componentSizeForBorderedSize(java.awt.Dimension componentSize){
+        return null; //TODO codavaj!!
+    }
 
-    protected abstract JComponent newDisplayComponent();
+    public void componentSwitched(int selectedIndex){
+        return; //TODO codavaj!!
+    }
 
-    protected void generateComponent() {}
+    protected java.awt.Dimension displayComponentBorderSize(){
+        return null; //TODO codavaj!!
+    }
 
-    public Dimension minimumComponentSize() { return null; }
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-    public void resetUserInterface() {}
+    protected void generateComponent(){
+        return; //TODO codavaj!!
+    }
 
-    private EOComponentController _visibleSubcontroller() { return null; }
+    protected boolean hideSubcontroller(com.webobjects.eoapplication.EOComponentController controller){
+        return false; //TODO codavaj!!
+    }
 
-    private void _updateSubcontrollerVisibleStates() {}
+    public java.awt.Dimension minimumComponentSize(){
+        return null; //TODO codavaj!!
+    }
 
-    public void subcontrollerVisibilityDidChange(EOComponentController controller) {}
+    protected abstract javax.swing.JComponent newDisplayComponent();
 
-    protected void componentDidBecomeVisible() {}
+    protected abstract void removeBorderComponentForControllerFromDisplayComponent(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent, int index);
 
-    protected void componentDidBecomeInvisible() {}
+    protected void removeComponentOfSubcontroller(com.webobjects.eoapplication.EOComponentController controller){
+        return; //TODO codavaj!!
+    }
 
-    public boolean _prepareBorderComponentChange() { return true; }
+    protected boolean removeTransientSubcontroller(com.webobjects.eoapplication.EOController controller){
+        return false; //TODO codavaj!!
+    }
 
-    protected boolean showSubcontroller(EOComponentController controller) { return true; }
+    public void resetUserInterface(){
+        return; //TODO codavaj!!
+    }
 
-    protected boolean hideSubcontroller(EOComponentController controller) { return true; }
+    protected abstract javax.swing.JComponent selectedBorderComponentInDisplayComponent(javax.swing.JComponent displayComponent);
 
-    protected Dimension displayComponentBorderSize() { return null; }
+    protected void showBorderComponentAtIndex(int index){
+        return; //TODO codavaj!!
+    }
 
-    public Dimension borderSize() { return null; }
+    protected abstract void showBorderComponentAtIndexInDisplayComponent(javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent, int index);
 
-    public Dimension borderedSizeForComponentSize(Dimension componentSize) { return null; }
+    protected boolean showSubcontroller(com.webobjects.eoapplication.EOComponentController controller){
+        return false; //TODO codavaj!!
+    }
 
-    public Dimension componentSizeForBorderedSize(Dimension componentSize) { return null; }
+    public void subcontrollerMinimumSizeDidChange(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent component, java.awt.Dimension updateMinimumSize){
+        return; //TODO codavaj!!
+    }
 
-    private Dimension _minimumContentSize() { return null; }
+    public void subcontrollerVisibilityDidChange(com.webobjects.eoapplication.EOComponentController controller){
+        return; //TODO codavaj!!
+    }
 
-    public void subcontrollerMinimumSizeDidChange(EOComponentController controller, JComponent component, Dimension updateMinimumSize) {}
+    protected com.webobjects.foundation.NSArray switchedControllers(){
+        return null; //TODO codavaj!!
+    }
 
-    protected NSArray switchedControllers() { return null; }
-
-    protected NSArray borderComponents() { return null; }
-
-    protected void showBorderComponentAtIndex(int index) {}
-
-    protected int visibleBorderComponentIndex() { return 0; }
-
-    protected abstract JComponent selectedBorderComponentInDisplayComponent(JComponent jcomponent);
-
-    protected abstract void addBorderComponentForControllerToDisplayComponent(EOComponentController eocomponentcontroller, JComponent jcomponent, JComponent jcomponent1);
-
-    protected abstract void removeBorderComponentForControllerFromDisplayComponent(EOComponentController eocomponentcontroller, JComponent jcomponent, JComponent jcomponent1, int i);
-
-    protected abstract void showBorderComponentAtIndexInDisplayComponent(JComponent jcomponent, JComponent jcomponent1, int i);
-
-    private EOComponentController _controllerForBorderComponent(JComponent borderComponent) { return null; }
-
-    private JComponent _borderComponentForController(EOComponentController controller) { return null; }
-
-    private void _prepareBorderComponentAtIndex(int index) {}
-
-    public boolean componentShouldChange(int newIndex) { return true; }
-
-    public void componentSwitched(int selectedIndex) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private NSMutableArray _switchedControllers;
-    private NSMutableArray _borderComponents;
-    private Dimension _borderSize;
+    protected int visibleBorderComponentIndex(){
+        return 0; //TODO codavaj!!
+    }
 
 }

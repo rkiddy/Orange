@@ -1,23 +1,15 @@
-
 package com.webobjects.directtoweb;
+public class AssistantServer extends java.lang.Thread{
+    public AssistantServer(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOApplication;
-import com.webobjects.foundation.NSForwardException;
-import java.io.IOException;
-import java.net.BindException;
-import java.net.ServerSocket;
+    public int port(){
+        return 0; //TODO codavaj!!
+    }
 
-
-public class AssistantServer extends Thread {
-
-
-    public AssistantServer() { return null; }
-
-    public int port() { return 0; }
-
-    public void run() {}
-
-    private ServerSocket _serverSocket;
-    private int _assistantPort;
+    public void run(){
+        return; //TODO codavaj!!
+    }
 
 }

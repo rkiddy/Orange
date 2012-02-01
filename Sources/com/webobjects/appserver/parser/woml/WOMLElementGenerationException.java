@@ -1,18 +1,22 @@
-
 package com.webobjects.appserver.parser.woml;
+/**
+ * See Also:Serialized Form
+ */
+public class WOMLElementGenerationException extends java.lang.RuntimeException{
+    public WOMLElementGenerationException(){
+         //TODO codavaj!!
+    }
 
+    public WOMLElementGenerationException(java.lang.String message){
+         //TODO codavaj!!
+    }
 
-public class WOMLElementGenerationException extends RuntimeException {
+    public WOMLElementGenerationException(java.lang.String message, java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
-
-    public WOMLElementGenerationException() { return null; }
-
-    public WOMLElementGenerationException(String message, Throwable cause) { return null; }
-
-    public WOMLElementGenerationException(String message) { return null; }
-
-    public WOMLElementGenerationException(Throwable cause) { return null; }
-
-    private static final long serialVersionUID = 0xcd4341dbL;
+    public WOMLElementGenerationException(java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
 }

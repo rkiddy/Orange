@@ -1,50 +1,55 @@
-
 package com.webobjects.eogeneration;
+public abstract class EODefaultActionTrigger extends com.webobjects.eogeneration.EOAssociationController implements java.awt.event.MouseListener{
+    public EODefaultActionTrigger(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.EOXMLUnarchiver;
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import javax.swing.JComponent;
+    public EODefaultActionTrigger(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public boolean invokesDefaultAction(){
+        return false; //TODO codavaj!!
+    }
 
-public abstract class EODefaultActionTrigger extends EOAssociationController
-    implements MouseListener {
+    public void mouseClicked(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
 
+    public void mouseEntered(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public EODefaultActionTrigger() { return null; }
+    public void mouseExited(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public EODefaultActionTrigger(EOXMLUnarchiver unarchiver) { return null; }
+    protected javax.swing.JComponent mouseListenerViewInWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    public void mousePressed(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public void setInvokesDefaultAction(boolean flag) {}
+    public void mouseReleased(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public boolean invokesDefaultAction() { return true; }
+    public void setInvokesDefaultAction(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    protected JComponent mouseListenerViewInWidget() { return null; }
+    protected void startListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    protected void startListeningToWidget() {}
+    protected void stopListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    protected void stopListeningToWidget() {}
-
-    public void triggerDefaultAction() {}
-
-    public void mouseClicked(MouseEvent event) {}
-
-    public void mouseEntered(MouseEvent mouseevent) {}
-
-    public void mouseExited(MouseEvent mouseevent) {}
-
-    public void mousePressed(MouseEvent mouseevent) {}
-
-    public void mouseReleased(MouseEvent mouseevent) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private boolean _invokesDefaultAction;
+    public void triggerDefaultAction(){
+        return; //TODO codavaj!!
+    }
 
 }

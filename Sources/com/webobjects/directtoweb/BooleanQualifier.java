@@ -1,36 +1,59 @@
-
 package com.webobjects.directtoweb;
+/**
+ * See Also:Serialized Form
+ */
+public class BooleanQualifier extends com.webobjects.eocontrol.EOQualifier implements com.webobjects.eocontrol.EOKeyValueArchiving{
+    public BooleanQualifier(java.lang.String key){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eocontrol.*;
-import com.webobjects.foundation.NSDictionary;
-import com.webobjects.foundation.NSMutableSet;
+    /**
+     * Description copied from class:
+     * Adds the receiver's qualifier keys to qualifierKeys. The subclasses in the EOControl framework do this by traversing the tree of qualifiers. Node qualifiers (such as EOAndQualifier) recursively invoke this method until they reach a leaf qualifier (such as EOKeyValueQualifier) which adds its key to the set.
+     * Subclasses of EOQualifier must implement this method.
+     */
+    public void addQualifierKeysToSet(com.webobjects.foundation.NSMutableSet qualKeys){
+        return; //TODO codavaj!!
+    }
 
-public class BooleanQualifier extends EOQualifier
-    implements EOKeyValueArchiving {
+    public static java.lang.Object decodeWithKeyValueUnarchiver(com.webobjects.eocontrol.EOKeyValueUnarchiver unarchiver){
+        return null; //TODO codavaj!!
+    }
 
+    public java.lang.String description(){
+        return null; //TODO codavaj!!
+    }
 
-    public BooleanQualifier(String key) { return null; }
+    /**
+     * Description copied from interface:
+     * Asks the receiver to archive its state into the EOKeyValueArchiver archiver.
+     */
+    public void encodeWithKeyValueArchiver(com.webobjects.eocontrol.EOKeyValueArchiver archiver){
+        return; //TODO codavaj!!
+    }
 
-    public boolean evaluateWithObject(EOKeyValueCodingAdditions o) { return true; }
+    public boolean evaluateWithObject(com.webobjects.eocontrol.EOKeyValueCodingAdditions o){
+        return false; //TODO codavaj!!
+    }
 
-    public String description() { return null; }
+    /**
+     * Description copied from class:
+     * Returns a new qualifier substituting all variables with values found in bindings. If requiresAll is true, any variable not found in bindings throws an exception. If requiresAll is false, missing variable values cause the qualifier node to be pruned from the tree.
+     */
+    public com.webobjects.eocontrol.EOQualifier qualifierWithBindings(com.webobjects.foundation.NSDictionary bindings, boolean requiresAll){
+        return null; //TODO codavaj!!
+    }
 
-    public String toString() { return null; }
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOQualifier qualifierWithBindings(NSDictionary bindings, boolean requiresAll) { return null; }
-
-    public void validateKeysWithRootClassDescription(EOClassDescription eoclassdescription) {}
-
-    public void addQualifierKeysToSet(NSMutableSet nsmutableset) {}
-
-    public void encodeWithKeyValueArchiver(EOKeyValueArchiver archiver) {}
-
-    public static Object decodeWithKeyValueUnarchiver(EOKeyValueUnarchiver unarchiver) { return null; }
-
-    static  {}
-
-    private static final long serialVersionUID = 0xfbf2c6d1L;
-    private String _key;
-    static final Integer _one;
+    /**
+     * Description copied from class:
+     * Ensures that the receiver contains keys and key paths that belong to or originate from classDescription. This method raises an exception if an unknown key is found, otherwise it returns null to indicate that the keys contained by the qualifier are valid.
+     */
+    public void validateKeysWithRootClassDescription(com.webobjects.eocontrol.EOClassDescription classDesc){
+        return; //TODO codavaj!!
+    }
 
 }

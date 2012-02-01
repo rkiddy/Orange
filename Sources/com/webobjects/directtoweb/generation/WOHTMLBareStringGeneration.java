@@ -1,14 +1,11 @@
-
 package com.webobjects.directtoweb.generation;
+public class WOHTMLBareStringGeneration{
+    public WOHTMLBareStringGeneration(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOContext;
-import com.webobjects.appserver.WOElement;
-import com.webobjects.appserver._private.WOHTMLBareString;
+    public static void appendToTemplate(com.webobjects.appserver.WOElement element, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
-
-public class WOHTMLBareStringGeneration {
-
-    public WOHTMLBareStringGeneration() { return null; }
-
-    public static void appendToTemplate(WOElement element, DTWTemplate aTemplate, WOContext aContext) { return null; }
 }

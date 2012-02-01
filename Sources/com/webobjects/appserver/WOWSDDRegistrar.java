@@ -1,116 +1,182 @@
-
 package com.webobjects.appserver;
-
-import com.webobjects.appserver._private.WODWSServiceObject;
-import com.webobjects.appserver._private.WOWebService;
-import com.webobjects.foundation.NSLog;
-import com.webobjects.webservices.support._private.WOWSSupport;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.net.URL;
-import java.util.*;
-import javax.xml.namespace.QName;
-import javax.xml.rpc.encoding.DeserializerFactory;
-import javax.xml.rpc.encoding.SerializerFactory;
-import javax.xml.transform.stream.StreamSource;
-import org.apache.axis.Constants;
-import org.apache.axis.deployment.wsdd.*;
-import org.apache.axis.utils.XMLUtils;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-
-
-public class WOWSDDRegistrar
-    implements com.webobjects.webservices.support._private.WOWSSupport.Delegate {
-    public static interface Delegate {
-
-        public abstract WOWSDDRegistrar newWSDDRegistrar();
+/**
+ * Registers WSDD types and services with WebObjects application.
+ * Since: 5.4.1
+ */
+public class WOWSDDRegistrar{
+    protected WOWSDDRegistrar(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Create a String of all the allowed methods separated by ,
+     */
+    protected java.lang.String createAllowedMethodsString(java.lang.String[] allowedMethods){
+        return null; //TODO codavaj!!
+    }
 
+    protected java.lang.String createServiceString(java.lang.String webServiceName, java.lang.Class webServiceClass, java.lang.String[] allowedMethods, boolean isRPC, boolean isD2WS){
+        return null; //TODO codavaj!!
+    }
 
-    protected WOWSDDRegistrar() { return null; }
+    /**
+     * Returns the list of declared method accessible on the the target web service class.
+     */
+    protected java.util.List getDeclaredMethodsForClass(java.lang.Class webServiceClass){
+        return null; //TODO codavaj!!
+    }
 
-    public static WOWSDDRegistrar getInstance() { return null; }
+    /**
+     * Returns the single instance of the Registrar
+     */
+    public static com.webobjects.appserver.WOWSDDRegistrar getInstance(){
+        return null; //TODO codavaj!!
+    }
 
-    public static void setDelegate(Delegate aDelegate) { return null; }
+    /**
+     * Returns the list of method on the the target web service class.
+     */
+    protected java.util.List getMethodsForNames(java.lang.Class webServiceClass, java.lang.String[] allowedMethods){
+        return null; //TODO codavaj!!
+    }
 
-    public static Document _getEmptyDeployment() { return null; }
+    /**
+     * Returns a collection of class that are parameters or return values of the list of methods
+     */
+    protected java.util.Collection getMethodsTypes(java.util.Collection methods){
+        return null; //TODO codavaj!!
+    }
 
-    public void _addRegisteredServiceName(String serviceName, WSDDService service) {}
+    /**
+     * Used by Direct To WebServices to register operations
+     */
+    public void registerD2WebServiceWithOperations(java.lang.String webServiceName, java.lang.String[] operations){
+        return; //TODO codavaj!!
+    }
 
-    public void _removeRegisteredServiceName(String serviceName) {}
+    /**
+     * Register aSerializerFactory for serializing objects of class aClass and aDeserializerFactory for deserializing DOM elements with QName aQName. Objects serialized by aSerializerFactory will have a QName of aQName. If a aSerializerFactory is null, only aDeserializerFactory will be registered, and vice versa.
+     */
+    public void registerFactoriesForClassWithQName(javax.xml.rpc.encoding.SerializerFactory aSerializerFactory, javax.xml.rpc.encoding.DeserializerFactory aDeserializerFactory, java.lang.Class aClass, javax.xml.namespace.QName aQName){
+        return; //TODO codavaj!!
+    }
 
-    public boolean _isServiceRegistered(String serviceName) { return true; }
+    /**
+     * Register the WSDDTypeMapping for WSDD generation. This method implements the WOWSSupport.Delegate and you never have to call this method.
+     */
+    public void registerTypeMapping(javax.xml.rpc.encoding.SerializerFactory aSerializerFactory, javax.xml.rpc.encoding.DeserializerFactory aDeserializerFactory, java.lang.Class aClass, javax.xml.namespace.QName aQName){
+        return; //TODO codavaj!!
+    }
 
-    public void _addRegisteredTypeMapping(Class type, WSDDTypeMapping typeMapping) {}
+    /**
+     * Expose all methods declared on webServiceClass as operations on a web service whose name is the non-qualified class name of webServiceClass.
+     */
+    public void registerWebService(java.lang.Class webServiceClass, boolean isRPC){
+        return; //TODO codavaj!!
+    }
 
-    public void _removeRegisteredTypeMapping(Class type) {}
+    /**
+     * Expose all methods declared on webServiceClass as operations on a web service whose name is webServiceName.
+     */
+    public void registerWebService(java.lang.String webServiceName, java.lang.Class webServiceClass, boolean isRPC){
+        return; //TODO codavaj!!
+    }
 
-    public boolean _isTypeMappingRegistered(Class type) { return true; }
+    /**
+     * Expose methods listed in allowedMethods declared on webServiceClass as operations on a web service whose name is webServiceName.
+     */
+    public void registerWebService(java.lang.String webServiceName, java.lang.Class webServiceClass, java.lang.String[] allowedMethods, boolean isRPC){
+        return; //TODO codavaj!!
+    }
 
-    public void registerWebService(Class webServiceClass, boolean isRPC) {}
+    /**
+     * Register an XSLT transformation for serviceName and operationName. All parameters must be non-null. The contents of the URL will be read at registration.
+     */
+    public void registerXSLTForServiceAndOperation(java.net.URL aURL, java.lang.String serviceName, java.lang.String operationName){
+        return; //TODO codavaj!!
+    }
 
-    public void registerWebService(String webServiceName, Class webServiceClass, boolean isRPC) {}
+    protected java.lang.String serviceStringCloseTag(){
+        return null; //TODO codavaj!!
+    }
 
-    public void registerWebService(String webServiceName, Class webServiceClass, String allowedMethods[], boolean isRPC) {}
+    protected java.lang.String serviceStringD2WRPCProvider(){
+        return null; //TODO codavaj!!
+    }
 
-    public void registerD2WebServiceWithOperations(String webServiceName, String operations[]) {}
+    protected java.lang.String serviceStringDeclaration(){
+        return null; //TODO codavaj!!
+    }
 
-    public void unregisterWebService(Class webServiceClass) {}
+    protected java.lang.String serviceStringMsgProvider(){
+        return null; //TODO codavaj!!
+    }
 
-    public void unregisterWebService(String webServiceName) {}
+    protected java.lang.String serviceStringOpenTag(java.lang.String name, boolean isRPC){
+        return null; //TODO codavaj!!
+    }
 
-    protected List getDeclaredMethodsForClass(Class webServiceClass) { return null; }
+    protected java.lang.String serviceStringParameterAllowedMethods(java.lang.String[] allowedMethods){
+        return null; //TODO codavaj!!
+    }
 
-    protected List getMethodsForNames(Class webServiceClass, String allowedMethods[]) { return null; }
+    protected java.lang.String serviceStringParameterClassName(java.lang.String name){
+        return null; //TODO codavaj!!
+    }
 
-    protected Collection getMethodsTypes(Collection methods) { return null; }
+    protected java.lang.String serviceStringParameterNamespace(){
+        return null; //TODO codavaj!!
+    }
 
-    protected String createServiceString(String webServiceName, Class webServiceClass, String allowedMethods[], boolean isRPC, boolean isD2WS) { return null; }
+    protected java.lang.String serviceStringParameterScope(){
+        return null; //TODO codavaj!!
+    }
 
-    protected String serviceStringDeclaration() { return null; }
+    protected java.lang.String serviceStringRPCProvider(){
+        return null; //TODO codavaj!!
+    }
 
-    protected String serviceStringOpenTag(String name, boolean isRPC) { return null; }
+    protected java.lang.String serviceStringTypeMappings(org.apache.axis.deployment.wsdd.WSDDTypeMapping typeMapping){
+        return null; //TODO codavaj!!
+    }
 
-    protected String serviceStringRPCProvider() { return null; }
+    /**
+     * Set the class delegate. This enable easy subclassing of the registrar.
+     */
+    public static void setDelegate(com.webobjects.appserver.WOWSDDRegistrar.Delegate aDelegate){
+        return; //TODO codavaj!!
+    }
 
-    protected String serviceStringMsgProvider() { return null; }
+    /**
+     * Register aDelegate as the security delegate for Axis.
+     */
+    public void setSecurityDelegate(java.lang.Object aDelegate){
+        return; //TODO codavaj!!
+    }
 
-    protected String serviceStringD2WRPCProvider() { return null; }
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    protected String serviceStringParameterScope() { return null; }
+    /**
+     * Deregister the web service registered for webServiceClass. This method assumes that webServiceClass will be exposed under it's classname.
+     */
+    public void unregisterWebService(java.lang.Class webServiceClass){
+        return; //TODO codavaj!!
+    }
 
-    protected String serviceStringParameterClassName(String name) { return null; }
+    /**
+     * Deregister the web service registered with the name webServiceName.
+     */
+    public void unregisterWebService(java.lang.String webServiceName){
+        return; //TODO codavaj!!
+    }
 
-    protected String serviceStringParameterAllowedMethods(String allowedMethods[]) { return null; }
+    public static interface Delegate{
+        /**
+         * Returns a new instance of the WOWSDDRegistrar. Note: this is invoked only once as the registrar is a singleton.
+         */
+        abstract com.webobjects.appserver.WOWSDDRegistrar newWSDDRegistrar();
 
-    protected String serviceStringParameterNamespace() { return null; }
-
-    protected String serviceStringTypeMappings(WSDDTypeMapping typeMapping) { return null; }
-
-    protected String serviceStringCloseTag() { return null; }
-
-    protected String createAllowedMethodsString(String allowedMethods[]) { return null; }
-
-    public void registerFactoriesForClassWithQName(SerializerFactory aSerializerFactory, DeserializerFactory aDeserializerFactory, Class aClass, QName aQName) {}
-
-    public void registerTypeMapping(SerializerFactory aSerializerFactory, DeserializerFactory aDeserializerFactory, Class aClass, QName aQName) {}
-
-    public void registerXSLTForServiceAndOperation(URL aURL, String serviceName, String operationName) {}
-
-    public void setSecurityDelegate(Object aDelegate) {}
-
-    public String toString() { return null; }
-
-    static  {}
-
-    private Map _registeredServiceNames;
-    private Map _registeredTypeMappings;
-    private static final String emptyDeploymentFileString = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<deployment xmlns=\"http://xml.apache.org/axis/wsdd/\" xmlns:java=\"http://xml.apache.org/axis/wsdd/providers/java\">\n<globalConfiguration>\n<parameter name=\"sendMultiRefs\" value=\"true\"/>\n<parameter name=\"sendXsiTypes\" value=\"true\"/>\n<parameter name=\"sendXMLDeclaration\" value=\"true\"/>\n<requestFlow>\n<handler type=\"java:com.webobjects.webservice.support._private.WOSecurityHandler\"/>\n<handler type=\"java:com.webobjects.appserver._private.WOServerSessionHandler\"/>\n</requestFlow>\n<responseFlow>\n<handler type=\"java:com.webobjects.appserver._private.WOServerSessionHandler\"/>\n<handler type=\"java:com.webobjects.webservice.support._private.WOSecurityHandler\"/>\n</responseFlow>\n</globalConfiguration>\n<handler name=\"URLMapper\" type=\"java:org.apache.axis.handlers.http.URLMapper\"/>\n<handler name=\"HTTPActionHandler\" type=\"java:org.apache.axis.handlers.http.HTTPActionHandler\"/>\n<handler name=\"RPCDispatcher\" type=\"java:org.apache.axis.providers.java.RPCProvider\"/>\n<handler name=\"MsgDispatcher\" type=\"java:org.apache.axis.providers.java.MsgProvider\"/>\n<transport name=\"http\">\n<requestFlow>\n<handler type=\"HTTPActionHandler\"/>\n<handler type=\"URLMapper\"/>\n</requestFlow>\n</transport>\n</deployment>";
-    private static Document document;
-    private static WOWSDDRegistrar _instance;
-    private static Delegate _delegate;
-
+    }
 }

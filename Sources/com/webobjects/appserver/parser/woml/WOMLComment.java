@@ -1,21 +1,23 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLComment extends com.webobjects.appserver.WOElement{
+    public WOMLComment(java.lang.String aString, java.lang.String commentStartPrefix, java.lang.String commentEndSuffix){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
+    /**
+     * Description copied from class:
+     * This method is invoked in WOElement objects in the request-handling phase when objects involved in the current transaction append their HTML content to the transaction's WOResponse object. If the WOElement has children WOElements, it should invoke this method on them in turn. WOElement's default implementation of this method does nothing.
+     */
+    public void appendToResponse(com.webobjects.appserver.WOResponse aResponse, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
-public class WOMLComment extends WOElement {
+    public boolean isEnd(){
+        return false; //TODO codavaj!!
+    }
 
-
-    public WOMLComment(String aString, String commentStartPrefix, String commentEndSuffix) { return null; }
-
-    public boolean isStart() { return true; }
-
-    public boolean isEnd() { return true; }
-
-    public void appendToResponse(WOResponse aResponse, WOContext aContext) {}
-
-    private String _string;
-    private boolean _start;
-    private boolean _end;
+    public boolean isStart(){
+        return false; //TODO codavaj!!
+    }
 
 }

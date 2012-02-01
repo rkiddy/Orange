@@ -1,40 +1,42 @@
-
 package com.webobjects.eoapplication;
+public class EOFrameController extends com.webobjects.eoapplication.EOSimpleWindowController{
+    public EOFrameController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.*;
-import javax.swing.*;
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOFrameController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-public class EOFrameController extends EOSimpleWindowController {
+    protected java.awt.Window newWindow(javax.swing.JComponent component){
+        return null; //TODO codavaj!!
+    }
 
+    public static void runControllerInNewFrame(com.webobjects.eoapplication.EOComponentController controller, java.lang.String windowTitle){
+        return; //TODO codavaj!!
+    }
 
-    public static void runControllerInNewFrame(EOComponentController controller, String windowTitle) { return null; }
+    protected void setWindowResizable(java.awt.Window window, boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public EOFrameController() { return null; }
+    protected void setWindowTitle(java.awt.Window window, java.lang.String title){
+        return; //TODO codavaj!!
+    }
 
-    public EOFrameController(EOXMLUnarchiver unarchiver) { return null; }
+    protected java.awt.Dimension verifyContentMinimumSize(java.awt.Window window, java.awt.Dimension size){
+        return null; //TODO codavaj!!
+    }
 
-    public void dispose() {}
-
-    protected Dimension windowBorderSize() { return null; }
-
-    protected void _updateUserInterface() {}
-
-    protected boolean _needsUserInterfaceUpdateNotifications() { return true; }
-
-    protected Window newWindow(JComponent component) { return null; }
-
-    protected void setWindowResizable(Window window, boolean flag) {}
-
-    protected void setWindowTitle(Window window, String title) {}
-
-    protected Dimension verifyContentMinimumSize(Window window, Dimension size) { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private JMenuBar _menuBar;
+    protected java.awt.Dimension windowBorderSize(){
+        return null; //TODO codavaj!!
+    }
 
 }

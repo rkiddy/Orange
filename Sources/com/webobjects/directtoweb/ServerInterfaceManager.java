@@ -1,20 +1,11 @@
-
 package com.webobjects.directtoweb;
+public class ServerInterfaceManager{
+    public ServerInterfaceManager(){
+         //TODO codavaj!!
+    }
 
-import java.util.Hashtable;
-
-
-public class ServerInterfaceManager {
-
-
-    public ServerInterfaceManager() { return null; }
-
-    public static synchronized void registerServerInterface(ServerInterface s) { return null; }
-
-    static synchronized ServerInterface interfaceFromId(String id) { return null; }
-
-    static  {}
-
-    private static Hashtable _idToInterfaceMap;
+    public static void registerServerInterface(com.webobjects.directtoweb.ServerInterface s){
+        return; //TODO codavaj!!
+    }
 
 }

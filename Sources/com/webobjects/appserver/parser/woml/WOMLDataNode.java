@@ -1,28 +1,31 @@
-
 package com.webobjects.appserver.parser.woml;
+public abstract class WOMLDataNode extends com.webobjects.appserver.parser.woml.WOMLTextNode{
+    public WOMLDataNode(com.webobjects.appserver.parser.woml.WOMLPosition position){
+         //TODO codavaj!!
+    }
 
+    public abstract java.lang.String getOutputPrefix();
 
+    public abstract java.lang.String getOutputSuffix();
 
-public abstract class WOMLDataNode extends WOMLTextNode {
+    public java.lang.String getOutputText(){
+        return null; //TODO codavaj!!
+    }
 
+    public boolean getShouldEmitEnd(){
+        return false; //TODO codavaj!!
+    }
 
-    public WOMLDataNode(WOMLPosition position) { return null; }
+    public boolean getShouldEmitStart(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean getShouldEmitStart() { return true; }
+    public void setShouldEmitEnd(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public void setShouldEmitStart(boolean value) {}
-
-    public boolean getShouldEmitEnd() { return true; }
-
-    public void setShouldEmitEnd(boolean value) {}
-
-    public abstract String getOutputPrefix();
-
-    public abstract String getOutputSuffix();
-
-    public String getOutputText() { return null; }
-
-    private boolean shouldEmitStart;
-    private boolean shouldEmitEnd;
+    public void setShouldEmitStart(boolean value){
+        return; //TODO codavaj!!
+    }
 
 }

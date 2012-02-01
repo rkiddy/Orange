@@ -1,20 +1,19 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WONullDeserializerFactory creates instances of WONullDeserializer.
+ * See Also:Serialized Form
+ */
+public class WONullDeserializerFactory extends org.apache.axis.encoding.ser.BaseDeserializerFactory{
+    public WONullDeserializerFactory(){
+         //TODO codavaj!!
+    }
 
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.DeserializerFactory;
-import org.apache.axis.encoding.ser.BaseDeserializerFactory;
+    public WONullDeserializerFactory(java.lang.Class aJavaType, javax.xml.namespace.QName anXmlType){
+         //TODO codavaj!!
+    }
 
-
-public class WONullDeserializerFactory extends BaseDeserializerFactory {
-
-
-    public WONullDeserializerFactory() { return null; }
-
-    public WONullDeserializerFactory(Class aJavaType, QName anXmlType) { return null; }
-
-    public static DeserializerFactory create(Class javaType, QName xmlType) { return null; }
-
-    private static final long serialVersionUID = 0x9ccdbb71L;
+    public static org.apache.axis.encoding.DeserializerFactory create(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+        return null; //TODO codavaj!!
+    }
 
 }

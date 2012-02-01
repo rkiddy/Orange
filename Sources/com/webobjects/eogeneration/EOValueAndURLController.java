@@ -1,34 +1,35 @@
-
 package com.webobjects.eogeneration;
+public abstract class EOValueAndURLController extends com.webobjects.eogeneration.EOValueController{
+    public EOValueAndURLController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.EODisplayUtilities;
-import com.webobjects.eoapplication.EOXMLUnarchiver;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
+    public EOValueAndURLController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from interface:
+     * Returns whether the receiver is currently editable. A receiver is editable if its editability is EOEditable.AlwaysEditable or its editability is EOEditable.IfSupercontrollerEditable and sending EOEditable.isEditable to the first EOEditable supercontroller of the receiver returns true.
+     */
+    public boolean isEditable(){
+        return false; //TODO codavaj!!
+    }
 
-public abstract class EOValueAndURLController extends EOValueController {
+    public void setURLKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Returns the receiver as a string that states the receiver's class name and type name, whether the receiver is connected, the number of subcontrollers, whether or not the receiver has been prepared, whether or not the receiver is visible, information about widget sizing and alignment behavior, and so on.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOValueAndURLController() { return null; }
-
-    public EOValueAndURLController(EOXMLUnarchiver unarchiver) { return null; }
-
-    public NSMutableDictionary _xmlParameters() { return null; }
-
-    public boolean isEditable() { return true; }
-
-    public void setURLKey(String string) {}
-
-    public String URLKey() { return null; }
-
-    protected String _derivedLabel() { return null; }
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private String _urlKey;
+    public java.lang.String URLKey(){
+        return null; //TODO codavaj!!
+    }
 
 }

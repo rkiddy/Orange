@@ -1,22 +1,21 @@
-
 package com.webobjects.directtoweb;
+/**
+ * This class is used internally by other classes in WebObjects and should be considered private. It should not be used, subclassed, or replaced.
+ * See Also:Serialized Form
+ */
+public class D2WQueryRelationship extends com.webobjects.directtoweb.QueryComponent implements com.webobjects.directtoweb.generation.DTWGeneration{
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public D2WQueryRelationship(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOAssociation;
-import com.webobjects.appserver.WOContext;
-import com.webobjects.directtoweb.generation.DTWGeneration;
-import com.webobjects.directtoweb.generation.DTWTemplate;
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.eoaccess.EORelationship;
-
-
-public class D2WQueryRelationship extends QueryComponent
-    implements DTWGeneration {
-
-
-    public D2WQueryRelationship(WOContext aContext) { return null; }
-
-    public WOAssociation replacementAssociationForAssociation(WOAssociation oldAssociation, String oldBinding, DTWTemplate aTemplate, WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0x558db285L;
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public com.webobjects.appserver.WOAssociation replacementAssociationForAssociation(com.webobjects.appserver.WOAssociation oldAssociation, java.lang.String oldBinding, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return null; //TODO codavaj!!
+    }
 
 }

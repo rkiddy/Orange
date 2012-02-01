@@ -1,71 +1,38 @@
-
 package com.webobjects.foundation;
-
-import java.lang.ref.WeakReference;
-import java.util.WeakHashMap;
-
-
-public class NSDelayedCallbackCenter {
-    private static class NSLightInvocation {
-
-
-        public NSLightInvocation(NSSelector newSelector, Object newTarget, Object newArgument, int newOrder) { return null; }
-
-        public NSLightInvocation(NSSelector newSelector, Object newTarget, Object newArgument) { return null; }
-
-        public Object target() { return null; }
-
-        public boolean equals(Object other) { return true; }
-
-        public void invoke() {}
-
-        public int order() { return 0; }
-
-        public int hashCode() { return 0; }
-
-        protected final Object _target;
-        protected final NSSelector _selector;
-        protected final Object _argument;
-        protected final int _order;
-
+/**
+ * An NSDelayedCallbackCenter object (also called a delayed callback center) provides a way to guarantee that particular methods are invoked after an event has ended. It allows you to postpone or schedule the execution of certain tasks for a point in time, for example because they can't be performed earlier, or because then they will have to be performed only once (combined effect). Selectors are registered with the delayed callback center in an internal list. The center, in turn, invokes them when the event ends. In WebObjects, this happens at the end of the current request-response cycle.
+ * When a selector is registered, a priority is specified, which determines the order in which it is invoked relative to the other selectors. The selectors are invoked in order of ascending priority. To register a selector with the delayed callback center, use performSelector. To cancel it before the event ends, use cancelPerformSelector.
+ * The event loop invokes eventEnded to indicate that the current event has ended. The eventEnded method invokes the queued selectors.
+ * Each task has a default delayed callback center that you access with the defaultCenter static method.
+ * See Also:NSDelayedCallbackCenter.performSelector(NSSelector,Object,Object,int), NSDelayedCallbackCenter.cancelPerformSelector(NSSelector,Object,Object), NSDelayedCallbackCenter.eventEnded(), NSDelayedCallbackCenter.defaultCenter()
+ */
+public class NSDelayedCallbackCenter{
+    /**
+     * Removes the specified selector for the specified target object and argument from the list of registered selectors. Only this specific combination of selector, target and argument will be removed.
+     */
+    public void cancelPerformSelector(com.webobjects.foundation.NSSelector selector, java.lang.Object target, java.lang.Object argument){
+        return; //TODO codavaj!!
     }
 
-    public static interface _Delegate {
-
-        public abstract void _delayedCallbackCenterWillNeedEndOfEventNotification(NSDelayedCallbackCenter nsdelayedcallbackcenter);
-
-        public abstract boolean _delayedCallbackCenterShouldHandleEndOfEvent(NSDelayedCallbackCenter nsdelayedcallbackcenter);
-
-        public abstract void _delayedCallbackCenterWillHandleEndOfEvent(NSDelayedCallbackCenter nsdelayedcallbackcenter);
+    /**
+     * Returns the current default center for the current request-response cycle. This is the current delayed callback center (NSDelayedCallbackCenter) for the calling thread.
+     */
+    public static com.webobjects.foundation.NSDelayedCallbackCenter defaultCenter(){
+        return null; //TODO codavaj!!
     }
 
+    /**
+     * Invokes the registered selectors in order of ascending priority. The event loop should invoke this method when the current event ends.
+     */
+    public void eventEnded(){
+        return; //TODO codavaj!!
+    }
 
-
-    public static NSDelayedCallbackCenter defaultCenter() { return null; }
-
-    public static void _setDelegate(_Delegate newDelegate) { return null; }
-
-    public static _Delegate _delegate() { return null; }
-
-    private NSDelayedCallbackCenter() { return null; }
-
-    public void performSelector(NSSelector selector, Object target, Object argument, int order) {}
-
-    public void cancelPerformSelector(NSSelector selector, Object target, Object argument) {}
-
-    public void _cancelAllActionsWithTarget(Object obj) {}
-
-    public void eventEnded() {}
-
-    public void _eventEnded() {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private static volatile _Delegate _delegate;
-    private static final WeakHashMap _centers;
-    private static volatile WeakReference _lastThread;
-    private static volatile NSDelayedCallbackCenter _lastCenter;
-    private final NSMutableArray _queue;
+    /**
+     * Registers selector to be invoked on target with the specified argument and order (priority). When the current event ends, the registered selectors are invoked in order of ascending priority.
+     */
+    public void performSelector(com.webobjects.foundation.NSSelector selector, java.lang.Object target, java.lang.Object argument, int order){
+        return; //TODO codavaj!!
+    }
 
 }

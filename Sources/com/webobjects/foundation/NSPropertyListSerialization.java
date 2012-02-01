@@ -1,273 +1,186 @@
-
 package com.webobjects.foundation;
-
-import java.io.*;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-import org.xml.sax.*;
-import org.xml.sax.helpers.DefaultHandler;
-
-
-public class NSPropertyListSerialization {
-    public static class _ApplePList extends _PListParser {
-
-
-        public _ApplePList() { return null; }
-
-        public _ApplePList(boolean indents) { return null; }
-
-        private void _saveIndexes(int i, int j, int k) {}
-
-        private String _savedIndexesAsString() { return null; }
-
-        public static boolean propertyListsAreEqual(Object obj, Object obj1) { return null; }
-
-        public static Object copyPropertyList(Object obj) { return null; }
-
-        public String stringFromPropertyList(Object plist) { return null; }
-
-        public Object parseStringIntoPlist(String string) { return null; }
-
-        private void _appendObjectToStringBuffer(Object obj, StringBuffer stringbuffer, int i) {}
-
-        private void _appendStringToStringBuffer(String s, StringBuffer stringbuffer, int i) {}
-
-        private void _appendDataToStringBuffer(NSData nsdata, StringBuffer stringbuffer, int i) {}
-
-        private void _appendArrayToStringBuffer(NSArray nsarray, StringBuffer stringbuffer, int i) {}
-
-        private void _appendDictionaryToStringBuffer(NSDictionary nsdictionary, StringBuffer stringbuffer, int i) {}
-
-        private final char _hexDigitForNibble(byte nibble) { return null; }
-
-        private int _readObjectIntoObjectReference(char ac[], int index, Object aobj[]) { return 0; }
-
-        private int _readUnquotedStringIntoStringBuffer(char ac[], int index, StringBuffer buffer) { return 0; }
-
-        private int _readQuotedStringIntoStringBuffer(char ac[], int index, StringBuffer stringbuffer) { return 0; }
-
-        private int _lengthOfData(char ac[], int index) { return 0; }
-
-        private int _readDataContentsIntoData(char ac[], int index, NSMutableData nsmutabledata) { return 0; }
-
-        private int _readArrayContentsIntoArray(char ac[], int index, NSMutableArray nsmutablearray) { return 0; }
-
-        private int _readDictionaryContentsIntoDictionary(char ac[], int index, NSMutableDictionary nsmutabledictionary) { return 0; }
-
-        private int _checkForWhitespaceOrComment(char ac[], int index) { return 0; }
-
-        private int _skipWhitespaceAndComments(char ac[], int index) { return 0; }
-
-        private int _processWhitespace(char ac[], int index) { return 0; }
-
-        private int _processSingleLineComment(char ac[], int index) { return 0; }
-
-        private int _processMultiLineComment(char ac[], int index) { return 0; }
-
-        private final byte _nibbleForHexDigit(char c) { return null; }
-
-        private final boolean _isHexDigit(char c) { return null; }
-
-        private final boolean _isWhitespace(char c) { return null; }
-
-        private char _nsToUnicode(int i) { return null; }
-
-        static  {}
-
-        private int _lineNumber;
-        private int _startOfLineCharIndex;
-        private int _savedIndex;
-        private int _savedLineNumber;
-        private int _savedStartOfLineCharIndex;
-        private static final int _C_NON_COMMENT_OR_SPACE = 1;
-        private static final int _C_WHITESPACE = 2;
-        private static final int _C_SINGLE_LINE_COMMENT = 3;
-        private static final int _C_MULTI_LINE_COMMENT = 4;
-        private static final int NSToPrecompUnicodeTable[];
-
-    }
-
-    public static class _XML extends _PListParser {
-        public static class DictionaryParser extends DefaultHandler {
-
-
-            public DictionaryParser() { return null; }
-
-            public Object plist() { return null; }
-
-            public void characters(char ch[], int start, int length) throws SAXException {}
-
-            public void endDocument() throws SAXException {}
-
-            public void endElement(String uri, String localName, String qName) throws SAXException {}
-
-            public void error(SAXParseException exception) throws SAXException {}
-
-            public void fatalError(SAXParseException exception) throws SAXException {}
-
-            public void ignorableWhitespace(char ac[], int i, int j) throws SAXException {}
-
-            public void processingInstruction(String s, String s1) throws SAXException {}
-
-            public InputSource resolveEntity(String publicId, String systemId) throws SAXException { return null; }
-
-            public void startElement(String uri, String localName, String qName, Attributes attributes) {}
-
-            public void startDocument() throws SAXException {}
-
-            private void saveCharContent() throws SAXException {}
-
-            public void warning(SAXParseException exception) throws SAXException {}
-
-            protected String unescapeString(String toRestore) { return null; }
-
-            static  {}
-
-            static String PUBLIC_APPLE_COMPUTER_PLIST_1_0;
-            static String PUBLIC_APPLE_PLIST_1_0;
-            protected SimpleDateFormat _dateFormat;
-            protected Stack _stack;
-            protected Object _plist;
-            protected StringBuffer _curChars;
-
-        }
-
-
-
-        public _XML() { return null; }
-
-        public _XML(boolean indents) { return null; }
-
-        public static SAXParserFactory parserFactory() { return null; }
-
-        public SAXParser newSAXParser() { return null; }
-
-        public Object parseStringIntoPlist(String string) { return null; }
-
-        public String stringFromPropertyList(Object plist) { return null; }
-
-        private void _appendObjectToStringBuffer(Object obj, StringBuffer stringbuffer, int i) {}
-
-        private void _appendStringToStringBuffer(String s, StringBuffer stringbuffer, int i) {}
-
-        private void _appendIntegerToStringBuffer(Number s, StringBuffer stringbuffer, int i) {}
-
-        private void _appendFloatToStringBuffer(Number s, StringBuffer stringbuffer, int i) {}
-
-        private void _appendBooleanToStringBuffer(Boolean s, StringBuffer stringbuffer, int i) {}
-
-        private void _appendDateToStringBuffer(Date s, StringBuffer stringbuffer, int i) {}
-
-        private void _appendDataToStringBuffer(NSData s, StringBuffer stringbuffer, int i) {}
-
-        private void _appendArrayToStringBuffer(List vector, StringBuffer stringbuffer, int i) {}
-
-        private void _appendDictionaryToStringBuffer(Map table, StringBuffer stringbuffer, int i) {}
-
-        protected String escapeString(String toValidate) { return null; }
-
-        protected static SAXParserFactory _parserFactory;
-        protected SimpleDateFormat _dateFormat;
-
-    }
-
-    public static abstract class _PListParser {
-
-
-        public _PListParser(boolean indents) { return null; }
-
-        protected void _appendIndentationToStringBuffer(StringBuffer buffer, int i) {}
-
-        protected void _appendNewLineToStringBuffer(StringBuffer buffer, int i) {}
-
-        public abstract Object parseStringIntoPlist(String s);
-
-        private boolean _indents;
-
-    }
-
-
-
-    private NSPropertyListSerialization() { return null; }
-
-    public static String stringFromPropertyList(Object plist) { return null; }
-
-    public static String stringFromPropertyList(Object plist, boolean indents) { return null; }
-
-    public static String xmlStringFromPropertyList(Object plist) { return null; }
-
-    public static String xmlStringFromPropertyList(Object plist, boolean indents) { return null; }
-
-    static boolean startsWithXMLDeclaration(String string) { return true; }
-
-    public static Object propertyListFromString(String string) { return null; }
-
-    public static Object propertyListFromString(String string, boolean forceXML) { return null; }
-
-    public static Object propertyListWithPathURL(URL url) { return null; }
-
-    public static Object propertyListWithPathURL(URL url, boolean forceXML) { return null; }
+/**
+ * This class provides static methods that convert between property lists and their string representations, which can be either strings or NSData objects. A property list is a structure that represents organized data. It can be built from a combination of NSArray, NSDictionary, String, and NSData objects.
+ * The string representation can be in XML or the ASCII plist format. To distinguish between the two formats, the parser that converts strings to property lists finds out whether the string starts with ?xml. A discussion of the ASCII plist format, A Primer on ASCII Property Lists, is available in the Mac OS X section of the Apple Developer Connection website. A discussion of XML property lists, Property List Services, is also available in the same area of the Apple Developer Connection website.
+ * The NSPropertyListSerialization class cannot be instantiated.
+ * See Also:NSPropertyListSerialization.booleanForString(java.lang.String), NSPropertyListSerialization.intForString(java.lang.String)
+ */
+public class NSPropertyListSerialization{
+    /**
+     * Convenience for methods to convert to xml plist. Returns true..
+     * See Also:Constant Field Values
+     */
+    public static final boolean ForceXML=true;
 
     /**
-     * @deprecated Method dataFromPropertyList is deprecated
+     * Convenience for methods to convert to plist. Returns true..
+     * See Also:Constant Field Values
      */
-
-    public static NSData dataFromPropertyList(Object plist) { return null; }
-
-    public static NSData dataFromPropertyList(Object plist, String encoding) { return null; }
+    public static final boolean Indents=true;
 
     /**
-     * @deprecated Method propertyListFromData is deprecated
+     * Convenience for methods to convert to plist. Returns false.
+     * See Also:Constant Field Values
      */
+    public static final boolean NoIndents=false;
 
-    public static Object propertyListFromData(NSData data) { return null; }
+    /**
+     * Parses the property list representation string and returns the resulting property list as an NSArray.
+     */
+    public static com.webobjects.foundation.NSArray arrayForString(java.lang.String value){
+        return null; //TODO codavaj!!
+    }
 
-    public static Object propertyListFromData(NSData data, String encoding) { return null; }
+    /**
+     * Parses the property list representation string and returns the resulting property list as an NSArray.
+     */
+    public static com.webobjects.foundation.NSArray arrayForString(java.lang.String value, boolean forceXML){
+        return null; //TODO codavaj!!
+    }
 
-    public static boolean booleanForString(String value) { return null; }
+    /**
+     * Converts a java.net.URL into a property list and returns the resulting property list as an NSArray.
+     */
+    public static com.webobjects.foundation.NSArray arrayWithPathURL(java.net.URL url){
+        return null; //TODO codavaj!!
+    }
 
-    public static int intForString(String value) { return null; }
+    /**
+     * Converts a java.net.URL into a property list and returns the resulting property list as an NSArray.
+     */
+    public static com.webobjects.foundation.NSArray arrayWithPathURL(java.net.URL url, boolean forceXML){
+        return null; //TODO codavaj!!
+    }
 
-    public static NSArray arrayWithPathURL(URL url) { return null; }
+    /**
+     * Parses a given string for boolean value according to the table below.
+     * String Result "YES" true "true" true any other value false
+     * The tests for "YES" and "true" are case insensitive.
+     */
+    public static boolean booleanForString(java.lang.String value){
+        return false; //TODO codavaj!!
+    }
 
-    public static NSArray arrayWithPathURL(URL url, boolean forceXML) { return null; }
+    /**
+     * Deprecated.
+     * Converts the property list object into a string and returns it as an NSData object. This method uses the platform's default character encoding to convert the result string to byte.
+     */
+    public static com.webobjects.foundation.NSData dataFromPropertyList(java.lang.Object plist){
+        return null; //TODO codavaj!!
+    }
 
-    public static NSArray arrayForString(String value) { return null; }
+    /**
+     * Converts the property list object into a string using a character encoding and returns it as an NSData object.
+     */
+    public static com.webobjects.foundation.NSData dataFromPropertyList(java.lang.Object plist, java.lang.String encoding){
+        return null; //TODO codavaj!!
+    }
 
-    public static NSArray arrayForString(String value, boolean forceXML) { return null; }
+    /**
+     * Parses the property list representation string and returns the resulting property list as an NSDictionary.
+     */
+    public static com.webobjects.foundation.NSDictionary dictionaryForString(java.lang.String value){
+        return null; //TODO codavaj!!
+    }
 
-    public static NSDictionary dictionaryWithPathURL(URL url) { return null; }
+    /**
+     * Parses the property list representation string and returns the resulting property list as an NSDictionary.
+     */
+    public static com.webobjects.foundation.NSDictionary dictionaryForString(java.lang.String value, boolean forceXML){
+        return null; //TODO codavaj!!
+    }
 
-    public static NSDictionary dictionaryWithPathURL(URL url, boolean forceXML) { return null; }
+    /**
+     * Converts a java.net.URL into a property list and returns the resulting property list as an NSDictionary.
+     */
+    public static com.webobjects.foundation.NSDictionary dictionaryWithPathURL(java.net.URL url){
+        return null; //TODO codavaj!!
+    }
 
-    public static NSDictionary dictionaryForString(String value) { return null; }
+    /**
+     * Converts a java.net.URL into a property list and returns the resulting property list as an NSDictionary.
+     */
+    public static com.webobjects.foundation.NSDictionary dictionaryWithPathURL(java.net.URL url, boolean forceXML){
+        return null; //TODO codavaj!!
+    }
 
-    public static NSDictionary dictionaryForString(String value, boolean forceXML) { return null; }
+    /**
+     * Parses a given string and returns the corresponding integer value.
+     */
+    public static int intForString(java.lang.String value){
+        return 0; //TODO codavaj!!
+    }
 
-    static  {}
+    /**
+     * Deprecated.
+     * Converts an NSData into a property list and returns it.
+     * This method uses the platform's default character encoding to convert the bytes in data byte array to characters in a string representation.
+     */
+    public static java.lang.Object propertyListFromData(com.webobjects.foundation.NSData data){
+        return null; //TODO codavaj!!
+    }
 
-    public static final Class _CLASS;
-    private static final int EOT = -1;
-    public static final boolean Indents = true;
-    public static final boolean NoIndents = false;
-    public static final boolean ForceXML = true;
+    /**
+     * Converts an NSData into a property list using a character encoding and returns it.
+     */
+    public static java.lang.Object propertyListFromData(com.webobjects.foundation.NSData data, java.lang.String encoding){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Converts a string into a property list and returns it.
+     */
+    public static java.lang.Object propertyListFromString(java.lang.String string){
+        return null; //TODO codavaj!!
+    }
 
-    // Unreferenced inner class com/webobjects/foundation/NSPropertyListSerialization$1
+    /**
+     * Converts a string into a property list and returns it.
+     */
+    public static java.lang.Object propertyListFromString(java.lang.String string, boolean forceXML){
+        return null; //TODO codavaj!!
+    }
 
-/* anonymous class */
-    static class _cls1 {
+    /**
+     * Converts a java.net.URL into a property list and returns it.
+     */
+    public static java.lang.Object propertyListWithPathURL(java.net.URL url){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Converts a java.net.URL into a property list and returns it.
+     */
+    public static java.lang.Object propertyListWithPathURL(java.net.URL url, boolean forceXML){
+        return null; //TODO codavaj!!
+    }
 
-        static  {}
+    /**
+     * Converts a property list object into a string (old style plist) and returns it. All entries are indented.
+     */
+    public static java.lang.String stringFromPropertyList(java.lang.Object plist){
+        return null; //TODO codavaj!!
+    }
 
-        static final int $SwitchMap$com$webobjects$foundation$NSPropertyListSerialization$_XML$DictionaryParser$XMLNode$Type[];
+    /**
+     * Converts a property list object into a string (old style plist) and returns it.
+     */
+    public static java.lang.String stringFromPropertyList(java.lang.Object plist, boolean indents){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Converts a property list object into an XML string and returns it. All entries are indented.
+     */
+    public static java.lang.String xmlStringFromPropertyList(java.lang.Object plist){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Converts a property list object into an XML string and returns it.
+     */
+    public static java.lang.String xmlStringFromPropertyList(java.lang.Object plist, boolean indents){
+        return null; //TODO codavaj!!
     }
 
 }

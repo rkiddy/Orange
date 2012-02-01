@@ -1,79 +1,87 @@
-
 package com.webobjects.eointerface.swing;
-
-import com.webobjects.eointerface.EOValueSelectionAssociation;
-import com.webobjects.eointerface.EOWidgetAssociation;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.text.Format;
-import javax.swing.*;
-
-
-public class EOSwingComboBoxPlugin extends com.webobjects.eointerface.EOValueSelectionAssociation.ValueSelectionPlugin
-    implements ActionListener, com.webobjects.eointerface.EOWidgetAssociation.WidgetPlugin.Formatting {
-    private class _ComboBoxModel extends AbstractListModel
-        implements ComboBoxModel {
-
-
-        public _ComboBoxModel() { return null; }
-
-        public Object getElementAt(int index) { return null; }
-
-        public Object getSelectedItem() { return null; }
-
-        public int getSize() { return 0; }
-
-        public void setSelectedItem(Object item) {}
-
-        boolean _isSettingValue() { return null; }
-
-        private int _itemIndexWhileSettingValue;
-        final EOSwingComboBoxPlugin this$0;
-
+/**
+ * EOSwingComboBoxPlugin is a concrete subclass of EOValueSelectionAssociation.ValueSelectionPlugin which is used with Swing's JComboBox.
+ * Associations classes: EOValueSelectionAssociation
+ * Widgets classes: JComboBox
+ */
+public class EOSwingComboBoxPlugin extends com.webobjects.eointerface.EOValueSelectionAssociation.ValueSelectionPlugin implements java.awt.event.ActionListener, com.webobjects.eointerface.EOWidgetAssociation.WidgetPlugin.Formatting{
+    /**
+     * Creates a new EOSwingComboBoxPlugin connected to an association and a UI widget.
+     * Parameters:association - Association of class EOValueSelectionAssociation or subclass for the plugin to usewidget - Widget of class JComboBox or subclass that the plugin will manage
+     */
+    public EOSwingComboBoxPlugin(com.webobjects.eointerface.EOWidgetAssociation association, java.lang.Object widget){
+         //TODO codavaj!!
     }
 
+    /**
+     * Invokes widgetSelectionDidChange on this plugin's EOValueSelectionAssociation.
+     */
+    public void actionPerformed(java.awt.event.ActionEvent event){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Clean up (end) the plugin's connection to its JComboBox widget. This makes sure that action events from the JComboBox are not sent anymore to this plugin.
+     */
+    public void breakConnection(){
+        return; //TODO codavaj!!
+    }
 
-    public EOSwingComboBoxPlugin(EOWidgetAssociation association, Object widget) { return null; }
+    /**
+     * Establishes a connection between the plugin and its UI widget. This makes sure that action events from the JComboBox are sent to this plugin.
+     */
+    public void establishConnection(){
+        return; //TODO codavaj!!
+    }
 
-    public void establishConnection() {}
+    /**
+     * Returns the selected choice in the JComboBox.
+     */
+    public int selectionIndex(){
+        return 0; //TODO codavaj!!
+    }
 
-    public void breakConnection() {}
+    /**
+     * Sets the selected choice and whether the JCombobox is enabled
+     */
+    public void setSelectionIndex(int selectionIndex, boolean isEnabled){
+        return; //TODO codavaj!!
+    }
 
-    public String[] widgetKeysTaken() { return null; }
+    /**
+     * Sets the titles in the plugin's JComboBox.
+     * If objects is null, clear out titles -- (only invoked if EOAssociation.TitlesAspect is bound).
+     */
+    public void setTitlesFromObjects(java.lang.Object[] objects){
+        return; //TODO codavaj!!
+    }
 
-    public void setTitlesFromObjects(Object objects[]) {}
+    /**
+     * Sets a formatter for the available choices (titles) in the JComboBox, which will format an array of objects coming from the EOValueSelectionAssociation into displayed strings.
+     */
+    public void setValueFormatter(java.lang.Object formatter){
+        return; //TODO codavaj!!
+    }
 
-    public String[] titles() { return null; }
+    /**
+     * Returns an array of available titles in the plugin's combo box
+     */
+    public java.lang.String[] titles(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setSelectionIndex(int selectionIndex, boolean isEnabled) {}
+    /**
+     * Returns the format set with setValueFormatter.
+     */
+    public java.lang.Object valueFormatter(){
+        return null; //TODO codavaj!!
+    }
 
-    public int selectionIndex() { return 0; }
+    /**
+     * Returns an array of Strings which represent outlet names in Interface Builder These outlets are disabled by Interface Builder once the button is connected to this plugins association.
+     */
+    public java.lang.String[] widgetKeysTaken(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setValueFormatter(Object formatter) {}
-
-    public Object valueFormatter() { return null; }
-
-    public void actionPerformed(ActionEvent event) {}
-
-    static Object[] access$000(EOSwingComboBoxPlugin x0) { return null; }
-
-    static int access$100(EOSwingComboBoxPlugin x0) { return 0; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private static DefaultComboBoxModel _DefaultComboBoxModel;
-    private Format _format;
-    private Object _titleValues[];
-    private String _titles[];
-    private int _selectionIndex;
-    private boolean _ignoreChanges;
-    private _ComboBoxModel _model;
-
-
-    static Object[] access$000(EOSwingComboBoxPlugin x0) { return null; }
-
-    static int access$100(EOSwingComboBoxPlugin x0) { return 0; }
 }

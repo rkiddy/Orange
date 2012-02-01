@@ -1,46 +1,67 @@
-
 package com.webobjects.jspservlet;
+public class WOServletContext extends com.webobjects.appserver.WOContext implements java.lang.Cloneable{
+    /**
+     * Creates a new WOServletContext object with aRequest. The userInfo dictionary of aRequest should contain at least the following: HttpServletRequest, HttpServletResponse ServletConfig, ServletContext. Optionally (for JSP pages), PageContext should also be included. The keys for the above objects are the same as the class of object. If PageContext is included, the JSP page and JspWriter objects will be extracted from the PageContext.
+     * Parameters:aRequest - the WORequest the context should be created for
+     */
+    public WOServletContext(com.webobjects.appserver.WORequest aRequest){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.foundation.NSDictionary;
-import com.webobjects.foundation.NSLog;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.http.*;
-import javax.servlet.jsp.JspWriter;
-import javax.servlet.jsp.PageContext;
+    /**
+     * Returns the HttpServletRequest.
+     */
+    public javax.servlet.http.HttpServletRequest httpServletRequest(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Returns the HttpServletResponse.
+     */
+    public javax.servlet.http.HttpServletResponse httpServletResponse(){
+        return null; //TODO codavaj!!
+    }
 
-public class WOServletContext extends WOContext
-    implements Cloneable {
+    /**
+     * Returns the HttpSession, if it exists. Returns null otherwise.
+     */
+    public javax.servlet.http.HttpSession httpSession(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Returns the JSP page object that was part of the PageContext. Only relevant for requests coming from JSP pages.
+     */
+    public java.lang.Object jspPage(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOServletContext(WORequest aRequest) { return null; }
+    /**
+     * Returns the JspWriter that was part of the PageContext. Only relevant for requests coming from JSP pages.
+     */
+    public javax.servlet.jsp.JspWriter jspWriter(){
+        return null; //TODO codavaj!!
+    }
 
-    public String _urlWithRequestHandlerKey(String requestHandlerKey, String aRequestHandlerPath, String aQueryString, boolean isSecure) { return null; }
+    /**
+     * Returns the ServletConfig.
+     */
+    public javax.servlet.ServletConfig servletConfig(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOSession session() { return null; }
+    /**
+     * Returns the ServletContext.
+     */
+    public javax.servlet.ServletContext servletContext(){
+        return null; //TODO codavaj!!
+    }
 
-    public JspWriter jspWriter() { return null; }
-
-    public Object jspPage() { return null; }
-
-    public HttpServletRequest httpServletRequest() { return null; }
-
-    public HttpServletResponse httpServletResponse() { return null; }
-
-    public ServletConfig servletConfig() { return null; }
-
-    public ServletContext servletContext() { return null; }
-
-    public HttpSession httpSession() { return null; }
-
-    private PageContext _pageContext;
-    private JspWriter _jspWriter;
-    private Object _page;
-    private HttpServletRequest _servletRequest;
-    private HttpServletResponse _servletResponse;
-    private ServletConfig _servletConfig;
-    private ServletContext _servletContext;
+    /**
+     * Returns the object representing the receiving context's session, if one exists. The overriden method checks to see if the session is part of the JSP session. If that fails, it defaults to the superclass behavior.
+     */
+    public com.webobjects.appserver.WOSession session(){
+        return null; //TODO codavaj!!
+    }
 
 }

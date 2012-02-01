@@ -1,12 +1,15 @@
-
 package com.webobjects.appserver;
-
-
-public class WODOMParserException extends RuntimeException {
-
-
-    public WODOMParserException(String s) { return null; }
-
-    private static final long serialVersionUID = 0xfcd171f0L;
+/**
+ * This runtime exception class is thrown when there are problems parsing XML content into a DOM document.
+ * See Also:Serialized Form
+ */
+public class WODOMParserException extends java.lang.RuntimeException{
+    /**
+     * Creates a WODOMParserException.
+     * Parameters:s - the exception string
+     */
+    public WODOMParserException(java.lang.String s){
+         //TODO codavaj!!
+    }
 
 }

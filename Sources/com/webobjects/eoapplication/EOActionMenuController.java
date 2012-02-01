@@ -1,33 +1,30 @@
-
 package com.webobjects.eoapplication;
+public class EOActionMenuController extends com.webobjects.eoapplication.EOActionWidgetController{
+    public EOActionMenuController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Dimension;
-import java.awt.Insets;
-import javax.swing.JComboBox;
-import javax.swing.JComponent;
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOActionMenuController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public com.webobjects.foundation.NSArray actionWidgets(){
+        return null; //TODO codavaj!!
+    }
 
-public class EOActionMenuController extends EOActionWidgetController {
+    protected void createWidgetsForActionsAndPlaceInContainers(com.webobjects.foundation.NSArray actions, com.webobjects.foundation.NSArray secondaryActions, javax.swing.JComponent container, javax.swing.JComponent secondaryContainer, int widgetPosition){
+        return; //TODO codavaj!!
+    }
 
+    protected void disposeActionWidgets(){
+        return; //TODO codavaj!!
+    }
 
-    public EOActionMenuController() { return null; }
-
-    public EOActionMenuController(EOXMLUnarchiver unarchiver) { return null; }
-
-    protected void disposeActionWidgets() {}
-
-    public NSArray actionWidgets() { return null; }
-
-    protected void updateActionWidgetEnabling() {}
-
-    protected void createWidgetsForActionsAndPlaceInContainers(NSArray actions, NSArray secondaryActions, JComponent container, JComponent secondaryContainer, int widgetPosition) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private JComboBox _actionMenu;
+    protected void updateActionWidgetEnabling(){
+        return; //TODO codavaj!!
+    }
 
 }

@@ -1,84 +1,66 @@
-
 package com.webobjects.eodistribution.client;
+/**
+ * An EOHTTPChannel is a concrete implementation of an EODistributionChannel which handles communication between the client and server in distributed Java Client applications using the HTTP protocol (POST commands).
+ * EOHTTPChannels use regular sockets to establish the connection. You can subclass EOHTTPChannel and override the createSocket method if you want to use different kinds of sockets, for example to implement an SSL channel.
+ */
+public class EOHTTPChannel extends com.webobjects.eodistribution.client.EODistributionChannel{
+    /**
+     * The name of the applicationURL connection key. The application URL is the URL of the server application.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String ApplicationURLKey="applicationURL";
 
-import com.webobjects.eodistribution.common._EOReferenceRecordingCoder;
-import com.webobjects.foundation.*;
-import java.io.*;
-import java.net.*;
-import java.util.StringTokenizer;
+    /**
+     * The name of the componentURL connection key. The component URL identifies the WOJavaClientComponent component used on the server side to represent the client.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String ComponentURLKey="componentURL";
 
+    /**
+     * The name of the page connection key. If specified, the channel connects to a WOJavaClientComponent on the page specified by name with this connection key (the default is the Main page).
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String PageKey="page";
 
-public class EOHTTPChannel extends EODistributionChannel {
+    /**
+     * The name of the sessionID connection key. The session ID identifies the session used on the server side for the client.
+     * See Also:Constant Field Values
+     */
+    public static final java.lang.String SessionIDKey="sessionID";
 
+    /**
+     * Creates a new HTTP channel.
+     */
+    public EOHTTPChannel(){
+         //TODO codavaj!!
+    }
 
-    public EOHTTPChannel() { return null; }
+    /**
+     * Returns the connection keys for EOHTTPChannels. Not all the keys have to be specified, usually the application URL is sufficient:
+     */
+    public com.webobjects.foundation.NSArray connectionKeys(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSArray connectionKeys() { return null; }
+    /**
+     * Creates and returns a new socket to communicate with the server. You can override this method if you wish to use different kinds of sockets, for example to implement an SSL channel.
+     */
+    public java.net.Socket createSocket(java.lang.String protocol, java.lang.String hostName, int portNumber) throws java.io.IOException{
+        return null; //TODO codavaj!!
+    }
 
-    public static String _resolvedHostName(String host, String applicationURL) { return null; }
+    /**
+     * Establishes a connection with the server and begins communication using the HTTP protocol. The method retrieves host, port, and URL information from the connection dictionary (application URL). Throws an NSForwardException containing an IOException if a communication problem occurs and an IllegalArgumentException if required information is missing from the connection dictionary.
+     */
+    public void establishConnection(){
+        return; //TODO codavaj!!
+    }
 
-    public void establishConnection() {}
-
-    private void _buildURL(String applicationURL, String componentURL, String sessionID) {}
-
-    public Socket createSocket(String protocol, String hostName, int portNumber) throws IOException { return null; }
-
-    private void _openSocketToServer() throws IOException {}
-
-    private void cleanUpConnectionResources() {}
-
-    private Object _responseToMessage(Object message, NSCoder coder, boolean useDelegate) { return null; }
-
-    boolean _isWithinResponseToMessage() { return null; }
-
-    public Object responseToMessage(Object message, NSCoder coder) { return null; }
-
-    public URL _completeURL(String string) { return null; }
-
-    private String _headerForMessageLength(int length) { return null; }
-
-    private void _saveCookie(StringBuffer cookieBuffer) throws IOException {}
-
-    private void _skipHeadersInResponse(InputStream input) throws IOException {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    public static final String ApplicationURLKey = "applicationURL";
-    public static final String ComponentURLKey = "componentURL";
-    public static final String SessionIDKey = "sessionID";
-    public static final String PageKey = "page";
-    private static final int _DefaultPort = 80;
-    private static final int _Newline = 10;
-    private static final int _CarriageReturn = 13;
-    private static final int FailureDelayMilliseconds = 10;
-    public static final String _EODefaultJavaClientMimeType = "x-eojavaclient-message";
-    public static final String _ContentLengthHeader = "content-length:";
-    public static final String _SetCookieHeader = "Set-Cookie:";
-    private static final char _EODefaultJavaClientMimeTypeCharacters[];
-    private static final char _LowercaseContentLengthHeaderCharacters[];
-    private static final char _UppercaseContentLengthHeaderCharacters[];
-    private static final char _LowercaseSetCookieHeaderCharacters[];
-    private static final char _UppercaseSetCookieHeaderCharacters[];
-    private static int _StandardPostRequest;
-    private static int _DirectActionGetRequestFullURL;
-    private static int _DirectActionGetRequestRelativeURL;
-    public static String _EOJavaClientMimeType;
-    private String _url;
-    private String _protocol;
-    private String _host;
-    private int _port;
-    private String _sessionID;
-    private int _requestType;
-    private Socket _socket;
-    private InputStream _input;
-    private InputStream _delegateInput;
-    private OutputStream _output;
-    private ByteArrayOutputStream _privateMessage;
-    private OutputStream _delegatePrivateMessage;
-    private boolean _delegateAskedForInputStream;
-    private boolean _delegateAskedForPrivateMessageStream;
-    private Thread _lastThread;
-    private NSMutableArray _cookies;
+    /**
+     * Sends the message message from the client to the server using the HTTP POST command. The message is encoded before it is sent using the coder coder. Synchronously receives, decodes, and returns the response to the message. Throws an IllegalStateException if the method is re-entered or an NSForwardException containing an IOException if a communication problem occurs.
+     */
+    public java.lang.Object responseToMessage(java.lang.Object message, com.webobjects.foundation.NSCoder coder){
+        return null; //TODO codavaj!!
+    }
 
 }

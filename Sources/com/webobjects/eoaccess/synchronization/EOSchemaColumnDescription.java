@@ -1,44 +1,84 @@
-
 package com.webobjects.eoaccess.synchronization;
+/**
+ * A wrapper object for relational database column information used for schema synchronization.
+ * Since: 5.4 See Also:EOSchemaTableDescription, EOSchemaSynchronizationFactory
+ */
+public class EOSchemaColumnDescription extends com.webobjects.eoaccess.synchronization.EOSchemaPropertyDescription{
+    public static final com.webobjects.eoaccess.synchronization.EOSchemaColumnDescription EmptyDescription=null;
 
+    protected EOSchemaColumnDescription(){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Allows null as specified by the eomodel
+     */
+    public java.lang.Boolean allowsNull(){
+        return null; //TODO codavaj!!
+    }
 
-public class EOSchemaColumnDescription extends EOSchemaPropertyDescription {
+    /**
+     * External data type as specified in the eomodel
+     */
+    public java.lang.String dataType(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Adds the fields for each subclass. Subclasses must override this method and call super first if they have specific fields to display.
+     */
+    protected void fieldsToString(java.lang.StringBuilder aLog){
+        return; //TODO codavaj!!
+    }
 
-    protected EOSchemaColumnDescription() { return null; }
+    /**
+     * Returns the internal data type of the column as specified in the eomodel
+     */
+    public java.lang.Object internalDataType(){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean isEmpty() { return true; }
+    /**
+     * Description copied from class:
+     * Returns true is the property description is empty
+     */
+    public boolean isEmpty(){
+        return false; //TODO codavaj!!
+    }
 
-    public String dataType() { return null; }
+    /**
+     * Scale as defined by the eomodel
+     */
+    public java.lang.Number scale(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void setDataType(String value) {}
+    protected void setAllowsNull(java.lang.Boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public Object internalDataType() { return null; }
+    protected void setDataType(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    protected void setInternalDataType(Object value) {}
+    protected void setInternalDataType(java.lang.Object value){
+        return; //TODO codavaj!!
+    }
 
-    public Number width() { return null; }
+    protected void setScale(java.lang.Number value){
+        return; //TODO codavaj!!
+    }
 
-    protected void setWidth(Number value) {}
+    protected void setWidth(java.lang.Number value){
+        return; //TODO codavaj!!
+    }
 
-    public Number scale() { return null; }
-
-    protected void setScale(Number value) {}
-
-    public Boolean allowsNull() { return null; }
-
-    protected void setAllowsNull(Boolean value) {}
-
-    protected void fieldsToString(StringBuilder aLog) {}
-
-    static  {}
-
-    protected String _dataType;
-    protected Object _internalDataType;
-    protected Number _width;
-    protected Number _scale;
-    protected Boolean _allowsNull;
-    public static final EOSchemaColumnDescription EmptyDescription;
+    /**
+     * Width as defined by the eomodel
+     */
+    public java.lang.Number width(){
+        return null; //TODO codavaj!!
+    }
 
 }

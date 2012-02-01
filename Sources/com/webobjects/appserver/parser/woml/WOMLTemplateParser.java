@@ -1,147 +1,209 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLTemplateParser extends com.webobjects.appserver.parser.WOComponentTemplateParser implements org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler{
+    public static java.lang.String CDATA_EMBED_PREFIX;
 
-import com.webobjects.appserver.WOAssociationFactory;
-import com.webobjects.appserver.WOElement;
-import com.webobjects.appserver._private.*;
-import com.webobjects.appserver.parser.WOComponentTemplateParser;
-import com.webobjects.appserver.parser.WOHTMLFormatException;
-import com.webobjects.appserver.parser.declaration.WODeclarationFormatException;
-import com.webobjects.appserver.parser.woml.namespaces.WOMLDefaultNamespace;
-import com.webobjects.foundation.*;
-import java.io.*;
-import java.lang.reflect.InvocationTargetException;
-import java.net.URL;
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import javax.xml.parsers.*;
-import org.xml.sax.*;
-import org.xml.sax.ext.LexicalHandler;
+    public static java.lang.String CDATA_EMBED_SUFFIX;
 
+    public static java.lang.String TEMPLATE_CANNED_PREFIX;
 
-public class WOMLTemplateParser extends WOComponentTemplateParser
-    implements ContentHandler, LexicalHandler {
+    public static java.lang.String TEMPLATE_CANNED_SUFFIX;
 
+    public static java.lang.String TEMPLATE_WRAPPER_ELEMENT_NAME;
 
-    private static void dumpNode(WOMLNode node, String depthString) { return null; }
+    public WOMLTemplateParser(java.lang.String referenceName, java.lang.String HTMLString, java.lang.String declarationString, com.webobjects.foundation.NSArray languages, com.webobjects.appserver.WOAssociationFactory associationFactory, com.webobjects.appserver.parser.woml.WOMLNamespaceProvider namespaceProvider){
+         //TODO codavaj!!
+    }
 
-    private static void dumpElement(WOElement element, String depthString, boolean asTree) { return null; }
+    /**
+     * Adds the given WOElement to the list of WOElement objects. If the given element is a bare string and the last element in the list is also a bare string the elements will be combined.
+     */
+    protected void addWOElement(com.webobjects.appserver.WOElement element, java.util.List elements){
+        return; //TODO codavaj!!
+    }
 
-    public static WOElement templateWithString(String referenceName, String templateString, NSArray languages, WOAssociationFactory associationFactory, WOMLNamespaceProvider namespaceProvider) throws WODeclarationFormatException, WOHTMLFormatException, ClassNotFoundException { return null; }
+    protected void appendEscapedText(java.lang.CharSequence sequence, java.lang.StringBuilder buffer){
+        return; //TODO codavaj!!
+    }
 
-    public static String escapeRegex(String s) { return null; }
+    public void characters(char[] ch, int start, int length) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public static boolean isCombinedTemplate(WOComponentDefinition definition) { return null; }
+    public void comment(char[] ch, int start, int length) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public WOMLTemplateParser(String referenceName, String HTMLString, String declarationString, NSArray languages, WOAssociationFactory associationFactory, WOMLNamespaceProvider namespaceProvider) { return null; }
+    /**
+     * Creates a list of WOElement objects from a list of WOMLNode objects. The given textBuffer holds the current bare string that was present at the beginning of the element creation.
+     */
+    protected void createWOElements(java.util.List nodes, java.lang.StringBuilder textBuffer, java.util.List childElements){
+        return; //TODO codavaj!!
+    }
 
-    protected String pathForComponentDef(WOComponentDefinition componentDef) { return null; }
+    public void endCDATA() throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    protected WOMLParentNode getCurrentNode() { return null; }
+    protected void endCurrentTextNode(){
+        return; //TODO codavaj!!
+    }
 
-    protected WOMLParentNode popNode() { return null; }
+    public void endDocument() throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    protected void pushNode(WOMLParentNode node) {}
+    public void endDTD() throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    protected void escapeInnerData(CharSequence sequence, String prefix, String suffix, StringBuilder buffer) {}
+    public void endElement(java.lang.String uri, java.lang.String localName, java.lang.String qName) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    protected void appendEscapedText(CharSequence sequence, StringBuilder buffer) {}
+    public void endEntity(java.lang.String name) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    protected String preprocess(String templateString) { return null; }
+    public void endPrefixMapping(java.lang.String prefix) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    protected WOElement process(String theTemplateString, String xmlProcessingInstruction, String prefixString) throws WOMLTemplateParserException { return null; }
+    protected void escapeInnerData(java.lang.CharSequence sequence, java.lang.String prefix, java.lang.String suffix, java.lang.StringBuilder buffer){
+        return; //TODO codavaj!!
+    }
 
-    protected int getCurrentLineNumber() { return 0; }
+    public static java.lang.String escapeRegex(java.lang.String s){
+        return null; //TODO codavaj!!
+    }
 
-    protected int getCurrentColumnNumber() { return 0; }
+    protected int getCurrentColumnNumber(){
+        return 0; //TODO codavaj!!
+    }
 
-    protected WOMLPosition getCurrentPosition() { return null; }
+    protected int getCurrentLineNumber(){
+        return 0; //TODO codavaj!!
+    }
 
-    protected void updateStartPosition() {}
+    protected com.webobjects.appserver.parser.woml.WOMLParentNode getCurrentNode(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void endCurrentTextNode() {}
+    protected com.webobjects.appserver.parser.woml.WOMLPosition getCurrentPosition(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void addWOElement(WOElement element, List elements) {}
+    public org.xml.sax.DTDHandler getDTDHandler(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void createWOElements(List nodes, StringBuilder textBuffer, List childElements) {}
+    public org.xml.sax.EntityResolver getEntityResolver(){
+        return null; //TODO codavaj!!
+    }
 
-    public ErrorHandler getErrorHandler() { return null; }
+    public org.xml.sax.ErrorHandler getErrorHandler(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setErrorHandler(ErrorHandler handler) {}
+    public void ignorableWhitespace(char[] ch, int start, int length) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public EntityResolver getEntityResolver() { return null; }
+    public static boolean isCombinedTemplate(com.webobjects.appserver._private.WOComponentDefinition definition){
+        return false; //TODO codavaj!!
+    }
 
-    public void setEntityResolver(EntityResolver entityResolver) {}
+    public com.webobjects.appserver.WOElement parse() throws java.lang.ClassNotFoundException, com.webobjects.appserver.parser.declaration.WODeclarationFormatException, com.webobjects.appserver.parser.WOHTMLFormatException{
+        return null; //TODO codavaj!!
+    }
 
-    public DTDHandler getDTDHandler() { return null; }
+    /**
+     * Parses the current buffer with the given prefix until the given suffix is found. If the prefix is not present then this method returns null and the buffer unmodified. If found characters are consumed into the result until the end token is found. If includeTrailingWhitespace is true this will add any trailing whitespace to the returned token. If includeLeadingWhitespace is specified then leading whitespace will be ignored for matching purposes, but still returned in the return value.
+     */
+    protected java.lang.String parseUntil(java.lang.String prefix, java.lang.StringBuilder buffer, java.lang.String endToken, boolean includeLeadingWhitespace, boolean includeTrailingWhitespace){
+        return null; //TODO codavaj!!
+    }
 
-    public void setDTDHandler(DTDHandler dtdHandler) {}
+    /**
+     * Returns the path string for the component definition given.
+     */
+    protected java.lang.String pathForComponentDef(com.webobjects.appserver._private.WOComponentDefinition componentDef){
+        return null; //TODO codavaj!!
+    }
 
-    protected String parseUntil(String prefix, StringBuilder buffer, String endToken, boolean includeLeadingWhitespace, boolean includeTrailingWhitespace) { return null; }
+    protected com.webobjects.appserver.parser.woml.WOMLParentNode popNode(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOElement parse() throws ClassNotFoundException, WODeclarationFormatException, WOHTMLFormatException { return null; }
+    /**
+     * This is unclean. This splits CDATA and comment sections into bits that have embedded elements. This also translates any non-comment and non-CDATA content ampersands to XML escape sequences (& ->
+     * ).
+     */
+    protected java.lang.String preprocess(java.lang.String templateString){
+        return null; //TODO codavaj!!
+    }
 
-    public void setDocumentLocator(Locator locator) {}
+    protected com.webobjects.appserver.WOElement process(java.lang.String theTemplateString, java.lang.String xmlProcessingInstruction, java.lang.String prefixString) throws com.webobjects.appserver.parser.woml.WOMLTemplateParserException{
+        return null; //TODO codavaj!!
+    }
 
-    public void startDocument() throws SAXException {}
+    public void processingInstruction(java.lang.String target, java.lang.String data) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void endDocument() throws SAXException {}
+    protected void pushNode(com.webobjects.appserver.parser.woml.WOMLParentNode node){
+        return; //TODO codavaj!!
+    }
 
-    public void startPrefixMapping(String prefix, String uri) throws SAXException {}
+    public void setDocumentLocator(org.xml.sax.Locator locator){
+        return; //TODO codavaj!!
+    }
 
-    public void endPrefixMapping(String s) throws SAXException {}
+    public void setDTDHandler(org.xml.sax.DTDHandler dtdHandler){
+        return; //TODO codavaj!!
+    }
 
-    public void processingInstruction(String target, String data) throws SAXException {}
+    public void setEntityResolver(org.xml.sax.EntityResolver entityResolver){
+        return; //TODO codavaj!!
+    }
 
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {}
+    public void setErrorHandler(org.xml.sax.ErrorHandler handler){
+        return; //TODO codavaj!!
+    }
 
-    public void endElement(String uri, String localName, String qName) throws SAXException {}
+    public void skippedEntity(java.lang.String name) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void characters(char ch[], int start, int length) throws SAXException {}
+    public void startCDATA() throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void ignorableWhitespace(char ch[], int start, int length) throws SAXException {}
+    public void startDocument() throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void skippedEntity(String s) throws SAXException {}
+    public void startDTD(java.lang.String name, java.lang.String publicId, java.lang.String systemId) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void comment(char ch[], int start, int length) throws SAXException {}
+    public void startElement(java.lang.String uri, java.lang.String localName, java.lang.String qName, org.xml.sax.Attributes attributes) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void startCDATA() throws SAXException {}
+    public void startEntity(java.lang.String name) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void endCDATA() throws SAXException {}
+    public void startPrefixMapping(java.lang.String prefix, java.lang.String uri) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void startDTD(String s, String s1, String s2) throws SAXException {}
+    public static com.webobjects.appserver.WOElement templateWithString(java.lang.String referenceName, java.lang.String templateString, com.webobjects.foundation.NSArray languages, com.webobjects.appserver.WOAssociationFactory associationFactory, com.webobjects.appserver.parser.woml.WOMLNamespaceProvider namespaceProvider) throws com.webobjects.appserver.parser.declaration.WODeclarationFormatException, com.webobjects.appserver.parser.WOHTMLFormatException, java.lang.ClassNotFoundException{
+        return null; //TODO codavaj!!
+    }
 
-    public void endDTD() throws SAXException {}
-
-    public void startEntity(String s) throws SAXException {}
-
-    public void endEntity(String s) throws SAXException {}
-
-    static  {}
-
-    public static String CDATA_EMBED_PREFIX;
-    public static String CDATA_EMBED_SUFFIX;
-    public static String TEMPLATE_WRAPPER_ELEMENT_NAME;
-    public static String TEMPLATE_CANNED_PREFIX;
-    public static String TEMPLATE_CANNED_SUFFIX;
-    private static final String ENTITY_AMP = "&amp;";
-    private static Pattern CDATA_EMBED_START_PATTERN;
-    private static Pattern CDATA_EMBED_END_PATTERN;
-    private static Pattern CDATA_START_PATTERN;
-    private static Pattern CDATA_END_PATTERN;
-    private static Pattern COMMENT_END_PATTERN;
-    private ErrorHandler errorHandler;
-    private EntityResolver entityResolver;
-    private DTDHandler dtdHandler;
-    private Map uriToNamespace;
-    private Map namespaceToUri;
-    private Locator locator;
-    private int lineNumberAdjust;
-    private List nodeStack;
-    private WOMLRootNode rootNode;
-    private WOMLTextNode currentTextNode;
-    private int startLineNumber;
-    private int startColumnNumber;
+    protected void updateStartPosition(){
+        return; //TODO codavaj!!
+    }
 
 }

@@ -1,123 +1,139 @@
-
 package com.webobjects.directtoweb.generation;
+public class DTWTemplate{
+    public DTWTemplate(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.appserver._private.*;
-import com.webobjects.eocontrol.EOEditingContext;
-import com.webobjects.eocontrol.EOKeyValueArchiver;
-import com.webobjects.foundation.*;
-import java.io.File;
-import java.net.URL;
-import java.util.Enumeration;
+    public void addDeclarationForElement(com.webobjects.appserver.WOElement anElement, java.lang.String name, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
+    public void addImports(com.webobjects.foundation.NSArray imports){
+        return; //TODO codavaj!!
+    }
 
-public class DTWTemplate {
+    public void addImportsForComponent(com.webobjects.appserver.WOComponent component){
+        return; //TODO codavaj!!
+    }
 
+    public void addInterfaceName(java.lang.String oldName, com.webobjects.appserver.WOComponent component){
+        return; //TODO codavaj!!
+    }
 
-    public DTWTemplate() { return null; }
+    public void addInterfaces(com.webobjects.foundation.NSArray interfaces){
+        return; //TODO codavaj!!
+    }
 
-    public static DTWTemplate templateWithName(String aName) { return null; }
+    public void addInterfacesForComponent(com.webobjects.appserver.WOComponent component){
+        return; //TODO codavaj!!
+    }
 
-    public static DTWTemplate templateForComponent(WOComponent component, WOContext oldContext, String componentName) { return null; }
+    public java.lang.String addMethod(java.lang.String code){
+        return null; //TODO codavaj!!
+    }
 
-    private Class generationClass(WOElement anElement) { return null; }
+    public java.lang.String addMethodNamed(java.lang.String oldName, com.webobjects.appserver.WOComponent component, boolean rename){
+        return null; //TODO codavaj!!
+    }
 
-    public void appendElement(WOElement anElement, WOContext aContext) {}
+    public java.lang.String addVariable(java.lang.String code){
+        return null; //TODO codavaj!!
+    }
 
-    public void writeComponentToPath(String s, String s1) {}
+    public java.lang.String addVariableNamed(java.lang.String oldName, com.webobjects.appserver.WOComponent component, boolean rename){
+        return null; //TODO codavaj!!
+    }
 
-    public EOKeyValueArchiver wooArchiver() { return null; }
+    public void appendClosingWebObjectTag(){
+        return; //TODO codavaj!!
+    }
 
-    public WOResponse responseForHTML() { return null; }
+    public void appendElement(com.webobjects.appserver.WOElement anElement, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
-    public String newNameWithBaseName(String rootName) { return null; }
+    public void appendOpeningWebObjectTagWithName(java.lang.String aName){
+        return; //TODO codavaj!!
+    }
 
-    public String componentName() { return null; }
+    public void archiveObject(java.lang.Object object, java.lang.String aName){
+        return; //TODO codavaj!!
+    }
 
-    public void setComponentName(String aName) {}
+    public java.lang.String componentName(){
+        return null; //TODO codavaj!!
+    }
 
-    public void appendOpeningWebObjectTagWithName(String aName) {}
+    public void generateDynamicTemplate(java.lang.String templateName, java.lang.String dtwComponentName, java.lang.String parentClass){
+        return; //TODO codavaj!!
+    }
 
-    public void appendClosingWebObjectTag() {}
+    public void generateJavaForComponent(com.webobjects.appserver.WOComponent component){
+        return; //TODO codavaj!!
+    }
 
-    public NSDictionary _replaceAssociations(NSDictionary associations, WOElement anElement, WOContext aContext) { return null; }
+    public void generateUserModelFile(){
+        return; //TODO codavaj!!
+    }
 
-    private String elementClassName(WOElement element) { return null; }
+    public java.lang.String html(){
+        return null; //TODO codavaj!!
+    }
 
-    public void addDeclarationForElement(WOElement anElement, String name, WOContext aContext) {}
+    public java.lang.String javaForClassNamed(java.lang.String className){
+        return null; //TODO codavaj!!
+    }
 
-    public Object referenceToEncodeForObject(EOKeyValueArchiver archiver, Object object) { return null; }
+    public java.lang.String newNameWithBaseName(java.lang.String rootName){
+        return null; //TODO codavaj!!
+    }
 
-    public void archiveObject(Object object, String aName) {}
+    public java.lang.Object referenceToEncodeForObject(com.webobjects.eocontrol.EOKeyValueArchiver archiver, java.lang.Object object){
+        return null; //TODO codavaj!!
+    }
 
-    private static NSDictionary _parseString(String code, Object someStringOrArray) { return null; }
+    public com.webobjects.appserver.WOResponse responseForHTML(){
+        return null; //TODO codavaj!!
+    }
 
-    private NSDictionary _loadTemplateJavaForClass(Class aClass, String frameworkName) { return null; }
+    public void setComponentName(java.lang.String aName){
+        return; //TODO codavaj!!
+    }
 
-    private NSDictionary _loadTemplateJavaForComponent(WOComponent component) { return null; }
+    public static com.webobjects.directtoweb.generation.DTWTemplate templateForComponent(com.webobjects.appserver.WOComponent component, com.webobjects.appserver.WOContext oldContext, java.lang.String componentName){
+        return null; //TODO codavaj!!
+    }
 
-    private void _addJavaCode(NSArray code, String aName, NSMutableDictionary aDictionary) {}
+    public static com.webobjects.directtoweb.generation.DTWTemplate templateWithName(java.lang.String aName){
+        return null; //TODO codavaj!!
+    }
 
-    public void addImports(NSArray imports) {}
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    public void addInterfaceName(String oldName, WOComponent component) {}
+    public java.lang.String wod(){
+        return null; //TODO codavaj!!
+    }
 
-    public void addInterfaces(NSArray interfaces) {}
+    public java.lang.String woo(){
+        return null; //TODO codavaj!!
+    }
 
-    public void generateJavaForComponent(WOComponent component) {}
+    public com.webobjects.eocontrol.EOKeyValueArchiver wooArchiver(){
+        return null; //TODO codavaj!!
+    }
 
-    public void addImportsForComponent(WOComponent component) {}
+    public void writeAndAddToProjectComponentNamed(java.lang.String aName){
+        return; //TODO codavaj!!
+    }
 
-    public void addInterfacesForComponent(WOComponent component) {}
+    public void writeComponentToPath(java.lang.String path, java.lang.String aName){
+        return; //TODO codavaj!!
+    }
 
-    public String addVariableNamed(String oldName, WOComponent component, boolean rename) { return null; }
-
-    public String addMethodNamed(String oldName, WOComponent component, boolean rename) { return null; }
-
-    public String addMethod(String code) { return null; }
-
-    public String addVariable(String code) { return null; }
-
-    public String _stringRepresentationWithDeclaration(NSDictionary aDeclaration) { return null; }
-
-    public String woo() { return null; }
-
-    String _postProcessFor45WOB(String aSrc) { return null; }
-
-    public String wod() { return null; }
-
-    public String html() { return null; }
-
-    public String javaForClassNamed(String className) { return null; }
-
-    public String toString() { return null; }
-
-    public boolean writeGeneratedComponentToPath(String aPath, String aName) { return true; }
-
-    public void writeAndAddToProjectComponentNamed(String aName) {}
-
-    public void generateUserModelFile() {}
-
-    public void generateDynamicTemplate(String templateName, String dtwComponentName, String parentClass) {}
-
-    String _replaceSubstr(String sourceString, String originalPattern, String replacementPatter) { return null; }
-
-    static  {}
-
-    private static String D2WNULLCONSTANTREPLACEMENT;
-    private static NSMutableDictionary _generatedJavaCache;
-    private NSMutableDictionary _namesDictionary;
-    private WOResponse response;
-    private NSMutableSet _imports;
-    private NSMutableDictionary _variablesSection;
-    private NSMutableDictionary _methodsSection;
-    private NSMutableSet _interfaces;
-    private NSMutableArray _wodBindings;
-    private EOKeyValueArchiver _wooArchiver;
-    private String _componentName;
-    private NSSelector _generationSel;
-    static final String TemplateNameKey = "TEMPLATE_CLASS_NAME";
-    static final String TemplateParentKey = "TEMPLATE_PARENT_CLASS_NAME";
-    private static final String TemplateFileSuffix = ".gava";
+    public boolean writeGeneratedComponentToPath(java.lang.String aPath, java.lang.String aName){
+        return false; //TODO codavaj!!
+    }
 
 }

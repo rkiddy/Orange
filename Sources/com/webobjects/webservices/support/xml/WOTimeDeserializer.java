@@ -1,22 +1,14 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * See Also:Serialized Form
+ */
+public class WOTimeDeserializer extends org.apache.axis.encoding.ser.CalendarDeserializer implements com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WOTimeDeserializer(java.lang.Class aJavaType, javax.xml.namespace.QName anXmlType){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.NSTimestamp;
-import java.sql.Timestamp;
-import java.util.Calendar;
-import java.util.Date;
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.ser.CalendarDeserializer;
-
-
-public class WOTimeDeserializer extends CalendarDeserializer
-    implements WOSoapConstants {
-
-
-    public WOTimeDeserializer(Class aJavaType, QName anXmlType) { return null; }
-
-    public Object makeValue(String source) { return null; }
-
-    private static final long serialVersionUID = 0x2eec8d45L;
+    public java.lang.Object makeValue(java.lang.String source){
+        return null; //TODO codavaj!!
+    }
 
 }

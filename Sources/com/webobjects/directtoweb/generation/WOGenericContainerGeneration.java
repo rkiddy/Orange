@@ -1,16 +1,11 @@
-
 package com.webobjects.directtoweb.generation;
+public class WOGenericContainerGeneration{
+    public WOGenericContainerGeneration(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.appserver._private.WOGenerationSupport;
-import com.webobjects.appserver._private.WOGenericContainer;
-import com.webobjects.foundation.NSDictionary;
-import com.webobjects.foundation.NSLog;
+    public static void appendToTemplate(com.webobjects.appserver.WOElement element, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
-
-public class WOGenericContainerGeneration {
-
-    public WOGenericContainerGeneration() { return null; }
-
-    public static void appendToTemplate(WOElement element, DTWTemplate aTemplate, WOContext aContext) { return null; }
 }

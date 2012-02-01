@@ -1,39 +1,186 @@
-
 package com.webobjects.foundation.xml;
+/**
+ * Constants used for XML serialization.
+ */
+public interface NSXMLObjectStreamConstants extends java.io.ObjectStreamConstants{
+    /**
+     * Array element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String ARRAY_TAG="array";
 
-import java.io.ObjectStreamConstants;
+    /**
+     * Boolean element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String BOOLEAN_TAG="boolean";
 
-public interface NSXMLObjectStreamConstants
-    extends ObjectStreamConstants {
+    /**
+     * Byte element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String BYTE_TAG="byte";
 
-    public static final String NAMESPACE = "http://www.apple.com/webobjects/XMLSerialization";
-    public static final String CONTENT_TAG = "content";
-    public static final String OBJECT_TAG = "object";
-    public static final String ARRAY_TAG = "array";
-    public static final String STRING_TAG = "string";
-    public static final String CLASS_TAG = "class";
-    public static final String SUPER_TAG = "super";
-    public static final String PROXY_TAG = "proxy";
-    public static final String FIELD_TAG = "field";
-    public static final String INTERFACE_TAG = "interface";
-    public static final String BOOLEAN_TAG = "boolean";
-    public static final String BYTE_TAG = "byte";
-    public static final String SHORT_TAG = "short";
-    public static final String CHAR_TAG = "ch";
-    public static final String INT_TAG = "int";
-    public static final String LONG_TAG = "long";
-    public static final String FLOAT_TAG = "float";
-    public static final String DOUBLE_TAG = "double";
-    public static final String EXCEPTION_TAG = "finalException";
-    public static final String ID_ATTR = "id";
-    public static final String IDREF_ATTR = "idRef";
-    public static final String KEY_ATTR = "key";
-    public static final String NAME_ATTR = "name";
-    public static final String SUID_ATTR = "suid";
-    public static final String FLAG_ATTR = "flag";
-    public static final String TYPE_ATTR = "type";
-    public static final String FIELD_ATTR = "field";
-    public static final String CLASS_ATTR = "classId";
-    public static final String LENGTH_ATTR = "length";
-    public static final String IGNORE_ATTR = "ignoreEDB";
+    /**
+     * Char element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String CHAR_TAG="ch";
+
+    /**
+     * ClassId attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String CLASS_ATTR="classId";
+
+    /**
+     * Class element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String CLASS_TAG="class";
+
+    /**
+     * Root element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String CONTENT_TAG="content";
+
+    /**
+     * Double element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String DOUBLE_TAG="double";
+
+    /**
+     * Final exception element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String EXCEPTION_TAG="finalException";
+
+    /**
+     * Field attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String FIELD_ATTR="field";
+
+    /**
+     * Field element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String FIELD_TAG="field";
+
+    /**
+     * Flag attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String FLAG_ATTR="flag";
+
+    /**
+     * Float element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String FLOAT_TAG="float";
+
+    /**
+     * ID attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String ID_ATTR="id";
+
+    /**
+     * IDREF attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String IDREF_ATTR="idRef";
+
+    /**
+     * Special meta-data tag used only by the system.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String IGNORE_ATTR="ignoreEDB";
+
+    /**
+     * Integer element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String INT_TAG="int";
+
+    /**
+     * Interface element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String INTERFACE_TAG="interface";
+
+    /**
+     * Key attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String KEY_ATTR="key";
+
+    /**
+     * Length of array attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String LENGTH_ATTR="length";
+
+    /**
+     * Long element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String LONG_TAG="long";
+
+    /**
+     * Name attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String NAME_ATTR="name";
+
+    /**
+     * Official namespace of the XML serialization.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String NAMESPACE="http://www.apple.com/webobjects/XMLSerialization";
+
+    /**
+     * Object element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String OBJECT_TAG="object";
+
+    /**
+     * Proxy element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String PROXY_TAG="proxy";
+
+    /**
+     * Short element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String SHORT_TAG="short";
+
+    /**
+     * String element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String STRING_TAG="string";
+
+    /**
+     * SUID attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String SUID_ATTR="suid";
+
+    /**
+     * Super element tag name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String SUPER_TAG="super";
+
+    /**
+     * Type attribute name.
+     * See Also:Constant Field Values
+     */
+    static final java.lang.String TYPE_ATTR="type";
+
 }

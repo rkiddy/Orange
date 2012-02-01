@@ -1,56 +1,75 @@
-
 package com.webobjects.eogeneration;
+public class EODetailSelectionController extends com.webobjects.eogeneration.EOEnumerationController implements java.awt.event.ComponentListener{
+    public EODetailSelectionController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.EOTable;
-import com.webobjects.foundation.*;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
-import javax.swing.JComponent;
+    public EODetailSelectionController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Invoked when the receiver's component becomes visible, giving the receiver a chance to react. EOComponentController's implementation invokes establishConnection to ensure the receiver is connected to the controller hierarchy.
+     */
+    protected void componentDidBecomeVisible(){
+        return; //TODO codavaj!!
+    }
 
-public class EODetailSelectionController extends EOEnumerationController
-    implements ComponentListener {
+    public void componentHidden(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
+    public void componentMoved(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public EODetailSelectionController() { return null; }
+    public void componentResized(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public EODetailSelectionController(EOXMLUnarchiver unarchiver) { return null; }
+    public void componentShown(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void disposeAssociations() {}
+    /**
+     * Description copied from class:
+     * Invoked from breakConnection to notify the receiver that its connection to its supercontroller has been broken, giving the receiver the opportunity to clean up after its become idle.
+     */
+    protected void connectionWasBroken(){
+        return; //TODO codavaj!!
+    }
 
-    protected void connectionWasEstablished() {}
+    /**
+     * Description copied from class:
+     * Invoked from establishConnection to notify the receiver that its connection to the controller hierarchy has been established, giving the receiver the opportunity to prepare itself (for example, setting delegates).
+     */
+    protected void connectionWasEstablished(){
+        return; //TODO codavaj!!
+    }
 
-    protected void connectionWasBroken() {}
+    protected void disposeAssociations(){
+        return; //TODO codavaj!!
+    }
 
-    protected int preferredLabelComponentPosition() { return 0; }
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
-    protected int _labelComponentVerticalOffset() { return 0; }
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void componentDidBecomeVisible() {}
+    protected int preferredLabelComponentPosition(){
+        return 0; //TODO codavaj!!
+    }
 
-    private EOTable _table() { return null; }
+    protected void startListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    protected JComponent newWidget() { return null; }
-
-    protected void startListeningToWidget() {}
-
-    protected void stopListeningToWidget() {}
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    public void componentHidden(ComponentEvent componentevent) {}
-
-    public void componentMoved(ComponentEvent componentevent) {}
-
-    public void componentResized(ComponentEvent event) {}
-
-    public void componentShown(ComponentEvent componentevent) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private NSMutableArray _associations;
+    protected void stopListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
 }

@@ -1,161 +1,145 @@
-
 package com.webobjects.eoapplication;
+public class EOWindowObserver implements java.awt.event.WindowListener, com.webobjects.foundation.NSDisposable, com.webobjects.eoapplication.EOAction.Enabling{
+    public static final java.lang.String ActiveWindowChangedNotification="EOActiveWindowChanged";
 
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.foundation.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+    public static final java.lang.String LastWindowClosedNotification="EOLastWindowClosed";
 
-
-public class EOWindowObserver
-    implements WindowListener, NSDisposable, EOAction.Enabling {
-    private static class _ActivateWindowRunnable
-        implements Runnable {
-
-
-        public _ActivateWindowRunnable(Frame frame) { return null; }
-
-        public void run() {}
-
-        private Frame _frame;
-
+    protected EOWindowObserver(){
+         //TODO codavaj!!
     }
 
-    private static class _MenuItem extends JMenuItem
-        implements ActionListener, NSDisposable {
-
-
-        public _MenuItem(Window window) { return null; }
-
-        public void dispose() {}
-
-        public void actionPerformed(ActionEvent event) {}
-
-        static  {}
-
-        private static boolean _menuItemsRetrieved;
-        private static Icon _menuIconEdited;
-        private static Icon _menuIconEditedHightlight;
-        private Window _window;
-
+    public void activateBestWindow(){
+        return; //TODO codavaj!!
     }
 
+    /**
+     * Activates the previously active window. The user can usually trigger this method from the Window menu.
+     */
+    public void activatePreviousWindow(){
+        return; //TODO codavaj!!
+    }
 
+    public java.awt.Window activeWindow(){
+        return null; //TODO codavaj!!
+    }
 
-    protected EOWindowObserver() { return null; }
+    public void blockActiveWindowChangedNotification(){
+        return; //TODO codavaj!!
+    }
 
-    public void dispose() {}
+    public void bringAllWindowsToFront(){
+        return; //TODO codavaj!!
+    }
 
-    public void registerWindow(Window window, EOController controller) {}
+    /**
+     * Implemented to handle window observer specific action enabling and disabling.
+     */
+    public boolean canPerformActionNamed(java.lang.String actionName){
+        return false; //TODO codavaj!!
+    }
 
-    public void registerWindow(Window window) {}
+    public com.webobjects.eoapplication.EOController controllerForActiveWindow(){
+        return null; //TODO codavaj!!
+    }
 
-    public void unregisterWindow(Window window) {}
+    public com.webobjects.eoapplication.EOController controllerForLatestDeactivatedWindow(){
+        return null; //TODO codavaj!!
+    }
 
-    public void unregisterWindowOfController(EOController controller) {}
+    public com.webobjects.eoapplication.EOController controllerForWindow(java.awt.Window window){
+        return null; //TODO codavaj!!
+    }
 
-    public EOController controllerForWindow(Window window) { return null; }
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-    public Window windowForController(EOController controller) { return null; }
+    public java.awt.Window latestDeactivatedWindow(){
+        return null; //TODO codavaj!!
+    }
 
-    public Window activeWindow() { return null; }
+    public void minimizeActiveWindow(){
+        return; //TODO codavaj!!
+    }
 
-    public EOController controllerForActiveWindow() { return null; }
+    public java.awt.Window previousWindowToActivate(){
+        return null; //TODO codavaj!!
+    }
 
-    public Window latestDeactivatedWindow() { return null; }
+    public com.webobjects.foundation.NSArray registeredWindows(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOController controllerForLatestDeactivatedWindow() { return null; }
+    public void registerWindow(java.awt.Window window){
+        return; //TODO codavaj!!
+    }
 
-    public void activateBestWindow() {}
+    public void registerWindow(java.awt.Window window, com.webobjects.eoapplication.EOController controller){
+        return; //TODO codavaj!!
+    }
 
-    private NSMutableArray _visibleWindowsNewMutableArray() { return null; }
+    public void unblockActiveWindowChangedNotification(){
+        return; //TODO codavaj!!
+    }
 
-    public NSArray visibleWindows() { return null; }
+    public void unregisterWindow(java.awt.Window window){
+        return; //TODO codavaj!!
+    }
 
-    public NSArray registeredWindows() { return null; }
+    public void unregisterWindowOfController(com.webobjects.eoapplication.EOController controller){
+        return; //TODO codavaj!!
+    }
 
-    private void _postLastWindowClosedNotification() {}
+    public com.webobjects.foundation.NSArray visibleWindows(){
+        return null; //TODO codavaj!!
+    }
 
-    private void _postActiveWindowChangedNotification() {}
+    public void windowActivated(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public void blockActiveWindowChangedNotification() {}
+    public void windowClosed(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public void unblockActiveWindowChangedNotification() {}
+    public void windowClosing(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void windowDidBecomeVisible(Window window) {}
+    public void windowDeactivated(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void windowDidBecomeInvisible(Window window) {}
+    public void windowDeiconified(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void windowDidBecomeActive(Window window) {}
+    protected void windowDidBecomeActive(java.awt.Window window){
+        return; //TODO codavaj!!
+    }
 
-    protected void windowDidBecomeInactive(Window window) {}
+    protected void windowDidBecomeInactive(java.awt.Window window){
+        return; //TODO codavaj!!
+    }
 
-    public boolean canPerformActionNamed(String actionName) { return true; }
+    protected void windowDidBecomeInvisible(java.awt.Window window){
+        return; //TODO codavaj!!
+    }
 
-    public Window previousWindowToActivate() { return null; }
+    protected void windowDidBecomeVisible(java.awt.Window window){
+        return; //TODO codavaj!!
+    }
 
-    public void activatePreviousWindow() {}
+    public java.awt.Window windowForController(com.webobjects.eoapplication.EOController controller){
+        return null; //TODO codavaj!!
+    }
 
-    public void minimizeActiveWindow() {}
+    public void windowIconified(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public void bringAllWindowsToFront() {}
-
-    public void _instrumentMenuBar(JMenuBar menuBar) {}
-
-    public void _deinstrumentMenuBar(JMenuBar menuBar) {}
-
-    private NSArray _sortedWindowsForWindowsMenus() { return null; }
-
-    private JMenu _updateWindowsMenu(JMenu menu, NSArray windows) { return null; }
-
-    public void _updateWindowsMenus(Object unusedArgument) {}
-
-    void _updateWindowsMenus(Window changedWindow) { return null; }
-
-    public void windowOpened(WindowEvent event) {}
-
-    public void windowClosed(WindowEvent event) {}
-
-    public void windowActivated(WindowEvent event) {}
-
-    public void windowDeactivated(WindowEvent event) {}
-
-    public void windowDeiconified(WindowEvent event) {}
-
-    public void windowIconified(WindowEvent event) {}
-
-    public void windowClosing(WindowEvent windowevent) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    public static final String ActiveWindowChangedNotification = "EOActiveWindowChanged";
-    public static final String LastWindowClosedNotification = "EOLastWindowClosed";
-    public static final int _WindowUpdateRunLoopOrdering = 0xaae60;
-    private static final NSSelector _updateWindowsMenusNotificationSelector;
-    private NSMutableDictionary _controllerWindowMapTable;
-    private NSMutableArray _windowActivationQueue;
-    private Window _activeWindow;
-    private Window _latestDeactivatedWindow;
-    private int _numberOfActiveWindowChangedNotificationBlocks;
-    private NSMutableArray _windowsMenus;
-    private NSMutableArray _sortedWindowsForWindowsMenus;
-    private boolean _registeredForWindowsMenuUpdateNotification;
-
-
-    // Unreferenced inner class com/webobjects/eoapplication/EOWindowObserver$1
-
-/* anonymous class */
-    class _cls1 extends NSComparator {
-
-
-        _cls1() { return null; }
-
-        public int compare(Object object1, Object object2) throws com.webobjects.foundation.NSComparator.ComparisonException { return 0; }
-
-        final EOWindowObserver this$0;
-
+    public void windowOpened(java.awt.event.WindowEvent event){
+        return; //TODO codavaj!!
     }
 
 }

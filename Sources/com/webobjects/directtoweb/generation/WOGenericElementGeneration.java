@@ -1,16 +1,11 @@
-
 package com.webobjects.directtoweb.generation;
+public class WOGenericElementGeneration{
+    public WOGenericElementGeneration(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.appserver._private.WOGenerationSupport;
-import com.webobjects.appserver._private.WOGenericElement;
-import com.webobjects.foundation.*;
-import java.util.Enumeration;
+    public static void appendToTemplate(com.webobjects.appserver.WOElement element, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
-
-public class WOGenericElementGeneration {
-
-    public WOGenericElementGeneration() { return null; }
-
-    public static void appendToTemplate(WOElement element, DTWTemplate aTemplate, WOContext aContext) { return null; }
 }

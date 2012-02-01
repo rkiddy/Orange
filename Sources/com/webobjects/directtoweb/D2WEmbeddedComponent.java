@@ -1,28 +1,56 @@
-
 package com.webobjects.directtoweb;
+/**
+ * This class is used internally by other classes in WebObjects and should be considered private. It should not be used, subclassed, or replaced.
+ * See Also:Serialized Form
+ */
+public class D2WEmbeddedComponent extends com.webobjects.appserver.WOComponent{
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public D2WEmbeddedComponent(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOComponent;
-import com.webobjects.appserver.WOContext;
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public com.webobjects.directtoweb.NextPageDelegate actionPageDelegate(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public void awake(){
+        return; //TODO codavaj!!
+    }
 
-public class D2WEmbeddedComponent extends WOComponent {
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public static com.webobjects.appserver.WOComponent findTarget(com.webobjects.appserver.WOComponent sender){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public com.webobjects.directtoweb.NextPageDelegate newPageDelegate(){
+        return null; //TODO codavaj!!
+    }
 
-    public D2WEmbeddedComponent(WOContext aContext) { return null; }
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public void setActionPageDelegate(com.webobjects.directtoweb.NextPageDelegate newValue){
+        return; //TODO codavaj!!
+    }
 
-    public static WOComponent findTarget(WOComponent sender) { return null; }
-
-    public void awake() {}
-
-    public boolean synchronizesVariablesWithBindings() { return true; }
-
-    public NextPageDelegate newPageDelegate() { return null; }
-
-    public NextPageDelegate actionPageDelegate() { return null; }
-
-    public void setActionPageDelegate(NextPageDelegate nextpagedelegate) {}
-
-    private static final long serialVersionUID = 0x18822646L;
-    protected NextPageDelegate _actionPageDelegate;
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public boolean synchronizesVariablesWithBindings(){
+        return false; //TODO codavaj!!
+    }
 
 }

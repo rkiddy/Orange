@@ -1,16 +1,11 @@
-
 package com.webobjects.webservices.support.xml;
-
-import org.apache.axis.encoding.Deserializer;
-import org.apache.axis.encoding.DeserializerImpl;
-
-
-public class WONullDeserializer extends DeserializerImpl
-    implements Deserializer, WOSoapConstants {
-
-
-    public WONullDeserializer() { return null; }
-
-    private static final long serialVersionUID = 0x94d604bbL;
+/**
+ * WONullDeserializer deserializes instances NSKeyValueCoding.Null.
+ * See Also:Serialized Form
+ */
+public class WONullDeserializer extends org.apache.axis.encoding.DeserializerImpl implements org.apache.axis.encoding.Deserializer, com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WONullDeserializer(){
+         //TODO codavaj!!
+    }
 
 }

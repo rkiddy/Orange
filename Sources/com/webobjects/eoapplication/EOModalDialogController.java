@@ -1,49 +1,58 @@
-
 package com.webobjects.eoapplication;
-
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Container;
-import java.awt.Window;
-import javax.swing.*;
-
-
-public class EOModalDialogController extends EODialogController
-    implements EOComponentController.Modal {
-    public static interface ModalActions {
-
-
-        public abstract boolean ok();
-
-        public abstract void cancel();
-
-        public abstract boolean modalDialogShouldClose();
-
-
-
-        public static final Class _CLASS = null;
-
+public class EOModalDialogController extends com.webobjects.eoapplication.EODialogController implements com.webobjects.eoapplication.EOComponentController.Modal{
+    public EOModalDialogController(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOModalDialogController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public void activateWindow(){
+        return; //TODO codavaj!!
+    }
 
-    public static void runControllerInNewModalDialog(EOComponentController controller, String windowTitle) { return null; }
+    public boolean closeWindow(){
+        return false; //TODO codavaj!!
+    }
 
-    public EOModalDialogController() { return null; }
+    public void finishModal(){
+        return; //TODO codavaj!!
+    }
 
-    public EOModalDialogController(EOXMLUnarchiver unarchiver) { return null; }
+    public boolean isModal(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean isModal() { return true; }
+    protected java.awt.Window newWindow(javax.swing.JComponent component){
+        return null; //TODO codavaj!!
+    }
 
-    public void finishModal() {}
+    public static void runControllerInNewModalDialog(com.webobjects.eoapplication.EOComponentController controller, java.lang.String windowTitle){
+        return; //TODO codavaj!!
+    }
 
-    protected Window newWindow(JComponent component) { return null; }
+    /**
+     * The EOModalDialogController.ModalActions interface defines the methods subcontrollers of modal dialog controllers have to implement to handle closing of the dialog.
+     */
+    public static interface ModalActions{
+        /**
+         * The action method invoked when the user cancels the modal dialog.
+         */
+        abstract void cancel();
 
-    public void activateWindow() {}
+        /**
+         * This method is invoked by the modal dialog controller on its subcontrollers when the user attempts to close the modal dialog with the dialog's close button (not the usual ok/cancel buttons). Subcontrollers return whether the dialog can be closed (which corresponds to a cancel operation) or not.
+         */
+        abstract boolean modalDialogShouldClose();
 
-    public boolean closeWindow() { return true; }
+        /**
+         * The action method invoked when the user wants to finish the modal dialog.
+         */
+        abstract boolean ok();
 
-    static  {}
-
-    public static final Class _CLASS = null;
-
+    }
 }

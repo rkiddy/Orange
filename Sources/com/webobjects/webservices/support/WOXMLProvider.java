@@ -1,63 +1,90 @@
-
 package com.webobjects.webservices.support;
+/**
+ * For internal use only.
+ */
+public class WOXMLProvider implements org.apache.axis.EngineConfiguration{
+    protected org.apache.axis.deployment.wsdd.WSDDDeployment deployment;
 
-import com.webobjects.foundation.NSLog;
-import java.io.InputStream;
-import java.util.*;
-import javax.xml.namespace.QName;
-import org.apache.axis.*;
-import org.apache.axis.deployment.wsdd.*;
-import org.apache.axis.encoding.TypeMappingRegistry;
-import org.apache.axis.handlers.soap.SOAPService;
-import org.apache.axis.utils.Messages;
-import org.apache.axis.utils.XMLUtils;
-import org.w3c.dom.Document;
+    protected org.w3c.dom.Document myDocument;
 
-public class WOXMLProvider
-    implements EngineConfiguration {
+    protected java.io.InputStream myInputStream;
 
-
-    public WOXMLProvider(InputStream stream) { return null; }
-
-    public WOXMLProvider(Document doc) { return null; }
-
-    public Document getDocument() { return null; }
-
-    public void setDocument(Document doc) {}
-
-    public WSDDDeployment getDeployment() { return null; }
-
-    public void setDeployment(WSDDDeployment depl) {}
-
-    protected void doConfigureEngine(AxisEngine engine) throws ConfigurationException {}
-
-    public void configureEngine(AxisEngine engine) throws ConfigurationException {}
-
-    public void writeEngineConfig(AxisEngine axisengine) throws ConfigurationException {}
-
-    public Handler getHandler(QName qname) throws ConfigurationException { return null; }
-
-    public SOAPService getService(QName qname) throws ConfigurationException { return null; }
-
-    public SOAPService getServiceByNamespaceURI(String namespace) throws ConfigurationException { return null; }
-
-    public Handler getTransport(QName qname) throws ConfigurationException { return null; }
-
-    public TypeMappingRegistry getTypeMappingRegistry() throws ConfigurationException { return null; }
-
-    public Handler getGlobalRequest() throws ConfigurationException { return null; }
-
-    public Handler getGlobalResponse() throws ConfigurationException { return null; }
-
-    public Hashtable getGlobalOptions() throws ConfigurationException { return null; }
-
-    public List getRoles() { return null; }
-
-    public Iterator getDeployedServices() throws ConfigurationException { return null; }
-
-    protected WSDDDeployment deployment;
-    protected InputStream myInputStream;
-    protected Document myDocument;
     protected boolean readOnly;
+
+    public WOXMLProvider(org.w3c.dom.Document doc){
+         //TODO codavaj!!
+    }
+
+    public WOXMLProvider(java.io.InputStream stream){
+         //TODO codavaj!!
+    }
+
+    public void configureEngine(org.apache.axis.AxisEngine engine) throws org.apache.axis.ConfigurationException{
+        return; //TODO codavaj!!
+    }
+
+    protected void doConfigureEngine(org.apache.axis.AxisEngine engine) throws org.apache.axis.ConfigurationException{
+        return; //TODO codavaj!!
+    }
+
+    public java.util.Iterator getDeployedServices() throws org.apache.axis.ConfigurationException{
+        return null; //TODO codavaj!!
+    }
+
+    public org.apache.axis.deployment.wsdd.WSDDDeployment getDeployment(){
+        return null; //TODO codavaj!!
+    }
+
+    public org.w3c.dom.Document getDocument(){
+        return null; //TODO codavaj!!
+    }
+
+    public java.util.Hashtable getGlobalOptions() throws org.apache.axis.ConfigurationException{
+        return null; //TODO codavaj!!
+    }
+
+    public org.apache.axis.Handler getGlobalRequest() throws org.apache.axis.ConfigurationException{
+        return null; //TODO codavaj!!
+    }
+
+    public org.apache.axis.Handler getGlobalResponse() throws org.apache.axis.ConfigurationException{
+        return null; //TODO codavaj!!
+    }
+
+    public org.apache.axis.Handler getHandler(javax.xml.namespace.QName qname) throws org.apache.axis.ConfigurationException{
+        return null; //TODO codavaj!!
+    }
+
+    public java.util.List getRoles(){
+        return null; //TODO codavaj!!
+    }
+
+    public org.apache.axis.handlers.soap.SOAPService getService(javax.xml.namespace.QName qname) throws org.apache.axis.ConfigurationException{
+        return null; //TODO codavaj!!
+    }
+
+    public org.apache.axis.handlers.soap.SOAPService getServiceByNamespaceURI(java.lang.String namespace) throws org.apache.axis.ConfigurationException{
+        return null; //TODO codavaj!!
+    }
+
+    public org.apache.axis.Handler getTransport(javax.xml.namespace.QName qname) throws org.apache.axis.ConfigurationException{
+        return null; //TODO codavaj!!
+    }
+
+    public org.apache.axis.encoding.TypeMappingRegistry getTypeMappingRegistry() throws org.apache.axis.ConfigurationException{
+        return null; //TODO codavaj!!
+    }
+
+    public void setDeployment(org.apache.axis.deployment.wsdd.WSDDDeployment depl){
+        return; //TODO codavaj!!
+    }
+
+    public void setDocument(org.w3c.dom.Document doc){
+        return; //TODO codavaj!!
+    }
+
+    public void writeEngineConfig(org.apache.axis.AxisEngine engine) throws org.apache.axis.ConfigurationException{
+        return; //TODO codavaj!!
+    }
 
 }

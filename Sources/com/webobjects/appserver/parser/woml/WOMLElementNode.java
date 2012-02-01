@@ -1,31 +1,39 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLElementNode extends com.webobjects.appserver.parser.woml.WOMLParentNode{
+    public WOMLElementNode(com.webobjects.appserver.parser.woml.WOMLPosition position, com.webobjects.appserver.parser.woml.WOMLElement element){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.parser.woml.namespaces.WOMLAbstractNamespace;
-import java.util.*;
+    public com.webobjects.appserver.parser.woml.WOMLAttributeMap getAttributes(){
+        return null; //TODO codavaj!!
+    }
 
+    public com.webobjects.appserver.parser.woml.WOMLElement getElement(){
+        return null; //TODO codavaj!!
+    }
 
-public class WOMLElementNode extends WOMLParentNode {
+    public boolean getHasDynamicAttributes(){
+        return false; //TODO codavaj!!
+    }
 
+    public boolean getHasNamespaces(){
+        return false; //TODO codavaj!!
+    }
 
-    public WOMLElementNode(WOMLPosition position, WOMLElement element) { return null; }
+    public java.lang.String getName(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLElement getElement() { return null; }
+    public java.lang.String getTagEndText(){
+        return null; //TODO codavaj!!
+    }
 
-    public String getName() { return null; }
+    public java.lang.String getTagStartText(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLAttributeMap getAttributes() { return null; }
-
-    public boolean getHasDynamicAttributes() { return true; }
-
-    public boolean getHasNamespaces() { return true; }
-
-    public String getTagStartText() { return null; }
-
-    public String getTagEndText() { return null; }
-
-    public String toString() { return null; }
-
-    private WOMLElement _element;
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

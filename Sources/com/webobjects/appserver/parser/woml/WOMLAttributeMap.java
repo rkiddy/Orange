@@ -1,42 +1,68 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLAttributeMap{
+    public WOMLAttributeMap(java.util.Map attributesByNamespace, java.util.Map associationsByNamespace){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOAssociation;
-import java.util.*;
+    public boolean containsAttribute(java.lang.String namespace, java.lang.String key){
+        return false; //TODO codavaj!!
+    }
 
+    public boolean containsAttribute(java.lang.String namespace, java.lang.String key, boolean searchUpward){
+        return false; //TODO codavaj!!
+    }
 
-public class WOMLAttributeMap {
+    public boolean containsNamespace(java.lang.String namespace){
+        return false; //TODO codavaj!!
+    }
 
+    public com.webobjects.appserver.WOAssociation getAssociation(java.lang.String namespace, java.lang.String key){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLAttributeMap(Map attributesByNamespace, Map associationsByNamespace) { return null; }
+    /**
+     * Returns the WOAssociation value for the given key.
+     */
+    public com.webobjects.appserver.WOAssociation getAssociation(java.lang.String namespace, java.lang.String key, boolean searchUpward){
+        return null; //TODO codavaj!!
+    }
 
-    public Collection getNamespaces() { return null; }
+    public java.util.Map getAssociations(java.lang.String namespace){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean containsNamespace(String namespace) { return true; }
+    public com.webobjects.appserver.parser.woml.WOMLAttribute getAttribute(java.lang.String namespace, java.lang.String key){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean containsAttribute(String namespace, String key) { return true; }
+    /**
+     * Returns the attribute value for the given key.
+     */
+    public com.webobjects.appserver.parser.woml.WOMLAttribute getAttribute(java.lang.String namespace, java.lang.String key, boolean searchUpward){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean containsAttribute(String namespace, String key, boolean searchUpward) { return true; }
+    public java.util.Map getAttributes(java.lang.String namespace){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLAttribute getAttribute(String namespace, String key) { return null; }
+    /**
+     * Returns a collection of the namespaces that are available in this map.
+     */
+    public java.util.Collection getNamespaces(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLAttribute getAttribute(String namespace, String key, boolean searchUpward) { return null; }
+    public void setAssociation(java.lang.String namespace, java.lang.String key, com.webobjects.appserver.WOAssociation value){
+        return; //TODO codavaj!!
+    }
 
-    public void setAttribute(String namespace, String key, WOMLAttribute value) {}
+    public void setAttribute(java.lang.String namespace, java.lang.String key, com.webobjects.appserver.parser.woml.WOMLAttribute value){
+        return; //TODO codavaj!!
+    }
 
-    public Map getAttributes(String namespace) { return null; }
-
-    public Map getAssociations(String namespace) { return null; }
-
-    public WOAssociation getAssociation(String namespace, String key) { return null; }
-
-    public void setAssociation(String namespace, String key, WOAssociation value) {}
-
-    public WOAssociation getAssociation(String namespace, String key, boolean searchUpward) { return null; }
-
-    public String toString() { return null; }
-
-    private Map _attributesByNamespace;
-    private Map _associationsByNamespace;
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

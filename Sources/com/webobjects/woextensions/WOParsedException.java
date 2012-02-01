@@ -1,27 +1,37 @@
-
 package com.webobjects.woextensions;
-
-import com.webobjects.foundation.NSArray;
-
-public class WOParsedException {
-
-
-    public WOParsedException(String message) { return null; }
-
-    public void setFrames(NSArray frames) {}
-
-    public NSArray getFrames() { return null; }
-
-    public void setCommonFrames(int commonFrames) {}
-
-    public boolean showEllipsis() { return true; }
-
-    public String getEllipsis() { return null; }
-
-    public String getMessage() { return null; }
-
-    protected NSArray frames;
+public class WOParsedException{
     protected int commonFrames;
-    protected String message;
+
+    protected com.webobjects.foundation.NSArray frames;
+
+    protected java.lang.String message;
+
+    public WOParsedException(java.lang.String message){
+         //TODO codavaj!!
+    }
+
+    public java.lang.String getEllipsis(){
+        return null; //TODO codavaj!!
+    }
+
+    public com.webobjects.foundation.NSArray getFrames(){
+        return null; //TODO codavaj!!
+    }
+
+    public java.lang.String getMessage(){
+        return null; //TODO codavaj!!
+    }
+
+    public void setCommonFrames(int commonFrames){
+        return; //TODO codavaj!!
+    }
+
+    public void setFrames(com.webobjects.foundation.NSArray frames){
+        return; //TODO codavaj!!
+    }
+
+    public boolean showEllipsis(){
+        return false; //TODO codavaj!!
+    }
 
 }

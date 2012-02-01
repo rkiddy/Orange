@@ -1,32 +1,39 @@
-
 package com.webobjects.directtoweb;
+public class KeyValuePath{
+    public KeyValuePath(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.eoaccess.EORelationship;
-import com.webobjects.foundation.NSKeyValueCoding;
-import com.webobjects.foundation.NSKeyValueCodingAdditions;
+    public static final com.webobjects.eoaccess.EOEntity entityAtEndOfKeyPath(java.lang.String keyPath, com.webobjects.eoaccess.EOEntity startingEntity){
+        return null; //TODO codavaj!!
+    }
 
-public class KeyValuePath {
+    public static final java.lang.String keyPathPortionInModel(java.lang.String keyPath, com.webobjects.eoaccess.EOEntity startingEntity){
+        return null; //TODO codavaj!!
+    }
 
-    public KeyValuePath() { return null; }
+    public static final java.lang.String keyPathPortionNotInModel(java.lang.String keyPath, java.lang.String keyPathPortionInModel){
+        return null; //TODO codavaj!!
+    }
 
-    public static final Object valueForKeyPathOnObject(String keyPath, Object object) { return null; }
+    public static final java.lang.String keyPathWithoutLastProperty(java.lang.String keyPath){
+        return null; //TODO codavaj!!
+    }
 
-    public static final void takeValueForKeyPathOnObject(Object value, String keyPath, Object object) { return null; }
+    public static final java.lang.String lastPropertyKeyInKeyPath(java.lang.String keyPath){
+        return null; //TODO codavaj!!
+    }
 
-    static final String car(String keyPath, int firstDot) { return null; }
+    public static final void takeValueForKeyPathOnObject(java.lang.Object value, java.lang.String keyPath, java.lang.Object object){
+        return; //TODO codavaj!!
+    }
 
-    static final String cdr(String keyPath, int firstDot) { return null; }
+    public static final java.lang.Object valueForKeyOnObject(java.lang.String key, java.lang.Object o){
+        return null; //TODO codavaj!!
+    }
 
-    public static final String lastPropertyKeyInKeyPath(String keyPath) { return null; }
+    public static final java.lang.Object valueForKeyPathOnObject(java.lang.String keyPath, java.lang.Object object){
+        return null; //TODO codavaj!!
+    }
 
-    public static final String keyPathWithoutLastProperty(String keyPath) { return null; }
-
-    public static final String keyPathPortionNotInModel(String keyPath, String keyPathPortionInModel) { return null; }
-
-    public static final String keyPathPortionInModel(String keyPath, EOEntity startingEntity) { return null; }
-
-    public static final EOEntity entityAtEndOfKeyPath(String keyPath, EOEntity startingEntity) { return null; }
-
-    public static final Object valueForKeyOnObject(String key, Object o) { return null; }
 }

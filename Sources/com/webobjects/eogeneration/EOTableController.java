@@ -1,62 +1,75 @@
-
 package com.webobjects.eogeneration;
+public class EOTableController extends com.webobjects.eogeneration.EODefaultActionTrigger implements java.awt.event.ComponentListener, com.webobjects.eogeneration.EOWidgetController.TableWidget{
+    public EOTableController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.EOXMLUnarchiver;
-import com.webobjects.eoapplication._EOWidgetUtilities;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.EOTable;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
-import javax.swing.JComponent;
-import javax.swing.JTable;
+    public EOTableController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public boolean allowsMultipleSelection(){
+        return false; //TODO codavaj!!
+    }
 
-public class EOTableController extends EODefaultActionTrigger
-    implements ComponentListener, EOWidgetController.TableWidget {
+    /**
+     * Description copied from class:
+     * Invoked when the receiver's component becomes visible, giving the receiver a chance to react. EOComponentController's implementation invokes establishConnection to ensure the receiver is connected to the controller hierarchy.
+     */
+    protected void componentDidBecomeVisible(){
+        return; //TODO codavaj!!
+    }
 
+    public void componentHidden(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public EOTableController() { return null; }
+    public void componentMoved(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public EOTableController(EOXMLUnarchiver unarchiver) { return null; }
+    public void componentResized(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    public void componentShown(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void componentDidBecomeVisible() {}
+    protected javax.swing.JComponent mouseListenerViewInWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setAllowsMultipleSelection(boolean flag) {}
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean allowsMultipleSelection() { return true; }
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setSortsByColumnOrder(boolean flag) {}
+    public void setAllowsMultipleSelection(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public boolean sortsByColumnOrder() { return true; }
+    public void setSortsByColumnOrder(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    protected JComponent newWidget() { return null; }
+    public boolean sortsByColumnOrder(){
+        return false; //TODO codavaj!!
+    }
 
-    protected void startListeningToWidget() {}
+    protected void startListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    protected void stopListeningToWidget() {}
+    protected void stopListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    public EOTable table() { return null; }
-
-    protected JComponent mouseListenerViewInWidget() { return null; }
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    public void componentHidden(ComponentEvent componentevent) {}
-
-    public void componentMoved(ComponentEvent componentevent) {}
-
-    public void componentResized(ComponentEvent event) {}
-
-    public void componentShown(ComponentEvent componentevent) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private boolean _allowsMultipleSelection;
-    private boolean _sortsByColumnOrder;
+    public com.webobjects.eointerface.swing.EOTable table(){
+        return null; //TODO codavaj!!
+    }
 
 }

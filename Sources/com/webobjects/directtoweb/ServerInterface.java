@@ -1,18 +1,13 @@
-
 package com.webobjects.directtoweb;
+public interface ServerInterface{
+    abstract void newConnection(com.webobjects.directtoweb.AssistantConnection connection);
 
-import com.apple.client.directtoweb.common.AssistantPacket;
+    abstract void removeConnection(com.webobjects.directtoweb.AssistantConnection connection);
 
+    abstract com.apple.client.directtoweb.common.AssistantPacket responseTo(com.apple.client.directtoweb.common.AssistantPacket packet, com.webobjects.directtoweb.AssistantConnection sender);
 
-public interface ServerInterface {
+    abstract com.apple.client.directtoweb.common.AssistantPacket resynchronizeResponseTo(com.apple.client.directtoweb.common.AssistantPacket packet, com.webobjects.directtoweb.AssistantConnection sender);
 
-    public abstract String sessionID();
+    abstract java.lang.String sessionID();
 
-    public abstract AssistantPacket responseTo(AssistantPacket assistantpacket, AssistantConnection assistantconnection);
-
-    public abstract AssistantPacket resynchronizeResponseTo(AssistantPacket assistantpacket, AssistantConnection assistantconnection);
-
-    public abstract void newConnection(AssistantConnection assistantconnection);
-
-    public abstract void removeConnection(AssistantConnection assistantconnection);
 }

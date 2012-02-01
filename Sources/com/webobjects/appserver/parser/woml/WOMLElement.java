@@ -1,49 +1,53 @@
-
 package com.webobjects.appserver.parser.woml;
+/**
+ * Since: 5.4
+ */
+public class WOMLElement extends com.webobjects.appserver.parser.woml.WOMLNamespaced{
+    public WOMLElement(java.lang.String containerReferenceName, com.webobjects.appserver.parser.woml.WOMLElement parent, java.util.Map uriToNamespace, java.lang.String uri, java.lang.String localName, java.lang.String qName, java.util.List attributeList, com.webobjects.appserver.WOAssociationFactory associationFactory){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOAssociationFactory;
-import com.webobjects.appserver.parser.declaration.WODeclarationFormatException;
-import com.webobjects.appserver.parser.declaration.WODeclarationParser;
-import java.util.*;
+    public com.webobjects.appserver.parser.woml.WOMLAttributeMap getAttributes(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Returns the reference name of the container of this element. This is usually the file name of the parsed file.
+     */
+    public java.lang.String getContainerReferenceName(){
+        return null; //TODO codavaj!!
+    }
 
-public class WOMLElement extends WOMLNamespaced {
+    public com.webobjects.appserver.parser.woml.WOMLElement getParent(){
+        return null; //TODO codavaj!!
+    }
 
+    public java.util.Map getProperties(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLElement(String containerReferenceName, WOMLElement parent, Map uriToNamespace, String uri, String localName, String qName, List attributeList, 
-            WOAssociationFactory associationFactory) { return null; }
+    public java.lang.Object getProperty(java.lang.String name){
+        return null; //TODO codavaj!!
+    }
 
-    private void addAttribute(WOMLAttribute attribute) {}
+    public boolean hasDynamicAttributes(){
+        return false; //TODO codavaj!!
+    }
 
-    private void createAttributes(WOAssociationFactory associationFactory) {}
+    public boolean hasNamespaces(){
+        return false; //TODO codavaj!!
+    }
 
-    public String getContainerReferenceName() { return null; }
+    public void removeProperty(java.lang.String name){
+        return; //TODO codavaj!!
+    }
 
-    public WOMLElement getParent() { return null; }
+    public void setProperty(java.lang.String name, java.lang.Object value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean hasNamespaces() { return true; }
-
-    public boolean hasDynamicAttributes() { return true; }
-
-    public WOMLAttributeMap getAttributes() { return null; }
-
-    public Map getProperties() { return null; }
-
-    public Object getProperty(String name) { return null; }
-
-    public void setProperty(String name, Object value) {}
-
-    public void removeProperty(String name) {}
-
-    public String toString() { return null; }
-
-    private String _containerReferenceName;
-    private WOMLElement _parent;
-    private Map _attributesByNamespace;
-    private Map _associationsByNamespace;
-    private boolean hasNamespaces;
-    private boolean hasDynamicAttributes;
-    private WOMLAttributeMap attributes;
-    private Map properties;
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

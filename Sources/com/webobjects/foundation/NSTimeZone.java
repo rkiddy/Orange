@@ -1,229 +1,317 @@
-
 package com.webobjects.foundation;
+/**
+ * NSTimeZone defines the behavior of time zones for different geopolitical regions. Consequently, these objects have names (and abbreviations, such as "PST") for these regions. NSTimeZone objects also represent a temporal offset, either plus or minus, from Greenwich Mean Time (GMT).
+ * NSTimeZone provides several ways to instantiate time zones. The class also permits you to set the default time zone within your application (setDefault). You can access this default time zone at any time with the getDefault static method. With the localTimeZone static method, you can get a relative time zone object that acts as a proxy for the default time zone for any locale in which it finds itself.
+ * Because NSTimeZone is a subclass of java.util.TimeZone, you can also use the java.util.TimeZone API with NSTimeZones.
+ * WARNING: NSTimeZone is only intended to be used with NSTimestamp and NSTimestampFormatter. It produces incorrect results when used with Java's date-related classes.
+ * Some NSTimestamp methods return date objects that are automatically bound to time zone objects. These date objects use the functionality of NSTimeZone to adjust dates for the proper locale. Unless you specify otherwise, objects returned from NSTimestamp are bound to the default time zone for the current locale.
+ * See Also:NSTimeZone.abbreviation(), NSTimeZone.getDefault(), NSTimeZone.getID(), NSTimeZone.localTimeZone(), NSTimeZone.setDefault(java.util.TimeZone), NSTimestamp, NSTimestampFormatter, Serialized Form
+ */
+public class NSTimeZone extends java.util.TimeZone implements java.lang.Cloneable, java.io.Serializable, com.webobjects.foundation.NSCoding{
+    /**
+     * Deprecated.
+     * The name for the notification posted during any invocation of NSTimeZone's resetSystemTimeZone method.
+     * See Also:NSTimeZone.resetSystemTimeZone(), NSNotification, Constant Field Values
+     */
+    public static final java.lang.String SystemTimeZoneDidChangeNotification="NSSystemTimeZoneDidChangeNotification";
 
-import java.io.*;
-import java.security.AccessController;
-import java.util.*;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
-import sun.security.action.GetPropertyAction;
-
-
-public class NSTimeZone extends TimeZone
-    implements Cloneable, Serializable, NSCoding {
-    protected static class __NSTZPeriodComparator extends NSComparator {
-
-
-        public __NSTZPeriodComparator() { return null; }
-
-        public __NSTZPeriodComparator(boolean ascending) { return null; }
-
-        public int compare(Object object1, Object object2) throws NSComparator.ComparisonException { return 0; }
-
-        protected boolean _ascending;
-
+    /**
+     * Required internally to implement the java.io.Serializable interface and should be considered private.
+     * Use the following methods to get NSTimeZone objects: timeZoneForSecondsFromGMT timeZoneWithName
+     * See Also:NSTimeZone.timeZoneWithName(java.lang.String, boolean), NSTimeZone.timeZoneForSecondsFromGMT(int), Serializable
+     */
+    public NSTimeZone(){
+         //TODO codavaj!!
     }
 
-    protected static class __NSTZPeriod {
-
-
-        protected __NSTZPeriod() { return null; }
-
-        protected boolean before(__NSTZPeriod aNSTZP) { return true; }
-
-        protected boolean equals(__NSTZPeriod aNSTZP) { return true; }
-
-        protected String _abbreviation;
-        protected int _isdst;
-        protected int _offset;
-        protected double _startTime;
-
+    /**
+     * Used internally by NSTimeZone and should be considered private.
+     * Use the following methods to get NSTimeZone objects: timeZoneForSecondsFromGMT timeZoneWithName
+     * Parameters:aName - the proposed name for the newly instantiated NSTimeZone objectaData - the proposed behavior for the newly instantiated NSTimeZone object (represented by raw binary data)See Also:NSTimeZone.timeZoneWithName(java.lang.String, boolean), NSTimeZone.timeZoneForSecondsFromGMT(int)
+     */
+    protected NSTimeZone(java.lang.String aName, com.webobjects.foundation.NSData aData){
+         //TODO codavaj!!
     }
 
-
-
-    public NSTimeZone() { return null; }
-
-    protected NSTimeZone(String aName, NSData aData) { return null; }
-
-    private static int __bSearchTZPeriods(NSMutableArray tzPeriods, int count, double time) { return null; }
-
-    private static NSTimeZone __concoctFixedTimeZone(int seconds, String abbr, int isDST) { return null; }
-
-    private static int __detzcode(byte buffer[], int offset) { return null; }
-
-    private static void __entzcode(int value, byte buffer[], int offset) { return null; }
-
-    private static void __initTimeZoneVariables() { return null; }
-
-    private static int __less2(int A, int W) { return null; }
-
-    private static int __less3(int A, int X) { return null; }
-
-    private static int __less4(int A, int Y) { return null; }
-
-    private static int __less5(int A, int Z) { return null; }
-
-    private static void __loadZipEntriesFromZoneArchive() { return null; }
-
-    private static int __log2(int x) { return null; }
-
-    private static synchronized NSTimeZone __lookupOrCreateTimeZone(String aName) { return null; }
-
-    private static NSMutableArray __parseTimeZoneData(NSData aData) { return null; }
-
-    private static String __replacementTimeZoneNameForName(String aName, boolean tryAbbreviation) { return null; }
-
-    public static NSDictionary abbreviationDictionary() { return null; }
-
-    public Class classForCoder() { return null; }
-
-    public Object clone() { return null; }
-
-    public static Object decodeObject(NSCoder aDecoder) { return null; }
-
-    public static synchronized NSTimeZone defaultTimeZone() { return null; }
-
-    public static String[] getAvailableIDs() { return null; }
-
-    public static NSTimeZone getGMT() { return null; }
-
-    public static TimeZone getDefault() { return null; }
-
-    public static NSArray knownTimeZoneNames() { return null; }
+    /**
+     * Returns the abbreviation for the NSTimeZone at the current instant, such as "EDT" (Eastern Daylight Time). Invokes abbreviationForTimestamp with an NSTimestamp representing the current instant.
+     * Invoked by toString.
+     */
+    public java.lang.String abbreviation(){
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method localTimeZone is deprecated
+     * Provides the mappings of time zone abbreviations to time zone names.
+     * Any given name may be represented by several abbreviations. Conversely, more than one time zone may have the same abbreviation. For example, US/Pacific and Canada/Pacific both use the abbreviation "PST." In these cases, this method always chooses a single name to which to map the abbreviation.
      */
-
-    public static NSTimeZone localTimeZone() { return null; }
+    public static com.webobjects.foundation.NSDictionary abbreviationDictionary(){
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method resetSystemTimeZone is deprecated
+     * Provides the abbreviation for the NSTimeZone at the instant specified by aTimestamp.
+     * Note that the abbreviation may be different at different instants. For example, during daylight savings time, the US/Eastern time zone has an abbreviation of "EDT". At other times, its abbreviation is "EST".
+     * Invoked by abbreviation.
      */
-
-    public static synchronized void resetSystemTimeZone() { return null; }
-
-    public static synchronized void setDefault(TimeZone aTZ) { return null; }
-
-    public static synchronized void setDefaultTimeZone(NSTimeZone aTZ) { return null; }
-
-    public void setID(String anID) {}
-
-    public void setRawOffset(int offsetMillis) {}
-
-    public static synchronized NSTimeZone systemTimeZone() { return null; }
-
-    public static synchronized NSTimeZone timeZoneForSecondsFromGMT(int secondsOffsetFromGMT) { return null; }
-
-    public static synchronized NSTimeZone timeZoneWithName(String aName, boolean tryAbbreviation) { return null; }
-
-    public static synchronized NSTimeZone timeZoneWithNameAndData(String aName, NSData aData) { return null; }
-
-    public static NSTimeZone _nstimeZoneWithTimeZone(TimeZone aZone) { return null; }
-
-    private synchronized void _initialize() { return null; }
-
-    public String abbreviation() { return null; }
-
-    public String abbreviationForTimestamp(NSTimestamp aTimestamp) { return null; }
-
-    public NSData data() { return null; }
-
-    public void encodeWithCoder(NSCoder aCoder) {}
-
-    public boolean equals(Object anObject) { return true; }
-
-    public String getDisplayName(boolean inDaylightSavingTime, int aTZStyle, Locale aLocale) { return null; }
-
-    public String getID() { return null; }
-
-    public int getOffset(int anEra, int aYear, int aMonth, int aDayOfMonth, int aDayOfWeek, int milliseconds) { return 0; }
-
-    int getOffset(NSTimestamp ts) { return null; }
-
-    public int getRawOffset() { return 0; }
-
-    public synchronized int hashCode() { return null; }
-
-    public boolean hasSameRules(TimeZone aTZ) { return true; }
-
-    public boolean inDaylightTime(Date aDate) { return true; }
-
-    public boolean isDaylightSavingTime() { return true; }
-
-    public boolean isDaylightSavingTimeForTimestamp(NSTimestamp aTimestamp) { return true; }
+    public java.lang.String abbreviationForTimestamp(com.webobjects.foundation.NSTimestamp aTimestamp){
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method isEqualToTimeZone is deprecated
+     * Description copied from interface:
+     * Allows the receiver, before being encoded, to substitute a class other than its own in a coder. For example, private subclasses can substitute the name of a public superclass when being encoded.
      */
-
-    public boolean isEqualToTimeZone(NSTimeZone aTimeZone) { return true; }
+    public java.lang.Class classForCoder(){
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method name is deprecated
+     * Since NSTimeZones are immutable, there's no need to make an actual clone.
      */
-
-    public String name() { return null; }
-
-    public int secondsFromGMT() { return 0; }
-
-    public int secondsFromGMTForTimestamp(NSTimestamp aTimestamp) { return 0; }
-
-    int secondsFromGMTForOffsetInSeconds(long offset) { return null; }
-
-    public String toString() { return null; }
-
-    public boolean useDaylightTime() { return true; }
-
-    private void writeObject(ObjectOutputStream s) throws IOException {}
-
-    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException {}
-
-    protected Object readResolve() throws ObjectStreamException { return null; }
-
-    static  {}
+    public java.lang.Object clone(){
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Field SystemTimeZoneDidChangeNotification is deprecated
+     * Provides an opaque object representing the behavior for this NSTimeZone. Invoked by equals.
      */
-    public static final String SystemTimeZoneDidChangeNotification = "NSSystemTimeZoneDidChangeNotification";
-    public static final Class _CLASS;
-    private static final String __ABBR_TABLE_NAME = "com/webobjects/foundation/TimeZoneInfo/Abbreviations.table";
-    private static final int __ABBR_TABLE_SIZE_IN_BYTES = 9932;
-    private static final String __ALIAS_TABLE_NAME = "com/webobjects/foundation/TimeZoneInfo/Aliases.table";
-    private static final int __ALIAS_TABLE_SIZE_IN_BYTES = 3092;
-    private static final String __GENERIC_TZ_NAME_STEM = "Etc/GMT";
-    private static final String __GMT = "GMT";
-    private static final int __GMT_LENGTH;
-    private static final String __MINUS = "-";
-    private static final String __PLUS = "+";
-    private static final String __UTF8 = "UTF8";
-    private static final String __ZONE_ARCHIVE_NAME = "com/webobjects/foundation/TimeZoneInfo/zoneinfo.zip";
-    static final long serialVersionUID = 0xbb34a25cL;
-    private static final String SerializationNameFieldKey = "name";
-    private static final String SerializationDataFieldKey = "timeZoneData";
-    private static NSDictionary __abbreviations;
-    private static NSDictionary __aliases;
-    private static NSTimeZone __defaultTimeZone;
-    private static NSTimeZone __gmt;
-    private static final NSNumberFormatter __hourFormatter;
-    private static final NSNumberFormatter __gmtHourFormatter;
-    private static NSSet __knownTimeZoneNames;
-    private static final NSMutableDictionary __knownTimeZones;
-    private static final __NSLocalTimeZone __localTimeZone;
-    private static final NSNumberFormatter __gmtMinuteFormatter;
-    private static final NSMutableDictionary __namesDataTable;
-    private static NSTimeZone __systemTimeZone;
-    private static final __NSTZPeriodComparator __tzPeriodComparator;
-    protected NSData _data;
-    protected transient int _hashCode;
-    protected transient boolean _initialized;
-    protected String _name;
-    protected transient int _rawOffset;
-    protected transient NSMutableArray _timeZonePeriods;
-    protected transient int _timeZonePeriodsCount;
-    protected transient boolean _useDaylightTime;
-    private static final ObjectStreamField serialPersistentFields[];
+    public com.webobjects.foundation.NSData data(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Provided for compliance with com.webobjects.foundation.NSCoding. Provides an NSTimeZone object for the decoded data. Attempts to avoid creating duplicate objects.
+     */
+    public static java.lang.Object decodeObject(com.webobjects.foundation.NSCoder aDecoder){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Provides the last object given to NSTimeZone via setDefault or setDefaultTimeZone.If no default time zone has been explicitly set, this method returns the system time zone. The default time zone returned by NSTimeZone may or may not be consistent with the default time zone returned by java.util.TimeZone.
+     */
+    public static com.webobjects.foundation.NSTimeZone defaultTimeZone(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from interface:
+     * Encodes the receiver using coder. Object type information along with an object's data is stored.
+     */
+    public void encodeWithCoder(com.webobjects.foundation.NSCoder aCoder){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Indicates whether this NSTimeZone has the same data as that of anObject. Invoked by: hasSameRules isEqualToTimeZone
+     */
+    public boolean equals(java.lang.Object anObject){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Provides a list of all of the names and abbreviations known to NSTimeZone.
+     */
+    public static java.lang.String[] getAvailableIDs(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Provides the last object given to NSTimeZone via setDefault or setDefaultTimeZone. If no default time zone has been explicitly set, this method returns the system time zone. The default time zone returned by NSTimeZone may or may not be consistent with the default time zone returned by java.util.TimeZone.
+     */
+    public static java.util.TimeZone getDefault(){
+        return null; //TODO codavaj!!
+    }
+
+    public java.lang.String getDisplayName(boolean inDaylightSavingTime, int aTZStyle, java.util.Locale aLocale){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Returns an NSTimeZone object representing GMT.
+     */
+    public static com.webobjects.foundation.NSTimeZone getGMT(){
+        return null; //TODO codavaj!!
+    }
+
+    public java.lang.String getID(){
+        return null; //TODO codavaj!!
+    }
+
+    public int getOffset(int anEra, int aYear, int aMonth, int aDayOfMonth, int aDayOfWeek, int milliseconds){
+        return 0; //TODO codavaj!!
+    }
+
+    /**
+     * Provides the generic difference between the NSTimeZone and Greenwich Mean Time (the offset).
+     * Because NSTimeZones represent geopolitical regions, many timezones don't have one, generic offset. The offset can change over time for reasons other than daylight saving purposes. Consequently, this method will return zero except for generic, apolitical time zones of the form GMT+/-hrs or Etc/GMT+/-hrs, like those generated by timeZoneForSecondsFromGMT.
+     */
+    public int getRawOffset(){
+        return 0; //TODO codavaj!!
+    }
+
+    public int hashCode(){
+        return 0; //TODO codavaj!!
+    }
+
+    /**
+     * Invokes equals with aTZ.
+     */
+    public boolean hasSameRules(java.util.TimeZone aTZ){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Indicates whether this NSTimeZone uses daylight savings time at aDate.
+     * Invokes isDaylightSavingTimeForTimestamp with an NSTimestamp representing aDate.
+     */
+    public boolean inDaylightTime(java.util.Date aDate){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Indicates whether this NSTimeZone currently uses daylight savings time. Invokes isDaylightSavingTimeForTimestamp with an NSTimestamp representing the current instant.
+     */
+    public boolean isDaylightSavingTime(){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Indicates whether this NSTimeZone uses daylight savings time at aTimestamp.
+     * Invoked by: inDaylightTime isDaylightSavingTime
+     */
+    public boolean isDaylightSavingTimeForTimestamp(com.webobjects.foundation.NSTimestamp aTimestamp){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * Invokes equals with aTimeZone.
+     */
+    public boolean isEqualToTimeZone(com.webobjects.foundation.NSTimeZone aTimeZone){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Provides a list of all of the names and abbreviations known to NSTimeZone.
+     */
+    public static com.webobjects.foundation.NSArray knownTimeZoneNames(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * Provides an object that forwards all messages to the default time zone in the current locale for the application. This behavior is particularly useful for NSTimestamp objects that are archived or distributed across a network. Such objects may be used in different locales than the one in which they were created.
+     */
+    public static com.webobjects.foundation.NSTimeZone localTimeZone(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * Invokes getID.
+     */
+    public java.lang.String name(){
+        return null; //TODO codavaj!!
+    }
+
+    protected java.lang.Object readResolve() throws java.io.ObjectStreamException{
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     * This method provided for backward compatibility only. Sets the system time zone to null and posts an NSTimeZone.SystemTimeZoneDidChangeNotification.
+     */
+    public static void resetSystemTimeZone(){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Indicates the difference between the NSTimeZone and Greenwich Mean Time (the offset) at the current instant.
+     */
+    public int secondsFromGMT(){
+        return 0; //TODO codavaj!!
+    }
+
+    /**
+     * Indicates the difference between the NSTimeZone and Greenwich Mean Time (the offset) at the instant specified by aTimestamp.
+     * The NSTimeZone object may change its offset from GMT at different points in the year. For example, the U.S. time zones change offsets with daylight savings time.
+     * Because NSTimeZone objects represent geopolitical regions, offsets such as those for daylight savings time may change across different spans. For example, the organization which governs a region may abolish daylight savings time, though daylight savings time would be relevant for moments preceding the abolition.
+     */
+    public int secondsFromGMTForTimestamp(com.webobjects.foundation.NSTimestamp aTimestamp){
+        return 0; //TODO codavaj!!
+    }
+
+    /**
+     * Changes the time zone provided by getDefault or defaultTimeZone for the application. The default time zone is not the same as the localTimeZone, which cannot be substituted.
+     */
+    public static void setDefault(java.util.TimeZone aTZ){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Changes the time zone provided by getDefault or defaultTimeZone for the application. The default time zone is not the same as the localTimeZone, which cannot be substituted.
+     */
+    public static void setDefaultTimeZone(com.webobjects.foundation.NSTimeZone aTZ){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Irrelevant for NSTimeZone objects, which are not mutable.
+     */
+    public void setID(java.lang.String anID){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Irrelevant for NSTimeZone objects, which are not mutable.
+     */
+    public void setRawOffset(int offsetMillis){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Provides the time zone object representing the system's time zone. This is different from localTimeZone and may be different from the time zone object returned by getDefault.
+     */
+    public static com.webobjects.foundation.NSTimeZone systemTimeZone(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Provides an NSTimeZone object representing a fixed offset, specified in seconds, from Greenwich Mean Time. If secondsOffsetFromGMT corresponds to a whole hour between 12 and -12, this method returns an existing, well-known NSTimeZone object that follows the POSIX convention. The time zone name is "Etc/GMT<+/->", where "hour" is a whole number 1-12 and the sign (plus or minus) is the
+     * of the sign of the offset. An offset of zero is a special case, for which the time zone name is simply "Etc/GMT".
+     * If secondsOffsetFromGMT does not correspond to a whole hour between 12 and -12, this method creates a new time zone for the specified offset, rounded to the nearest minute. In this case, the time zone name is consistent with the Java convention rather than the POSIX convention. The time zone name is "GMT<+/->:", where the hour is always represented by two digits, and where the sign (plus or minus) is the same as the sign of the offset. Time zones created from offsets are always apolitical. They never use daylight savings time, and their offsets are constant throughout the year, and throughout history.
+     */
+    public static com.webobjects.foundation.NSTimeZone timeZoneForSecondsFromGMT(int secondsOffsetFromGMT){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Provides an NSTimeZone object corresponding to aName. Avoids creating duplicate NSTimeZone objects as much as possible. This method is the recommended way for you to create or retrieve NSTimeZone objects.
+     * Invoked by: decodeObject readResolve systemTimeZone timeZoneForSecondsFromGMT
+     */
+    public static com.webobjects.foundation.NSTimeZone timeZoneWithName(java.lang.String aName, boolean tryAbbreviation){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Use timeZoneWithName instead of calling this method directly.
+     * Invoked by: decodeObject readResolve timeZoneForSecondsFromGMT
+     */
+    public static com.webobjects.foundation.NSTimeZone timeZoneWithNameAndData(java.lang.String aName, com.webobjects.foundation.NSData aData){
+        return null; //TODO codavaj!!
+    }
+
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Indicates whether the NSTimeZone ever uses or has used daylight savings time. Only ever true for objects that represent geopolitical regions.
+     */
+    public boolean useDaylightTime(){
+        return false; //TODO codavaj!!
+    }
 
 }

@@ -1,41 +1,35 @@
-
 package com.webobjects.eogeneration;
+public abstract class EOEnumerationController extends com.webobjects.eogeneration.EOTitlesController{
+    public EOEnumerationController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eocontrol.EOEnterpriseObject;
-import com.webobjects.eointerface.EODisplayGroup;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
+    public EOEnumerationController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    protected boolean preferredUsesLabelComponent(){
+        return false; //TODO codavaj!!
+    }
 
-public abstract class EOEnumerationController extends EOTitlesController {
+    public java.lang.String relationshipPath(){
+        return null; //TODO codavaj!!
+    }
 
+    public void setRelationshipPath(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public EOEnumerationController() { return null; }
+    public java.lang.String titlesEntityName(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOEnumerationController(EOXMLUnarchiver unarchiver) { return null; }
-
-    public NSMutableDictionary _xmlParameters() { return null; }
-
-    protected boolean preferredUsesLabelComponent() { return true; }
-
-    public void setRelationshipPath(String string) {}
-
-    public String relationshipPath() { return null; }
-
-    protected String _derivedLabel() { return null; }
-
-    protected EOEnterpriseObject _masterObject() { return null; }
-
-    protected String _masterEntityName() { return null; }
-
-    public String titlesEntityName() { return null; }
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private String _relationshipPath;
+    /**
+     * Description copied from class:
+     * Returns the receiver as a string that states the receiver's class name and type name, whether the receiver is connected, the number of subcontrollers, whether or not the receiver has been prepared, whether or not the receiver is visible, information about widget sizing and alignment behavior, and so on.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

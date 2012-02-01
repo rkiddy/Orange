@@ -1,14 +1,10 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOContext;
-
-
-public class WOLQueryPage extends D2WQueryPage {
-
-
-    public WOLQueryPage(WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0xb1d187eeL;
+/**
+ * See Also:Serialized Form
+ */
+public class WOLQueryPage extends com.webobjects.directtoweb.D2WQueryPage{
+    public WOLQueryPage(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
 }

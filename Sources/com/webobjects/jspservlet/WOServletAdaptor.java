@@ -1,112 +1,92 @@
-
 package com.webobjects.jspservlet;
-
-import com.webobjects.appserver.WOApplication;
-import java.io.*;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.util.*;
-import javax.naming.InitialContext;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.jsp.PageContext;
-
-
-public class WOServletAdaptor extends HttpServlet {
-    public static class JavaArchiveFilter
-        implements FilenameFilter {
-
-
-        public JavaArchiveFilter() { return null; }
-
-        public boolean accept(File dir, String aName) { return true; }
-
-        private static final String JAR = ".jar";
-        private static final String ZIP = ".zip";
-
+/**
+ * See Also:Serialized Form
+ */
+public class WOServletAdaptor extends javax.servlet.http.HttpServlet{
+    /**
+     * Empty default constructor that just calls super().
+     * Throws: javax.servlet.ServletException
+     */
+    public WOServletAdaptor() throws javax.servlet.ServletException{
+         //TODO codavaj!!
     }
 
+    public void destroy(){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Method for GET requests. The request will be parsed and translated into a WORequest, and handed off to the WOApplication object. The WOResponse from the WOApplication will be parsed and translated into the HttpServletResponse. This, along with doPost, allows a WOApp to run inside of a Servlet container unchanged.
+     */
+    public void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws java.io.IOException, javax.servlet.ServletException{
+        return; //TODO codavaj!!
+    }
 
-    public static void initStatics(ServletContext servletContext) throws UnavailableException { return null; }
+    /**
+     * Method for POST requests. The request will be parsed and translated into a WORequest, and handed off to the WOApplication object. The WOResponse from the WOApplication will be parsed and translated into the HttpServletResponse. This, along with doGet, allows a WOApp to run inside of a Servlet container unchanged.
+     */
+    public void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws java.io.IOException, javax.servlet.ServletException{
+        return; //TODO codavaj!!
+    }
 
-    private static _WOServletAppInterface appInstance(ServletContext servletContext) { return null; }
+    /**
+     * Returns a String representing the generated content for a given WOComponent with name. The bindings for that WOComponent are passed in bindings. extraHeaders are headers that will be added to the WORequest as seen by the WOComponent -- note that all the headers that are part of the HttpServletRequest are included automatically. The servletRequest, servletResponse and servlet are passed in for possible use later. If bodyContentOnly is true, only text between the first tag and the last tag will be returned. If mergeResponseHeaders is true, the response headers for the WOComponent will be merged into the servletResponse. Note that all the servlet objects will be stored in the userInfo dictionary argument of WOApplication.responseForComponentWithName. This API is designed to be invoked from inside a Servlet -- for embedding components within JSP pages, use the taglib instead.
+     */
+    public static java.lang.String embeddedComponentResponse(java.lang.String name, java.util.Map bindings, java.util.Map extraHeaders, javax.servlet.http.HttpServletRequest servletRequest, javax.servlet.http.HttpServletResponse servletResponse, javax.servlet.http.HttpServlet servlet, boolean bodyContentOnly, boolean mergeResponseHeaders){
+        return null; //TODO codavaj!!
+    }
 
-    public static Object woApplicationObject() { return null; }
+    protected static java.lang.String embeddedComponentResponse(java.lang.String name, java.util.Map bindings, java.util.Map extraHeaders, javax.servlet.jsp.PageContext pageContext, boolean bodyContentOnly, boolean mergeResponseHeaders){
+        return null; //TODO codavaj!!
+    }
 
-    private static String getRealPath(String path) { return null; }
+    /**
+     * Returns a String representing the generated content for a given direct action with actionName. The Direct Action className may be specified as well, but is optional. formValues are passed to the direct action as a query string, while the contentString is just passed as regular content -- if the content requires special headers to process use extraHeaders. extraHeaders are headers that will be added to the WORequest as seen by the Direct Action -- note that all the headers that are part of the HttpServletRequest are included automatically. The servletRequest, servletResponse and servlet are passed in for possible use later. If bodyContentOnly is true, only text between the first BODY tag and the last BODY tag will be returned. If mergeResponseHeaders is true, the response headers for the WOComponent will be merged into the servletResponse. Note that all the servlet objects will be stored in the userInfo dictionary argument of WOApplication.responseForComponentWithName. This API is designed to be invoked from inside a Servlet -- for embedding direct actions within JSP pages, use the taglib instead.
+     */
+    public static java.lang.String embeddedDirectActionResponse(java.lang.String actionName, java.lang.String className, java.util.Map formValues, java.io.InputStream contentStream, java.util.Map extraHeaders, javax.servlet.http.HttpServletRequest servletRequest, javax.servlet.http.HttpServletResponse servletResponse, javax.servlet.http.HttpServlet servlet, boolean bodyContentOnly, boolean mergeResponseHeaders){
+        return null; //TODO codavaj!!
+    }
 
-    private static String[] tokenizeClasspath(String aClasspath) { return null; }
+    protected static java.lang.String embeddedDirectActionResponse(java.lang.String actionName, java.lang.String className, java.util.Map formValues, java.io.InputStream contentStream, java.util.Map extraHeaders, javax.servlet.jsp.PageContext pageContext, boolean bodyContentOnly, boolean mergeResponseHeaders){
+        return null; //TODO codavaj!!
+    }
 
-    private static void addArchivesToList(File archiveDir, ArrayList al) { return null; }
+    /**
+     * Default init method that just calls initStatics
+     */
+    public void init() throws javax.servlet.ServletException{
+        return; //TODO codavaj!!
+    }
 
-    private static URL[] mangleClasspathForClassLoader(String aClasspath) { return null; }
+    /**
+     * Initializes all the appropriate objects so that JSP/Servlet integration works. Normally, this method should never be called, since either calling embeddedComponentResponse or having the servlet container initialize the WOServletAdaptor object will do everything for you. However, if you are planning on using WebObjects objects directly in either a JSP or Servlet, you must invoke this method first. Further invocations of this method past the first will do nothing.
+     */
+    public static void initStatics(javax.servlet.ServletContext servletContext) throws javax.servlet.UnavailableException{
+        return; //TODO codavaj!!
+    }
 
-    private static String mangleClasspathForBundle(String aClasspath) { return null; }
+    /**
+     * String representation of this class, which includes the classpath, the mainBundlePath, the name of the WOApplication subclass, as well as the ServletConfig and ServletContext
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    private static _WOServletAppInterface getAppWrapper(Object app) { return null; }
+    /**
+     * Returns the WOApplication class (or subclass) used by this application. initStatics, embeddedComponentResponse, embeddedDirectActionResponse, or a Taglib must have been invoked previous to calling this.
+     */
+    public static java.lang.Object woApplicationObject(){
+        return null; //TODO codavaj!!
+    }
 
-    public static synchronized void _applicationInit(ServletContext servletContext) throws UnavailableException { return null; }
+    public static class JavaArchiveFilter implements java.io.FilenameFilter{
+        public JavaArchiveFilter(){
+             //TODO codavaj!!
+        }
 
-    protected static String embeddedComponentResponse(String name, Map bindings, Map extraHeaders, PageContext pageContext, boolean bodyContentOnly, boolean mergeResponseHeaders) { return null; }
+        public boolean accept(java.io.File dir, java.lang.String aName){
+            return false; //TODO codavaj!!
+        }
 
-    public static String embeddedComponentResponse(String name, Map bindings, Map extraHeaders, HttpServletRequest servletRequest, HttpServletResponse servletResponse, HttpServlet servlet, boolean bodyContentOnly, boolean mergeResponseHeaders) { return null; }
-
-    private static String _embeddedComponentResponse(String name, Map bindings, Map extraHeaders, Map userInfo, String urlPrefix, String appName, boolean bodyContentOnly, boolean mergeResponseHeaders) { return null; }
-
-    protected static String embeddedDirectActionResponse(String actionName, String className, Map formValues, InputStream contentStream, Map extraHeaders, PageContext pageContext, boolean bodyContentOnly, boolean mergeResponseHeaders) { return null; }
-
-    public static String embeddedDirectActionResponse(String actionName, String className, Map formValues, InputStream contentStream, Map extraHeaders, HttpServletRequest servletRequest, HttpServletResponse servletResponse, HttpServlet servlet, 
-            boolean bodyContentOnly, boolean mergeResponseHeaders) { return null; }
-
-    private static String _embeddedDirectActionResponse(String actionName, String className, Map formValues, InputStream contentStream, Map extraHeaders, Map userInfo, String urlPrefix, String appName, 
-            boolean bodyContentOnly, boolean mergeResponseHeaders) { return null; }
-
-    private static String extractBodyFromContent(String contentString) { return null; }
-
-    public WOServletAdaptor() throws ServletException { return null; }
-
-    public void init() throws ServletException {}
-
-    public void destroy() {}
-
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {}
-
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {}
-
-    private void _handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {}
-
-    private static boolean _isDeployed(ServletContext servletContext) { return null; }
-
-    public String toString() { return null; }
-
-    static  {}
-
-    private static final long serialVersionUID = 0x3c28f31cL;
-    private static final String WOROOT = "WOROOT";
-    private static final String LOCALROOT = "LOCALROOT";
-    private static final String WOAINSTALLROOT = "WOAINSTALLROOT";
-    private static final String WEBINFROOT = "WEBINFROOT";
-    private static final String LAUNCH_ROOT_ERR_MSG = "You can either define WOROOT, LOCALROOT and WOAINSTALLROOT as Java system properties (e.g. in your application server's launch script as command line arguments) or in the application Deployment Descriptor file (web.xml).";
-    private static final String WEBINF_ROOT_ERR_MSG = "WEBINFROOT can only be used if the application is being deployed in a directory (Servlet Single Directory Deployment). It cannot be used if you are deploying the application in a WAR file.";
-    private static Class stringParamType;
-    private static Class urlParamType;
-    private static Class woappInitParamTypesOld[];
-    private static Class woappInitParamTypesNew[];
-    private static _WOServletAppInterface woApplicationWrapper;
-    private static ClassLoader classLoader;
-    private static String woRoot;
-    private static String localRoot;
-    private static String woaInstallRoot;
-    private static String webInfRoot;
-    private static String classpath;
-    private static String tokenizedClasspath[];
-    private static String mainBundlePath;
-    private static String mainclassname;
-    private static String mainBundleName;
-    private static JavaArchiveFilter jaf;
-    private static volatile ServletContext _servletContext;
-
+    }
 }

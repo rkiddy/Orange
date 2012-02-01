@@ -1,21 +1,14 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * See Also:Serialized Form
+ */
+public class WOArrayDeserializer extends org.apache.axis.encoding.ser.ArrayDeserializer implements com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WOArrayDeserializer(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.NSKeyValueCoding;
-import java.lang.reflect.Array;
-import java.util.*;
-import org.apache.axis.encoding.ser.ArrayDeserializer;
-import org.xml.sax.SAXException;
-
-
-public class WOArrayDeserializer extends ArrayDeserializer
-    implements WOSoapConstants {
-
-
-    public WOArrayDeserializer() { return null; }
-
-    public void valueComplete() throws SAXException {}
-
-    private static final long serialVersionUID = 0xab1d8b2bL;
+    public void valueComplete() throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
 }

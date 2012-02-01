@@ -1,62 +1,45 @@
-
 package com.webobjects.eoapplication;
-
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.*;
-import javax.swing.*;
-
-
-public class EOTabSwitchController extends EOSwitchController {
-    private class _TabbedPane extends JTabbedPane {
-
-
-        public _TabbedPane() { return null; }
-
-        public void addTabWithoutNotifications(String title, Icon icon, Component component) {}
-
-        public void removeTabAtIndexWithoutNotifications(int index) {}
-
-        public void setSelectedIndexWithoutNotifications(int index) {}
-
-        public void setSelectedIndex(int index) {}
-
-        protected void fireStateChanged() {}
-
-        boolean _preventStateChangeNotification;
-        final EOTabSwitchController this$0;
-
+public class EOTabSwitchController extends com.webobjects.eoapplication.EOSwitchController{
+    public EOTabSwitchController(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOTabSwitchController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    protected void addBorderComponentForControllerToDisplayComponent(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent){
+        return; //TODO codavaj!!
+    }
 
-    public EOTabSwitchController() { return null; }
+    protected java.awt.Dimension displayComponentBorderSize(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOTabSwitchController(EOXMLUnarchiver unarchiver) { return null; }
+    /**
+     * Description copied from class:
+     */
+    public java.awt.Dimension minimumComponentSize(){
+        return null; //TODO codavaj!!
+    }
 
-    protected Insets _preferredInsets() { return null; }
+    protected javax.swing.JComponent newDisplayComponent(){
+        return null; //TODO codavaj!!
+    }
 
-    private _TabbedPane _createTabbedPane() { return null; }
+    protected void removeBorderComponentForControllerFromDisplayComponent(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent, int index){
+        return; //TODO codavaj!!
+    }
 
-    protected JComponent newDisplayComponent() { return null; }
+    protected javax.swing.JComponent selectedBorderComponentInDisplayComponent(javax.swing.JComponent displayComponent){
+        return null; //TODO codavaj!!
+    }
 
-    public Dimension minimumComponentSize() { return null; }
-
-    protected Dimension displayComponentBorderSize() { return null; }
-
-    protected JComponent selectedBorderComponentInDisplayComponent(JComponent displayComponent) { return null; }
-
-    protected void addBorderComponentForControllerToDisplayComponent(EOComponentController controller, JComponent borderComponent, JComponent displayComponent) {}
-
-    protected void removeBorderComponentForControllerFromDisplayComponent(EOComponentController controller, JComponent borderComponent, JComponent displayComponent, int index) {}
-
-    protected void showBorderComponentAtIndexInDisplayComponent(JComponent borderComponent, JComponent displayComponent, int index) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private int _tabbedPaneMinimumWidth;
+    protected void showBorderComponentAtIndexInDisplayComponent(javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent, int index){
+        return; //TODO codavaj!!
+    }
 
 }

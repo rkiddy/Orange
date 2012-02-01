@@ -1,34 +1,36 @@
-
 package com.webobjects.directtoweb;
+/**
+ * This property-level component displays a hyperlink representing a to-one relationship. The hyperlink navigates to an inspect page displaying the destination object of the relationship.
+ * Property-level components are not accessed programmatically. Instead, you use the Web Assistant to choose the property-level component that Direct to Web uses to display a property on a particular entity and task page.
+ * See Also:Serialized Form
+ */
+public class D2WDisplayToOneFault extends com.webobjects.directtoweb.D2WStatelessComponent implements com.webobjects.directtoweb.generation.DTWGeneration{
+    public D2WDisplayToOneFault(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.directtoweb.generation.DTWGeneration;
-import com.webobjects.directtoweb.generation.DTWTemplate;
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.eocontrol.EOEnterpriseObject;
+    public java.lang.String helpString(){
+        return null; //TODO codavaj!!
+    }
 
+    public java.lang.String methodNameForShouldDisplay(){
+        return null; //TODO codavaj!!
+    }
 
-public class D2WDisplayToOneFault extends D2WStatelessComponent
-    implements DTWGeneration {
+    public java.lang.String methodNameForToOneAction(){
+        return null; //TODO codavaj!!
+    }
 
+    public com.webobjects.appserver.WOAssociation replacementAssociationForAssociation(com.webobjects.appserver.WOAssociation oldAssociation, java.lang.String oldBinding, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return null; //TODO codavaj!!
+    }
 
-    public D2WDisplayToOneFault(WOContext aContext) { return null; }
+    public boolean shouldDisplay(){
+        return false; //TODO codavaj!!
+    }
 
-    private EOEnterpriseObject _eo() { return null; }
-
-    public WOComponent toOneAction() { return null; }
-
-    public boolean shouldDisplay() { return true; }
-
-    public String helpString() { return null; }
-
-    public String methodNameForShouldDisplay() { return null; }
-
-    public String methodNameForToOneAction() { return null; }
-
-    public WOAssociation replacementAssociationForAssociation(WOAssociation oldAssociation, String oldBinding, DTWTemplate aTemplate, WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0x1b7a4c44L;
-    private String _helpString;
+    public com.webobjects.appserver.WOComponent toOneAction(){
+        return null; //TODO codavaj!!
+    }
 
 }

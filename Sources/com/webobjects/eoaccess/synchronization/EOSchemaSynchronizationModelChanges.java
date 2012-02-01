@@ -1,62 +1,162 @@
-
 package com.webobjects.eoaccess.synchronization;
+/**
+ * Encapsulates the changes between the previous eomodel.
+ * Since: 5.4 See Also:EOSchemaSynchronizationFactory, EOSchemaSynchronization
+ */
+public class EOSchemaSynchronizationModelChanges extends com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationChanges{
+    public EOSchemaSynchronizationModelChanges(){
+         //TODO codavaj!!
+    }
 
-import java.util.*;
+    /**
+     * Adds a table name to the list of table to be deleted.
+     */
+    public void addToDeletedTableNames(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Adds a table name to the list of table to be inserted.
+     */
+    public void addToInsertedTableNames(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-public class EOSchemaSynchronizationModelChanges extends EOSchemaSynchronizationChanges {
+    /**
+     * Adds a table name to the list of table to be updated.
+     */
+    public void addToUpdatedTableNames(java.lang.String value, com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationTableChanges change){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Rerturns the changes for the named table. If there are no changes returns an empty Object.
+     */
+    public com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationTableChanges changesForTableNamed(java.lang.String value){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSchemaSynchronizationModelChanges() { return null; }
+    /**
+     * Returns the list of table to be deleted.
+     */
+    public java.util.Set deletedTableNames(){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean isEmpty() { return true; }
+    /**
+     * Returns an iterator on the list of table names to be deleted.
+     */
+    public java.util.Iterator deletedTableNamesIterator(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOSchemaSynchronizationTableChanges newChangesForTable(String value) { return null; }
+    public void fieldsToString(java.lang.StringBuilder aLog){
+        return; //TODO codavaj!!
+    }
 
-    public Set updatedTableNames() { return null; }
+    /**
+     * Returns the list of table to be inserted.
+     */
+    public java.util.Set insertedTableNames(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setUpdatedTableNames(Map value) {}
+    /**
+     * Returns an iterator on the list of table names to be inserted.
+     */
+    public java.util.Iterator insertedTableNamesIterator(){
+        return null; //TODO codavaj!!
+    }
 
-    public void addToUpdatedTableNames(String value, EOSchemaSynchronizationTableChanges change) {}
+    /**
+     * Checks if there is any changes defined by this structrure
+     */
+    public boolean isEmpty(){
+        return false; //TODO codavaj!!
+    }
 
-    public void removeFromUpdatedTableNames(String value) {}
+    /**
+     * Checks if a table is to be deleted.
+     */
+    public boolean isTableNamedDeleted(java.lang.String value){
+        return false; //TODO codavaj!!
+    }
 
-    public EOSchemaSynchronizationTableChanges changesForTableNamed(String value) { return null; }
+    /**
+     * Checks if a table is to be inserted.
+     */
+    public boolean isTableNamedInserted(java.lang.String value){
+        return false; //TODO codavaj!!
+    }
 
-    Collection allChanges() { return null; }
+    /**
+     * Checks if a table is to be updated.
+     */
+    public boolean isTableNamedUpdated(java.lang.String value){
+        return false; //TODO codavaj!!
+    }
 
-    public Iterator updatedTableNamesIterator() { return null; }
+    /**
+     * Returns enewly initialized change object. This object is not inserted in the update list. This is to facilitate subclassing.
+     */
+    public com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationTableChanges newChangesForTable(java.lang.String value){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean isTableNamedUpdated(String value) { return true; }
+    /**
+     * Removes a table name from the list of table to be deleted.
+     */
+    public void removeFromDeletedTableNames(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public Set deletedTableNames() { return null; }
+    /**
+     * Removes a table name from the list of table to be inserted.
+     */
+    public void removeFromInsertedTableNames(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public void setDeletedTableNames(Collection value) {}
+    /**
+     * Removes a table name from the list of table to be updated.
+     */
+    public void removeFromUpdatedTableNames(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public void addToDeletedTableNames(String value) {}
+    /**
+     * Set the deleted table names.
+     */
+    public void setDeletedTableNames(java.util.Collection value){
+        return; //TODO codavaj!!
+    }
 
-    public void removeFromDeletedTableNames(String value) {}
+    /**
+     * Set the inserted table names.
+     */
+    public void setInsertedTableNames(java.util.Collection value){
+        return; //TODO codavaj!!
+    }
 
-    public Iterator deletedTableNamesIterator() { return null; }
+    /**
+     * Set the updated table names and updates descriptions.
+     */
+    public void setUpdatedTableNames(java.util.Map value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean isTableNamedDeleted(String value) { return true; }
+    /**
+     * Returns the list of tables to be updated.
+     */
+    public java.util.Set updatedTableNames(){
+        return null; //TODO codavaj!!
+    }
 
-    public Set insertedTableNames() { return null; }
-
-    public void setInsertedTableNames(Collection value) {}
-
-    public void addToInsertedTableNames(String value) {}
-
-    public void removeFromInsertedTableNames(String value) {}
-
-    public Iterator insertedTableNamesIterator() { return null; }
-
-    public boolean isTableNamedInserted(String value) { return true; }
-
-    public void fieldsToString(StringBuilder aLog) {}
-
-    protected Set _insertedTables;
-    protected Set _deletedTables;
-    protected Map _updatedTables;
+    /**
+     * Returns an iterator on the list of table names to be updated.
+     */
+    public java.util.Iterator updatedTableNamesIterator(){
+        return null; //TODO codavaj!!
+    }
 
 }

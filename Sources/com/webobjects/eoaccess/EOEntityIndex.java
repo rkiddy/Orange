@@ -1,162 +1,180 @@
-
 package com.webobjects.eoaccess;
-
-import com.webobjects.foundation.*;
-import java.util.Enumeration;
-import java.util.Iterator;
-
-
-public class EOEntityIndex
-    implements EOPropertyListEncoding, EOSQLExpression.SQLValue {
-    static final class Order extends Enum {
-
-
-        public static final Order[] values() { return null; }
-
-        public static Order valueOf(String name) { return null; }
-
-        private Order(String s, int i, String name) { return null; }
-
-        public String externalName() { return null; }
-
-        public static Order orderForName(String name) { return null; }
-
-        public String toString() { return null; }
-
-        static  {}
-
-        public static final Order Ascending;
-        public static final Order Descending;
-        String _externalName;
-        private static final Order $VALUES[];
-
+/**
+ * EOEntityIndex represent an index on an entity.
+ */
+public class EOEntityIndex implements com.webobjects.eoaccess.EOPropertyListEncoding, com.webobjects.eoaccess.EOSQLExpression.SQLValue{
+    public EOEntityIndex(){
+         //TODO codavaj!!
     }
 
-    static final class Type extends Enum {
-
-
-        public static final Type[] values() { return null; }
-
-        public static Type valueOf(String name) { return null; }
-
-        private Type(String s, int i, String name) { return null; }
-
-        public String externalName() { return null; }
-
-        public static Type typeForName(String name) { return null; }
-
-        public String toString() { return null; }
-
-        static  {}
-
-        public static final Type Clustered;
-        public static final Type Hashed;
-        String _externalName;
-        private static final Type $VALUES[];
-
+    /**
+     * Creates an EOEntityIndex object with the state specified in plist whose parent is owner. The possible keys for plist are: name attributes constrain indexType order userInfo
+     * Parameters:plist - A dictionary whose keys are attribute names and whose values are the attribute values for the new EOAttribute object.owner - The parent object for the new EOAttribute.
+     */
+    public EOEntityIndex(com.webobjects.foundation.NSDictionary plist, com.webobjects.eoaccess.EOEntity owner){
+         //TODO codavaj!!
     }
 
-    static final class Constraint extends Enum {
-
-
-        public static final Constraint[] values() { return null; }
-
-        public static Constraint valueOf(String name) { return null; }
-
-        private Constraint(String s, int i, String name) { return null; }
-
-        public String externalName() { return null; }
-
-        public static Constraint constraintForName(String name) { return null; }
-
-        public String toString() { return null; }
-
-        static  {}
-
-        public static final Constraint Unique;
-        public static final Constraint FullText;
-        public static final Constraint Spatial;
-        public static final Constraint Distinct;
-        public static final Constraint None;
-        String _externalName;
-        private static final Constraint $VALUES[];
-
+    /**
+     * Adds attribute to the receiver.
+     */
+    public void addAttribute(com.webobjects.eoaccess.EOAttribute attribute){
+        return; //TODO codavaj!!
     }
 
+    /**
+     * Return the list of attribute used by this index
+     */
+    public com.webobjects.foundation.NSArray attributes(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from interface:
+     * Finishes initializing the receiver from the property list dic, restoring references to other objects. Consequently, it should not be invoked until all other objects from dic that the receiver might reference have been created. The receiver must have been created with a constructor of the form: public ClassName(NSDictionary propertyList, Object owner)
+     */
+    public void awakeWithPropertyList(com.webobjects.foundation.NSDictionary dic){
+        return; //TODO codavaj!!
+    }
 
-    public EOEntityIndex() { return null; }
+    /**
+     * Returns the index constraint.
+     */
+    public com.webobjects.eoaccess.EOEntityIndex.Constraint constraint(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOEntityIndex(NSDictionary plist, EOEntity owner) { return null; }
+    /**
+     * Description copied from interface:
+     * Encodes the receiver as a property list. Property lists are NSDictionary objects whose values are String, NSDictionary, NSArray, and NSData objects.
+     */
+    public void encodeIntoPropertyList(com.webobjects.foundation.NSMutableDictionary result){
+        return; //TODO codavaj!!
+    }
 
-    public void awakeWithPropertyList(NSDictionary nsdictionary) {}
+    public com.webobjects.eoaccess.EOEntity entity(){
+        return null; //TODO codavaj!!
+    }
 
-    public void encodeIntoPropertyList(NSMutableDictionary result) {}
+    /**
+     * Checks if the receiver has any attribute defined.
+     */
+    public boolean isEmpty(){
+        return false; //TODO codavaj!!
+    }
 
-    public String valueForSQLExpression(EOSQLExpression context) { return null; }
+    /**
+     * Returns the internal name of the index.
+     */
+    public java.lang.String name(){
+        return null; //TODO codavaj!!
+    }
 
-    public String name() { return null; }
+    /**
+     * Returns the index order.
+     */
+    public com.webobjects.eoaccess.EOEntityIndex.Order order(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setName(String name) {}
+    /**
+     * Removes attribute from the receiver.
+     */
+    public void removeAttribute(com.webobjects.eoaccess.EOAttribute attribute){
+        return; //TODO codavaj!!
+    }
 
-    public NSArray attributes() { return null; }
+    /**
+     * Sets the list of attributes used by this index
+     */
+    public void setAttributes(com.webobjects.foundation.NSArray value){
+        return; //TODO codavaj!!
+    }
 
-    public void setAttributes(NSArray value) {}
+    /**
+     * Set the value of the index constraint. Default is None.
+     */
+    public void setConstraint(com.webobjects.eoaccess.EOEntityIndex.Constraint value){
+        return; //TODO codavaj!!
+    }
 
-    public void addAttribute(EOAttribute attribute) {}
+    /**
+     * Set the value of the index constraint. Invalid value are ignored. Default is None.
+     */
+    public void setConstraint(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public void removeAttribute(EOAttribute attribute) {}
+    public void setEntity(com.webobjects.eoaccess.EOEntity value){
+        return; //TODO codavaj!!
+    }
 
-    public boolean isEmpty() { return true; }
+    /**
+     * Sets the attribute's name to name, which can not be a name that is already in use by an attribute or relationship belonging to the same entity as the receiver.
+     */
+    public void setName(java.lang.String name){
+        return; //TODO codavaj!!
+    }
 
-    public Constraint constraint() { return null; }
+    /**
+     * Set the value of the index order. Default is Ascending.
+     */
+    public void setOrder(com.webobjects.eoaccess.EOEntityIndex.Order value){
+        return; //TODO codavaj!!
+    }
 
-    public void setConstraint(Constraint value) {}
+    /**
+     * Set the value of the index order. Invalid value are ignored. Default is Ascending.
+     */
+    public void setOrder(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public void setConstraint(String value) {}
+    /**
+     * Set the value of the index type. Default is Clustered.
+     */
+    public void setType(com.webobjects.eoaccess.EOEntityIndex.Type value){
+        return; //TODO codavaj!!
+    }
 
-    public Type type() { return null; }
+    /**
+     * Set the value of the index type. Invalid value are ignored. Default is Clustered.
+     */
+    public void setType(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public void setType(Type value) {}
+    /**
+     * Sets the dictionary of auxiliary data, which the application can use for whatever it needs. dictionary can only contain property list data types (that is, NSDictionary, String, NSArray, and NSData).
+     */
+    public void setUserInfo(com.webobjects.foundation.NSDictionary aDictionary){
+        return; //TODO codavaj!!
+    }
 
-    public void setType(String value) {}
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    public Order order() { return null; }
+    /**
+     * Returns the index type.
+     */
+    public com.webobjects.eoaccess.EOEntityIndex.Type type(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setOrder(Order value) {}
+    /**
+     * Returns a dictionary of user data. An application can use this data for whatever it needs.
+     */
+    public com.webobjects.foundation.NSDictionary userInfo(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setOrder(String value) {}
-
-    Object parent() { return null; }
-
-    void setParent(Object parent) { return null; }
-
-    public EOEntity entity() { return null; }
-
-    public void setEntity(EOEntity value) {}
-
-    private void _parent_setIsEdited() {}
-
-    private EOEntityIndex _parent_indexNamed(String name) { return null; }
-
-    private void _parent_removeIndex(EOEntityIndex index) {}
-
-    public NSDictionary userInfo() { return null; }
-
-    public void setUserInfo(NSDictionary aDictionary) {}
-
-    private void setUserInfoFromPlist(NSDictionary aDictionary) {}
-
-    public String toString() { return null; }
-
-    public String _toString(int indent) { return null; }
-
-    protected String _name;
-    protected EOEntity _parent;
-    protected NSMutableArray _attributes;
-    protected Constraint _constraint;
-    protected Type _type;
-    protected Order _order;
-    protected NSDictionary _userInfo;
+    /**
+     * Description copied from interface:
+     * Returns a String to be used to represent the receiver in an SQL statement.
+     */
+    public java.lang.String valueForSQLExpression(com.webobjects.eoaccess.EOSQLExpression context){
+        return null; //TODO codavaj!!
+    }
 
 }

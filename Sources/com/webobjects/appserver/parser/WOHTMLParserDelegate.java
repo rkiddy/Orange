@@ -1,16 +1,14 @@
-
 package com.webobjects.appserver.parser;
+/**
+ * Since: 5.4
+ */
+public interface WOHTMLParserDelegate{
+    abstract void didParseClosingWebObjectTag(java.lang.String webobject, com.webobjects.appserver.parser.WOHTMLParser parser) throws com.webobjects.appserver.parser.declaration.WODeclarationFormatException, com.webobjects.appserver.parser.WOHTMLFormatException, java.lang.ClassNotFoundException;
 
-import com.webobjects.appserver.parser.declaration.WODeclarationFormatException;
+    abstract void didParseComment(java.lang.String comment, com.webobjects.appserver.parser.WOHTMLParser parser);
 
+    abstract void didParseOpeningWebObjectTag(java.lang.String webobject, com.webobjects.appserver.parser.WOHTMLParser parser) throws com.webobjects.appserver.parser.WOHTMLFormatException;
 
-public interface WOHTMLParserDelegate {
+    abstract void didParseText(java.lang.String text, com.webobjects.appserver.parser.WOHTMLParser parser);
 
-    public abstract void didParseOpeningWebObjectTag(String s, WOHTMLParser wohtmlparser) throws WOHTMLFormatException;
-
-    public abstract void didParseClosingWebObjectTag(String s, WOHTMLParser wohtmlparser) throws WODeclarationFormatException, WOHTMLFormatException, ClassNotFoundException;
-
-    public abstract void didParseComment(String s, WOHTMLParser wohtmlparser);
-
-    public abstract void didParseText(String s, WOHTMLParser wohtmlparser);
 }

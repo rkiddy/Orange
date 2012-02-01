@@ -1,104 +1,143 @@
-
 package com.webobjects.eogeneration;
-
-import com.webobjects.eoapplication.*;
-import com.webobjects.eocontrol.EODataSource;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.*;
-import com.webobjects.foundation.*;
-import java.awt.Dimension;
-import java.awt.event.*;
-import javax.swing.*;
-
-
-public class EOActionController extends EOTitlesController
-    implements ComponentListener {
-    protected static class _Action extends EOAction {
-
-
-        public _Action(EOActionAssociation association, String descriptionPath, String shortDescription, Icon icon, Icon smallIcon) { return null; }
-
-        private boolean _associationButtonIsEnabled() { return true; }
-
-        public boolean actionCanBePerformedInContextOfController(EOController controller) { return true; }
-
-        public void actionPerformed(ActionEvent event) {}
-
-        EOActionAssociation _association;
-
+public class EOActionController extends com.webobjects.eogeneration.EOTitlesController implements java.awt.event.ComponentListener{
+    public EOActionController(){
+         //TODO codavaj!!
     }
 
+    public EOActionController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public java.lang.String actionKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOActionController() { return null; }
+    public int buttonPosition(){
+        return 0; //TODO codavaj!!
+    }
 
-    public EOActionController(EOXMLUnarchiver unarchiver) { return null; }
+    /**
+     * Description copied from class:
+     * Returns whether the controller can be transient. By default, a component controller is transient only if it's an instance of EOComponentController, not an instance of a subclass.
+     */
+    public boolean canBeTransient(){
+        return false; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    /**
+     * Description copied from class:
+     * Invoked when the receiver's component becomes visible, giving the receiver a chance to react. EOComponentController's implementation invokes establishConnection to ensure the receiver is connected to the controller hierarchy.
+     */
+    protected void componentDidBecomeVisible(){
+        return; //TODO codavaj!!
+    }
 
-    protected void disposeAssociations() {}
+    public void componentHidden(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected boolean disposeIfTransient() { return true; }
+    public void componentMoved(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public boolean canBeTransient() { return true; }
+    public void componentResized(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void connectionWasEstablished() {}
+    public void componentShown(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
 
-    protected void connectionWasBroken() {}
+    /**
+     * Description copied from class:
+     * Invoked from breakConnection to notify the receiver that its connection to its supercontroller has been broken, giving the receiver the opportunity to clean up after its become idle.
+     */
+    protected void connectionWasBroken(){
+        return; //TODO codavaj!!
+    }
 
-    protected void componentDidBecomeVisible() {}
+    /**
+     * Description copied from class:
+     * Invoked from establishConnection to notify the receiver that its connection to the controller hierarchy has been established, giving the receiver the opportunity to prepare itself (for example, setting delegates).
+     */
+    protected void connectionWasEstablished(){
+        return; //TODO codavaj!!
+    }
 
-    public void setUsesButton(boolean flag) {}
+    /**
+     * Description copied from class:
+     * Returns an array of the receiver's default actions (EOAction objects). A subclass of EOController should override this method to return the actions it defines merged with the actions of its superclass. Never invoke this method directly. Instead, invoke actions, which caches the results of defaultActions and is therefore more efficient.
+     */
+    protected com.webobjects.foundation.NSArray defaultActions(){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean usesButton() { return true; }
+    protected void disposeAssociations(){
+        return; //TODO codavaj!!
+    }
 
-    public void setUsesAction(boolean flag) {}
+    /**
+     * Description copied from class:
+     * Disposes the receiver if it's transient, first removing it from its supercontroller with removeTransientSubcontroller If the receiver's supercontroller is non-null, this method also attempts to dispose of the supercontroller if it's transient. Supercontrollers can prevent a controller from becoming transient, in which case this method returns false. Subclasses should first invoke the super implementation and only continue disposing if the super implementation returns true.
+     */
+    protected boolean disposeIfTransient(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean usesAction() { return true; }
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
-    public void setActionKey(String string) {}
+    public com.webobjects.eocontrol.EODataSource newTitlesDataSource(){
+        return null; //TODO codavaj!!
+    }
 
-    public String actionKey() { return null; }
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setButtonPosition(int position) {}
+    protected int preferredWidgetAutosizingMask(){
+        return 0; //TODO codavaj!!
+    }
 
-    public int buttonPosition() { return 0; }
+    public void setActionKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    protected String _derivedLabel() { return null; }
+    public void setButtonPosition(int position){
+        return; //TODO codavaj!!
+    }
 
-    protected int preferredWidgetAutosizingMask() { return 0; }
+    public void setUsesAction(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    protected JComponent newWidget() { return null; }
+    public void setUsesButton(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    protected void startListeningToWidget() {}
+    protected void startListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    protected void stopListeningToWidget() {}
+    protected void stopListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    public EODataSource newTitlesDataSource() { return null; }
+    /**
+     * Description copied from class:
+     * Returns the receiver as a string that states the receiver's class name and type name, whether the receiver is connected, the number of subcontrollers, whether or not the receiver has been prepared, whether or not the receiver is visible, information about widget sizing and alignment behavior, and so on.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
+    public boolean usesAction(){
+        return false; //TODO codavaj!!
+    }
 
-    protected NSArray defaultActions() { return null; }
-
-    public void componentHidden(ComponentEvent componentevent) {}
-
-    public void componentMoved(ComponentEvent componentevent) {}
-
-    public void componentResized(ComponentEvent event) {}
-
-    public void componentShown(ComponentEvent componentevent) {}
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private boolean _usesButton;
-    private boolean _usesAction;
-    private String _actionKey;
-    private int _buttonPosition;
-    private JButton _button;
-    private EOTable _titlesTable;
-    private NSMutableArray _associations;
+    public boolean usesButton(){
+        return false; //TODO codavaj!!
+    }
 
 }

@@ -1,38 +1,38 @@
-
 package com.webobjects.appserver.parser;
+/**
+ * Since: 5.4
+ */
+public class WOBundleComponentTemplateParser extends com.webobjects.appserver.parser.WOComponentTemplateParser implements com.webobjects.appserver.parser.WOHTMLParserDelegate{
+    public WOBundleComponentTemplateParser(java.lang.String referenceName, java.lang.String HTMLString, java.lang.String declarationString, com.webobjects.foundation.NSArray languages, com.webobjects.appserver.WOAssociationFactory associationFactory, com.webobjects.appserver.parser.woml.WOMLNamespaceProvider namespaceProvider){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOAssociationFactory;
-import com.webobjects.appserver.WOElement;
-import com.webobjects.appserver._private.WOHTMLCommentString;
-import com.webobjects.appserver.parser.declaration.WODeclarationFormatException;
-import com.webobjects.appserver.parser.declaration.WODeclarationParser;
-import com.webobjects.appserver.parser.woml.WOMLNamespaceProvider;
-import com.webobjects.foundation.*;
+    public com.webobjects.foundation.NSDictionary declarations() throws com.webobjects.appserver.parser.declaration.WODeclarationFormatException{
+        return null; //TODO codavaj!!
+    }
 
+    public void didParseClosingWebObjectTag(java.lang.String webobject, com.webobjects.appserver.parser.WOHTMLParser parser) throws com.webobjects.appserver.parser.declaration.WODeclarationFormatException, com.webobjects.appserver.parser.WOHTMLFormatException, java.lang.ClassNotFoundException{
+        return; //TODO codavaj!!
+    }
 
-public class WOBundleComponentTemplateParser extends WOComponentTemplateParser
-    implements WOHTMLParserDelegate {
+    public void didParseComment(java.lang.String comment, com.webobjects.appserver.parser.WOHTMLParser parser){
+        return; //TODO codavaj!!
+    }
 
+    public void didParseOpeningWebObjectTag(java.lang.String webobject, com.webobjects.appserver.parser.WOHTMLParser parser) throws com.webobjects.appserver.parser.WOHTMLFormatException{
+        return; //TODO codavaj!!
+    }
 
-    public WOBundleComponentTemplateParser(String referenceName, String HTMLString, String declarationString, NSArray languages, WOAssociationFactory associationFactory, WOMLNamespaceProvider namespaceProvider) { return null; }
+    public void didParseText(java.lang.String text, com.webobjects.appserver.parser.WOHTMLParser parser){
+        return; //TODO codavaj!!
+    }
 
-    public void didParseOpeningWebObjectTag(String webobject, WOHTMLParser parser) throws WOHTMLFormatException {}
+    public com.webobjects.appserver.WOElement parse() throws com.webobjects.appserver.parser.declaration.WODeclarationFormatException, com.webobjects.appserver.parser.WOHTMLFormatException, java.lang.ClassNotFoundException{
+        return null; //TODO codavaj!!
+    }
 
-    public void didParseClosingWebObjectTag(String webobject, WOHTMLParser parser) throws WODeclarationFormatException, WOHTMLFormatException, ClassNotFoundException {}
-
-    public void didParseComment(String comment, WOHTMLParser parser) {}
-
-    public void didParseText(String text, WOHTMLParser parser) {}
-
-    public NSDictionary declarations() throws WODeclarationFormatException { return null; }
-
-    public void setDeclarations(NSDictionary value) {}
-
-    public WOElement parse() throws WODeclarationFormatException, WOHTMLFormatException, ClassNotFoundException { return null; }
-
-    static  {}
-
-    protected WOHTMLWebObjectTag _currentWebObjectTag;
-    protected NSDictionary _declarations;
+    public void setDeclarations(com.webobjects.foundation.NSDictionary value){
+        return; //TODO codavaj!!
+    }
 
 }

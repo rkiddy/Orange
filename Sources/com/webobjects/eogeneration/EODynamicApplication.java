@@ -1,56 +1,31 @@
-
 package com.webobjects.eogeneration;
+public class EODynamicApplication extends com.webobjects.eoapplication.EOApplication{
+    public EODynamicApplication(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eocontrol.EOEditingContext;
-import com.webobjects.foundation.*;
-import java.io.PrintStream;
-import java.util.Date;
+    /**
+     * Description copied from interface:
+     * Returns true if the receiver can perform the action method (sent by an EOAction object) named actionName, false otherwise. An EOController's implementation of this method generally returns false if the receiver doesn't have an action named actionName or if the actionName action is explicitly disabled.
+     */
+    public boolean canPerformActionNamed(java.lang.String actionName){
+        return false; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Returns an NSArray containing the actions (EOAction objects) for the application. The application object's actions are displayed in the main menu of the Java Client application.
+     */
+    protected com.webobjects.foundation.NSArray defaultActions(){
+        return null; //TODO codavaj!!
+    }
 
-public class EODynamicApplication extends EOApplication {
-
-
-    public EODynamicApplication() { return null; }
-
-    protected NSArray defaultActions() { return null; }
-
-    public boolean canPerformActionNamed(String actionName) { return true; }
-
-    protected void finishInitialization() {}
-
-    public void _printActiveWindowComponentHierarchy() {}
-
-    public void _printActiveWindowEditingContexts() {}
-
-    public void _printControllerHierarchy() {}
-
-    public void _runGarbageCollector() {}
-
-    public void _restartApplication() {}
-
-    public void _resetCaches() {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    public static final String _ControllerFactoryClassNameArgument = "controllerFactoryClassName";
-    private static final String _ControllerCachingArgument = "controllerCaching";
-    private static final String _XMLLoggingArgument = "XMLLogging";
-
-
-    // Unreferenced inner class com/webobjects/eogeneration/EODynamicApplication$1
-
-/* anonymous class */
-    class _cls1 extends com.webobjects.eoapplication._EOTimer.CallbackAdaptor {
-
-
-        _cls1() { return null; }
-
-        public void timerFired(_EOTimer timer, Date date, Date lastFireDate) {}
-
-        final EODynamicApplication this$0;
-
+    /**
+     * Description copied from class:
+     * This method is invoked after the final event thread is guaranteed to be running. If you subclass EOApplication, use this method to initialize anything relating to the user interface or event handling. Do not perform such initialization using EOApplication's constructor.
+     */
+    protected void finishInitialization(){
+        return; //TODO codavaj!!
     }
 
 }

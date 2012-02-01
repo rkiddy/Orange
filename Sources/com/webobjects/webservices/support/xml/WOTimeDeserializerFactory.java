@@ -1,18 +1,15 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOTimeDeserializerFactory creates instances of WOTimeDeserializer.
+ * See Also:Serialized Form
+ */
+public class WOTimeDeserializerFactory extends org.apache.axis.encoding.ser.BaseDeserializerFactory{
+    public WOTimeDeserializerFactory(java.lang.Class aJavaType, javax.xml.namespace.QName anXmlType){
+         //TODO codavaj!!
+    }
 
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.DeserializerFactory;
-import org.apache.axis.encoding.ser.BaseDeserializerFactory;
-
-
-public class WOTimeDeserializerFactory extends BaseDeserializerFactory {
-
-
-    public WOTimeDeserializerFactory(Class aJavaType, QName anXmlType) { return null; }
-
-    public static DeserializerFactory create(Class javaType, QName xmlType) { return null; }
-
-    private static final long serialVersionUID = 0xcfe666a3L;
+    public static org.apache.axis.encoding.DeserializerFactory create(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+        return null; //TODO codavaj!!
+    }
 
 }

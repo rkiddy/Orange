@@ -1,14 +1,10 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOContext;
-
-
-public class WOLListPage extends D2WListPage {
-
-
-    public WOLListPage(WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0xdd1c9e00L;
+/**
+ * See Also:Serialized Form
+ */
+public class WOLListPage extends com.webobjects.directtoweb.D2WListPage{
+    public WOLListPage(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
 }

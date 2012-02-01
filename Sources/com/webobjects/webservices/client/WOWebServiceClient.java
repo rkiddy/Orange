@@ -1,73 +1,103 @@
-
 package com.webobjects.webservices.client;
+/**
+ * A WOWebServiceClient provides a mechanism for introspecting and invoking Web service operations implemented using SOAP over HTTP. An instance of WOWebServiceClient maps roughly to the contents of a WSDL document: it will manage as many WOWebServices as the WSDL contains SOAP services.
+ */
+public class WOWebServiceClient{
+    /**
+     * Create and initialize an instance of WOWebServiceClient from aURL. aURL must be a valid URL pointing to a WSDL document describing a Web service.
+     * Parameters:aURL - URL referring to a WSDL document
+     */
+    public WOWebServiceClient(java.net.URL aURL){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.*;
-import java.io.IOException;
-import java.net.URL;
-import java.util.*;
-import javax.wsdl.*;
-import javax.wsdl.extensions.soap.*;
-import javax.wsdl.factory.WSDLFactory;
-import javax.wsdl.xml.WSDLReader;
-import javax.xml.namespace.QName;
-import javax.xml.rpc.ParameterMode;
-import org.apache.axis.EngineConfiguration;
-import org.apache.axis.client.Call;
-import org.apache.axis.encoding.DeserializerFactory;
-import org.apache.axis.encoding.SerializerFactory;
-import org.apache.axis.utils.XMLUtils;
-import org.w3c.dom.Document;
+    /**
+     * Return the EngineConfiguration being used by the service named serviceName. Will return null if there is no service named serviceName, or throw an IllegalArgumentException if serviceName is null.
+     */
+    public org.apache.axis.EngineConfiguration engineConfigurationForServiceNamed(java.lang.String serviceName){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Invoke the operation operationName on the web service serviceName with parameters parameters. If operationName is a SOAP-RPC call, parameters should be a language array of the parameters expected by the remote method, in the order in which they are to be passed to the method. If operationName is a SOAP document style operation, parameters should contain the Element objects which will form the SOAP body. parameters may be null.
+     * This method may return either an object, or a language array of objects.
+     */
+    public java.lang.Object invoke(java.lang.String serviceName, java.lang.String operationName, java.lang.Object[] parameters){
+        return null; //TODO codavaj!!
+    }
 
-public class WOWebServiceClient {
+    /**
+     * Return the object class to which DOM elements with name aQNameObject will be deserialized. Will return null if there is no deserializer registered for aQNameObject. This method always returns an Object class type, not a primitive class.
+     */
+    public java.lang.Class objectTypeForQName(java.lang.Object aQNameObject){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Returns an NSDictionary containing a mapping of operation name to WOClientOperation instance for for all operations defined on the Web service named serviceName.
+     */
+    public com.webobjects.foundation.NSDictionary operationsDictionaryForService(java.lang.String serviceName){
+        return null; //TODO codavaj!!
+    }
 
-    public WOWebServiceClient(URL aURL) { return null; }
+    /**
+     * Register aSerializerFactory for serializing objects of class aClass and aDeserializerFactory for deserializing DOM elements with QName aQName. Objects serialized by aSerializerFactory will have a QName of aQName. If a aSerializerFactory is null, only aDeserializerFactory will be registered, and vice versa.
+     */
+    public void registerFactoriesForClassWithQName(org.apache.axis.encoding.SerializerFactory sFactory, org.apache.axis.encoding.DeserializerFactory dFactory, java.lang.Class aClass, javax.xml.namespace.QName aQname){
+        return; //TODO codavaj!!
+    }
 
-    private void initializeFromURL(URL aURL) {}
+    /**
+     * Returns the names of all WOWebServices controlled by this client.
+     */
+    public com.webobjects.foundation.NSArray serviceNames(){
+        return null; //TODO codavaj!!
+    }
 
-    public void registerFactoriesForClassWithQName(SerializerFactory sFactory, DeserializerFactory dFactory, Class aClass, QName aQname) {}
+    /**
+     * Returns an NSDictionary containing a mapping of service name to WOWebServices.
+     */
+    public com.webobjects.foundation.NSDictionary servicesDictionary(){
+        return null; //TODO codavaj!!
+    }
 
-    public Class objectTypeForQName(Object aQNameObject) { return null; }
+    /**
+     * Return an opaque SessionInfo object which can be used to transfer session information between instances of WOWebService. This can be used when invoking multiple Web services on a WebObjects application when a developer wishes to maintain a single session on the server. Will return null if there is no service named serviceName, or throw an IllegalArgumentException if serviceName is null.
+     */
+    public com.webobjects.webservices.client.WOWebService.SessionInfo sessionInfoForServiceNamed(java.lang.String serviceName){
+        return null; //TODO codavaj!!
+    }
 
-    public Class typeForQName(Object aQnameObject) { return null; }
+    /**
+     * Set the EngineConfiguration to used by the underlying Axis service object used by the service named serviceName. If the service has already been created, the existing instance will be freed. Will throw an IllegalArgumentException if either engineConfig or serviceName is null.
+     */
+    public void setEngineConfigurationForServiceNamed(org.apache.axis.EngineConfiguration engineConfig, java.lang.String serviceName){
+        return; //TODO codavaj!!
+    }
 
-    public EngineConfiguration engineConfigurationForServiceNamed(String serviceName) { return null; }
+    /**
+     * Register aDelegate as the security delegate for the service named serviceName. Will do nothing if there is no service named serviceName, or throw if serviceName is null.
+     */
+    public void setSecurityDelegateForServiceNamed(java.lang.Object aDelegate, java.lang.String serviceName){
+        return; //TODO codavaj!!
+    }
 
-    public void setEngineConfigurationForServiceNamed(EngineConfiguration engineConfig, String serviceName) {}
+    /**
+     * Sets the session information for the service named serviceName to the values in info. Will do nothing if there is no service named serviceName. Any existing session information in the service will be overwritten by the values in info.
+     */
+    public void setSessionInfoForServiceNamed(com.webobjects.webservices.client.WOWebService.SessionInfo info, java.lang.String serviceName){
+        return; //TODO codavaj!!
+    }
 
-    private static final void _appendPartNamesToVector(Object objects[], Vector vector) { return null; }
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    private static final Vector constructParameterOrdering(Operation operation, Input input, Output output) { return null; }
-
-    private static final void addOrderedParametersToWOOperation(List paramOrder, WOClientOperation wwso, Operation operation, Input input, Output output) { return null; }
-
-    private static WOClientParameter _paramWithPart(Part part, ParameterMode mode) { return null; }
-
-    private WOClientOperation processOperation(Operation operation, String endpoint) { return null; }
-
-    private WOWebService processService(Service aService) { return null; }
-
-    private void populateCaches() {}
-
-    public void setSecurityDelegateForServiceNamed(Object aDelegate, String serviceName) {}
-
-    public Object invoke(String serviceName, String operationName, Object parameters[]) { return null; }
-
-    public WOWebService.SessionInfo sessionInfoForServiceNamed(String serviceName) { return null; }
-
-    public void setSessionInfoForServiceNamed(WOWebService.SessionInfo info, String serviceName) {}
-
-    public NSArray serviceNames() { return null; }
-
-    public NSDictionary servicesDictionary() { return null; }
-
-    public NSDictionary operationsDictionaryForService(String serviceName) { return null; }
-
-    public String toString() { return null; }
-
-    private Document wsdl;
-    private URL url;
-    private NSMutableDictionary _services;
+    /**
+     * Return the class to which DOM elements with name aQnameObject will be deserialized. Will return null if there is no deserializer registered for aQnameObject.
+     */
+    public java.lang.Class typeForQName(java.lang.Object aQnameObject){
+        return null; //TODO codavaj!!
+    }
 
 }

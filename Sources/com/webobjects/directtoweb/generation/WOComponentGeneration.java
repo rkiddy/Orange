@@ -1,12 +1,11 @@
-
 package com.webobjects.directtoweb.generation;
+public class WOComponentGeneration{
+    public WOComponentGeneration(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
+    public static com.webobjects.appserver.WOAssociation replacementAssociationForAssociation(com.webobjects.appserver.WOComponent aComponent, com.webobjects.appserver.WOAssociation anAssociation, java.lang.String aBinding, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return null; //TODO codavaj!!
+    }
 
-
-public class WOComponentGeneration {
-
-    public WOComponentGeneration() { return null; }
-
-    public static WOAssociation replacementAssociationForAssociation(WOComponent aComponent, WOAssociation anAssociation, String aBinding, DTWTemplate aTemplate, WOContext aContext) { return null; }
 }

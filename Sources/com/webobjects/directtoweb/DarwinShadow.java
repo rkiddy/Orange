@@ -1,34 +1,50 @@
-
 package com.webobjects.directtoweb;
+/**
+ * See Also:Serialized Form
+ */
+public class DarwinShadow extends com.webobjects.appserver.WOComponent{
+    public java.lang.String elementID;
 
-import com.webobjects.appserver.WOComponent;
-import com.webobjects.appserver.WOContext;
+    public java.lang.String id1;
 
-public class DarwinShadow extends WOComponent {
+    public java.lang.String id10;
 
+    public java.lang.String id11;
 
-    public DarwinShadow(WOContext context) { return null; }
+    public java.lang.String id12;
 
-    public String getElementID() { return null; }
+    public java.lang.String id13;
 
-    public void setElementID(String newElementID) {}
+    public java.lang.String id14;
 
-    private static final long serialVersionUID = 0xba65caa0L;
-    public String elementID;
-    public String scriptExecutorString;
-    public String id1;
-    public String id2;
-    public String id3;
-    public String id4;
-    public String id5;
-    public String id6;
-    public String id7;
-    public String id8;
-    public String id9;
-    public String id10;
-    public String id11;
-    public String id12;
-    public String id13;
-    public String id14;
+    public java.lang.String id2;
+
+    public java.lang.String id3;
+
+    public java.lang.String id4;
+
+    public java.lang.String id5;
+
+    public java.lang.String id6;
+
+    public java.lang.String id7;
+
+    public java.lang.String id8;
+
+    public java.lang.String id9;
+
+    public java.lang.String scriptExecutorString;
+
+    public DarwinShadow(com.webobjects.appserver.WOContext context){
+         //TODO codavaj!!
+    }
+
+    public java.lang.String getElementID(){
+        return null; //TODO codavaj!!
+    }
+
+    public void setElementID(java.lang.String newElementID){
+        return; //TODO codavaj!!
+    }
 
 }

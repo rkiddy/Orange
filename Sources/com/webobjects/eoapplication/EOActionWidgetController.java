@@ -1,77 +1,78 @@
-
 package com.webobjects.eoapplication;
+public abstract class EOActionWidgetController extends com.webobjects.eoapplication.EOComponentController implements com.webobjects.eoapplication.EOComponentController.ActionCollector{
+    public EOActionWidgetController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.*;
-import java.awt.*;
-import javax.swing.JComponent;
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOActionWidgetController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public javax.swing.JComponent actionWidgetContainer(){
+        return null; //TODO codavaj!!
+    }
 
-public abstract class EOActionWidgetController extends EOComponentController
-    implements EOComponentController.ActionCollector {
+    public int actionWidgetPosition(){
+        return 0; //TODO codavaj!!
+    }
 
+    public abstract com.webobjects.foundation.NSArray actionWidgets();
 
-    public EOActionWidgetController() { return null; }
+    public com.webobjects.foundation.NSArray collectedActions(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOActionWidgetController(EOXMLUnarchiver unarchiver) { return null; }
+    protected void componentDidBecomeVisible(){
+        return; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    protected abstract void createWidgetsForActionsAndPlaceInContainers(com.webobjects.foundation.NSArray actions, com.webobjects.foundation.NSArray secondaryActions, javax.swing.JComponent container, javax.swing.JComponent secondaryContainer, int widgetPosition);
 
-    public void dispose() {}
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
     protected abstract void disposeActionWidgets();
 
-    public void setActionWidgetPosition(int position) {}
+    protected void generateComponent(){
+        return; //TODO codavaj!!
+    }
 
-    public int actionWidgetPosition() { return 0; }
+    public void resetActions(){
+        return; //TODO codavaj!!
+    }
 
-    public void setActionWidgetContainer(JComponent component) {}
+    public javax.swing.JComponent secondaryActionWidgetContainer(){
+        return null; //TODO codavaj!!
+    }
 
-    public JComponent actionWidgetContainer() { return null; }
+    public void setActionWidgetContainer(javax.swing.JComponent component){
+        return; //TODO codavaj!!
+    }
 
-    public void setSecondaryActionWidgetContainer(JComponent component) {}
+    public void setActionWidgetPosition(int position){
+        return; //TODO codavaj!!
+    }
 
-    public JComponent secondaryActionWidgetContainer() { return null; }
+    public void setSecondaryActionWidgetContainer(javax.swing.JComponent component){
+        return; //TODO codavaj!!
+    }
 
-    protected Insets _preferredInsets() { return null; }
+    public void subcontrollerActionsDidChange(com.webobjects.eoapplication.EOController controller){
+        return; //TODO codavaj!!
+    }
 
-    public boolean _canFillUpSpaceForIntegration(Component component) { return true; }
+    public void subcontrollerConnectionDidChange(com.webobjects.eoapplication.EOController controller){
+        return; //TODO codavaj!!
+    }
 
-    protected boolean _drawSeparator() { return true; }
-
-    protected void generateComponent() {}
-
-    protected void _updateUserInterface() {}
-
-    protected boolean _needsUserInterfaceUpdateNotifications() { return true; }
-
-    protected boolean supportsSecondaryActionWidget() { return true; }
-
-    public abstract NSArray actionWidgets();
+    protected boolean supportsSecondaryActionWidget(){
+        return false; //TODO codavaj!!
+    }
 
     protected abstract void updateActionWidgetEnabling();
-
-    protected abstract void createWidgetsForActionsAndPlaceInContainers(NSArray nsarray, NSArray nsarray1, JComponent jcomponent, JComponent jcomponent1, int i);
-
-    protected void componentDidBecomeVisible() {}
-
-    public void subcontrollerConnectionDidChange(EOController controller) {}
-
-    public void subcontrollerActionsDidChange(EOController controller) {}
-
-    protected void _fillActionsArrayWithController(EOController controller, NSMutableArray arrayOfActionArrays) {}
-
-    public NSArray collectedActions() { return null; }
-
-    public void resetActions() {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private static NSArray _testActions;
-    private int _actionWidgetPosition;
-    private NSArray _collectedActions;
-    private JComponent _actionWidgetContainer;
-    private JComponent _secondaryActionWidgetContainer;
 
 }

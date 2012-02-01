@@ -1,66 +1,68 @@
-
 package com.webobjects.appserver;
+/**
+ * JMX interface for WOStatisticsStore
+ * Since: 5.4
+ */
+public interface WOStatisticsStoreMBean{
+    abstract long getApplicationlastAccessTime();
 
-import java.util.ArrayList;
-import java.util.HashMap;
+    abstract long getAverageCATransactionTime();
 
-public interface WOStatisticsStoreMBean {
+    abstract long getAverageDATransactionTime();
 
-    public abstract void setLogFile(String s, long l);
+    abstract long getAverageIdleTime();
 
-    public abstract String logFile();
+    abstract double getAverageRequestsPerSession();
 
-    public abstract long logFileRotationFrequency();
+    abstract java.util.HashMap getAverageSessionMemory();
 
-    public abstract double logFileRotationFrequencyInDays();
+    abstract long getAverageTransactionTime();
 
-    public abstract void logString(String s);
+    abstract long getAverageWSTransactionTime();
 
-    public abstract int getTransactionMovingAverageSampleSize();
+    abstract java.util.HashMap getDirectActionStatistics();
 
-    public abstract void setTransactionMovingAverageSampleSize(int i);
+    abstract java.util.ArrayList getLastSessionStatistics();
 
-    public abstract int sessionMovingAverageSampleSize();
+    abstract java.util.HashMap getMemoryUsage();
 
-    public abstract void setSessionMovingAverageSampleSize(int i);
+    abstract long getMovingAverageIdleTime();
 
-    public abstract long getAverageIdleTime();
+    abstract double getMovingAverageRequestsPerSession();
 
-    public abstract long getAverageTransactionTime();
+    abstract long getMovingAverageSessionLife();
 
-    public abstract long getAverageWSTransactionTime();
+    abstract long getMovingAverageTransactionTime();
 
-    public abstract long getAverageDATransactionTime();
+    abstract java.util.HashMap getPagesStatistics();
 
-    public abstract long getAverageCATransactionTime();
+    abstract java.util.HashMap getPathsStatistics();
 
-    public abstract long getMovingAverageIdleTime();
+    abstract int getStatisticStoreSessionMax();
 
-    public abstract long getMovingAverageTransactionTime();
+    abstract int getTransactionMovingAverageSampleSize();
 
-    public abstract double getAverageRequestsPerSession();
+    abstract java.util.HashMap getWebServiceStatistics();
 
-    public abstract double getMovingAverageRequestsPerSession();
+    abstract java.lang.String logFile();
 
-    public abstract long getMovingAverageSessionLife();
+    abstract long logFileRotationFrequency();
 
-    public abstract HashMap getAverageSessionMemory();
+    abstract double logFileRotationFrequencyInDays();
 
-    public abstract HashMap getMemoryUsage();
+    abstract void logString(java.lang.String statistics);
 
-    public abstract ArrayList getLastSessionStatistics();
+    abstract int sessionMovingAverageSampleSize();
 
-    public abstract HashMap getPagesStatistics();
+    abstract void setApplicationLastAccessTime(long timeInMillis);
 
-    public abstract HashMap getWebServiceStatistics();
+    /**
+     * Logging to Files
+     */
+    abstract void setLogFile(java.lang.String path, long milliseconds);
 
-    public abstract HashMap getDirectActionStatistics();
+    abstract void setSessionMovingAverageSampleSize(int aCount);
 
-    public abstract HashMap getPathsStatistics();
+    abstract void setTransactionMovingAverageSampleSize(int aCount);
 
-    public abstract int getStatisticStoreSessionMax();
-
-    public abstract long getApplicationlastAccessTime();
-
-    public abstract void setApplicationLastAccessTime(long l);
 }

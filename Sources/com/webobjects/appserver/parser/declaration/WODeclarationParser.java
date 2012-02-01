@@ -1,107 +1,133 @@
-
 package com.webobjects.appserver.parser.declaration;
+public class WODeclarationParser implements com.webobjects.appserver.parser.declaration.WODeclarationParserConstants{
+    public com.webobjects.appserver.parser.declaration.Token jj_nt;
 
-import com.webobjects.appserver.WOAssociation;
-import com.webobjects.appserver.WOAssociationFactory;
-import com.webobjects.appserver._private.WODeclaration;
-import com.webobjects.appserver.parser.woml.WOMLPosition;
-import com.webobjects.foundation.NSDictionary;
-import com.webobjects.foundation.NSMutableDictionary;
-import java.io.*;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.Vector;
+    public com.webobjects.appserver.parser.declaration.Token token;
 
+    public com.webobjects.appserver.parser.declaration.WODeclarationParserTokenManager token_source;
 
-public class WODeclarationParser
-    implements WODeclarationParserConstants {
+    public WODeclarationParser(java.io.InputStream stream){
+         //TODO codavaj!!
+    }
 
+    public WODeclarationParser(java.io.InputStream stream, java.lang.String encoding){
+         //TODO codavaj!!
+    }
 
-    public static NSDictionary declarationsWithString(String referenceName, String defs, WOAssociationFactory associationFactory) throws WODeclarationFormatException { return null; }
+    public WODeclarationParser(java.io.Reader stream){
+         //TODO codavaj!!
+    }
 
-    public static WOAssociation associationWithString(String referenceName, String associationDef, WOAssociationFactory associationFactory) throws WODeclarationFormatException { return null; }
+    public WODeclarationParser(java.lang.String referenceName, java.io.Reader reader, com.webobjects.appserver.WOAssociationFactory associationFactory){
+         //TODO codavaj!!
+    }
 
-    public static Number makeInt(String s) { return null; }
+    public WODeclarationParser(com.webobjects.appserver.parser.declaration.WODeclarationParserTokenManager tm){
+         //TODO codavaj!!
+    }
 
-    public static Number makeFloat(String s) { return null; }
+    public final com.webobjects.appserver.WOAssociation association() throws com.webobjects.appserver.parser.declaration.ParseException{
+        return null; //TODO codavaj!!
+    }
 
-    public static int countNumericEscapeSequence(char source[], int position, int maxNumericDigits) { return null; }
+    public com.webobjects.appserver.WOAssociationFactory associationFactory(){
+        return null; //TODO codavaj!!
+    }
 
-    public static String replaceEscapeSequencesWithRealChars(String escapedText) throws IllegalArgumentException { return null; }
+    public final java.lang.String associationKey() throws com.webobjects.appserver.parser.declaration.ParseException{
+        return null; //TODO codavaj!!
+    }
 
-    public WODeclarationParser(String referenceName, Reader reader, WOAssociationFactory associationFactory) { return null; }
+    public final com.webobjects.appserver.WOAssociation associationRoot() throws com.webobjects.appserver.parser.declaration.ParseException{
+        return null; //TODO codavaj!!
+    }
 
-    public WOAssociationFactory associationFactory() { return null; }
+    public final com.webobjects.foundation.NSDictionary associations() throws com.webobjects.appserver.parser.declaration.ParseException{
+        return null; //TODO codavaj!!
+    }
 
-    public String getReferenceName() { return null; }
+    public static com.webobjects.appserver.WOAssociation associationWithString(java.lang.String referenceName, java.lang.String associationDef, com.webobjects.appserver.WOAssociationFactory associationFactory) throws com.webobjects.appserver.parser.declaration.WODeclarationFormatException{
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLPosition getPosition(Token token) { return null; }
+    public static int countNumericEscapeSequence(char[] source, int position, int maxNumericDigits){
+        return 0; //TODO codavaj!!
+    }
 
-    public WOMLPosition getCurrentPosition() { return null; }
+    public final com.webobjects.foundation.NSDictionary declarations() throws com.webobjects.appserver.parser.declaration.ParseException{
+        return null; //TODO codavaj!!
+    }
 
-    public final NSDictionary declarations() throws ParseException { return null; }
+    public static com.webobjects.foundation.NSDictionary declarationsWithString(java.lang.String referenceName, java.lang.String defs, com.webobjects.appserver.WOAssociationFactory associationFactory) throws com.webobjects.appserver.parser.declaration.WODeclarationFormatException{
+        return null; //TODO codavaj!!
+    }
 
-    public final NSDictionary associations() throws ParseException { return null; }
+    public final void disable_tracing(){
+        return; //TODO codavaj!!
+    }
 
-    public final String associationKey() throws ParseException { return null; }
+    public final void enable_tracing(){
+        return; //TODO codavaj!!
+    }
 
-    public final WOAssociation associationRoot() throws ParseException { return null; }
+    public com.webobjects.appserver.parser.declaration.ParseException generateParseException(){
+        return null; //TODO codavaj!!
+    }
 
-    public final WOAssociation association() throws ParseException { return null; }
+    public com.webobjects.appserver.parser.woml.WOMLPosition getCurrentPosition(){
+        return null; //TODO codavaj!!
+    }
 
-    public final String quotedString() throws ParseException { return null; }
+    public final com.webobjects.appserver.parser.declaration.Token getNextToken(){
+        return null; //TODO codavaj!!
+    }
 
-    public final Number number() throws ParseException { return null; }
+    public com.webobjects.appserver.parser.woml.WOMLPosition getPosition(com.webobjects.appserver.parser.declaration.Token token){
+        return null; //TODO codavaj!!
+    }
 
-    private static void jj_la1_0() { return null; }
+    public java.lang.String getReferenceName(){
+        return null; //TODO codavaj!!
+    }
 
-    private static void jj_la1_1() { return null; }
+    public final com.webobjects.appserver.parser.declaration.Token getToken(int index){
+        return null; //TODO codavaj!!
+    }
 
-    public WODeclarationParser(InputStream stream) { return null; }
+    public static java.lang.Number makeFloat(java.lang.String s){
+        return null; //TODO codavaj!!
+    }
 
-    public WODeclarationParser(InputStream stream, String encoding) { return null; }
+    public static java.lang.Number makeInt(java.lang.String s){
+        return null; //TODO codavaj!!
+    }
 
-    public void ReInit(InputStream stream) {}
+    public final java.lang.Number number() throws com.webobjects.appserver.parser.declaration.ParseException{
+        return null; //TODO codavaj!!
+    }
 
-    public void ReInit(InputStream stream, String encoding) {}
+    public final java.lang.String quotedString() throws com.webobjects.appserver.parser.declaration.ParseException{
+        return null; //TODO codavaj!!
+    }
 
-    public WODeclarationParser(Reader stream) { return null; }
+    public void ReInit(java.io.InputStream stream){
+        return; //TODO codavaj!!
+    }
 
-    public void ReInit(Reader stream) {}
+    public void ReInit(java.io.InputStream stream, java.lang.String encoding){
+        return; //TODO codavaj!!
+    }
 
-    public WODeclarationParser(WODeclarationParserTokenManager tm) { return null; }
+    public void ReInit(java.io.Reader stream){
+        return; //TODO codavaj!!
+    }
 
-    public void ReInit(WODeclarationParserTokenManager tm) {}
+    public void ReInit(com.webobjects.appserver.parser.declaration.WODeclarationParserTokenManager tm){
+        return; //TODO codavaj!!
+    }
 
-    private final Token jj_consume_token(int kind) throws ParseException { return null; }
-
-    public final Token getNextToken() { return null; }
-
-    public final Token getToken(int index) { return null; }
-
-    private final int jj_ntk() { return null; }
-
-    public ParseException generateParseException() { return null; }
-
-    public final void enable_tracing() { return null; }
-
-    public final void disable_tracing() { return null; }
-
-    static  {}
-
-    private WOAssociationFactory associationFactory;
-    private String referenceName;
-    public WODeclarationParserTokenManager token_source;
-    JavaCharStream jj_input_stream;
-    public Token token;
-    public Token jj_nt;
-    private int jj_ntk;
-    private int jj_gen;
-    private final int jj_la1[];
-    private static int jj_la1_0[];
-    private static int jj_la1_1[];
-    private Vector jj_expentries;
-    private int jj_expentry[];
-    private int jj_kind;
+    public static java.lang.String replaceEscapeSequencesWithRealChars(java.lang.String escapedText) throws java.lang.IllegalArgumentException{
+        return null; //TODO codavaj!!
+    }
 
 }

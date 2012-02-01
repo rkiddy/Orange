@@ -1,20 +1,19 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOSetSerializerFactory creates instances of WOSetSerializer.
+ * See Also:Serialized Form
+ */
+public class WOSetSerializerFactory extends org.apache.axis.encoding.ser.BaseSerializerFactory{
+    public WOSetSerializerFactory(){
+         //TODO codavaj!!
+    }
 
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.SerializerFactory;
-import org.apache.axis.encoding.ser.BaseSerializerFactory;
+    public WOSetSerializerFactory(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+         //TODO codavaj!!
+    }
 
-
-public class WOSetSerializerFactory extends BaseSerializerFactory {
-
-
-    public WOSetSerializerFactory() { return null; }
-
-    public WOSetSerializerFactory(Class javaType, QName xmlType) { return null; }
-
-    public static SerializerFactory create(Class javaType, QName xmlType) { return null; }
-
-    private static final long serialVersionUID = 0xb3fc1cccL;
+    public static org.apache.axis.encoding.SerializerFactory create(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+        return null; //TODO codavaj!!
+    }
 
 }

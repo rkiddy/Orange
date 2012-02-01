@@ -1,35 +1,44 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLTemplateExtensions{
+    public static final java.lang.String DYNAMIC_ATTRIBUTE_PREFIX="[";
 
-import java.util.*;
+    public static final java.lang.String DYNAMIC_ATTRIBUTE_SUFFIX="]";
 
-public class WOMLTemplateExtensions {
+    /**
+     * Usual defaults are html, xhtml, and xml
+     */
+    public java.util.List combinedTemplateFileExtensions(){
+        return null; //TODO codavaj!!
+    }
 
+    public java.lang.String dynamicAttributePrefix(){
+        return null; //TODO codavaj!!
+    }
 
-    private WOMLTemplateExtensions() { return null; }
+    public java.lang.String dynamicAttributeSuffix(){
+        return null; //TODO codavaj!!
+    }
 
-    public static WOMLTemplateExtensions instance() { return null; }
+    /**
+     * Returns an instance of the WOTemplatePaser subclass. Must be implemented by subclassers.
+     */
+    public static com.webobjects.appserver.parser.woml.WOMLTemplateExtensions instance(){
+        return null; //TODO codavaj!!
+    }
 
-    public List combinedTemplateFileExtensions() { return null; }
+    /**
+     * Set supported file extensions for combined html components
+     */
+    public void setCombinedTemplateFileExtensions(java.util.List extensions){
+        return; //TODO codavaj!!
+    }
 
-    public void setCombinedTemplateFileExtensions(List extensions) {}
+    public void setDynamicAttributePrefix(java.lang.String dynamicAttributePrefix){
+        return; //TODO codavaj!!
+    }
 
-    public String dynamicAttributePrefix() { return null; }
-
-    public void setDynamicAttributePrefix(String dynamicAttributePrefix) {}
-
-    public String dynamicAttributeSuffix() { return null; }
-
-    public void setDynamicAttributeSuffix(String dynamicAttributeSuffix) {}
-
-    static  {}
-
-    private static WOMLTemplateExtensions _instance;
-    private static String _defaultExtensions[];
-    private List _fileExtensions;
-    private String _DynamicAttributePrefix;
-    private String _DynamicAttributeSuffix;
-    public static final String DYNAMIC_ATTRIBUTE_PREFIX = "[";
-    public static final String DYNAMIC_ATTRIBUTE_SUFFIX = "]";
+    public void setDynamicAttributeSuffix(java.lang.String dynamicAttributeSuffix){
+        return; //TODO codavaj!!
+    }
 
 }

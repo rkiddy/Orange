@@ -1,51 +1,47 @@
-
 package com.webobjects.eogeneration;
+public class EOComboBoxController extends com.webobjects.eogeneration.EOTitlesController implements com.webobjects.eogeneration.EOWidgetController.QueryWidget{
+    public EOComboBoxController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.*;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Dimension;
-import javax.swing.JComboBox;
-import javax.swing.JComponent;
+    public EOComboBoxController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public boolean isQueryWidget(){
+        return false; //TODO codavaj!!
+    }
 
-public class EOComboBoxController extends EOTitlesController
-    implements EOWidgetController.QueryWidget {
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOComboBoxController() { return null; }
+    protected boolean preferredUsesLabelComponent(){
+        return false; //TODO codavaj!!
+    }
 
-    public EOComboBoxController(EOXMLUnarchiver unarchiver) { return null; }
+    public void setIsQueryWidget(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    public void setValueKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    protected boolean preferredUsesLabelComponent() { return true; }
+    /**
+     * Description copied from class:
+     * Returns the receiver as a string that states the receiver's class name and type name, whether the receiver is connected, the number of subcontrollers, whether or not the receiver has been prepared, whether or not the receiver is visible, information about widget sizing and alignment behavior, and so on.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setValueKey(String string) {}
-
-    public String valueKey() { return null; }
-
-    protected String _derivedLabel() { return null; }
-
-    public void setIsQueryWidget(boolean flag) {}
-
-    public boolean isQueryWidget() { return true; }
-
-    protected JComponent newWidget() { return null; }
-
-    protected EODisplayGroup _defaultDisplayGroup() { return null; }
-
-    protected String _associationValueKey() { return null; }
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private String _valueKey;
-    private boolean _isQueryWidget;
+    public java.lang.String valueKey(){
+        return null; //TODO codavaj!!
+    }
 
 }

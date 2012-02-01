@@ -1,63 +1,113 @@
-
 package com.webobjects.eoaccess;
+/**
+ * EOStoredProcedure encapsulates the information stored in an EOModel about a stored procedure which is stored in a database server. The main information is the name within the model, the external name (as defined in the database), the number of arguments and their types.
+ */
+public class EOStoredProcedure implements com.webobjects.eoaccess.EOPropertyListEncoding{
+    /**
+     * Creates a new EOStoredProcedure from a property list.
+     * Parameters:propertyList - NSDictionary a property list conataining the definitions for this stored procedureowner - this parameter should be of type EOModel; the EOStoredProcedure will store this parameter as its model, but will not yet add itself to the model's list of stored procedures
+     */
+    public EOStoredProcedure(com.webobjects.foundation.NSDictionary propertyList, java.lang.Object owner){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.*;
-import java.util.Enumeration;
+    /**
+     * The constructor for a EOStoredProcedure (which is a reference to the stored procedure in the database).
+     * Parameters:name - the name of the stored procedure within the EOModel
+     */
+    public EOStoredProcedure(java.lang.String name){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Returns the EOAttribute objects that describe the stored procedure's arguments.
+     */
+    public com.webobjects.foundation.NSArray arguments(){
+        return null; //TODO codavaj!!
+    }
 
-public class EOStoredProcedure
-    implements EOPropertyListEncoding {
+    /**
+     * The second phase in a two-phase creation process of a model.
+     */
+    public void awakeWithPropertyList(com.webobjects.foundation.NSDictionary propertyList){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Renames the receiver's name and its arguments to conform to the Framework's naming conventions. For example, NAME is renamed name and FIRST_NAME is renamed firstName. This method is used in reverse-engineering a model.
+     */
+    public void beautifyName(){
+        return; //TODO codavaj!!
+    }
 
-    public EOStoredProcedure(String name) { return null; }
+    /**
+     * Encodes the definitions of this EOStoredProcedure into a property list.
+     */
+    public void encodeIntoPropertyList(com.webobjects.foundation.NSMutableDictionary result){
+        return; //TODO codavaj!!
+    }
 
-    public String name() { return null; }
+    /**
+     * Returns the name of the stored procedure as it is defined in the database, or null if it doesn't have an external name.
+     */
+    public java.lang.String externalName(){
+        return null; //TODO codavaj!!
+    }
 
-    public String externalName() { return null; }
+    /**
+     * Returns the model to which the receiver belongs.
+     */
+    public com.webobjects.eoaccess.EOModel model(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOModel model() { return null; }
+    /**
+     * Returns the name of the stored procedure as it is defined in the EOModel.
+     */
+    public java.lang.String name(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSArray arguments() { return null; }
+    /**
+     * Sets arguments as the array of EOAttributes that describe the receiver's arguments.
+     */
+    public void setArguments(com.webobjects.foundation.NSArray arguments){
+        return; //TODO codavaj!!
+    }
 
-    public NSDictionary userInfo() { return null; }
+    /**
+     * Sets the external name of the stored procedure to externalName. The parameter externalName should be the name of the stored procedure as it is defined in the database.
+     */
+    public void setExternalName(java.lang.String externalName){
+        return; //TODO codavaj!!
+    }
 
-    public NSDictionary _internalInfo() { return null; }
+    /**
+     * Sets the name of this EOStoredProcedure.
+     */
+    public void setName(java.lang.String name){
+        return; //TODO codavaj!!
+    }
 
-    protected boolean _isIdentifierStartingChar(char ch) { return true; }
+    /**
+     * Sets the dictionary of auxiliary data, which your application can use for whatever it needs. dictionary can only contain property list data types (that is, String, NSDictionary, NSArray, and NSData).
+     */
+    public void setUserInfo(com.webobjects.foundation.NSDictionary aDictionary){
+        return; //TODO codavaj!!
+    }
 
-    protected boolean _isIdentifierChar(char ch) { return true; }
+    /**
+     * This constructs and return a string representation of this EOStoredProcedure.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setName(String name) {}
-
-    public void setExternalName(String externalName) {}
-
-    public void setArguments(NSArray arguments) {}
-
-    public void setUserInfo(NSDictionary aDictionary) {}
-
-    public void _setInternalInfo(NSDictionary aDictionary) {}
-
-    public String toString() { return null; }
-
-    public String _toString(int indent) { return null; }
-
-    public EOStoredProcedure(NSDictionary propertyList, Object owner) { return null; }
-
-    public void awakeWithPropertyList(NSDictionary nsdictionary) {}
-
-    public void encodeIntoPropertyList(NSMutableDictionary result) {}
-
-    protected void _setIsEdited() {}
-
-    protected void _setModel(EOModel model) {}
-
-    public void beautifyName() {}
-
-    protected String _name;
-    protected String _externalName;
-    protected EOModel _model;
-    protected NSArray _arguments;
-    protected NSDictionary _userInfo;
-    protected NSDictionary _internalInfo;
+    /**
+     * Returns a dictionary of user data. Your application can use this to store any auxiliary information it needs.
+     */
+    public com.webobjects.foundation.NSDictionary userInfo(){
+        return null; //TODO codavaj!!
+    }
 
 }

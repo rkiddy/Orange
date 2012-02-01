@@ -1,14 +1,10 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOContext;
-
-
-public class BASConfirmPage extends D2WConfirmPage {
-
-
-    public BASConfirmPage(WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0x78ec9723L;
+/**
+ * See Also:Serialized Form
+ */
+public class BASConfirmPage extends com.webobjects.directtoweb.D2WConfirmPage{
+    public BASConfirmPage(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
 }

@@ -1,33 +1,35 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOGlobalIDSerializer serializes EOGlobalID instances.
+ * See Also:Serialized Form
+ */
+public class WOGlobalIDSerializer implements org.apache.axis.encoding.Serializer, com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WOGlobalIDSerializer(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eocontrol.*;
-import java.io.IOException;
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.SerializationContext;
-import org.apache.axis.encoding.Serializer;
-import org.apache.axis.wsdl.fromJava.Types;
-import org.w3c.dom.Element;
-import org.xml.sax.Attributes;
+    public java.lang.String getMechanismType(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Serialize an EOGlobalID. Will throw an IOException if value is not an instance of EOGlobalID.
+     */
+    public void serialize(javax.xml.namespace.QName name, org.xml.sax.Attributes attributes, java.lang.Object value, org.apache.axis.encoding.SerializationContext context) throws java.io.IOException{
+        return; //TODO codavaj!!
+    }
 
-public class WOGlobalIDSerializer
-    implements Serializer, WOSoapConstants {
-
-
-    public WOGlobalIDSerializer() { return null; }
-
-    public void serialize(QName name, Attributes attributes, Object value, SerializationContext context) throws IOException {}
-
-    public String getMechanismType() { return null; }
-
-    public Element writeSchema(Class javaType, Types types) throws Exception { return null; }
-
-    private static final long serialVersionUID = 0xc0884e22L;
-    private static final String NAME_MEMBER = "entityName";
-    private static final String SUBENTITY_MEMBER = "subEntityName";
-    private static final String GUESSEDENTITY_MEMBER = "guessedEntityName";
-    private static final String PKS_MEMBER = "primaryKeys";
-    private static final String DATA_MEMBER = "data";
+    /**
+     * Return XML schema for the specified type, suitable for insertion into the
+     * types
+     * element of a WSDL document, or underneath an
+     * element
+     * or
+     * attribute
+     * declaration.
+     */
+    public org.w3c.dom.Element writeSchema(java.lang.Class javaType, org.apache.axis.wsdl.fromJava.Types types) throws java.lang.Exception{
+        return null; //TODO codavaj!!
+    }
 
 }

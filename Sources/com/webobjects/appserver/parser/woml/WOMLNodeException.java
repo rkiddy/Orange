@@ -1,22 +1,26 @@
-
 package com.webobjects.appserver.parser.woml;
+/**
+ * See Also:Serialized Form
+ */
+public class WOMLNodeException extends java.lang.RuntimeException{
+    public WOMLNodeException(java.lang.String message, com.webobjects.appserver.parser.woml.WOMLNode node){
+         //TODO codavaj!!
+    }
 
+    public WOMLNodeException(java.lang.String message, com.webobjects.appserver.parser.woml.WOMLNode node, java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
+    public WOMLNodeException(com.webobjects.appserver.parser.woml.WOMLNode node){
+         //TODO codavaj!!
+    }
 
-public class WOMLNodeException extends RuntimeException {
+    public WOMLNodeException(com.webobjects.appserver.parser.woml.WOMLNode node, java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
-
-    public WOMLNodeException(WOMLNode node) { return null; }
-
-    public WOMLNodeException(String message, WOMLNode node, Throwable cause) { return null; }
-
-    public WOMLNodeException(String message, WOMLNode node) { return null; }
-
-    public WOMLNodeException(WOMLNode node, Throwable cause) { return null; }
-
-    public WOMLNode getNode() { return null; }
-
-    private static final long serialVersionUID = 0xfc1e6dfbL;
-    private WOMLNode _node;
+    public com.webobjects.appserver.parser.woml.WOMLNode getNode(){
+        return null; //TODO codavaj!!
+    }
 
 }

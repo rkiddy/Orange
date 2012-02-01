@@ -1,114 +1,197 @@
-
 package com.webobjects.appserver.parser.declaration;
+/**
+ * An implementation of interface CharStream, where the stream is assumed to contain only ASCII characters (with java-like unicode escape processing).
+ */
+public class JavaCharStream{
+    protected int[] bufcolumn;
 
-import java.io.*;
+    protected char[] buffer;
 
-public class JavaCharStream {
+    protected int[] bufline;
 
-
-    static final int hexval(char c) throws IOException { return null; }
-
-    protected void setTabSize(int i) {}
-
-    protected int getTabSize(int i) { return 0; }
-
-    protected void ExpandBuff(boolean wrapAround) {}
-
-    protected void FillBuff() throws IOException {}
-
-    protected char ReadByte() throws IOException { return null; }
-
-    public char BeginToken() throws IOException { return null; }
-
-    protected void AdjustBuffSize() {}
-
-    protected void UpdateLineColumn(char c) {}
-
-    public char readChar() throws IOException { return null; }
-
-    /**
-     * @deprecated Method getColumn is deprecated
-     */
-
-    public int getColumn() { return 0; }
-
-    /**
-     * @deprecated Method getLine is deprecated
-     */
-
-    public int getLine() { return 0; }
-
-    public int getEndColumn() { return 0; }
-
-    public int getEndLine() { return 0; }
-
-    public int getBeginColumn() { return 0; }
-
-    public int getBeginLine() { return 0; }
-
-    public void backup(int amount) {}
-
-    public JavaCharStream(Reader dstream, int startline, int startcolumn, int buffersize) { return null; }
-
-    public JavaCharStream(Reader dstream, int startline, int startcolumn) { return null; }
-
-    public JavaCharStream(Reader dstream) { return null; }
-
-    public void ReInit(Reader dstream, int startline, int startcolumn, int buffersize) {}
-
-    public void ReInit(Reader dstream, int startline, int startcolumn) {}
-
-    public void ReInit(Reader dstream) {}
-
-    public JavaCharStream(InputStream dstream, String encoding, int startline, int startcolumn, int buffersize) throws UnsupportedEncodingException { return null; }
-
-    public JavaCharStream(InputStream dstream, int startline, int startcolumn, int buffersize) { return null; }
-
-    public JavaCharStream(InputStream dstream, String encoding, int startline, int startcolumn) throws UnsupportedEncodingException { return null; }
-
-    public JavaCharStream(InputStream dstream, int startline, int startcolumn) { return null; }
-
-    public JavaCharStream(InputStream dstream, String encoding) throws UnsupportedEncodingException { return null; }
-
-    public JavaCharStream(InputStream dstream) { return null; }
-
-    public void ReInit(InputStream dstream, String encoding, int startline, int startcolumn, int buffersize) throws UnsupportedEncodingException {}
-
-    public void ReInit(InputStream dstream, int startline, int startcolumn, int buffersize) {}
-
-    public void ReInit(InputStream dstream, String encoding, int startline, int startcolumn) throws UnsupportedEncodingException {}
-
-    public void ReInit(InputStream dstream, int startline, int startcolumn) {}
-
-    public void ReInit(InputStream dstream, String encoding) throws UnsupportedEncodingException {}
-
-    public void ReInit(InputStream dstream) {}
-
-    public String GetImage() { return null; }
-
-    public char[] GetSuffix(int len) { return null; }
-
-    public void Done() {}
-
-    public void adjustBeginLineColumn(int newLine, int newCol) {}
-
-    public static final boolean staticFlag = false;
     public int bufpos;
-    int bufsize;
-    int available;
-    int tokenBegin;
-    protected int bufline[];
-    protected int bufcolumn[];
+
     protected int column;
-    protected int line;
-    protected boolean prevCharIsCR;
-    protected boolean prevCharIsLF;
-    protected Reader inputStream;
-    protected char nextCharBuf[];
-    protected char buffer[];
-    protected int maxNextCharInd;
-    protected int nextCharInd;
+
     protected int inBuf;
+
+    protected java.io.Reader inputStream;
+
+    protected int line;
+
+    protected int maxNextCharInd;
+
+    protected char[] nextCharBuf;
+
+    protected int nextCharInd;
+
+    protected boolean prevCharIsCR;
+
+    protected boolean prevCharIsLF;
+
+    public static final boolean staticFlag=false;
+
     protected int tabSize;
+
+    public JavaCharStream(java.io.InputStream dstream){
+         //TODO codavaj!!
+    }
+
+    public JavaCharStream(java.io.InputStream dstream, int startline, int startcolumn){
+         //TODO codavaj!!
+    }
+
+    public JavaCharStream(java.io.InputStream dstream, int startline, int startcolumn, int buffersize){
+         //TODO codavaj!!
+    }
+
+    public JavaCharStream(java.io.InputStream dstream, java.lang.String encoding) throws java.io.UnsupportedEncodingException{
+         //TODO codavaj!!
+    }
+
+    public JavaCharStream(java.io.InputStream dstream, java.lang.String encoding, int startline, int startcolumn) throws java.io.UnsupportedEncodingException{
+         //TODO codavaj!!
+    }
+
+    public JavaCharStream(java.io.InputStream dstream, java.lang.String encoding, int startline, int startcolumn, int buffersize) throws java.io.UnsupportedEncodingException{
+         //TODO codavaj!!
+    }
+
+    public JavaCharStream(java.io.Reader dstream){
+         //TODO codavaj!!
+    }
+
+    public JavaCharStream(java.io.Reader dstream, int startline, int startcolumn){
+         //TODO codavaj!!
+    }
+
+    public JavaCharStream(java.io.Reader dstream, int startline, int startcolumn, int buffersize){
+         //TODO codavaj!!
+    }
+
+    /**
+     * Method to adjust line and column numbers for the start of a token.
+     */
+    public void adjustBeginLineColumn(int newLine, int newCol){
+        return; //TODO codavaj!!
+    }
+
+    protected void AdjustBuffSize(){
+        return; //TODO codavaj!!
+    }
+
+    public void backup(int amount){
+        return; //TODO codavaj!!
+    }
+
+    public char BeginToken() throws java.io.IOException{
+        return ' '; //TODO codavaj!!
+    }
+
+    public void Done(){
+        return; //TODO codavaj!!
+    }
+
+    protected void ExpandBuff(boolean wrapAround){
+        return; //TODO codavaj!!
+    }
+
+    protected void FillBuff() throws java.io.IOException{
+        return; //TODO codavaj!!
+    }
+
+    public int getBeginColumn(){
+        return 0; //TODO codavaj!!
+    }
+
+    public int getBeginLine(){
+        return 0; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     */
+    public int getColumn(){
+        return 0; //TODO codavaj!!
+    }
+
+    public int getEndColumn(){
+        return 0; //TODO codavaj!!
+    }
+
+    public int getEndLine(){
+        return 0; //TODO codavaj!!
+    }
+
+    public java.lang.String GetImage(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     */
+    public int getLine(){
+        return 0; //TODO codavaj!!
+    }
+
+    public char[] GetSuffix(int len){
+        return null; //TODO codavaj!!
+    }
+
+    protected int getTabSize(int i){
+        return 0; //TODO codavaj!!
+    }
+
+    protected char ReadByte() throws java.io.IOException{
+        return ' '; //TODO codavaj!!
+    }
+
+    public char readChar() throws java.io.IOException{
+        return ' '; //TODO codavaj!!
+    }
+
+    public void ReInit(java.io.InputStream dstream){
+        return; //TODO codavaj!!
+    }
+
+    public void ReInit(java.io.InputStream dstream, int startline, int startcolumn){
+        return; //TODO codavaj!!
+    }
+
+    public void ReInit(java.io.InputStream dstream, int startline, int startcolumn, int buffersize){
+        return; //TODO codavaj!!
+    }
+
+    public void ReInit(java.io.InputStream dstream, java.lang.String encoding) throws java.io.UnsupportedEncodingException{
+        return; //TODO codavaj!!
+    }
+
+    public void ReInit(java.io.InputStream dstream, java.lang.String encoding, int startline, int startcolumn) throws java.io.UnsupportedEncodingException{
+        return; //TODO codavaj!!
+    }
+
+    public void ReInit(java.io.InputStream dstream, java.lang.String encoding, int startline, int startcolumn, int buffersize) throws java.io.UnsupportedEncodingException{
+        return; //TODO codavaj!!
+    }
+
+    public void ReInit(java.io.Reader dstream){
+        return; //TODO codavaj!!
+    }
+
+    public void ReInit(java.io.Reader dstream, int startline, int startcolumn){
+        return; //TODO codavaj!!
+    }
+
+    public void ReInit(java.io.Reader dstream, int startline, int startcolumn, int buffersize){
+        return; //TODO codavaj!!
+    }
+
+    protected void setTabSize(int i){
+        return; //TODO codavaj!!
+    }
+
+    protected void UpdateLineColumn(char c){
+        return; //TODO codavaj!!
+    }
 
 }

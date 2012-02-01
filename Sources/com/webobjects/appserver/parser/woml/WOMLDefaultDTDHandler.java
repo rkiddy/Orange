@@ -1,16 +1,15 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLDefaultDTDHandler implements org.xml.sax.DTDHandler{
+    public WOMLDefaultDTDHandler(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.NSLog;
-import org.xml.sax.DTDHandler;
-import org.xml.sax.SAXException;
+    public void notationDecl(java.lang.String name, java.lang.String publicId, java.lang.String systemId) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-public class WOMLDefaultDTDHandler
-    implements DTDHandler {
+    public void unparsedEntityDecl(java.lang.String name, java.lang.String publicId, java.lang.String systemId, java.lang.String notationName) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public WOMLDefaultDTDHandler() { return null; }
-
-    public void notationDecl(String name, String publicId, String systemId) throws SAXException {}
-
-    public void unparsedEntityDecl(String name, String publicId, String systemId, String notationName) throws SAXException {}
 }

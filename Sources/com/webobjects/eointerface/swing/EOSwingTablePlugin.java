@@ -1,96 +1,135 @@
-
 package com.webobjects.eointerface.swing;
-
-import com.webobjects.eointerface.*;
-import com.webobjects.foundation._NSUtilities;
-import javax.swing.JTable;
-import javax.swing.ListSelectionModel;
-import javax.swing.event.*;
-import javax.swing.table.*;
-
-
-public class EOSwingTablePlugin extends com.webobjects.eointerface.EOTableAssociation.TablePlugin
-    implements ListSelectionListener, TableColumnModelListener {
-    private class _TableModel extends AbstractTableModel {
-
-
-        public _TableModel() { return null; }
-
-        public EOTableAssociation tableAssociation() { return null; }
-
-        public void addTableModelListener(TableModelListener listener) {}
-
-        public void fireTableChanged() {}
-
-        public Class getColumnClass(int columnIndex) { return null; }
-
-        public int getColumnCount() { return 0; }
-
-        public String getColumnName(int columnIndex) { return null; }
-
-        public int getRowCount() { return 0; }
-
-        public Object getValueAt(int rowIndex, int columnIndex) { return null; }
-
-        public boolean isCellEditable(int rowIndex, int columnIndex) { return true; }
-
-        public void setValueAt(Object value, int rowIndex, int columnIndex) {}
-
-        protected boolean _justBecameTableModel;
-        final EOSwingTablePlugin this$0;
-
+/**
+ * EOSwingTablePlugin is a concrete subclass of EOTableAssociation.TablePlugin which is used with Swing tables.
+ * associations classes: EOTableAssociation
+ * widgets classes: EOTable, JTable (an EOTable contains a JTable inside)
+ */
+public class EOSwingTablePlugin extends com.webobjects.eointerface.EOTableAssociation.TablePlugin implements javax.swing.event.ListSelectionListener, javax.swing.event.TableColumnModelListener{
+    /**
+     * Creates a new EOSwingTablePlugin connected to an association and a UI widget.
+     * Parameters:association - association of class EOTableColumnAssociation or subclass for the plugin to usewidget - widget of class EOTable or JTable or subclass that the plugin will manage
+     */
+    public EOSwingTablePlugin(com.webobjects.eointerface.EOWidgetAssociation association, java.lang.Object widget){
+         //TODO codavaj!!
     }
 
+    /**
+     * Cleans up (ends) the plugin's connection to its TableColumn widget, removing the listeners and resetting the TableModel to an instance of DefaultTableModel.
+     */
+    public void breakConnection(){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Conformance to ColumnModelListener. Invokes tableDidChangeColumns on the plugin's EOTableAssociation.
+     */
+    public void columnAdded(javax.swing.event.TableColumnModelEvent event){
+        return; //TODO codavaj!!
+    }
 
-    static JTable _tableForWidget(Object widget) { return null; }
+    /**
+     * Conformance to ColumnModelListener.
+     */
+    public void columnMarginChanged(javax.swing.event.ChangeEvent event){
+        return; //TODO codavaj!!
+    }
 
-    static EOTableAssociation _tableAssociationForWidget(Object widget) { return null; }
+    /**
+     * Conformance to ColumnModelListener. Invokes tableDidChangeColumns on the plugin's EOTableAssociation.
+     */
+    public void columnMoved(javax.swing.event.TableColumnModelEvent event){
+        return; //TODO codavaj!!
+    }
 
-    static int _indexForTableColumnInTable(Object widget, TableColumn tableColumn) { return 0; }
+    /**
+     * Conformance to ColumnModelListener. Invokes tableDidChangeColumns on the plugin's EOTableAssociation.
+     */
+    public void columnRemoved(javax.swing.event.TableColumnModelEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public EOSwingTablePlugin(EOWidgetAssociation association, Object widget) { return null; }
+    /**
+     * Conformance to ListSelectionListener.
+     */
+    public void columnSelectionChanged(javax.swing.event.ListSelectionEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public void establishConnection() {}
+    /**
+     * Returns the column being edited.
+     */
+    public int editingColumnIndex(){
+        return 0; //TODO codavaj!!
+    }
 
-    public void breakConnection() {}
+    /**
+     * Returns the index of the row being edited
+     */
+    public int editingRowIndex(){
+        return 0; //TODO codavaj!!
+    }
 
-    public String[] widgetKeysTaken() { return null; }
+    /**
+     * Establishes a connection between the plugin and its UI widget.
+     */
+    public void establishConnection(){
+        return; //TODO codavaj!!
+    }
 
-    public void updateTableContents(int numberOfRows) {}
+    /**
+     * Returns the EOTableAssociation for this plugin's table.
+     */
+    public com.webobjects.eointerface.EOTableAssociation existingTableAssociation(){
+        return null; //TODO codavaj!!
+    }
 
-    public void updateSelectionIndexes(int selectedRowIndexes[]) {}
+    /**
+     * Returns the table's number of columns.
+     */
+    public int numberOfColumns(){
+        return 0; //TODO codavaj!!
+    }
 
-    public int[] selectionIndexes() { return null; }
+    /**
+     * Returns an array with the indexes of the selected rows.
+     */
+    public int[] selectionIndexes(){
+        return null; //TODO codavaj!!
+    }
 
-    public void valueChanged(ListSelectionEvent event) {}
+    /**
+     * Returns the EOTableColumnAssociation for the column at the specified index.
+     */
+    public com.webobjects.eointerface.EOTableColumnAssociation tableColumnAssociationForColumnAtIndex(int columnIndex){
+        return null; //TODO codavaj!!
+    }
 
-    public int editingColumnIndex() { return 0; }
+    /**
+     * This method notifies the table plugin that the table's selection has changed It is called internally by the EOTableAssociation.
+     */
+    public void updateSelectionIndexes(int[] selectedRowIndexes){
+        return; //TODO codavaj!!
+    }
 
-    public int editingRowIndex() { return 0; }
+    /**
+     * This method notifies the table plugin that the table's data has changed. It is called internally by the EOTableAssociation.
+     */
+    public void updateTableContents(int numberOfRows){
+        return; //TODO codavaj!!
+    }
 
-    public int numberOfColumns() { return 0; }
+    /**
+     * Conforming to ListSelectionListener API. Invokes EOTableAssociation's tableDidChangeSelection method.
+     */
+    public void valueChanged(javax.swing.event.ListSelectionEvent event){
+        return; //TODO codavaj!!
+    }
 
-    public EOTableColumnAssociation tableColumnAssociationForColumnAtIndex(int columnIndex) { return null; }
-
-    public EOTableAssociation existingTableAssociation() { return null; }
-
-    private void _columnsDidChange() {}
-
-    public void columnAdded(TableColumnModelEvent event) {}
-
-    public void columnRemoved(TableColumnModelEvent event) {}
-
-    public void columnMoved(TableColumnModelEvent event) {}
-
-    public void columnMarginChanged(ChangeEvent changeevent) {}
-
-    public void columnSelectionChanged(ListSelectionEvent listselectionevent) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private JTable _table;
-    private boolean _ignoreChanges;
+    /**
+     * Returns an array of Strings which represent outlet names in Interface Builder These outlets are disabled by Interface Builder once the TableColumn is connected to this plugin's association.
+     */
+    public java.lang.String[] widgetKeysTaken(){
+        return null; //TODO codavaj!!
+    }
 
 }

@@ -1,18 +1,23 @@
-
 package com.webobjects.appserver;
+/**
+ * Exception thrown by the WOAssociationFactory.
+ * Since: 5.4 See Also:WOAssociationFactory, Serialized Form
+ */
+public class WOSchemeNotSupportedException extends java.lang.RuntimeException{
+    public WOSchemeNotSupportedException(){
+         //TODO codavaj!!
+    }
 
+    public WOSchemeNotSupportedException(java.lang.String message){
+         //TODO codavaj!!
+    }
 
-public class WOSchemeNotSupportedException extends RuntimeException {
+    public WOSchemeNotSupportedException(java.lang.String message, java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
-
-    public WOSchemeNotSupportedException() { return null; }
-
-    public WOSchemeNotSupportedException(String message, Throwable cause) { return null; }
-
-    public WOSchemeNotSupportedException(String message) { return null; }
-
-    public WOSchemeNotSupportedException(Throwable cause) { return null; }
-
-    private static final long serialVersionUID = 0xe22618e1L;
+    public WOSchemeNotSupportedException(java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
 }

@@ -1,32 +1,34 @@
-
 package com.webobjects.eoapplication;
+public class EOProgrammaticSwitchController extends com.webobjects.eoapplication.EOSwitchController{
+    public EOProgrammaticSwitchController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation._NSUtilities;
-import javax.swing.JComponent;
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOProgrammaticSwitchController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    protected void addBorderComponentForControllerToDisplayComponent(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent){
+        return; //TODO codavaj!!
+    }
 
-public class EOProgrammaticSwitchController extends EOSwitchController {
+    protected javax.swing.JComponent newDisplayComponent(){
+        return null; //TODO codavaj!!
+    }
 
+    protected void removeBorderComponentForControllerFromDisplayComponent(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent, int index){
+        return; //TODO codavaj!!
+    }
 
-    public EOProgrammaticSwitchController() { return null; }
+    protected javax.swing.JComponent selectedBorderComponentInDisplayComponent(javax.swing.JComponent displayComponent){
+        return null; //TODO codavaj!!
+    }
 
-    public EOProgrammaticSwitchController(EOXMLUnarchiver unarchiver) { return null; }
-
-    protected JComponent newDisplayComponent() { return null; }
-
-    protected JComponent selectedBorderComponentInDisplayComponent(JComponent displayComponent) { return null; }
-
-    protected void addBorderComponentForControllerToDisplayComponent(EOComponentController eocomponentcontroller, JComponent jcomponent, JComponent jcomponent1) {}
-
-    protected void removeBorderComponentForControllerFromDisplayComponent(EOComponentController eocomponentcontroller, JComponent jcomponent, JComponent jcomponent1, int i) {}
-
-    protected void showBorderComponentAtIndexInDisplayComponent(JComponent borderComponent, JComponent displayComponent, int index) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private int _visibleBorderComponentIndex;
+    protected void showBorderComponentAtIndexInDisplayComponent(javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent, int index){
+        return; //TODO codavaj!!
+    }
 
 }

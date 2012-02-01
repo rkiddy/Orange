@@ -1,17 +1,23 @@
-
 package com.webobjects.directtoweb;
+public class ServerSideAction extends com.apple.client.directtoweb.common.Action implements com.webobjects.eocontrol.EOKeyValueArchiving{
+    public ServerSideAction(){
+         //TODO codavaj!!
+    }
 
-import com.apple.client.directtoweb.common.Action;
-import com.webobjects.eocontrol.*;
+    public ServerSideAction(java.lang.String label, java.lang.String task, java.lang.String entity){
+         //TODO codavaj!!
+    }
 
-public class ServerSideAction extends Action
-    implements EOKeyValueArchiving {
+    public static java.lang.Object decodeWithKeyValueUnarchiver(com.webobjects.eocontrol.EOKeyValueUnarchiver unarchiver){
+        return null; //TODO codavaj!!
+    }
 
-    public ServerSideAction() { return null; }
+    /**
+     * Description copied from interface:
+     * Asks the receiver to archive its state into the EOKeyValueArchiver archiver.
+     */
+    public void encodeWithKeyValueArchiver(com.webobjects.eocontrol.EOKeyValueArchiver archiver){
+        return; //TODO codavaj!!
+    }
 
-    public ServerSideAction(String label, String task, String entity) { return null; }
-
-    public void encodeWithKeyValueArchiver(EOKeyValueArchiver archiver) {}
-
-    public static Object decodeWithKeyValueUnarchiver(EOKeyValueUnarchiver unarchiver) { return null; }
 }

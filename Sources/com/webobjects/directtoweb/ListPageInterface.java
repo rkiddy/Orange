@@ -1,15 +1,21 @@
-
 package com.webobjects.directtoweb;
+/**
+ * This interface is implemented by pages returned by the D2W method listPageForEntityNamed. Use methods defined in this interface to initialize a newly created list page.
+ */
+public interface ListPageInterface{
+    /**
+     * Sets data source containing objects to display.
+     */
+    abstract void setDataSource(com.webobjects.eocontrol.EODataSource aDataSource);
 
-import com.webobjects.appserver.WOComponent;
-import com.webobjects.eocontrol.EODataSource;
+    /**
+     * Sets page to display when the user clicks 'Return' in the list page. If the new page needs to be initialized, use the method setNextPageDelegate instead.
+     */
+    abstract void setNextPage(com.webobjects.appserver.WOComponent nextPage);
 
+    /**
+     * Sets delegate object that receives call to nextPage method. When the user clicks 'Return' in the list page, Direct to Web invokes the nextPage method on nextPageDelegate. The page returned by that method call is the next page displayed. One normally uses this delegate mechanism to initialize the next page.
+     */
+    abstract void setNextPageDelegate(com.webobjects.directtoweb.NextPageDelegate nextPageDelegate);
 
-public interface ListPageInterface {
-
-    public abstract void setDataSource(EODataSource eodatasource);
-
-    public abstract void setNextPage(WOComponent wocomponent);
-
-    public abstract void setNextPageDelegate(NextPageDelegate nextpagedelegate);
 }

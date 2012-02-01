@@ -1,187 +1,256 @@
-
 package com.webobjects.appserver;
+/**
+ * Since: 5.4 See Also:Serialized Form
+ */
+public class WODynamicURL implements java.io.Serializable{
+    protected static final java.lang.String ProtocolSeparator="://";
 
-import com.webobjects.appserver._private.WOURLFormatException;
-import com.webobjects.foundation.NSLog;
-import java.io.*;
-
-
-public class WODynamicURL
-    implements Serializable {
-    public static class WOURLInvalidQueryString extends LocaleURLFormatException {
-
-
-        public WOURLInvalidQueryString() { return null; }
-
-        private static final long serialVersionUID = 0xc78fb5d6L;
-
+    public WODynamicURL(){
+         //TODO codavaj!!
     }
 
-    public static class WOURLInvalidRequestHandlerPath extends LocaleURLFormatException {
-
-
-        public WOURLInvalidRequestHandlerPath() { return null; }
-
-        private static final long serialVersionUID = 0x9df55981L;
-
+    public WODynamicURL(java.lang.String url){
+         //TODO codavaj!!
     }
 
-    public static class WOURLInvalidRequestHandlerKey extends LocaleURLFormatException {
-
-
-        public WOURLInvalidRequestHandlerKey() { return null; }
-
-        private static final long serialVersionUID = 0x6d93176aL;
-
+    public java.lang.String[] adaptorExtensions(){
+        return null; //TODO codavaj!!
     }
 
-    public static class WOURLInvalidApplicationNumber extends LocaleURLFormatException {
-
-
-        public WOURLInvalidApplicationNumber() { return null; }
-
-        private static final long serialVersionUID = 0x555d6fd1L;
-
+    public java.lang.String adaptorName(){
+        return null; //TODO codavaj!!
     }
 
-    public static class WOURLInvalidApplicationName extends LocaleURLFormatException {
-
-
-        public WOURLInvalidApplicationName() { return null; }
-
-        private static final long serialVersionUID = 0x733b239dL;
-
+    public java.lang.String adaptorPath(){
+        return null; //TODO codavaj!!
     }
 
-    public static class WOURLInvalidWebObjectsVersion extends LocaleURLFormatException {
-
-
-        public WOURLInvalidWebObjectsVersion() { return null; }
-
-        private static final long serialVersionUID = 0xb71f4c35L;
-
+    public java.lang.String applicationExtension(){
+        return null; //TODO codavaj!!
     }
 
-    public static class WOURLInvalidPrefix extends LocaleURLFormatException {
-
-
-        public WOURLInvalidPrefix() { return null; }
-
-        private static final long serialVersionUID = 0x1a9dfd2dL;
-
+    public java.lang.String applicationName(){
+        return null; //TODO codavaj!!
     }
 
-    public static class LocaleURLFormatException extends WOURLFormatException {
-
-
-        public LocaleURLFormatException(String value) { return null; }
-
-        private static final long serialVersionUID = 0xbfa51a38L;
-
+    public java.lang.String applicationNumber(){
+        return null; //TODO codavaj!!
     }
 
+    public void check(){
+        return; //TODO codavaj!!
+    }
 
+    public void checkApplicationName() throws com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        return; //TODO codavaj!!
+    }
 
-    public WODynamicURL() { return null; }
+    public void checkApplicationNumber() throws com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        return; //TODO codavaj!!
+    }
 
-    public WODynamicURL(String url) { return null; }
+    public void checkPrefix() throws com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        return; //TODO codavaj!!
+    }
 
-    protected int setPrefixToken(String url, int start, int stop) { return 0; }
+    public void checkQueryString() throws com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        return; //TODO codavaj!!
+    }
 
-    protected int setApplicationNameToken(String url, int start, int stop) { return 0; }
+    public void checkRequestHandlerKey() throws com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        return; //TODO codavaj!!
+    }
 
-    protected int setApplicationNumberToken(String url, int start, int stop) { return 0; }
+    public void checkRequestHandlerPath() throws com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        return; //TODO codavaj!!
+    }
 
-    protected int setHandlerKeyToken(String url, int start, int stop) { return 0; }
+    public void checkWebObjectsVersion() throws com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        return; //TODO codavaj!!
+    }
 
-    protected int setHandlerPathToken(String url, int start, int stop) { return 0; }
+    public java.lang.Object clone(){
+        return null; //TODO codavaj!!
+    }
 
-    protected int setQueryStringToken(String url, int start, int stop) { return 0; }
+    protected boolean containsNull(java.lang.String value){
+        return false; //TODO codavaj!!
+    }
 
-    public int nextSeparator(String value, int start) { return 0; }
+    protected boolean containsQuestionMark(java.lang.String value){
+        return false; //TODO codavaj!!
+    }
 
-    public int nextProtocolSeparator(String value, int start) { return 0; }
+    public int nextProtocolSeparator(java.lang.String value, int start){
+        return 0; //TODO codavaj!!
+    }
 
-    public int nextProtocolSeparator(String value, int start, int stop) { return 0; }
+    public int nextProtocolSeparator(java.lang.String value, int start, int stop){
+        return 0; //TODO codavaj!!
+    }
 
-    public int nextQuerySeparator(String value, int start) { return 0; }
+    public int nextQuerySeparator(java.lang.String value, int start){
+        return 0; //TODO codavaj!!
+    }
 
-    public int nextSeparatorBefore(String value, int start, int stop) { return 0; }
+    public int nextSeparator(java.lang.String value, int start){
+        return 0; //TODO codavaj!!
+    }
 
-    public String safeSubstring(String value, int start, int end) { return null; }
+    public int nextSeparatorBefore(java.lang.String value, int start, int stop){
+        return 0; //TODO codavaj!!
+    }
 
-    public String prefix() { return null; }
+    public java.lang.String prefix(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setPrefix(String value) {}
+    public java.lang.String queryString(){
+        return null; //TODO codavaj!!
+    }
 
-    public void checkPrefix() throws LocaleURLFormatException {}
+    public java.lang.String requestHandlerKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public String webObjectsVersion() { return null; }
+    public java.lang.String requestHandlerPath(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setWebObjectsVersion(String value) {}
+    public java.lang.String safeSubstring(java.lang.String value, int start, int end){
+        return null; //TODO codavaj!!
+    }
 
-    public void checkWebObjectsVersion() throws LocaleURLFormatException {}
+    public void setApplicationName(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public String applicationName() { return null; }
+    protected int setApplicationNameToken(java.lang.String url, int start, int stop){
+        return 0; //TODO codavaj!!
+    }
 
-    public void setApplicationName(String value) {}
+    public void setApplicationNumber(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public void checkApplicationName() throws LocaleURLFormatException {}
+    protected int setApplicationNumberToken(java.lang.String url, int start, int stop){
+        return 0; //TODO codavaj!!
+    }
 
-    public String applicationNumber() { return null; }
+    protected int setHandlerKeyToken(java.lang.String url, int start, int stop){
+        return 0; //TODO codavaj!!
+    }
 
-    public void setApplicationNumber(String value) {}
+    protected int setHandlerPathToken(java.lang.String url, int start, int stop){
+        return 0; //TODO codavaj!!
+    }
 
-    public void checkApplicationNumber() throws LocaleURLFormatException {}
+    public void setPrefix(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public String requestHandlerKey() { return null; }
+    protected int setPrefixToken(java.lang.String url, int start, int stop){
+        return 0; //TODO codavaj!!
+    }
 
-    public void setRequestHandlerKey(String value) {}
+    public void setQueryString(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public void checkRequestHandlerKey() throws LocaleURLFormatException {}
+    protected int setQueryStringToken(java.lang.String url, int start, int stop){
+        return 0; //TODO codavaj!!
+    }
 
-    public String requestHandlerPath() { return null; }
+    public void setRequestHandlerKey(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public void setRequestHandlerPath(String value) {}
+    public void setRequestHandlerPath(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public void checkRequestHandlerPath() throws LocaleURLFormatException {}
+    public void setWebObjectsVersion(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public String queryString() { return null; }
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setQueryString(String value) {}
+    public java.lang.String webObjectsVersion(){
+        return null; //TODO codavaj!!
+    }
 
-    public void checkQueryString() throws LocaleURLFormatException {}
+    /**
+     * See Also:Serialized Form
+     */
+    public static class WOURLInvalidApplicationNumber extends com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        public WOURLInvalidApplicationNumber(){
+             //TODO codavaj!!
+        }
 
-    public void check() throws WOURLFormatException {}
+    }
+    /**
+     * See Also:Serialized Form
+     */
+    public static class WOURLInvalidWebObjectsVersion extends com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        public WOURLInvalidWebObjectsVersion(){
+             //TODO codavaj!!
+        }
 
-    public Object clone() { return null; }
+    }
+    /**
+     * See Also:Serialized Form
+     */
+    public static class WOURLInvalidRequestHandlerKey extends com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        public WOURLInvalidRequestHandlerKey(){
+             //TODO codavaj!!
+        }
 
-    public String toString() { return null; }
+    }
+    /**
+     * Since: 5.4 See Also:Serialized Form
+     */
+    public static class LocaleURLFormatException extends com.webobjects.appserver._private.WOURLFormatException{
+        public LocaleURLFormatException(java.lang.String value){
+             //TODO codavaj!!
+        }
 
-    private void writeObject(ObjectOutputStream out) throws IOException {}
+    }
+    /**
+     * See Also:Serialized Form
+     */
+    public static class WOURLInvalidQueryString extends com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        public WOURLInvalidQueryString(){
+             //TODO codavaj!!
+        }
 
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {}
+    }
+    /**
+     * See Also:Serialized Form
+     */
+    public static class WOURLInvalidPrefix extends com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        public WOURLInvalidPrefix(){
+             //TODO codavaj!!
+        }
 
-    protected boolean containsNull(String value) { return true; }
+    }
+    /**
+     * See Also:Serialized Form
+     */
+    public static class WOURLInvalidApplicationName extends com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        public WOURLInvalidApplicationName(){
+             //TODO codavaj!!
+        }
 
-    protected boolean containsQuestionMark(String value) { return true; }
+    }
+    /**
+     * See Also:Serialized Form
+     */
+    public static class WOURLInvalidRequestHandlerPath extends com.webobjects.appserver.WODynamicURL.LocaleURLFormatException{
+        public WOURLInvalidRequestHandlerPath(){
+             //TODO codavaj!!
+        }
 
-    public String applicationExtension() { return null; }
-
-    public String adaptorName() { return null; }
-
-    public String adaptorPath() { return null; }
-
-    public String[] adaptorExtensions() { return null; }
-
-    static final long serialVersionUID = 0x5a47be22L;
-    protected String _prefix;
-    protected String _webObjectsVersion;
-    protected String _applicationName;
-    protected String _applicationNumber;
-    protected String _requestHandlerKey;
-    protected String _requestHandlerPath;
-    protected String _queryString;
-    protected static final String ProtocolSeparator = "://";
-
+    }
 }

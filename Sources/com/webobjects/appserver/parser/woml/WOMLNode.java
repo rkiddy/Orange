@@ -1,23 +1,23 @@
-
 package com.webobjects.appserver.parser.woml;
+public abstract class WOMLNode{
+    public WOMLNode(com.webobjects.appserver.parser.woml.WOMLPosition position){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOElement;
+    public com.webobjects.appserver.parser.woml.WOMLPosition getPosition(){
+        return null; //TODO codavaj!!
+    }
 
+    public com.webobjects.appserver.WOElement getWOElement(){
+        return null; //TODO codavaj!!
+    }
 
-public abstract class WOMLNode {
+    public void setPosition(com.webobjects.appserver.parser.woml.WOMLPosition value){
+        return; //TODO codavaj!!
+    }
 
-
-    public WOMLNode(WOMLPosition position) { return null; }
-
-    public WOMLPosition getPosition() { return null; }
-
-    public void setPosition(WOMLPosition value) {}
-
-    public WOElement getWOElement() { return null; }
-
-    public void setWOElement(WOElement value) {}
-
-    private WOMLPosition _position;
-    private WOElement _woElement;
+    public void setWOElement(com.webobjects.appserver.WOElement value){
+        return; //TODO codavaj!!
+    }
 
 }

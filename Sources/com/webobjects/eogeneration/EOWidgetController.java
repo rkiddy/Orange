@@ -1,166 +1,182 @@
-
 package com.webobjects.eogeneration;
+public abstract class EOWidgetController extends com.webobjects.eoapplication.EOComponentController{
+    public EOWidgetController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.swing.*;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Dimension;
-import javax.swing.JComponent;
+    public EOWidgetController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
-public abstract class EOWidgetController extends EOComponentController {
-    public static interface DefaultAction {
-        public static interface CommonWidgetHandler {
+    /**
+     * Description copied from class:
+     * Prepares the receiver so it is disposed when Java performs garbage collection.
+     */
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-            public abstract boolean canTakeResposibilityForDefaultActionWithActionWidget(JComponent jcomponent);
+    /**
+     * Description copied from class:
+     * Invoked when it's necessary to create the receiver's component, including setting up the subcontroller area. Subclass implementations of this method usually invoke setComponent and if necessary setSubcontrollerArea. EOComponentController's default implementation creates an empty EOView to hold subcontroller components.
+     * The layout mechanisms used to integrate the components of controllers expect that the component is generated with the minimum size possible.
+     */
+    protected void generateComponent(){
+        return; //TODO codavaj!!
+    }
 
-            public abstract void takeResposibilityForDefaultActionWithActionWidget(JComponent jcomponent);
+    public boolean highlightsLabel(){
+        return false; //TODO codavaj!!
+    }
+
+    public javax.swing.JComponent labelComponent(){
+        return null; //TODO codavaj!!
+    }
+
+    public int labelComponentAlignment(){
+        return 0; //TODO codavaj!!
+    }
+
+    public int labelComponentPosition(){
+        return 0; //TODO codavaj!!
+    }
+
+    /**
+     * Returns the receiver's alignment width, the minimum width used for text labels in its component (and its integrated subcontroller components).
+     */
+    public int labelComponentWidth(){
+        return 0; //TODO codavaj!!
+    }
+
+    public java.awt.Dimension minimumWidgetSize(){
+        return null; //TODO codavaj!!
+    }
+
+    protected javax.swing.JComponent newLabelComponent(java.lang.String label, int minimumWidth, boolean appendColon, int alignment, boolean highlightLabel){
+        return null; //TODO codavaj!!
+    }
+
+    protected abstract javax.swing.JComponent newWidget();
+
+    protected int preferredLabelComponentPosition(){
+        return 0; //TODO codavaj!!
+    }
+
+    protected boolean preferredUsesLabelComponent(){
+        return false; //TODO codavaj!!
+    }
+
+    protected int preferredWidgetAutosizingMask(){
+        return 0; //TODO codavaj!!
+    }
+
+    protected void setAlignmentForWidget(javax.swing.JComponent widget, int alignment){
+        return; //TODO codavaj!!
+    }
+
+    public void setHighlightsLabel(boolean flag){
+        return; //TODO codavaj!!
+    }
+
+    public void setLabelComponent(javax.swing.JComponent labelComponent){
+        return; //TODO codavaj!!
+    }
+
+    public void setLabelComponentAlignment(int alignment){
+        return; //TODO codavaj!!
+    }
+
+    public void setLabelComponentPosition(int position){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Sets the receiver's alignment width, the minimum width used for text labels in its component (and its integrated subcontroller components). Throws an IllegalStateException if the receiver's component is already prepared. In other words, you can only set the alignment behavior before the component is generated.
+     */
+    public void setLabelComponentWidth(int labelComponentWidth){
+        return; //TODO codavaj!!
+    }
+
+    public void setMinimumWidgetSize(java.awt.Dimension size){
+        return; //TODO codavaj!!
+    }
+
+    public void setUsesLabelComponent(boolean flag){
+        return; //TODO codavaj!!
+    }
+
+    public void setWidget(javax.swing.JComponent widget){
+        return; //TODO codavaj!!
+    }
+
+    public void setWidgetAlignment(int alignment){
+        return; //TODO codavaj!!
+    }
+
+    protected void startListeningToWidget(){
+        return; //TODO codavaj!!
+    }
+
+    protected void stopListeningToWidget(){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * Returns the component that will be used to display tool tip text.
+     */
+    protected javax.swing.JComponent toolTipComponent(){
+        return null; //TODO codavaj!!
+    }
+
+    public boolean usesLabelComponent(){
+        return false; //TODO codavaj!!
+    }
+
+    public javax.swing.JComponent widget(){
+        return null; //TODO codavaj!!
+    }
+
+    public int widgetAlignment(){
+        return 0; //TODO codavaj!!
+    }
+
+    public static interface DefaultAction{
+        abstract void defaultAction();
+
+        public static interface CommonWidgetHandler{
+            abstract boolean canTakeResposibilityForDefaultActionWithActionWidget(javax.swing.JComponent actionWidget);
+
+            abstract void takeResposibilityForDefaultActionWithActionWidget(javax.swing.JComponent actionWidget);
+
         }
+    }
+    public static interface QueryWidget{
+        abstract boolean isQueryWidget();
 
-
-
-        public abstract void defaultAction();
-
-
-
-        public static final Class _CLASS = null;
+        abstract void setIsQueryWidget(boolean flag);
 
     }
+    public static interface FormatWidget{
+        abstract java.lang.Class formatClass();
 
-    public static interface TableWidget {
+        abstract java.lang.String formatPattern();
 
+        abstract boolean isFormatAllowed();
 
-        public abstract EOTable table();
+        abstract void setFormatAllowed(boolean flag);
 
-        public abstract void setAllowsMultipleSelection(boolean flag);
+        abstract void setFormatClass(java.lang.Class formatClass);
 
-        public abstract boolean allowsMultipleSelection();
-
-
-
-        public static final Class _CLASS = null;
-
-    }
-
-    public static interface QueryWidget {
-
-
-        public abstract void setIsQueryWidget(boolean flag);
-
-        public abstract boolean isQueryWidget();
-
-
-
-        public static final Class _CLASS = null;
+        abstract void setFormatPattern(java.lang.String formatPattern);
 
     }
+    public static interface TableWidget{
+        abstract boolean allowsMultipleSelection();
 
-    public static interface FormatWidget {
+        abstract void setAllowsMultipleSelection(boolean flag);
 
-
-        public abstract void setFormatAllowed(boolean flag);
-
-        public abstract boolean isFormatAllowed();
-
-        public abstract void setFormatClass(Class class1);
-
-        public abstract Class formatClass();
-
-        public abstract void setFormatPattern(String s);
-
-        public abstract String formatPattern();
-
-
-
-        public static final Class _CLASS = null;
+        abstract com.webobjects.eointerface.swing.EOTable table();
 
     }
-
-
-
-    public EOWidgetController() { return null; }
-
-    public EOWidgetController(EOXMLUnarchiver unarchiver) { return null; }
-
-    public NSMutableDictionary _xmlParameters() { return null; }
-
-    public void dispose() {}
-
-    protected DefaultAction _defaultActionTarget() { return null; }
-
-    protected JComponent toolTipComponent() { return null; }
-
-    protected int preferredLabelComponentPosition() { return 0; }
-
-    protected boolean preferredUsesLabelComponent() { return true; }
-
-    protected JComponent newLabelComponent(String label, int minimumWidth, boolean appendColon, int alignment, boolean highlightLabel) { return null; }
-
-    protected int preferredWidgetAutosizingMask() { return 0; }
-
-    protected int _labelComponentVerticalOffset() { return 0; }
-
-    protected void _addLabelComponentToComponent(JComponent labelComponent, JComponent component, int x, int widgetHeight, boolean isSeparator) {}
-
-    protected String _labelComponentString() { return null; }
-
-    protected void generateComponent() {}
-
-    public void setLabelComponentPosition(int position) {}
-
-    public int labelComponentPosition() { return 0; }
-
-    public void setWidgetAlignment(int alignment) {}
-
-    public int widgetAlignment() { return 0; }
-
-    public void setLabelComponentAlignment(int alignment) {}
-
-    public int labelComponentAlignment() { return 0; }
-
-    public void setUsesLabelComponent(boolean flag) {}
-
-    public boolean usesLabelComponent() { return true; }
-
-    public void setHighlightsLabel(boolean flag) {}
-
-    public boolean highlightsLabel() { return true; }
-
-    public void setLabelComponentWidth(int labelComponentWidth) {}
-
-    public int labelComponentWidth() { return 0; }
-
-    public void setMinimumWidgetSize(Dimension size) {}
-
-    public Dimension minimumWidgetSize() { return null; }
-
-    protected abstract JComponent newWidget();
-
-    protected void setAlignmentForWidget(JComponent jcomponent, int i) {}
-
-    protected void startListeningToWidget() {}
-
-    protected void stopListeningToWidget() {}
-
-    public void setWidget(JComponent widget) {}
-
-    public JComponent widget() { return null; }
-
-    public void setLabelComponent(JComponent labelComponent) {}
-
-    public JComponent labelComponent() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS = null;
-    private JComponent _widget;
-    private JComponent _labelComponent;
-    private int _labelComponentPosition;
-    private int _widgetAlignment;
-    private int _labelComponentAlignment;
-    private boolean _usesLabelComponent;
-    private boolean _highlightsLabel;
-    private int _labelComponentWidth;
-    private Dimension _minimumWidgetSize;
-
 }

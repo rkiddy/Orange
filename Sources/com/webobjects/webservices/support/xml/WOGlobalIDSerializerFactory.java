@@ -1,20 +1,19 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOGlobalIDSerializerFactory creates instances of WOGlobalIDSerializer.
+ * See Also:Serialized Form
+ */
+public class WOGlobalIDSerializerFactory extends org.apache.axis.encoding.ser.BaseSerializerFactory{
+    public WOGlobalIDSerializerFactory(){
+         //TODO codavaj!!
+    }
 
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.SerializerFactory;
-import org.apache.axis.encoding.ser.BaseSerializerFactory;
+    public WOGlobalIDSerializerFactory(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+         //TODO codavaj!!
+    }
 
-
-public class WOGlobalIDSerializerFactory extends BaseSerializerFactory {
-
-
-    public WOGlobalIDSerializerFactory() { return null; }
-
-    public WOGlobalIDSerializerFactory(Class javaType, QName xmlType) { return null; }
-
-    public static SerializerFactory create(Class javaType, QName xmlType) { return null; }
-
-    private static final long serialVersionUID = 0x1f883829L;
+    public static org.apache.axis.encoding.SerializerFactory create(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+        return null; //TODO codavaj!!
+    }
 
 }

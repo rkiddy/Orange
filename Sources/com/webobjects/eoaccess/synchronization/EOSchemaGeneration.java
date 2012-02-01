@@ -1,61 +1,113 @@
-
 package com.webobjects.eoaccess.synchronization;
+/**
+ * This interface has been introduced to define API for generating database schemas from EOModel files. None of the API is new in WebObjects 5.x. Rather, it was moved to EOSchemaGeneration from EOSQLExpression. The API is essentially the same as in WebObjects 4.5.x except that methods that were static methods of EOSQLExpression in WebObjects 4.5.x are now instance methods on EOSchemaGeneration.
+ * An implementation of the EOSchemaGeneration interface is provided by EOSynchronizationFactory, a new class introduced in WebObjects 5.0.
+ * EOSchemaGeneration defines a number of constants that are intended for use as keys in options dictionaries. A corresponding value of "YES" indicates that the EOSQLExpression should generate SQL to perform the corresponding database operation.
+ * Since: 5.4 See Also:EOSQLExpression, EOSchemaSynchronizationFactory
+ */
+public interface EOSchemaGeneration{
+    /**
+     * Appends expression's statement to script along with any necessary delimiter. script is the StringBuffer in which the SQL script is built.
+     * Used in conjunction with schemaCreationStatementsForEntities and schemaCreationScriptForEntities to build up the SQL script to generate the specified schema for a set of EOEntities.
+     */
+    abstract void appendExpressionToScript(com.webobjects.eoaccess.EOSQLExpression expression, java.lang.StringBuffer script);
 
-import com.webobjects.eoaccess.*;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation.NSDictionary;
+    /**
+     * Generates and returns an array of EOSQLExpressions containing the SQL statements to create a database or user that can be accessed by the provided connectionDictionary and administrativeConnectionDictionary. Returns null if this feature is not supported.
+     */
+    abstract com.webobjects.foundation.NSArray createDatabaseStatementsForConnectionDictionary(com.webobjects.foundation.NSDictionary connectionDictionary, com.webobjects.foundation.NSDictionary administrativeConnectionDictionary);
 
+    abstract com.webobjects.foundation.NSArray createIndexStatementsForEntityGroup(com.webobjects.foundation.NSArray entityGroup);
 
-public interface EOSchemaGeneration {
-    public static interface Delegate {
+    abstract com.webobjects.foundation.NSArray createIndexStatementsForEntityGroups(com.webobjects.foundation.NSArray entityGroups);
 
-        public abstract NSArray indexDefinitionForEntity(EOEntity eoentity);
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to create a table for entityGroup. Returns an empty array if entityGroup is null or empty.
+     */
+    abstract com.webobjects.foundation.NSArray createTableStatementsForEntityGroup(com.webobjects.foundation.NSArray entityGroup);
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to create the tables for each of the entity groups in entityGroups. Returns an empty array if entityGroups is null or empty.
+     */
+    abstract com.webobjects.foundation.NSArray createTableStatementsForEntityGroups(com.webobjects.foundation.NSArray entityGroups);
+
+    /**
+     * Generates and returns an array of EOSQLExpressions that define the SQL statements to drop a database or user that is accessed by the provided connectionDictionary and administrativeConnectionDictionary. Returns null if this feature is not supported.
+     */
+    abstract com.webobjects.foundation.NSArray dropDatabaseStatementsForConnectionDictionary(com.webobjects.foundation.NSDictionary connectionDictionary, com.webobjects.foundation.NSDictionary administrativeConnectionDictionary);
+
+    abstract com.webobjects.foundation.NSArray dropIndexStatementsForEntityGroup(com.webobjects.foundation.NSArray entityGroup);
+
+    abstract com.webobjects.foundation.NSArray dropIndexStatementsForEntityGroups(com.webobjects.foundation.NSArray entityGroups);
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to drop the primary key generation support for entityGroup, or null if primary key generation is not supported.
+     */
+    abstract com.webobjects.foundation.NSArray dropPrimaryKeySupportStatementsForEntityGroup(com.webobjects.foundation.NSArray entityGroup);
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to drop the primary key generation support for all the entities in each of the the entity groups in entityGroups. Returns an empty array if entityGroups is null or empty. Returns an array containing an error message if primary key generation support is not available.
+     */
+    abstract com.webobjects.foundation.NSArray dropPrimaryKeySupportStatementsForEntityGroups(com.webobjects.foundation.NSArray entityGroups);
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to drop the table identified by entityGroup. Returns an empty array if entityGroup is null. The drop statement generated by this method should be sufficient to remove the table created by createTableStatementsForEntityGroup's statements.
+     */
+    abstract com.webobjects.foundation.NSArray dropTableStatementsForEntityGroup(com.webobjects.foundation.NSArray entityGroup);
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to drop the tables for all the entity groups in entityGroups. Returns an empty array if entityGroups is null or empty.
+     */
+    abstract com.webobjects.foundation.NSArray dropTableStatementsForEntityGroups(com.webobjects.foundation.NSArray entityGroups);
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL statements necessary to create foreign key constraints for relationship. Returns an empty array if unable to generate foreign key constraints for relationship
+     */
+    abstract com.webobjects.foundation.NSArray foreignKeyConstraintStatementsForRelationship(com.webobjects.eoaccess.EORelationship relationship);
+
+    /**
+     * Creates a new Options object, to facilitate subclassing.
+     */
+    abstract com.webobjects.eoaccess.synchronization.EOSchemaGenerationOptions newOptions();
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to create the primary key constraints for entityGroup. Returns an empty array if any of the primary key attributes in entityGroup don't have a column name or if entityGroup is null.
+     */
+    abstract com.webobjects.foundation.NSArray primaryKeyConstraintStatementsForEntityGroup(com.webobjects.foundation.NSArray entityGroup);
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to create the primary key constraints for the entities specified in entityGroups. Returns an empty array if entityGroups is null or empty.
+     */
+    abstract com.webobjects.foundation.NSArray primaryKeyConstraintStatementsForEntityGroups(com.webobjects.foundation.NSArray entityGroups);
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to create the primary key generation support for entityGroup, or null if primary key generation is not supported.
+     */
+    abstract com.webobjects.foundation.NSArray primaryKeySupportStatementsForEntityGroup(com.webobjects.foundation.NSArray entityGroup);
+
+    /**
+     * Returns an array of EOSQLExpression objects that define the SQL necessary to create the primary key generation support for all the entities in each of the the entity groups in entityGroups. Returns an empty array if entityGroups is null or empty. Returns an array containing an error message if primary key generation support is not available.
+     */
+    abstract com.webobjects.foundation.NSArray primaryKeySupportStatementsForEntityGroups(com.webobjects.foundation.NSArray entityGroups);
+
+    /**
+     * Returns a script of SQL statements suitable to create the schema based on options for the EOEntity objects in allEntities. Returns an empty string if either options or allEntities is empty or null.
+     * options is an option object used in conjunction with appendExpressionToScript and schemaCreationScriptForEntities to build up the SQL script to generate the specified schema for allEntities.
+     */
+    abstract java.lang.String schemaCreationScriptForEntities(com.webobjects.foundation.NSArray allEntities, com.webobjects.eoaccess.synchronization.EOSchemaGenerationOptions options);
+
+    /**
+     * Returns an array of EOSQLExpressions suitable to create the schema based on options for the EOEntity objects in allEntities. Returns an empty array if either allEntities or options is null or empty.
+     * options is an option object used in conjunction with appendExpressionToScript and schemaCreationScriptForEntities to build up the SQL script to generate the specified schema for allEntities.
+     */
+    abstract com.webobjects.foundation.NSArray schemaCreationStatementsForEntities(com.webobjects.foundation.NSArray allEntities, com.webobjects.eoaccess.synchronization.EOSchemaGenerationOptions options);
+
+    abstract com.webobjects.eoaccess.synchronization.EOSchemaGeneration.Delegate schemaGenerationDelegate();
+
+    abstract void setSchemaGenerationDelegate(com.webobjects.eoaccess.synchronization.EOSchemaGeneration.Delegate delegate);
+
+    public static interface Delegate{
+        abstract com.webobjects.foundation.NSArray indexDefinitionForEntity(com.webobjects.eoaccess.EOEntity entity);
+
     }
-
-
-    public abstract void setSchemaGenerationDelegate(Delegate delegate1);
-
-    public abstract Delegate schemaGenerationDelegate();
-
-    public abstract EOSchemaGenerationOptions newOptions();
-
-    public abstract NSArray foreignKeyConstraintStatementsForRelationship(EORelationship eorelationship);
-
-    public abstract NSArray createTableStatementsForEntityGroup(NSArray nsarray);
-
-    public abstract NSArray dropTableStatementsForEntityGroup(NSArray nsarray);
-
-    public abstract NSArray primaryKeyConstraintStatementsForEntityGroup(NSArray nsarray);
-
-    public abstract NSArray primaryKeySupportStatementsForEntityGroup(NSArray nsarray);
-
-    public abstract NSArray dropPrimaryKeySupportStatementsForEntityGroup(NSArray nsarray);
-
-    public abstract NSArray createTableStatementsForEntityGroups(NSArray nsarray);
-
-    public abstract NSArray dropTableStatementsForEntityGroups(NSArray nsarray);
-
-    public abstract NSArray primaryKeyConstraintStatementsForEntityGroups(NSArray nsarray);
-
-    public abstract NSArray primaryKeySupportStatementsForEntityGroups(NSArray nsarray);
-
-    public abstract NSArray dropPrimaryKeySupportStatementsForEntityGroups(NSArray nsarray);
-
-    public abstract String schemaCreationScriptForEntities(NSArray nsarray, EOSchemaGenerationOptions eoschemagenerationoptions);
-
-    public abstract void appendExpressionToScript(EOSQLExpression eosqlexpression, StringBuffer stringbuffer);
-
-    public abstract NSArray schemaCreationStatementsForEntities(NSArray nsarray, EOSchemaGenerationOptions eoschemagenerationoptions);
-
-    public abstract NSArray createDatabaseStatementsForConnectionDictionary(NSDictionary nsdictionary, NSDictionary nsdictionary1);
-
-    public abstract NSArray dropDatabaseStatementsForConnectionDictionary(NSDictionary nsdictionary, NSDictionary nsdictionary1);
-
-    public abstract NSArray createIndexStatementsForEntityGroups(NSArray nsarray);
-
-    public abstract NSArray createIndexStatementsForEntityGroup(NSArray nsarray);
-
-    public abstract NSArray dropIndexStatementsForEntityGroups(NSArray nsarray);
-
-    public abstract NSArray dropIndexStatementsForEntityGroup(NSArray nsarray);
 }

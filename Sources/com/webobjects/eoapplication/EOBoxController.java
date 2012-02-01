@@ -1,87 +1,76 @@
-
 package com.webobjects.eoapplication;
+public class EOBoxController extends com.webobjects.eoapplication.EOComponentController{
+    public static final int EtchedBorder=1;
 
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.*;
-import javax.swing.BorderFactory;
-import javax.swing.JComponent;
-import javax.swing.border.*;
+    public static final int LineBorder=4;
 
+    public static final int LoweredBezelBorder=3;
 
-public class EOBoxController extends EOComponentController {
-    private static class _TitledBorder extends AbstractBorder {
+    public static final int NoBorder=0;
 
+    public static final int RaisedBezelBorder=2;
 
-        public _TitledBorder(Border border, String title, Font titleFont, Color titleColor, int titlePosition) { return null; }
-
-        public int getTitleWidth(Component component) { return 0; }
-
-        public void paintBorder(Component component, Graphics graphics, int x, int y, int width, int height) {}
-
-        public Insets getBorderInsets(Component component) { return null; }
-
-        public boolean isBorderOpaque() { return true; }
-
-        private String _title;
-        private Border _border;
-        private Font _titleFont;
-        private Color _titleColor;
-        private int _titlePosition;
-
+    public EOBoxController(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOBoxController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public int borderType(){
+        return 0; //TODO codavaj!!
+    }
 
-    public EOBoxController() { return null; }
+    protected void generateComponent(){
+        return; //TODO codavaj!!
+    }
 
-    public EOBoxController(EOXMLUnarchiver unarchiver) { return null; }
+    public boolean highlightsTitle(){
+        return false; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    public void setBorderType(int type){
+        return; //TODO codavaj!!
+    }
 
-    public void setBorderType(int type) {}
+    public void setHighlightsTitle(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public int borderType() { return 0; }
+    public void setTitleColor(java.awt.Color color){
+        return; //TODO codavaj!!
+    }
 
-    public void setUsesTitledBorder(boolean flag) {}
+    public void setTitleFont(java.awt.Font font){
+        return; //TODO codavaj!!
+    }
 
-    public boolean usesTitledBorder() { return true; }
+    public void setTitlePosition(int position){
+        return; //TODO codavaj!!
+    }
 
-    public void setHighlightsTitle(boolean flag) {}
+    public void setUsesTitledBorder(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public boolean highlightsTitle() { return true; }
+    public java.awt.Color titleColor(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setTitlePosition(int position) {}
+    public java.awt.Font titleFont(){
+        return null; //TODO codavaj!!
+    }
 
-    public int titlePosition() { return 0; }
+    public int titlePosition(){
+        return 0; //TODO codavaj!!
+    }
 
-    public void setTitleColor(Color color) {}
-
-    public Color titleColor() { return null; }
-
-    public void setTitleFont(Font font) {}
-
-    public Font titleFont() { return null; }
-
-    protected Insets _preferredInsets() { return null; }
-
-    protected void generateComponent() {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    public static final int NoBorder = 0;
-    public static final int EtchedBorder = 1;
-    public static final int RaisedBezelBorder = 2;
-    public static final int LoweredBezelBorder = 3;
-    public static final int LineBorder = 4;
-    private int _borderType;
-    private boolean _usesTitledBorder;
-    private boolean _highlightsTitle;
-    private int _titlePosition;
-    private Color _titleColor;
-    private Font _titleFont;
+    public boolean usesTitledBorder(){
+        return false; //TODO codavaj!!
+    }
 
 }

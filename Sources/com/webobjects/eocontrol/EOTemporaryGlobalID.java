@@ -1,83 +1,86 @@
-
 package com.webobjects.eocontrol;
+/**
+ * An EOTemporaryGlobalID object identifies a newly created enterprise object before it's saved to an external store. When the object is saved, the temporary ID is converted to a permanent one, as described in the EOGlobalID class specification.
+ * See Also:EOGlobalID, Serialized Form
+ */
+public class EOTemporaryGlobalID extends com.webobjects.eocontrol.EOGlobalID implements com.webobjects.foundation.NSCoding{
+    /**
+     * The following int constant specifies the length (in bytes) of a global ID.
+     * See Also:Constant Field Values
+     */
+    public static final int UniqueBinaryKeyLength=24;
 
-import com.webobjects.foundation.*;
-import java.io.*;
-import java.net.*;
-import java.util.Random;
+    /**
+     * Creates and returns an EOTemporaryGlobalID as a unique instance. The returned object contains a byte string that's guaranteed to be unique network wide. As a result, EOTemporaryGlobalIDs can be safely passed between processes and machines while still preserving global uniqueness. The returned byte string has the format:
+     * Sequence [2], ProcessID [2] , Time [4], IP Addr [4]
+     */
+    public EOTemporaryGlobalID(){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Creates and returns an EOTemporaryGlobalID as a unique instance. It uses ,as input, an array of bytes in order to create this unique global ID.
+     * Parameters:globallyUniqueBytes - an array of bytes describing a unique id
+     */
+    protected EOTemporaryGlobalID(byte[] globallyUniqueBytes){
+         //TODO codavaj!!
+    }
 
-public class EOTemporaryGlobalID extends EOGlobalID
-    implements NSCoding {
+    /**
+     * Assigns to uniqueBytes an array of bytes that represent a byte string that's guaranteed to be unique network wide. The size of the uniqueBytes array should be at least the value of UniqueBinaryKeyLength constant. The returned byte string has the format:
+     * Sequence [2], ProcessID [2] , Time [4], IP Addr [4]
+     */
+    public static void assignGloballyUniqueBytes(byte[] uniqueBytes){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from interface:
+     * Allows the receiver, before being encoded, to substitute a class other than its own in a coder. For example, private subclasses can substitute the name of a public superclass when being encoded.
+     */
+    public java.lang.Class classForCoder(){
+        return null; //TODO codavaj!!
+    }
 
-    public static synchronized void _setHostIdentificationBytes(byte bytes[]) { return null; }
+    public static java.lang.Object decodeObject(com.webobjects.foundation.NSCoder coder){
+        return null; //TODO codavaj!!
+    }
 
-    public static synchronized byte[] _hostIdentificationBytes() { return null; }
+    /**
+     * Description copied from interface:
+     * Encodes the receiver using coder. Object type information along with an object's data is stored.
+     */
+    public void encodeWithCoder(com.webobjects.foundation.NSCoder coder){
+        return; //TODO codavaj!!
+    }
 
-    public static void _setProcessIdentificationBytesFromInt(int processIdentification) { return null; }
+    /**
+     * Compares the receiver to object. If the contents of object are equal to the contents of the receiver, this method returns true. If not, it returns false. Two data objects are equal if they hold the same number of bytes, if both have the same hash code and if the bytes at the same position in the objects are the same.
+     */
+    public boolean equals(java.lang.Object object){
+        return false; //TODO codavaj!!
+    }
 
-    public static synchronized void _setProcessIdentificationBytes(byte bytes[]) { return null; }
+    /**
+     * Description copied from class:
+     * Provides an appropriate hash code useful for storing the receiver in a hash-based data structure.
+     */
+    public int hashCode(){
+        return 0; //TODO codavaj!!
+    }
 
-    public static synchronized byte[] _processIdentificationBytes() { return null; }
+    /**
+     * Used to find out if the the globalID is temporary or not. This method implementation returns true.
+     */
+    public boolean isTemporary(){
+        return false; //TODO codavaj!!
+    }
 
-    private static int _hashCodeForGloballyUniqueBytes(byte bytes[]) { return null; }
-
-    public static synchronized void assignGloballyUniqueBytes(byte uniqueBytes[]) { return null; }
-
-    public EOTemporaryGlobalID() { return null; }
-
-    protected EOTemporaryGlobalID(byte globallyUniqueBytes[]) { return null; }
-
-    public byte[] _rawBytes() { return null; }
-
-    public static EOTemporaryGlobalID _gidForRawBytes(byte globallyUniqueBytes[]) { return null; }
-
-    public boolean isTemporary() { return true; }
-
-    public boolean equals(Object object) { return true; }
-
-    public int hashCode() { return 0; }
-
-    public Class classForCoder() { return null; }
-
-    public static Object decodeObject(NSCoder coder) { return null; }
-
-    public void encodeWithCoder(NSCoder coder) {}
-
-    private void writeObject(ObjectOutputStream s) throws IOException {}
-
-    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException {}
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    static final long serialVersionUID = 0xe79e58d3L;
-    private static final String SerializationBytesFieldKey = "gid";
-    private static final byte _NoByteArray[];
-    private static final int _MinimumHostIdentificationBytesLength = 4;
-    private static final int _HostIdentificationBytesLength = 6;
-    private static final int _ProcessIdentificationBytesLength = 4;
-    private static final int _CounterBytesLength = 2;
-    private static final int _TimestampBytesLength = 8;
-    private static final int _RandomBytesLength = 4;
-    private static final int _HostIdentificationStartIndex = 0;
-    private static final int _ProcessIdentificationStartIndex = 6;
-    private static final int _CounterStartIndex = 10;
-    private static final int _TimestampStartIndex = 12;
-    private static final int _RandomStartIndex = 20;
-    public static final int UniqueBinaryKeyLength = 24;
-    private static byte _hostIdentificationBytes[];
-    private static byte _processIdentificationBytes[];
-    private static final byte _counterBytes[];
-    private static byte _timestampBytes[];
-    private static final byte _randomBytes[];
-    private static byte _combinedUniqueBytesWithoutCounterInserted[];
-    private static long _timestamp;
-    private byte _bytes[];
-    private transient int _hashCode;
-    private static final ObjectStreamField serialPersistentFields[];
+    /**
+     * String represntation of an EOTemporaryGlobalID.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

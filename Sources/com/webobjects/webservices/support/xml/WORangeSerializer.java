@@ -1,31 +1,35 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WORangeSerializer serializes instances of NSRange.
+ * See Also:Serialized Form
+ */
+public class WORangeSerializer implements org.apache.axis.encoding.Serializer, com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WORangeSerializer(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.NSRange;
-import com.webobjects.foundation._NSUtilities;
-import java.io.IOException;
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.SerializationContext;
-import org.apache.axis.encoding.Serializer;
-import org.apache.axis.wsdl.fromJava.Types;
-import org.w3c.dom.Element;
-import org.xml.sax.Attributes;
+    public java.lang.String getMechanismType(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Serialize an NSRange to an element named name, with the indicated attributes.
+     */
+    public void serialize(javax.xml.namespace.QName name, org.xml.sax.Attributes attributes, java.lang.Object value, org.apache.axis.encoding.SerializationContext context) throws java.io.IOException{
+        return; //TODO codavaj!!
+    }
 
-public class WORangeSerializer
-    implements Serializer, WOSoapConstants {
-
-
-    public WORangeSerializer() { return null; }
-
-    public void serialize(QName name, Attributes attributes, Object value, SerializationContext context) throws IOException {}
-
-    public String getMechanismType() { return null; }
-
-    public Element writeSchema(Class javaType, Types types) throws Exception { return null; }
-
-    private static final long serialVersionUID = 0x4a335d68L;
-    private static final String LOCATION_MEMBER = "location";
-    private static final String LENGTH_MEMBER = "length";
+    /**
+     * Return XML schema for the specified type, suitable for insertion into the
+     * types
+     * element of a WSDL document, or underneath an
+     * element
+     * or
+     * attribute
+     * declaration.
+     */
+    public org.w3c.dom.Element writeSchema(java.lang.Class javaType, org.apache.axis.wsdl.fromJava.Types types) throws java.lang.Exception{
+        return null; //TODO codavaj!!
+    }
 
 }

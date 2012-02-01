@@ -1,50 +1,74 @@
-
 package com.webobjects.eocontrol;
-
-import com.webobjects.foundation.*;
-
-
-public class EOKeyValueArchiver {
-    public static interface Delegate {
-
-
-        public abstract Object referenceToEncodeForObject(EOKeyValueArchiver eokeyvaluearchiver, Object obj);
-
-
-
-        public static final Class _CLASS = null;
-
+/**
+ * EOKeyValueArchiver objects are used to archive a graph of objects into a "property list" with a key-value mechanism. To (re)create the object graph, EOKeyValueUnarchiver objects are used. A typical way to use EOKeyValueArchiver/EOKeyValueUnarchiver is:
+ * Afterwards, to recreate the object graph:
+ * See Also:EOKeyValueUnarchiver, EOKeyValueArchiving
+ */
+public class EOKeyValueArchiver{
+    /**
+     * Creates a new EOKeyValueArchiver.
+     */
+    public EOKeyValueArchiver(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Returns the receiver's delegate.
+     */
+    public java.lang.Object delegate(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Returns the property list which represents the object archive.
+     */
+    public com.webobjects.foundation.NSDictionary dictionary(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOKeyValueArchiver() { return null; }
+    /**
+     * Archives the boolean value under the key key.
+     */
+    public void encodeBool(boolean value, java.lang.String key){
+        return; //TODO codavaj!!
+    }
 
-    public void setDelegate(Object delegate) {}
+    /**
+     * Archives the integer value under the key key.
+     */
+    public void encodeInt(int value, java.lang.String key){
+        return; //TODO codavaj!!
+    }
 
-    public Object _mthdelegate() { return null; }
+    /**
+     * Archives the object object in place under the key key. The object either needs to be an instance of the NSArray or NSDictionary class, implement the EOKeyValueArchiving interface, or have a Support object registered with EOKeyValueArchiving. For objects that implement EOKeyValueArchiving, this method calls object with encodeWithKeyValueArchiver.
+     */
+    public void encodeObject(java.lang.Object object, java.lang.String key){
+        return; //TODO codavaj!!
+    }
 
-    protected void _encodeValueForKey(Object value, String key) {}
+    /**
+     * Archives the object object with a special reference (placeholder) under the key key. The reference object is determined by asking the receiver's delegate with the referenceToEncodeForObject method.
+     */
+    public void encodeReferenceToObject(java.lang.Object object, java.lang.String key){
+        return; //TODO codavaj!!
+    }
 
-    protected void _encodeArrayForKey(NSArray objects, String key) {}
+    /**
+     * Sets the receiver's delegate.
+     */
+    public void setDelegate(java.lang.Object delegate){
+        return; //TODO codavaj!!
+    }
 
-    protected void _encodeDictionaryForKey(NSDictionary dictionary, String key) {}
+    /**
+     * The EOKeyValueArchiver.Delegate interface defines methods which can be used by a delegate object of an EOKeyValueArchiver to control the behavior of the archiver object.
+     */
+    public static interface Delegate{
+        /**
+         * A delegate of an EOKeyValueArchiver can implement this method to encode references if any of the objects it encodes call encodeReferenceToObject. The delegate should return a placeholder object (perhaps a String) to encode in place of the referenced object.
+         */
+        abstract java.lang.Object referenceToEncodeForObject(com.webobjects.eocontrol.EOKeyValueArchiver archiver, java.lang.Object object);
 
-    public void encodeObject(Object object, String key) {}
-
-    public void encodeReferenceToObject(Object object, String key) {}
-
-    public void encodeBool(boolean value, String key) {}
-
-    public void encodeInt(int value, String key) {}
-
-    public NSDictionary dictionary() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS = null;
-    protected NSMutableDictionary _propertyList;
-    private Delegate _delegate;
-    private _NSDelegate _legacyDelegate;
-
+    }
 }

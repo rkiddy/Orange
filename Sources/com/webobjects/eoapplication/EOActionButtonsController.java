@@ -1,48 +1,42 @@
-
 package com.webobjects.eoapplication;
+public class EOActionButtonsController extends com.webobjects.eoapplication.EOActionWidgetController{
+    public EOActionButtonsController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.*;
-import java.awt.Dimension;
-import java.awt.Insets;
-import javax.swing.JComponent;
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOActionButtonsController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public com.webobjects.foundation.NSArray actionWidgets(){
+        return null; //TODO codavaj!!
+    }
 
-public class EOActionButtonsController extends EOActionWidgetController
-    implements EOWindowController._Toobar {
+    protected void createWidgetsForActionsAndPlaceInContainers(com.webobjects.foundation.NSArray actions, com.webobjects.foundation.NSArray secondaryActions, javax.swing.JComponent container, javax.swing.JComponent secondaryContainer, int widgetPosition){
+        return; //TODO codavaj!!
+    }
 
+    protected void disposeActionWidgets(){
+        return; //TODO codavaj!!
+    }
 
-    public EOActionButtonsController() { return null; }
+    public void setUsesLargeButtonRepresentation(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public EOActionButtonsController(EOXMLUnarchiver unarchiver) { return null; }
+    protected boolean supportsSecondaryActionWidget(){
+        return false; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    protected void updateActionWidgetEnabling(){
+        return; //TODO codavaj!!
+    }
 
-    protected void disposeActionWidgets() {}
-
-    public void setUsesLargeButtonRepresentation(boolean flag) {}
-
-    public boolean usesLargeButtonRepresentation() { return true; }
-
-    protected Insets _preferredInsets() { return null; }
-
-    public boolean _isToolbar() { return true; }
-
-    protected boolean _drawSeparator() { return true; }
-
-    protected boolean supportsSecondaryActionWidget() { return true; }
-
-    public NSArray actionWidgets() { return null; }
-
-    protected void updateActionWidgetEnabling() {}
-
-    protected void createWidgetsForActionsAndPlaceInContainers(NSArray actions, NSArray secondaryActions, JComponent container, JComponent secondaryContainer, int widgetPosition) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private JComponent _buttonRow;
-    private JComponent _secondaryButtonRow;
-    private boolean _usesLargeButtonRepresentation;
+    public boolean usesLargeButtonRepresentation(){
+        return false; //TODO codavaj!!
+    }
 
 }

@@ -1,23 +1,17 @@
-
 package com.webobjects.webservices.generation;
+/**
+ * See Also:Serialized Form
+ */
+public class WOFetchSpecSearchOperation extends com.webobjects.webservices.generation.WOSearchOperation{
+    public WOFetchSpecSearchOperation(com.webobjects.appserver.WOContext context){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOContext;
-import com.webobjects.directtoweb.D2WContext;
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.eoaccess.EOModelGroup;
-import com.webobjects.eocontrol.*;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.webservices.support.xml.WOEnterpriseObjectSerializationStrategy;
-
-
-public class WOFetchSpecSearchOperation extends WOSearchOperation {
-
-
-    public WOFetchSpecSearchOperation(WOContext context) { return null; }
-
-    public Object invoke() { return null; }
-
-    private static final long serialVersionUID = 0xdb918a63L;
+    /**
+     * Performs a search using an EOFetchSpecification based on an EOFetchSpecification in the project's model. This operation performs a named fetch specification fetch by: Identifying which entity to use by getting the D2WContext value for key WOServiceUtilities.RuleSystemConstants.EntityNameKey Getting the name of the EOFetchSpecification to use by getting the D2WContext value for key WOServiceUtilities.RuleSystemConstants.FetchSpecificationNameKey Filling in the fetch specification's bindings dictionary with corresponding argument values and then fetching.
+     */
+    public java.lang.Object invoke(){
+        return null; //TODO codavaj!!
+    }
 
 }

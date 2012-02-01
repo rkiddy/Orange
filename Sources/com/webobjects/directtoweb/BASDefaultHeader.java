@@ -1,14 +1,10 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOContext;
-
-
-public class BASDefaultHeader extends DefaultHeader {
-
-
-    public BASDefaultHeader(WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0xc47f4f89L;
+/**
+ * See Also:Serialized Form
+ */
+public class BASDefaultHeader extends com.webobjects.directtoweb.DefaultHeader{
+    public BASDefaultHeader(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
 }

@@ -1,40 +1,41 @@
-
 package com.webobjects.eoapplication;
-
-import com.webobjects.eoaccess.EODatabaseDataSource;
-import com.webobjects.eocontrol.*;
-import com.webobjects.foundation.*;
-import java.io.File;
-
-
-public class EOApplicationSupport extends EOApplication.ApplicationSupport {
-    public class _DataSourceFactory extends EODataSourceFactory {
-
-
-        public _DataSourceFactory() { return null; }
-
-        public EODataSource newMasterDataSourceWithFetchSpecificationName(EOEditingContext editingContext, String entityName, String fetchSpecificationName) { return null; }
-
-        public EODataSource newMasterDataSource(EOEditingContext editingContext, String entityName, EOFetchSpecification fetchSpecification) { return null; }
-
-        public boolean isMasterDataSource(EODataSource dataSource) { return true; }
-
-        public boolean isDetailDataSource(EODataSource dataSource) { return true; }
-
-        public void setAuxilaryQualifierOnDataSource(EODataSource dataSource, EOQualifier qualifier) {}
-
-        final EOApplicationSupport this$0;
-
+/**
+ * EOApplicationSupport is an EOApplication.ApplicationSupport subclass used with two-tier Swing/EOF applications. The main function on EOApplicationSupport is the entry point used for these kind of applications.
+ */
+public class EOApplicationSupport extends com.webobjects.eoapplication.EOApplication.ApplicationSupport{
+    /**
+     * Creates a new EOApplicationSupport object.
+     */
+    public EOApplicationSupport(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Main entry point for two-tier Swing/EOF applications.
+     */
+    public static void main(java.lang.String[] argv){
+        return; //TODO codavaj!!
+    }
 
-    public static void main(String argv[]) { return null; }
+    /**
+     * Sets the application name and a two-tier specific defaults manager.
+     */
+    public void prepareApplication(com.webobjects.eoapplication.EOApplication application, com.webobjects.foundation.NSDictionary arguments){
+        return; //TODO codavaj!!
+    }
 
-    public EOApplicationSupport() { return null; }
+    /**
+     * Initializes all NSBundles used by the application and their principal classes.
+     */
+    public void prepareClasses(com.webobjects.foundation.NSDictionary arguments){
+        return; //TODO codavaj!!
+    }
 
-    public void prepareClasses(NSDictionary arguments) {}
+    /**
+     * Initializes a two-tier specific data source factory and resource bundle.
+     */
+    public void prepareGlobalObjects(com.webobjects.foundation.NSDictionary arguments){
+        return; //TODO codavaj!!
+    }
 
-    public void prepareGlobalObjects(NSDictionary arguments) {}
-
-    public void prepareApplication(EOApplication application, NSDictionary arguments) {}
 }

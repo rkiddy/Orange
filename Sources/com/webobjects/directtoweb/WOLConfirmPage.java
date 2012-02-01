@@ -1,14 +1,10 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOContext;
-
-
-public class WOLConfirmPage extends D2WConfirmPage {
-
-
-    public WOLConfirmPage(WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0x3ba231f3L;
+/**
+ * See Also:Serialized Form
+ */
+public class WOLConfirmPage extends com.webobjects.directtoweb.D2WConfirmPage{
+    public WOLConfirmPage(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
 }

@@ -1,22 +1,18 @@
-
 package com.webobjects.webservices.generation;
+/**
+ * See Also:Serialized Form
+ */
+public class WOInsertOperation extends com.webobjects.webservices.generation.WOOperation{
+    public WOInsertOperation(com.webobjects.appserver.WOContext context){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOContext;
-import com.webobjects.directtoweb.D2WContext;
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.eoaccess.EOGeneralAdaptorException;
-import com.webobjects.eocontrol.*;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation.NSLog;
-
-
-public class WOInsertOperation extends WOOperation {
-
-
-    public WOInsertOperation(WOContext context) { return null; }
-
-    public Object invoke() { return null; }
-
-    private static final long serialVersionUID = 0x3cf2834eL;
+    /**
+     * Creates and inserts a new EOEnterpriseObject into the operation's EOEditingContext. The values of the new object are set with key-value coding using argument key paths as the keys, and argument values as the corresponding values.
+     * If WOServiceUtilities.commitOperationImmediately() is true, then the changes to the editing context are saved before this method returns.
+     */
+    public java.lang.Object invoke(){
+        return null; //TODO codavaj!!
+    }
 
 }

@@ -1,66 +1,129 @@
-
 package com.webobjects.eocontrol;
+/**
+ * EODetailDataSource defines a data source for use in master-detail configurations, where operations in the detail data source are applied directly to properties of a master object. EODetailDataSource implements the standard fetchObjects, insertObject, and deleteObject methods to operate on a relationship property of its master object. It works for any concrete subclass of EODataSource, including another EODetailDataSource in a chain of master and detail data sources.
+ * To set up an EODetailDataSource programmatically, you can typically create it by sending a dataSourceQualifiedByKey message to the master data source, then establish the master object with a qualifyWithRelationshipKey message. The latter method records the name of a relationship for a particular object to resolve in fetchObjects and to modify in insertObject and deleteObject. These three methods then manipulate the relationship property of the master object to perform the operations requested.
+ * See Also:EODetailDataSource.fetchObjects(), EODetailDataSource.insertObject(Object anObject), EODetailDataSource.deleteObject(Object anObject), EODetailDataSource.qualifyWithRelationshipKey(String relationshipKey, Object masterObject), Serialized Form
+ */
+public class EODetailDataSource extends com.webobjects.eocontrol.EODataSource implements java.io.Serializable, com.webobjects.eocontrol.EOKeyValueArchiving{
+    /**
+     * Creates and returns a new EODetailDataSource object. The new data source's masterObject is associated with masterClassDescription, and key is assigned to the new data source's detailKey. The constructor invokes qualifyWithRelationshipKey specifying key as the relationship key and null as the object.
+     * Parameters:masterClassDescription - class description for the master objectkey - keypath defining relationship on the master objectSee Also:EODetailDataSource.masterObject(), EODetailDataSource.detailKey(), EODetailDataSource.qualifyWithRelationshipKey( String relationshipKey , Object masterObject), EODetailDataSource.masterClassDescription()
+     */
+    public EODetailDataSource(com.webobjects.eocontrol.EOClassDescription masterClassDescription, java.lang.String key){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.*;
-import java.io.*;
+    /**
+     * Creates and returns a new EODetailDataSource object. The new data source provides destination objects for the relationship named by a key from a masterObject in masterDataSource.
+     * Parameters:masterDataSource - provider of the master objectskey - the String giving the new relationshipSee Also:EODetailDataSource.masterDataSource()
+     */
+    public EODetailDataSource(com.webobjects.eocontrol.EODataSource masterDataSource, java.lang.String key){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Returns the class description for the detail object if a detail key is defined, otherwise returns the master class description
+     */
+    public com.webobjects.eocontrol.EOClassDescription classDescriptionForObjects(){
+        return null; //TODO codavaj!!
+    }
 
-public class EODetailDataSource extends EODataSource
-    implements Serializable, EOKeyValueArchiving {
+    /**
+     * Creates an EODetailDataSource for key.
+     */
+    public com.webobjects.eocontrol.EODataSource dataSourceQualifiedByKey(java.lang.String key){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Provides conformance to EOKeyValueArchiving.
+     */
+    public static java.lang.Object decodeWithKeyValueUnarchiver(com.webobjects.eocontrol.EOKeyValueUnarchiver unarchiver){
+        return null; //TODO codavaj!!
+    }
 
-    private void writeObject(ObjectOutputStream out) throws IOException {}
+    /**
+     * Sends a removeObjectFromBothSidesOfRelationshipWithKey message to the master object using detailKey. Throws an IllegalStateException if there is no master object or no detail key set.
+     */
+    public void deleteObject(java.lang.Object eo){
+        return; //TODO codavaj!!
+    }
 
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {}
+    /**
+     * Gets the detail key of the receiver, which names the relationship for which the receiver provides objects to its master object.
+     */
+    public java.lang.String detailKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public EODetailDataSource(EOClassDescription masterClassDescription, String key) { return null; }
+    /**
+     * Returns the editing context of the master data source, or null if there is not one
+     */
+    public com.webobjects.eocontrol.EOEditingContext editingContext(){
+        return null; //TODO codavaj!!
+    }
 
-    public EODetailDataSource(EODataSource masterDataSource, String key) { return null; }
+    /**
+     * Provides conformance to EOKeyValueArchiving.
+     */
+    public void encodeWithKeyValueArchiver(com.webobjects.eocontrol.EOKeyValueArchiver archiver){
+        return; //TODO codavaj!!
+    }
 
-    public static Object decodeWithKeyValueUnarchiver(EOKeyValueUnarchiver unarchiver) { return null; }
+    /**
+     * Sends valueForKey (defined in the NSKeyValueCoding interface) to the master object with the receiver's detail key as the argument, constructs an array for the returned object or objects, and returns it. Returns an empty array if there's no master object, or returns an array containing the master object itself if no detail key is set.
+     */
+    public com.webobjects.foundation.NSArray fetchObjects(){
+        return null; //TODO codavaj!!
+    }
 
-    public void encodeWithKeyValueArchiver(EOKeyValueArchiver archiver) {}
+    /**
+     * Sends an addObjectToBothSidesOfRelationshipWithKey message to the master object.
+     */
+    public void insertObject(java.lang.Object eo){
+        return; //TODO codavaj!!
+    }
 
-    public void qualifyWithRelationshipKey(String key, Object sourceObject) {}
+    /**
+     * Gets the EOClassDescription for the receiver's master object.
+     */
+    public com.webobjects.eocontrol.EOClassDescription masterClassDescription(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSArray fetchObjects() { return null; }
+    /**
+     * Gets the master data source for the receiver.
+     */
+    public com.webobjects.eocontrol.EODataSource masterDataSource(){
+        return null; //TODO codavaj!!
+    }
 
-    public void insertObject(Object eo) {}
+    /**
+     * Returns the master object of the receiver.
+     */
+    public java.lang.Object masterObject(){
+        return null; //TODO codavaj!!
+    }
 
-    public void deleteObject(Object eo) {}
+    /**
+     * Configures the receiver to provide objects based on the relationship of sourceObject named by key. Relationship key can be different from the one provided to the constructor, which changes the relationship the receiver operates on. If sourceObject is null this method causes the receiver to return an empty array when sent a fetchObjects message.
+     */
+    public void qualifyWithRelationshipKey(java.lang.String key, java.lang.Object sourceObject){
+        return; //TODO codavaj!!
+    }
 
-    public EOEditingContext editingContext() { return null; }
+    /**
+     * Sets the detail key of the receiver, which names the relationship for which the receiver provides objects to its master object.
+     */
+    public void setDetailKey(java.lang.String detailKeyPath){
+        return; //TODO codavaj!!
+    }
 
-    public EOClassDescription classDescriptionForObjects() { return null; }
-
-    private EOClassDescription _classDescriptionForKeyPath(EOClassDescription target, String keyPath) { return null; }
-
-    void setMasterDataSource(EODataSource masterDataSource) { return null; }
-
-    public EODataSource masterDataSource() { return null; }
-
-    public void setMasterClassDescription(EOClassDescription master) {}
-
-    public EOClassDescription masterClassDescription() { return null; }
-
-    public String detailKey() { return null; }
-
-    public void setDetailKey(String detailKeyPath) {}
-
-    public Object masterObject() { return null; }
-
-    public EODataSource dataSourceQualifiedByKey(String key) { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private EOClassDescription _masterClassDescription;
-    private transient EODataSource _masterDataSource;
-    private transient EOEnterpriseObject _masterObject;
-    private String _detailKey;
-    static final long serialVersionUID = 0x6ab3716eL;
-    private static final String EntityNameFieldKey = "entityName";
-    private static final String DetailKeyFieldKey = "detailKey";
-    private static final ObjectStreamField serialPersistentFields[];
+    /**
+     * Assigns master as the EOClassDescription for the receiver's master object.
+     */
+    public void setMasterClassDescription(com.webobjects.eocontrol.EOClassDescription master){
+        return; //TODO codavaj!!
+    }
 
 }

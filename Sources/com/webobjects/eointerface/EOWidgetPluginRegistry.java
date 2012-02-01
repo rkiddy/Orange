@@ -1,82 +1,105 @@
-
 package com.webobjects.eointerface;
-
-import com.webobjects.foundation.*;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
-
-
-public class EOWidgetPluginRegistry {
-    static class _RegistryInfo {
-
-
-        public _RegistryInfo(Class associationClass, Class widgetClass) { return null; }
-
-        public int hashCode() { return 0; }
-
-        public boolean equals(Object object) { return true; }
-
-        private Class _associationClass;
-        private Class _widgetClass;
-        private int _hashCode;
-
+/**
+ * The EOWidgetPluginRegistry maintains a mapping from widget plugin classes to association and widget classes. The registry provides static methods for setting and getting which plugin should be used, given a widget and association. So, for any pair of association and widget classes, there can be only one widget plugin class registered. This allows for objects of any association class to be used with multiple widgets (regardless of widget set). Typically, when an application using the widget plugin registry starts up, the application first registers widget plugins with the registry, before the application's nib's are loaded.
+ */
+public class EOWidgetPluginRegistry{
+    public EOWidgetPluginRegistry(){
+         //TODO codavaj!!
     }
 
-    public static abstract class WidgetSetPlugin {
-
-
-        public WidgetSetPlugin() { return null; }
-
-        public void runErrorPanel(String title, String message, String okButton) {}
-
-        public abstract int runAlertPanel(String s, String s1, String s2, String s3, String s4);
-
-        public void setDefaultStringLocalizationResourceBundle(ResourceBundle resourceBundle) {}
-
-        public ResourceBundle defaultStringLocalizationResourceBundle() { return null; }
-
-        public String localizedString(String string) { return null; }
-
-        static  {}
-
-        public static final Class _CLASS;
-        public static final int AlertPanelDefaultAction = 0;
-        public static final int AlertPanelAlternateAction = 1;
-        public static final int AlertPanelOtherAction = 2;
-        private ResourceBundle _stringLocalizationResourceBundle;
-
+    /**
+     * Searches the set of registered plugins, looking for a widget plugin class that is registered for use with EOAssociation's of class associationClass and objects of class widgetClass and returns the first one found. This method will attempt to find a widget plugin for widgetClass's superclass or associationClass's superclass if no widget plugin is registered for widgetClass and associationClass.
+     */
+    public static java.lang.Class findWidgetPluginClass(java.lang.Class associationClass, java.lang.Class widgetClass){
+        return null; //TODO codavaj!!
     }
 
+    /**
+     * Creates a new instance of the widget plugin class that is usable with association and widget. This method looks for the widget plugin class that is registered for use with association and widget. This method throws an IllegalArgumentException if either association or widget are null or if the found widget plugin class is not a subclass of association.widgetPluginClass(). Throws an IllegalStateException if no widget plugin is registered for use with association and widget.
+     */
+    public static com.webobjects.eointerface.EOWidgetAssociation.WidgetPlugin newWidgetPluginForAssociation(com.webobjects.eointerface.EOWidgetAssociation association, java.lang.Object widget){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Registers widgetPluginClass with the application's EOWidgetPluginRegistry. widgetPluginClass is registered as the widget plugin class to use to connect associations of class associationClass to widgets of class widgetClass. Any widget plugin class that was previously registered for this associationClass/widgetClass combination is unregistered.
+     */
+    public static void registerWidgetPluginClass(java.lang.Class associationClass, java.lang.Class widgetClass, java.lang.Class widgetPluginClass){
+        return; //TODO codavaj!!
+    }
 
-    public EOWidgetPluginRegistry() { return null; }
+    /**
+     * Sets widgetSetPlugin as the application's WidgetSetPlugin.
+     */
+    public static void setWidgetSetPlugin(com.webobjects.eointerface.EOWidgetPluginRegistry.WidgetSetPlugin widgetSetPlugin){
+        return; //TODO codavaj!!
+    }
 
-    public static void setWidgetSetPlugin(WidgetSetPlugin widgetSetPlugin) { return null; }
+    /**
+     * Returns the application's WidgetSetPlugin.
+     */
+    public static com.webobjects.eointerface.EOWidgetPluginRegistry.WidgetSetPlugin widgetSetPlugin(){
+        return null; //TODO codavaj!!
+    }
 
-    public static WidgetSetPlugin widgetSetPlugin() { return null; }
+    /**
+     * Abstract super class for plugins that handle the widget set specific task of displaying alert panels.
+     */
+    public static abstract class WidgetSetPlugin{
+        /**
+         * Value retruned when the user selects cancel, no, or the alternate button in an alert panel.
+         * See Also:Constant Field Values
+         */
+        public static final int AlertPanelAlternateAction=1;
 
-    static void _runErrorPanel(String title, String message, String okButton) {}
+        /**
+         * Value retruned when the user selects ok, yes, or the default button in an alert panel.
+         * See Also:Constant Field Values
+         */
+        public static final int AlertPanelDefaultAction=0;
 
-    static int _runAlertPanel(String title, String message, String defaultButton, String alternateButton, String otherButton) { return 0; }
+        /**
+         * Value retruned when the user selects the third or other button in an alert panel.
+         * See Also:Constant Field Values
+         */
+        public static final int AlertPanelOtherAction=2;
 
-    static String _localizedString(String string) { return null; }
+        public WidgetSetPlugin(){
+             //TODO codavaj!!
+        }
 
-    public static void _registerWidgetPluginClassWithWidgetClassName(Class associationClass, String widgetClassName, String widgetPluginClassName) { return null; }
+        /**
+         * Returns the ResourceBundle used to locate localized strings.
+         */
+        public java.util.ResourceBundle defaultStringLocalizationResourceBundle(){
+            return null; //TODO codavaj!!
+        }
 
-    public static void registerWidgetPluginClass(Class associationClass, Class widgetClass, Class widgetPluginClass) { return null; }
+        /**
+         * Returns a localized string for string .
+         */
+        public java.lang.String localizedString(java.lang.String string){
+            return null; //TODO codavaj!!
+        }
 
-    public static Class findWidgetPluginClass(Class associationClass, Class widgetClass) { return null; }
+        /**
+         * Displays an alert panel to the user giving the user up to three option buttons.
+         */
+        public abstract int runAlertPanel(java.lang.String title, java.lang.String message, java.lang.String defaultButton, java.lang.String alternateButton, java.lang.String otherButton);
 
-    public static EOWidgetAssociation.WidgetPlugin newWidgetPluginForAssociation(EOWidgetAssociation association, Object widget) { return null; }
+        /**
+         * Displays an error panel to the user with one button.
+         */
+        public void runErrorPanel(java.lang.String title, java.lang.String message, java.lang.String okButton){
+            return; //TODO codavaj!!
+        }
 
-    static  {}
+        /**
+         * Sets the ResourceBunde to search when looking for localized strings.
+         */
+        public void setDefaultStringLocalizationResourceBundle(java.util.ResourceBundle resourceBundle){
+            return; //TODO codavaj!!
+        }
 
-    public static final Class _CLASS;
-    private static final String _DefaultAlertPanelTitle = "Alert";
-    private static final String _DefaultAlertPanelDefaultButtonTitle = "Ok";
-    private static _NSThreadsafeMutableDictionary _widgetPluginRegistry;
-    private static WidgetSetPlugin _widgetSetPlugin;
-
+    }
 }

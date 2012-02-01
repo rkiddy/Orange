@@ -1,33 +1,30 @@
-
 package com.webobjects.directtoweb;
+/**
+ * See Also:Serialized Form
+ */
+public class D2WCompactInspectComponent extends com.webobjects.directtoweb.D2WComponent{
+    public D2WCompactInspectComponent(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOComponent;
-import com.webobjects.appserver.WOContext;
-import com.webobjects.eoaccess.EOGeneralAdaptorException;
-import com.webobjects.eocontrol.EOEditingContext;
-import com.webobjects.eocontrol.EOEnterpriseObject;
-import com.webobjects.foundation.NSForwardException;
-import com.webobjects.foundation.NSValidation;
+    public java.lang.String backgroundColorForRow(){
+        return null; //TODO codavaj!!
+    }
 
+    public com.webobjects.appserver.WOComponent deleteObjectAction() throws java.lang.Throwable{
+        return null; //TODO codavaj!!
+    }
 
-public class D2WCompactInspectComponent extends D2WComponent {
+    public com.webobjects.appserver.WOComponent inspectObjectAction(){
+        return null; //TODO codavaj!!
+    }
 
+    public boolean isSelecting(){
+        return false; //TODO codavaj!!
+    }
 
-    public D2WCompactInspectComponent(WOContext aContext) { return null; }
-
-    public WOComponent inspectObjectAction() { return null; }
-
-    public String backgroundColorForRow() { return null; }
-
-    WOComponent editObjectAction() { return null; }
-
-    public WOComponent deleteObjectAction() throws Throwable { return null; }
-
-    public WOComponent selectObjectAction() { return null; }
-
-    public boolean isSelecting() { return true; }
-
-    private static final long serialVersionUID = 0xcc7f1ee9L;
-    private boolean _rowFlip;
+    public com.webobjects.appserver.WOComponent selectObjectAction(){
+        return null; //TODO codavaj!!
+    }
 
 }

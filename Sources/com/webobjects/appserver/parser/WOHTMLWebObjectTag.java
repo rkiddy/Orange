@@ -1,45 +1,42 @@
-
 package com.webobjects.appserver.parser;
+/**
+ * Since: 5.4
+ */
+public class WOHTMLWebObjectTag{
+    public WOHTMLWebObjectTag(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.appserver._private.*;
-import com.webobjects.appserver.parser.declaration.WODeclarationFormatException;
-import com.webobjects.foundation.*;
-import java.util.Enumeration;
-import java.util.StringTokenizer;
+    public WOHTMLWebObjectTag(java.lang.String webobject, com.webobjects.appserver.parser.WOHTMLWebObjectTag myParent) throws com.webobjects.appserver.parser.WOHTMLFormatException{
+         //TODO codavaj!!
+    }
 
+    public void addChildElement(java.lang.Object object){
+        return; //TODO codavaj!!
+    }
 
-public class WOHTMLWebObjectTag {
+    public com.webobjects.foundation.NSArray children(){
+        return null; //TODO codavaj!!
+    }
 
+    public com.webobjects.appserver.WOElement dynamicElement(com.webobjects.foundation.NSDictionary declarations, com.webobjects.foundation.NSArray languages) throws com.webobjects.appserver.parser.declaration.WODeclarationFormatException, java.lang.ClassNotFoundException{
+        return null; //TODO codavaj!!
+    }
 
-    private void extractName(String webobject) throws WOHTMLFormatException {}
+    public boolean isTopLevel(){
+        return false; //TODO codavaj!!
+    }
 
-    public WOHTMLWebObjectTag() { return null; }
+    public java.lang.String name(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOHTMLWebObjectTag(String webobject, WOHTMLWebObjectTag myParent) throws WOHTMLFormatException { return null; }
+    public com.webobjects.appserver.parser.WOHTMLWebObjectTag parentTag(){
+        return null; //TODO codavaj!!
+    }
 
-    public String name() { return null; }
-
-    public WOHTMLWebObjectTag parentTag() { return null; }
-
-    public boolean isTopLevel() { return true; }
-
-    public NSArray children() { return null; }
-
-    public WOElement template() { return null; }
-
-    public void addChildElement(Object object) {}
-
-    public WOElement dynamicElement(NSDictionary declarations, NSArray languages) throws WODeclarationFormatException, ClassNotFoundException { return null; }
-
-    private static WOElement _componentReferenceWithClassNameDeclarationAndTemplate(String aClassName, WODeclaration aDeclaration, WOElement template, NSArray languages) throws ClassNotFoundException { return null; }
-
-    private static WOElement _elementWithClass(Class aClass, WODeclaration aDeclaration, WOElement template) { return null; }
-
-    private static WOElement _elementWithDeclaration(WODeclaration aDeclaration, String aDeclarationName, WOElement template, NSArray languages) throws ClassNotFoundException, WODeclarationFormatException { return null; }
-
-    private String _name;
-    private WOHTMLWebObjectTag _parent;
-    private NSMutableArray _children;
+    public com.webobjects.appserver.WOElement template(){
+        return null; //TODO codavaj!!
+    }
 
 }

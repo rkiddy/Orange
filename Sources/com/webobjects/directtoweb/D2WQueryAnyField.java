@@ -1,41 +1,80 @@
-
 package com.webobjects.directtoweb;
+/**
+ * This property-level component builds a query based on the destination objects of a relationship. The user can specify the key for an attribute of the destination object and a value the attribute must have. This object does not traverse the relationship, making it appropriate for relationships that contain many objects.
+ * Property-level components are not accessed programmatically. Instead, you use the Web Assistant to choose the property-level component that Direct to Web uses to display a property on a particular entity and task page.
+ * If you want to create property-level component to query based on a property, use D2WCustomQueryComponent.
+ * See Also:Serialized Form
+ */
+public class D2WQueryAnyField extends com.webobjects.directtoweb.QueryComponent{
+    /**
+     * Creates a new D2WQueryAnyField with the specified aContext.
+     * Parameters:aContext - a WOContext.
+     */
+    public D2WQueryAnyField(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOAssociation;
-import com.webobjects.appserver.WOContext;
-import com.webobjects.directtoweb.generation.DTWTemplate;
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.eoaccess.EORelationship;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation.NSMutableArray;
-import java.util.Enumeration;
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public java.lang.String componentsForDisplayKeyList(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public java.lang.String componentsForKeyList(){
+        return null; //TODO codavaj!!
+    }
 
-public class D2WQueryAnyField extends QueryComponent {
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public com.webobjects.directtoweb.D2WContext relationshipContext(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public com.webobjects.foundation.NSArray relationshipContextDisplayAttributesKeys(){
+        return null; //TODO codavaj!!
+    }
 
-    public D2WQueryAnyField(WOContext aContext) { return null; }
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public com.webobjects.appserver.WOAssociation replacementAssociationForAssociation(com.webobjects.appserver.WOAssociation oldAssociation, java.lang.String oldBinding, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return null; //TODO codavaj!!
+    }
 
-    public D2WContext relationshipContext() { return null; }
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public void reset(){
+        return; //TODO codavaj!!
+    }
 
-    public void reset() {}
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public java.lang.String selectedKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSArray relationshipContextDisplayAttributesKeys() { return null; }
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public void setSelectedKey(java.lang.String newValue){
+        return; //TODO codavaj!!
+    }
 
-    public String selectedKey() { return null; }
-
-    public String variableNameForKeyList() { return null; }
-
-    public String componentsForKeyList() { return null; }
-
-    public String componentsForDisplayKeyList() { return null; }
-
-    public void setSelectedKey(String s) {}
-
-    public WOAssociation replacementAssociationForAssociation(WOAssociation oldAssociation, String oldBinding, DTWTemplate aTemplate, WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0x8c330db6L;
-    private NSMutableArray _displayAttributeKeys;
-    private D2WContext _relationshipContext;
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public java.lang.String variableNameForKeyList(){
+        return null; //TODO codavaj!!
+    }
 
 }

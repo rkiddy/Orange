@@ -1,8 +1,5 @@
-
 package com.webobjects.directtoweb;
+public interface DelegateGeneration{
+    abstract java.lang.String generationString();
 
-
-public interface DelegateGeneration {
-
-    public abstract String generationString();
 }

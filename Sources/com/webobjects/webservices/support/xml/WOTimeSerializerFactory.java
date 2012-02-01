@@ -1,18 +1,14 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * See Also:Serialized Form
+ */
+public class WOTimeSerializerFactory extends org.apache.axis.encoding.ser.BaseSerializerFactory{
+    public WOTimeSerializerFactory(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+         //TODO codavaj!!
+    }
 
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.SerializerFactory;
-import org.apache.axis.encoding.ser.BaseSerializerFactory;
-import org.apache.axis.encoding.ser.CalendarSerializer;
-
-public class WOTimeSerializerFactory extends BaseSerializerFactory {
-
-
-    public WOTimeSerializerFactory(Class javaType, QName xmlType) { return null; }
-
-    public static SerializerFactory create(Class javaType, QName xmlType) { return null; }
-
-    private static final long serialVersionUID = 0xb6740284L;
+    public static org.apache.axis.encoding.SerializerFactory create(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+        return null; //TODO codavaj!!
+    }
 
 }

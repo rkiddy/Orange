@@ -1,335 +1,63 @@
-
 package com.webobjects.jndiadaptor;
-
-import com.webobjects.eoaccess.EOAttribute;
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.eocontrol.*;
-import com.webobjects.foundation.*;
-import java.math.BigDecimal;
-
-
-public class LDAPPlugIn extends JNDIPlugIn {
-    private class _GeneralizedTimeType extends _TimestampType {
-
-
-        public _GeneralizedTimeType(String objectIdentifier, String name) { return null; }
-
-        final LDAPPlugIn this$0;
-
+/**
+ * The LDAPPlugIn class represents a plug-in to the JNDIAdaptor for Lightweight Directory Access Protocol services.
+ */
+public class LDAPPlugIn extends com.webobjects.jndiadaptor.JNDIPlugIn{
+    /**
+     * Creates a new instance of LDAPPlugIn.
+     * See Also:JNDIPlugIn
+     */
+    public LDAPPlugIn(){
+         //TODO codavaj!!
     }
 
-    private class _UTCTimeType extends _TimestampType {
-
-
-        public _UTCTimeType(String objectIdentifier, String name) { return null; }
-
-        protected int offsetIndex(String s) { return 0; }
-
-        private boolean _hasCentury(String s) { return true; }
-
-        protected String dateTime(String s) { return null; }
-
-        private String _century(String ymdHMS) { return null; }
-
-        final LDAPPlugIn this$0;
-
+    /**
+     * Description copied from class:
+     * Creates a base with the specified fetch specification and entity. The base represents the relative name of a context or object in a search. For a typical fetch-all operation, the base will be the empty string. For fetching a particular row, the base will be the relative distinguished name. See RFC 2253 UTF-8 String Representation of Distinguished Names
+     */
+    public java.lang.String base(com.webobjects.eocontrol.EOFetchSpecification fetchSpecification, com.webobjects.eoaccess.EOEntity entity){
+        return null; //TODO codavaj!!
     }
 
-    private abstract class _TimestampType extends _JNDIType
-        implements JNDIType {
-
-
-        public _TimestampType(String objectIdentifier, String name) { return null; }
-
-        public String javaValueClassName() { return null; }
-
-        public String objCValueClassName() { return null; }
-
-        public String filterExpression(Object internal) { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        protected int offsetIndex(String s) { return 0; }
-
-        protected String dateTime(String s) { return null; }
-
-        protected NSTimeZone timeZone(String s) { return null; }
-
-        protected Object revert(Object internal) { return null; }
-
-        private final NSTimestampFormatter _formatter;
-        final LDAPPlugIn this$0;
-
+    /**
+     * Creates a version of the specified name that is a valid relative distinguished name. The following special characters are escaped: , ; + = #
+     * \
+     * See RFC 2253 UTF-8 String Representation of Distinguished Names
+     */
+    public java.lang.String convertSpecialCharactersForDistinguishedName(java.lang.String name){
+        return null; //TODO codavaj!!
     }
 
-    private class _StringType extends _JNDIType
-        implements JNDIType {
-
-
-        public _StringType(String objectIdentifier, String name) { return null; }
-
-        public String javaValueClassName() { return null; }
-
-        public String objCValueClassName() { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        protected Object revert(Object internal) { return null; }
-
-        final LDAPPlugIn this$0;
-
+    /**
+     * Description copied from class:
+     * Gets the default JNDI type. The default type is used by EOModeler for reverse engineering in case the external type of an attribute cannot be determined.
+     */
+    public com.webobjects.jndiadaptor.JNDIType defaultType(){
+        return null; //TODO codavaj!!
     }
 
-    private class _BigDecimalType extends _NumberType {
-
-
-        public _BigDecimalType(String objectIdentifier, String name) { return null; }
-
-        public String javaValueClassName() { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        protected Object revert(Object internal) { return null; }
-
-        final LDAPPlugIn this$0;
-
+    /**
+     * Description copied from class:
+     * Creates a filter with the specified fetch specification and entity. The filter represents the filter expression to use in a search. See RFC 2254 The String Representation of LDAP Search Filters
+     */
+    public java.lang.String filter(com.webobjects.eocontrol.EOFetchSpecification fetchSpecification, com.webobjects.eoaccess.EOEntity entity){
+        return null; //TODO codavaj!!
     }
 
-    private class _DoubleType extends _NumberType {
-
-
-        public _DoubleType(String objectIdentifier, String name) { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        final LDAPPlugIn this$0;
-
+    /**
+     * Gets the JNDI types. EOModeler requires external types, primarily for reverse engineering. The LDAP plug-in defines JNDI types for all LDAP attribute syntaxes. See RFC 2252 Attribute Syntax Definitions
+     */
+    public com.webobjects.foundation.NSArray jndiTypes(){
+        return null; //TODO codavaj!!
     }
 
-    private class _FloatType extends _NumberType {
-
-
-        public _FloatType(String objectIdentifier, String name) { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        final LDAPPlugIn this$0;
-
+    /**
+     * Gets the relative distinguished name for a new row. Uses the write format for automatic primary key generation. For example, the following pattern specifies the constant string "cn=" to be followed by the value of the attribute named "cn": cn=
+     * cn
+     * See RFC 2253 UTF-8 String Representation of Distinguished Names
+     */
+    public java.lang.String relativeDistinguishedNameForNewRow(com.webobjects.foundation.NSDictionary row, com.webobjects.eoaccess.EOAttribute relativeDistinguishedNameAttribute, java.lang.String currentRelativeDistinguishedNameAttributeValue){
+        return null; //TODO codavaj!!
     }
-
-    private class _LongType extends _NumberType {
-
-
-        public _LongType(String objectIdentifier, String name) { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        final LDAPPlugIn this$0;
-
-    }
-
-    private class _IntegerType extends _NumberType {
-
-
-        public _IntegerType(String objectIdentifier, String name) { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        final LDAPPlugIn this$0;
-
-    }
-
-    private class _ShortType extends _NumberType {
-
-
-        public _ShortType(String objectIdentifier, String name) { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        final LDAPPlugIn this$0;
-
-    }
-
-    private class _BooleanType extends _NumberType {
-
-
-        public _BooleanType(String objectIdentifier, String name) { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        protected Object revert(Object internal) { return null; }
-
-        final LDAPPlugIn this$0;
-
-    }
-
-    private class _NumberType extends _JNDIType
-        implements JNDIType {
-
-
-        public _NumberType(String objectIdentifier, String name) { return null; }
-
-        public _NumberType(String objectIdentifier, String name, String valueType) { return null; }
-
-        public String javaValueClassName() { return null; }
-
-        public String objCValueClassName() { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        protected Object revert(Object internal) { return null; }
-
-        final LDAPPlugIn this$0;
-
-    }
-
-    private class _DataType extends _JNDIType
-        implements JNDIType {
-
-
-        public _DataType(String objectIdentifier, String name) { return null; }
-
-        public String javaValueClassName() { return null; }
-
-        public String objCValueClassName() { return null; }
-
-        public String filterExpression(Object internal) { return null; }
-
-        protected Object convert(Object external, String valueType) { return null; }
-
-        protected Object revert(Object internal) { return null; }
-
-        final LDAPPlugIn this$0;
-
-    }
-
-    class _KeyValueQualifierFormatter {
-
-
-        _KeyValueQualifierFormatter() { return null; }
-
-        public String parse(EOKeyValueQualifier qualifier, EOEntity entity) { return null; }
-
-        protected EOAttribute attribute(EOEntity entity, String attributeName) { return null; }
-
-        protected boolean requiresNegation(NSSelector selector, Object value) { return true; }
-
-        protected boolean isInverted(NSSelector selector) { return true; }
-
-        protected boolean isNull(Object value) { return true; }
-
-        protected String operatorString(NSSelector selector) { return null; }
-
-        protected boolean assertsPresence(NSSelector selector) { return true; }
-
-        protected String valueString(EOAttribute attribute, NSSelector selector, Object value) { return null; }
-
-        protected String convertSpecialCharactersForFilter(String valueString) { return null; }
-
-        final LDAPPlugIn this$0;
-
-    }
-
-    private class _FilterVisitorImpl extends _VisitorImpl
-        implements JNDIPlugIn._FilterVisitor {
-
-
-        public _FilterVisitorImpl(EOEntity entity) { return null; }
-
-        public String filter() { return null; }
-
-        public void visitKeyValueQualifier(EOKeyValueQualifier qualifier) {}
-
-        public void visitNotQualifier(EONotQualifier qualifier) {}
-
-        public void visitAndQualifier(EOAndQualifier qualifier) {}
-
-        public void visitOrQualifier(EOOrQualifier qualifier) {}
-
-        private final StringBuffer _filter;
-        final LDAPPlugIn this$0;
-
-    }
-
-    private class _BaseVisitorImpl extends _VisitorImpl
-        implements JNDIPlugIn._BaseVisitor {
-
-
-        public _BaseVisitorImpl(EOEntity entity) { return null; }
-
-        public String base() { return null; }
-
-        public void visitKeyValueQualifier(EOKeyValueQualifier qualifier) {}
-
-        private String _string(Object value) { return null; }
-
-        private volatile String _base;
-        final LDAPPlugIn this$0;
-
-    }
-
-    private abstract class _VisitorImpl {
-
-
-        public _VisitorImpl(EOEntity entity) { return null; }
-
-        public EOEntity entity() { return null; }
-
-        public void visitUnknownQualifier(EOQualifier qualifier) {}
-
-        public void visitKeyComparisonQualifier(EOKeyComparisonQualifier qualifier) {}
-
-        public void visitKeyValueQualifier(EOKeyValueQualifier qualifier) {}
-
-        public void visitNotQualifier(EONotQualifier qualifier) {}
-
-        public void visitAndQualifier(EOAndQualifier qualifier) {}
-
-        public void visitOrQualifier(EOOrQualifier qualifier) {}
-
-        private final EOEntity _entity;
-        final LDAPPlugIn this$0;
-
-    }
-
-
-
-    public LDAPPlugIn() { return null; }
-
-    public synchronized NSArray jndiTypes() { return null; }
-
-    private NSArray _createJndiTypes() { return null; }
-
-    NSDictionary _createSynonyms() { return null; }
-
-    public synchronized JNDIType defaultType() { return null; }
-
-    public String base(EOFetchSpecification fetchSpecification, EOEntity entity) { return null; }
-
-    public String filter(EOFetchSpecification fetchSpecification, EOEntity entity) { return null; }
-
-    private void _nextChar() {}
-
-    private void _skipChar() {}
-
-    public String convertSpecialCharactersForDistinguishedName(String name) { return null; }
-
-    private String _formatDistinguishedName(String str, boolean mustReplace, EOAttribute rdnAtt, NSDictionary row) { return null; }
-
-    public String relativeDistinguishedNameForNewRow(NSDictionary row, EOAttribute relativeDistinguishedNameAttribute, String currentRelativeDistinguishedNameAttributeValue) { return null; }
-
-    static  {}
-
-    static final NSTimeZone _GMT;
-    private static final String _ID = "1.3.6.1.4.1.1466.115.121.1.";
-    private NSArray _jndiTypes;
-    private JNDIType _defaultType;
-    private char _chars[];
-    private char _ch;
-    private int _maxPos;
-    private int _parsePos;
-    private StringBuffer _sb;
-    private static boolean _specialChar[];
-    private StringBuffer _sbuffer;
 
 }

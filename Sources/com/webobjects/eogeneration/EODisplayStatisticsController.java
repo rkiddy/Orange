@@ -1,72 +1,71 @@
-
 package com.webobjects.eogeneration;
-
-import com.webobjects.eoapplication.*;
-import com.webobjects.eocontrol.EODelayedObserver;
-import com.webobjects.eocontrol.EOObserverCenter;
-import com.webobjects.eointerface.EODisplayGroup;
-import com.webobjects.eointerface.swing.EOTextField;
-import com.webobjects.foundation.*;
-import java.awt.Font;
-
-
-public class EODisplayStatisticsController extends EOStaticLabelController {
-    public class _DisplayGroupObserver extends EODelayedObserver {
-
-
-        public _DisplayGroupObserver() { return null; }
-
-        public void subjectChanged() {}
-
-        final EODisplayStatisticsController this$0;
-
+public class EODisplayStatisticsController extends com.webobjects.eogeneration.EOStaticLabelController{
+    public EODisplayStatisticsController(){
+         //TODO codavaj!!
     }
 
+    public EODisplayStatisticsController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Returns whether the controller can be transient. By default, a component controller is transient only if it's an instance of EOComponentController, not an instance of a subclass.
+     */
+    public boolean canBeTransient(){
+        return false; //TODO codavaj!!
+    }
 
-    public EODisplayStatisticsController() { return null; }
+    /**
+     * Description copied from class:
+     * Invoked when the receiver's component becomes visible, giving the receiver a chance to react. EOComponentController's implementation invokes establishConnection to ensure the receiver is connected to the controller hierarchy.
+     */
+    protected void componentDidBecomeVisible(){
+        return; //TODO codavaj!!
+    }
 
-    public EODisplayStatisticsController(EOXMLUnarchiver unarchiver) { return null; }
+    /**
+     * Description copied from class:
+     * Invoked from breakConnection to notify the receiver that its connection to its supercontroller has been broken, giving the receiver the opportunity to clean up after its become idle.
+     */
+    protected void connectionWasBroken(){
+        return; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    /**
+     * Description copied from class:
+     * Invoked from establishConnection to notify the receiver that its connection to the controller hierarchy has been established, giving the receiver the opportunity to prepare itself (for example, setting delegates).
+     */
+    protected void connectionWasEstablished(){
+        return; //TODO codavaj!!
+    }
 
-    public boolean canBeTransient() { return true; }
+    public com.webobjects.eointerface.EODisplayGroup displayGroup(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void connectionWasEstablished() {}
+    public java.lang.String displayGroupProviderMethodName(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void connectionWasBroken() {}
+    public java.lang.String displayPattern(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void componentDidBecomeVisible() {}
+    public void setDisplayGroup(com.webobjects.eointerface.EODisplayGroup displayGroup){
+        return; //TODO codavaj!!
+    }
 
-    protected Font _preferredFont() { return null; }
+    public void setDisplayGroupProviderMethodName(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    protected int _preferredAlignment() { return 0; }
+    public void setDisplayPattern(java.lang.String displayPattern){
+        return; //TODO codavaj!!
+    }
 
-    public void setDisplayPattern(String displayPattern) {}
-
-    public String displayPattern() { return null; }
-
-    public void setDisplayGroupProviderMethodName(String string) {}
-
-    public String displayGroupProviderMethodName() { return null; }
-
-    protected EODisplayGroup _defaultDisplayGroup() { return null; }
-
-    public void setDisplayGroup(EODisplayGroup displayGroup) {}
-
-    public EODisplayGroup displayGroup() { return null; }
-
-    public void subjectChanged() {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private static final String _DefaultPattern = "# (*)";
-    private static final String _DisplayedPatternIdentifier = "*";
-    private static final String _SelectedPatternIdentifier = "#";
-    private String _displayPattern;
-    private String _displayGroupProviderMethodName;
-    private EODisplayGroup _displayGroup;
-    private _DisplayGroupObserver _observer;
+    public void subjectChanged(){
+        return; //TODO codavaj!!
+    }
 
 }

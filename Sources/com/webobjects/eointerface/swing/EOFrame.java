@@ -1,21 +1,14 @@
-
 package com.webobjects.eointerface.swing;
-
-import com.webobjects.foundation.NSDisposable;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Container;
-import javax.swing.JFrame;
-
-
-public class EOFrame extends JFrame
-    implements NSDisposable {
-
-
-    public EOFrame() { return null; }
-
-    static  {}
-
-    private static final long serialVersionUID = 0x9dfc2692L;
-    public static final Class _CLASS;
+/**
+ * An EOFrame is a window that uses the EOViewLayout layout manager to manage layout geometry. See the EOViewLayout class specification for more information on the layout mechanism.
+ * See Also:EOViewLayout, Serialized Form
+ */
+public class EOFrame extends javax.swing.JFrame implements com.webobjects.foundation.NSDisposable{
+    /**
+     * Creates a new EOFrame object with an EOViewLayout layout manager.
+     */
+    public EOFrame(){
+         //TODO codavaj!!
+    }
 
 }

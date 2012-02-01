@@ -1,264 +1,369 @@
-
 package com.webobjects.appserver;
-
-import com.webobjects.appserver._private.WOProperties;
-import com.webobjects.foundation.*;
-import java.io.File;
-import java.util.*;
-
-
-public class WOStatisticsStore
-    implements NSKeyValueCoding, com.webobjects.foundation.NSKeyValueCoding.ErrorHandling, NSKeyValueCodingAdditions, WOStatisticsStoreMBean {
-
-
-    protected WOStatisticsStore() { return null; }
-
-    public int getTransactionMovingAverageSampleSize() { return 0; }
-
-    public int transactionMovingAverageSampleSize() { return 0; }
-
-    public void setTransactionMovingAverageSampleSize(int aCount) {}
-
-    public int getSessionMovingAverageSampleSize() { return 0; }
-
-    public int sessionMovingAverageSampleSize() { return 0; }
-
-    public void setSessionMovingAverageSampleSize(int aCount) {}
-
-    public NSDictionary statistics() { return null; }
-
-    private void _applicationWillHandleRequest() {}
-
-    public void applicationWillHandleComponentActionRequest() {}
-
-    public void applicationWillHandleWebServiceRequest() {}
-
-    public void applicationWillHandleDirectActionRequest() {}
-
-    private long _applicationDidHandleRequest() { return 0L; }
-
-    private void _applicationDidHandleWebServiceRequestWithActionNamed(String anActionName) {}
-
-    private void _applicationDidHandleDirectActionRequestWithActionNamed(String anActionName) {}
-
-    public void applicationDidHandleWebServiceRequestWithActionNamed(String anActionName) {}
-
-    public void applicationDidHandleDirectActionRequestWithActionNamed(String anActionName) {}
-
-    private void _applicationDidHandleComponentActionRequest() {}
-
-    public void applicationDidHandleComponentActionRequestWithPageNamed(String pageName) {}
-
-    private void applicationCreatedSession(WOSession aSession) {}
-
-    protected void _applicationCreatedSession(WOSession aSession) {}
-
-    private void sessionTerminating(WOSession aSession) {}
-
-    protected void _sessionTerminating(WOSession aSession) {}
-
-    private void _updateHandlerStatistics(NSMutableDictionary handlerStatistics, String aName, long lastInterval) {}
-
-    private void _updatePathsStatisticsWithPaths(NSArray paths) {}
-
-    private void _purgePathsStatistics() {}
-
-    public void recordStatisticsForResponse(WOResponse aResponse, WOContext aContext) {}
-
-    public String descriptionForResponse(WOResponse aResponse, WOContext aContext) { return null; }
-
-    public String formatDescription(String statistics, WOResponse aResponse, WOContext aContext) { return null; }
-
-    public void setLogFile(String path, long milliseconds) {}
+/**
+ * This class holds various runtime statistics of an application.
+ * There is only one instance of this class in an application, so access to all methods must be thread-safe. If at all possible, use "volatile" instead of synchronization to avoid scalability issues here.
+ * You can override descriptionForResponse in each of the components if the user wants to record more information. For example, you might want to record the values of all of the component's variables or perhaps just one or two key variables.
+ * If the user want to record extra information about the session, the user can override WOStatisticsStore's recordStatisticsForResponse method.
+ * The session information is saved as several lines in the Common Log File Format (CLFF), one line per request served. The log is maintained in the CLFF format so that it can be analyzed by any standard CLFF-analysis tool. (For more information about the statistics recorded in the log file, see the formatDescription method description.).
+ * See Also:WOStatisticsStore.recordStatisticsForResponse(WOResponse, WOContext), WOStatisticsStore.descriptionForResponse(WOResponse, WOContext), WOStatisticsStore.setLogFile(String, long), WOStatisticsStore.formatDescription(String, WOResponse, WOContext)
+ */
+public class WOStatisticsStore implements com.webobjects.foundation.NSKeyValueCoding, com.webobjects.foundation.NSKeyValueCoding.ErrorHandling, com.webobjects.foundation.NSKeyValueCodingAdditions, com.webobjects.appserver.WOStatisticsStoreMBean{
+    /**
+     * Return an initialized WOStatisticsStore.
+     */
+    protected WOStatisticsStore(){
+         //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method setLogFile is deprecated
+     * A component action request handler should call this method at the appropriate time to register the fact that it just handled a component action request.
      */
-
-    public void setLogFile(String path, double days) {}
-
-    public String logFile() { return null; }
-
-    public long logFileRotationFrequency() { return 0L; }
+    public void applicationDidHandleComponentActionRequestWithPageNamed(java.lang.String pageName){
+        return; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method logFileRotationFrequencyInDays is deprecated
+     * A direct action request handler should call this method at the appropriate time to register the fact that it just handled a direct action request.
      */
+    public void applicationDidHandleDirectActionRequestWithActionNamed(java.lang.String anActionName){
+        return; //TODO codavaj!!
+    }
 
-    public double logFileRotationFrequencyInDays() { return null; }
+    /**
+     * A web service request handler should call this method at the appropriate time to register the fact that it just handled a web service request.
+     */
+    public void applicationDidHandleWebServiceRequestWithActionNamed(java.lang.String anActionName){
+        return; //TODO codavaj!!
+    }
 
-    public void logString(String statistics) {}
+    /**
+     * A component action request handler should call this method at the appropriate time to register the fact that it is about to handle a component action request.
+     */
+    public void applicationWillHandleComponentActionRequest(){
+        return; //TODO codavaj!!
+    }
 
-    public long getAverageIdleTime() { return 0L; }
+    /**
+     * A direct action request handler should call this method at the appropriate time to register the fact that it is about to handle a direct action request.
+     */
+    public void applicationWillHandleDirectActionRequest(){
+        return; //TODO codavaj!!
+    }
 
-    public long getAverageTransactionTime() { return 0L; }
+    /**
+     * A web service request handler should call this method at the appropriate time to register the fact that it is about to handle a web service request.
+     */
+    public void applicationWillHandleWebServiceRequest(){
+        return; //TODO codavaj!!
+    }
 
-    public long getAverageWSTransactionTime() { return 0L; }
+    /**
+     * WOStatisticsStore's implementation of this static method returns true, indicating that key-value coding is allowed to access fields in this object if an appropriate method isn't present.
+     */
+    public static boolean canAccessFieldsDirectly(){
+        return false; //TODO codavaj!!
+    }
 
-    public long getAverageDATransactionTime() { return 0L; }
+    /**
+     * Records information about the current response by invoking descriptionForResponse on the current response page and returning the result. This method is invoked at the end of the request-response loop in WOSession's appendToResponse method, after the recordStatisticsForResponse method.
+     */
+    public java.lang.String descriptionForResponse(com.webobjects.appserver.WOResponse aResponse, com.webobjects.appserver.WOContext aContext){
+        return null; //TODO codavaj!!
+    }
 
-    public long getAverageCATransactionTime() { return 0L; }
+    /**
+     * If log file recording is enabled, this method formats the string statistics using the Common Log File Format (CLFF). The resulting string contains:
+     * The host from which the HTTP request was received The name of the user that performed the request The current date The request's HTTP method (GET or PUT) The WebObjects application name The result of the descriptionForResponse method (by default, this method returns the response component's name) The request's HTTP version The HTTP status of the response The size of the response
+     * Log file recording is enabled by setting a log file using the setLogFile method.
+     * This method is used by WOSession to record information about the current transaction when log file recording is enabled.
+     */
+    public java.lang.String formatDescription(java.lang.String statistics, com.webobjects.appserver.WOResponse aResponse, com.webobjects.appserver.WOContext aContext){
+        return null; //TODO codavaj!!
+    }
 
-    public long getMovingAverageIdleTime() { return 0L; }
+    /**
+     * JMX Support
+     */
+    public long getApplicationlastAccessTime(){
+        return 0l; //TODO codavaj!!
+    }
 
-    public long getMovingAverageTransactionTime() { return 0L; }
+    public long getAverageCATransactionTime(){
+        return 0l; //TODO codavaj!!
+    }
 
-    public double getAverageRequestsPerSession() { return null; }
+    public long getAverageDATransactionTime(){
+        return 0l; //TODO codavaj!!
+    }
 
-    public double getMovingAverageRequestsPerSession() { return null; }
+    public long getAverageIdleTime(){
+        return 0l; //TODO codavaj!!
+    }
 
-    public long getMovingAverageSessionLife() { return 0L; }
+    public double getAverageRequestsPerSession(){
+        return 0.0d; //TODO codavaj!!
+    }
 
-    public HashMap getAverageSessionMemory() { return null; }
+    public java.util.HashMap getAverageSessionMemory(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary memoryUsage() { return null; }
+    public long getAverageTransactionTime(){
+        return 0l; //TODO codavaj!!
+    }
 
-    public HashMap getMemoryUsage() { return null; }
+    public long getAverageWSTransactionTime(){
+        return 0l; //TODO codavaj!!
+    }
 
-    public ArrayList getLastSessionStatistics() { return null; }
+    /**
+     * JMX MBean Support
+     */
+    public java.util.HashMap getDirectActionStatistics(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSArray lastSessionStatistics() { return null; }
+    /**
+     * JMX support
+     */
+    public java.util.ArrayList getLastSessionStatistics(){
+        return null; //TODO codavaj!!
+    }
 
-    private static NSMutableDictionary _hashtableForHandlerStatistics(NSMutableDictionary statistics) { return null; }
+    /**
+     * JMX support
+     */
+    public java.util.HashMap getMemoryUsage(){
+        return null; //TODO codavaj!!
+    }
 
-    private static HashMap _hashMapForHandlerStatistics(NSMutableDictionary statistics) { return null; }
+    public long getMovingAverageIdleTime(){
+        return 0l; //TODO codavaj!!
+    }
 
-    public HashMap getPagesStatistics() { return null; }
+    public double getMovingAverageRequestsPerSession(){
+        return 0.0d; //TODO codavaj!!
+    }
 
-    private NSDictionary _pagesStatistics() { return null; }
+    public long getMovingAverageSessionLife(){
+        return 0l; //TODO codavaj!!
+    }
 
-    public HashMap getWebServiceStatistics() { return null; }
+    public long getMovingAverageTransactionTime(){
+        return 0l; //TODO codavaj!!
+    }
 
-    private NSDictionary _webServiceStatistics() { return null; }
+    /**
+     * JMX MBean Support
+     */
+    public java.util.HashMap getPagesStatistics(){
+        return null; //TODO codavaj!!
+    }
 
-    public HashMap getDirectActionStatistics() { return null; }
+    /**
+     * JMX MBean Support
+     */
+    public java.util.HashMap getPathsStatistics(){
+        return null; //TODO codavaj!!
+    }
 
-    private NSDictionary _directActionStatistics() { return null; }
+    /**
+     * JMX Support
+     */
+    public int getSessionMovingAverageSampleSize(){
+        return 0; //TODO codavaj!!
+    }
 
-    public HashMap getPathsStatistics() { return null; }
+    public int getStatisticStoreSessionMax(){
+        return 0; //TODO codavaj!!
+    }
 
-    private NSDictionary _pathsStatistics() { return null; }
+    /**
+     * JMX Support
+     */
+    public int getTransactionMovingAverageSampleSize(){
+        return 0; //TODO codavaj!!
+    }
 
-    protected String _password() { return null; }
+    /**
+     * JMX MBean Support
+     */
+    public java.util.HashMap getWebServiceStatistics(){
+        return null; //TODO codavaj!!
+    }
 
-    public int getStatisticStoreSessionMax() { return 0; }
+    /**
+     * Conformance to NSKeyValueCoding.ErrorHandling.
+     */
+    public java.lang.Object handleQueryWithUnboundKey(java.lang.String key){
+        return null; //TODO codavaj!!
+    }
 
-    public void setPassword(String password) {}
+    /**
+     * Conformance to NSKeyValueCoding.ErrorHandling.
+     */
+    public void handleTakeValueForUnboundKey(java.lang.Object value, java.lang.String key){
+        return; //TODO codavaj!!
+    }
 
-    public boolean validateLogin(String string, WOSession aSession) { return true; }
+    /**
+     * Statistics for the last session
+     */
+    public com.webobjects.foundation.NSArray lastSessionStatistics(){
+        return null; //TODO codavaj!!
+    }
 
-    public static boolean canAccessFieldsDirectly() { return null; }
+    /**
+     * Gets the full path of the log file. This log file does not exist unless setLogFile has been called.
+     */
+    public java.lang.String logFile(){
+        return null; //TODO codavaj!!
+    }
 
-    public Object valueForKey(String key) { return null; }
+    /**
+     * The number of milliseconds a log file lasts. That is, a log file's contents are flushed after a certain time interval to ensure that it does not grow too large and a new log file is started. This method returns that time interval.
+     * Before a new log file is started, the contents of the current log file are saved to a backup file. You can then inspect this log file and/or removed when its data has grown stale.
+     */
+    public long logFileRotationFrequency(){
+        return 0l; //TODO codavaj!!
+    }
 
-    public void takeValueForKey(Object value, String key) {}
+    /**
+     * Deprecated.
+     */
+    public double logFileRotationFrequencyInDays(){
+        return 0.0d; //TODO codavaj!!
+    }
 
-    public Object handleQueryWithUnboundKey(String key) { return null; }
+    /**
+     * Writes the string statistics to the log file specified by logFile. The method is used to record a session's statistics when that session ends. You can also use it to record any string to the log file that you might find helpful.
+     */
+    public void logString(java.lang.String statistics){
+        return; //TODO codavaj!!
+    }
 
-    public void handleTakeValueForUnboundKey(Object value, String key) {}
+    /**
+     * Gets an NSMutableDictionary that indicates the total amount of memory in the Java Virtual Machine (access this value using the dictionary key "Total Memory"), and an approximation of the amount of free memory in the system (access this value using the dictionary key "Free Memory"). Both values are measured in bytes. These values can be obtained directly from the java.lang.Runtime object by using the totalMemory() and freeMemory() methods, respectively.
+     */
+    public com.webobjects.foundation.NSMutableDictionary memoryUsage(){
+        return null; //TODO codavaj!!
+    }
 
-    public void unableToSetNullForKey(String key) {}
+    /**
+     * Records statistics for the current cycle of the request-response loop. This method is invoked at the end of WOSession's appendToResponse method, immediately before the descriptionForResponse method. By default, this method records the name of the response page for later use by descriptionForResponse. You can override it if you want to record more information about the session before the current request and response are garbage collected. You must begin your implementation by invoking the superclass method.
+     */
+    public void recordStatisticsForResponse(com.webobjects.appserver.WOResponse aResponse, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
-    public Object valueForKeyPath(String keyPath) { return null; }
+    /**
+     * The WOStatisticsStore object uses the returned sample size to compute the response time for the last n transactions and the idle time between the last n transactions, where n is the number returned by this method. The default sample size is 10.
+     */
+    public int sessionMovingAverageSampleSize(){
+        return 0; //TODO codavaj!!
+    }
 
-    public void takeValueForKeyPath(Object value, String keyPath) {}
+    /**
+     * JMX Support
+     */
+    public void setApplicationLastAccessTime(long timeInMillis){
+        return; //TODO codavaj!!
+    }
 
-    public long getApplicationlastAccessTime() { return 0L; }
+    /**
+     * Deprecated.
+     */
+    public void setLogFile(java.lang.String path, double days){
+        return; //TODO codavaj!!
+    }
 
-    public void setApplicationLastAccessTime(long timeInMillis) {}
+    /**
+     * Sets the full path of the log file to which statistics will be recorded; these statistics will be in Common Log File Format (CLFF). It also sets the rotation period of the log file in milliseconds. After each period the contents of the current log file are saved to a backup file and a new log file is started.
+     * The default is not to record information to a log file.
+     */
+    public void setLogFile(java.lang.String path, long milliseconds){
+        return; //TODO codavaj!!
+    }
 
-    static  {}
+    /**
+     * Implements security for the WOStats page by setting its password to password. By default, there is no password, and access to the WOStats page is disabled. You can call this method to set the access password or you can set the password in the Java system properties through the property key "WOStatisticsPassword".
+     * When you enter the WOStats URL, a login panel appears. You can leave the user name field blank; as long as you type the appropriate password in the password field, the WOStats page will appear.
+     */
+    public void setPassword(java.lang.String password){
+        return; //TODO codavaj!!
+    }
 
-    private static final int DefaultTransactionMovingAverageCount = 100;
-    private static final int DefaultSessionMovingAverageCount = 10;
-    private static final String _PagesTotalServed = "Served";
-    private static final String _PagesAvgResponseTime = "Avg Resp. Time";
-    private static final String _PagesMinResponseTime = "Min Resp. Time";
-    private static final String _PagesMaxResponseTime = "Max Resp. Time";
-    private static final String _MemoryCommittedNT = "Committed";
-    private static final String _MemoryReservedNT = "Reserved";
-    private static final String _MemoryUnknown = "Unknown";
-    private static final String _MemoryProcessImageSizeSUN = "Process Image Size";
-    private static final String _MemoryResident = "Resident Set Size";
-    private static final String _MemoryVirtual = "Virtual";
-    private static final String _Memory = "Memory";
-    private static final String _StartingDate = "StartedAt";
-    private static final String _PagesStatistics = "Pages";
-    private static final String _WebServiceStatistics = "WebService";
-    private static final String _DirectActionStatistics = "DirectActions";
-    private static final String _DetailsStatistics = "Details";
-    private static final String _LogInfo = "LogFile";
-    private static final String _TransactionsCount = "Transactions";
-    private static final String _WSTransactionsCount = "Web Service Transactions";
-    private static final String _DATransactionsCount = "Direct Action Transactions";
-    private static final String _CATransactionsCount = "Component Action Transactions";
-    private static final String _WSTransactionTime = "Web Service Avg. Transaction Time";
-    private static final String _DATransactionTime = "Direct Action Avg. Transaction Time";
-    private static final String _CATransactionTime = "Component Action  Avg. Transaction Time";
-    private static final String _IdleTime = "Avg. Idle Time";
-    private static final String _MovingIdleTime = "Moving Avg. Idle Time";
-    private static final String _TransactionTime = "Avg. Transaction Time";
-    private static final String _MovingTransactionTime = "Moving Avg. Transaction Time";
-    private static final String _SampleSize = "Sample Size For Moving Avg.";
-    private static final String _TransactionsStatistics = "Transactions";
-    private static final String _TransactionRate = "Transaction Rate";
-    private static final String _SessionsCount = "Total Sessions Created";
-    private static final String _CurrentSessionsCount = "Current Active Sessions";
-    private static final String _MaxActiveSessions = "Peak Active Sessions";
-    private static final String _MaxActiveSessionsDate = "Peak Active Sessions Date";
-    private static final String _MovingTransactionsPerSession = "Moving Avg. Transactions Per Session";
-    private static final String _MovingSessionLife = "Moving Avg. Session Life";
-    private static final String _TransactionsPerSession = "Avg. Transactions Per Session";
-    private static final String _SessionLife = "Avg. Session Life";
-    private static final String _SessionMemory = "Avg. Memory Per Session";
-    private static final String _LastSessionStatistics = "Last Session's Statistics";
-    private static final String _SessionsStatistics = "Sessions";
-    private static final String _SessionRate = "Session Rate";
-    private static final NSTimestampFormatter TheDateFormat;
-    private static final NSTimeZone TheDateFormatTZ;
-    private static final NSTimestampFormatter TheFileDateFormat;
-    private volatile int _transactionMovingAverageSampleCount;
-    private volatile int _sessionMovingAverageSampleCount;
-    private volatile int _transactionsCount;
-    private volatile int _lastStatsTransactionsCount;
-    private volatile int _webServiceTransactionsCount;
-    private volatile int _directActionTransactionsCount;
-    private volatile int _componentActionTransactionsCount;
-    private volatile int _sessionsCount;
-    private volatile int _lastStatsSessionsCount;
-    private volatile int _maxActiveSessionsCount;
-    private volatile NSTimestamp _maxActiveSessionsDate;
-    private volatile int _averageSessionLife;
-    private volatile NSArray _lastSessionStatistics;
-    private volatile int _movingAverageSessionLife;
-    private volatile double _movingAverageRequestsPerSession;
-    private volatile int _movingAverageSessionsCount;
-    private final NSTimestamp _startDate;
-    private final long _startDateMillis;
-    private long _lastStatsDateMillis;
-    private long _lastWillHandleRequestTimeIntervalMillis;
-    private long _lastDidHandleRequestTimeIntervalMillis;
-    private long _totalIdleTimeIntervalMillis;
-    private long _totalTransactionTimeIntervalMillis;
-    private long _totalWSTransactionTimeIntervalMillis;
-    private long _totalDATransactionTimeIntervalMillis;
-    private long _totalCATransactionTimeIntervalMillis;
-    private long _movingIdleTimeIntervalMillis;
-    private long _movingTransactionTimeIntervalMillis;
-    private volatile int _movingAverageTransactionsCount;
-    private final NSDictionary _initializationMemory;
-    private final NSMutableDictionary _pagesStatistics;
-    private final NSMutableDictionary _pathsStatistics;
-    private volatile String _logPath;
-    private long _logRotation;
-    private long _logCreationDate;
-    private volatile String _password;
-    private final NSMutableDictionary _webServiceStatistics;
-    private final NSMutableDictionary _directActionStatistics;
-    private int _statStoreSessionMax;
-    private volatile String _currentPage;
-    private static final double msecPerDay = 86400000D;
-    private static final double dayPerMsec = 1.1574074074074074E-08D;
-    protected static volatile long _applicationLastAccessTime;
+    /**
+     * Sets the moving average sample size for each session to aCount. The WOStatisticsStore object uses this sample size to compute the response time for the last aCount transactions and the idle time between the last aCount transactions.
+     * The default moving average session sample size is 10 transactions.
+     */
+    public void setSessionMovingAverageSampleSize(int aCount){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Sets the moving average sample size for each transaction to aCount. The WOStatisticsStore object uses this sample size to compute the response time for the last aCount transactions and the idle time between the last aCount transactions.
+     * The default moving average transaction sample size is 100 transactions.
+     */
+    public void setTransactionMovingAverageSampleSize(int aCount){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Gets a dictionary containing the statistics that the WOStatisticsStore records.
+     * The averages that are displayed by this method are not computed until this method is invoked. Therefore, invoking this method is costly and should not be done at every request.
+     */
+    public com.webobjects.foundation.NSDictionary statistics(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Conformance to NSKeyValueCoding.
+     */
+    public void takeValueForKey(java.lang.Object value, java.lang.String key){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Conformance to NSKeyValueCodingAdditions.
+     */
+    public void takeValueForKeyPath(java.lang.Object value, java.lang.String keyPath){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * The WOStatisticsStore object uses the returned sample size to compute the response time for the last n transactions and the idle time between the last n transactions, where n is the number returned by this method. The default sample size is 100.
+     */
+    public int transactionMovingAverageSampleSize(){
+        return 0; //TODO codavaj!!
+    }
+
+    /**
+     * Conformance to NSKeyValueCoding.ErrorHandling.
+     */
+    public void unableToSetNullForKey(java.lang.String key){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Validates if the password string is correct so as to allow viewing of the application's statistics.
+     */
+    public boolean validateLogin(java.lang.String string, com.webobjects.appserver.WOSession aSession){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Conformance to NSKeyValueCoding.
+     */
+    public java.lang.Object valueForKey(java.lang.String key){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Conformance to NSKeyValueCodingAdditions.
+     */
+    public java.lang.Object valueForKeyPath(java.lang.String keyPath){
+        return null; //TODO codavaj!!
+    }
 
 }

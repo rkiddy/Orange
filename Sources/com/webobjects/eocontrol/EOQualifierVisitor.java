@@ -1,19 +1,18 @@
-
 package com.webobjects.eocontrol;
+/**
+ * The EOQualifierVisitor interface is intended for internal use only.
+ */
+public interface EOQualifierVisitor{
+    abstract void visitAndQualifier(com.webobjects.eocontrol.EOAndQualifier q);
 
+    abstract void visitKeyComparisonQualifier(com.webobjects.eocontrol.EOKeyComparisonQualifier q);
 
+    abstract void visitKeyValueQualifier(com.webobjects.eocontrol.EOKeyValueQualifier q);
 
-public interface EOQualifierVisitor {
+    abstract void visitNotQualifier(com.webobjects.eocontrol.EONotQualifier q);
 
-    public abstract void visitUnknownQualifier(EOQualifier eoqualifier);
+    abstract void visitOrQualifier(com.webobjects.eocontrol.EOOrQualifier q);
 
-    public abstract void visitKeyComparisonQualifier(EOKeyComparisonQualifier eokeycomparisonqualifier);
+    abstract void visitUnknownQualifier(com.webobjects.eocontrol.EOQualifier q);
 
-    public abstract void visitKeyValueQualifier(EOKeyValueQualifier eokeyvaluequalifier);
-
-    public abstract void visitNotQualifier(EONotQualifier eonotqualifier);
-
-    public abstract void visitAndQualifier(EOAndQualifier eoandqualifier);
-
-    public abstract void visitOrQualifier(EOOrQualifier eoorqualifier);
 }

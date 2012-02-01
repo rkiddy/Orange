@@ -1,14 +1,14 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOComponent;
-import com.webobjects.appserver.WOContext;
-
-public class D2WGenerationWrapper extends WOComponent {
-
-
-    public D2WGenerationWrapper(WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0x103306d5L;
+/**
+ * This class is used internally by other classes in WebObjects and should be considered private. It should not be used, subclassed, or replaced.
+ * See Also:Serialized Form
+ */
+public class D2WGenerationWrapper extends com.webobjects.appserver.WOComponent{
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public D2WGenerationWrapper(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
 }

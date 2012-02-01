@@ -1,21 +1,19 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLAttribute extends com.webobjects.appserver.parser.woml.WOMLNamespaced{
+    public WOMLAttribute(java.util.Map uriToNamespace, org.xml.sax.Attributes attributes, int index){
+         //TODO codavaj!!
+    }
 
-import java.util.Map;
-import org.xml.sax.Attributes;
+    public java.lang.String getValue(){
+        return null; //TODO codavaj!!
+    }
 
+    public boolean isValueDynamic(){
+        return false; //TODO codavaj!!
+    }
 
-public class WOMLAttribute extends WOMLNamespaced {
-
-
-    public WOMLAttribute(Map uriToNamespace, Attributes attributes, int index) { return null; }
-
-    public boolean isValueDynamic() { return true; }
-
-    public String getValue() { return null; }
-
-    public String toString() { return null; }
-
-    private String value;
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

@@ -1,26 +1,34 @@
-
 package com.webobjects.appserver.parser.declaration;
+/**
+ * See Also:Serialized Form
+ */
+public class WODeclarationFormatException extends com.webobjects.appserver.parser.WOParserException{
+    public WODeclarationFormatException(java.lang.String message){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.parser.WOParserException;
-import com.webobjects.appserver.parser.woml.WOMLPosition;
+    public WODeclarationFormatException(java.lang.String message, java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
-public class WODeclarationFormatException extends WOParserException {
+    public WODeclarationFormatException(java.lang.String referenceName, com.webobjects.appserver.parser.woml.WOMLPosition position){
+         //TODO codavaj!!
+    }
 
+    public WODeclarationFormatException(java.lang.String referenceName, com.webobjects.appserver.parser.woml.WOMLPosition position, java.lang.String message){
+         //TODO codavaj!!
+    }
 
-    public WODeclarationFormatException(String message) { return null; }
+    public WODeclarationFormatException(java.lang.String referenceName, com.webobjects.appserver.parser.woml.WOMLPosition position, java.lang.String message, java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
-    public WODeclarationFormatException(Throwable cause) { return null; }
+    public WODeclarationFormatException(java.lang.String referenceName, com.webobjects.appserver.parser.woml.WOMLPosition position, java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
-    public WODeclarationFormatException(String message, Throwable cause) { return null; }
-
-    public WODeclarationFormatException(String referenceName, WOMLPosition position, String message, Throwable cause) { return null; }
-
-    public WODeclarationFormatException(String referenceName, WOMLPosition position, String message) { return null; }
-
-    public WODeclarationFormatException(String referenceName, WOMLPosition position, Throwable cause) { return null; }
-
-    public WODeclarationFormatException(String referenceName, WOMLPosition position) { return null; }
-
-    private static final long serialVersionUID = 0xf41af5e1L;
+    public WODeclarationFormatException(java.lang.Throwable cause){
+         //TODO codavaj!!
+    }
 
 }

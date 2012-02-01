@@ -1,34 +1,28 @@
-
 package com.webobjects.eointerface.swing;
-
-import com.webobjects.foundation.NSDisposable;
-import com.webobjects.foundation._NSUtilities;
-import javax.swing.*;
-import javax.swing.table.TableColumn;
-
-
-public class EOTable extends JScrollPane
-    implements NSDisposable {
-    public static class _EOTableColumn extends TableColumn {
-
-        public _EOTableColumn() { return null; }
+/**
+ * The EOTable class is used to represent tables of data. An EOTable is basically a JScrollPane with a JTable (and a JTableHeader) inside. If you want to configure or message an EOTable's JTable directly, you can access it with the table method.
+ * See Also:EOTable.table(), Serialized Form
+ */
+public class EOTable extends javax.swing.JScrollPane implements com.webobjects.foundation.NSDisposable{
+    /**
+     * Constructs a new EOTable which is configured to always use a vertical scroll bar and a horizontal scrollbar if needed.
+     */
+    public EOTable(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Releases all resources used by this object and ensures that it becomes available for garbage collection. Note that you should not use the object any further after invoking dispose.
+     */
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-
-    public EOTable() { return null; }
-
-    public void dispose() {}
-
-    public JTable table() { return null; }
-
-    public EOColumnEditor _defaultColumnEditor() { return null; }
-
-    static  {}
-
-    private static final long serialVersionUID = 0x9d3db065L;
-    public static final Class _CLASS;
-    private JTable _table;
-    private EOColumnEditor _defaultColumnEditor;
+    /**
+     * Returns the JTable used by the EOTable.
+     */
+    public javax.swing.JTable table(){
+        return null; //TODO codavaj!!
+    }
 
 }

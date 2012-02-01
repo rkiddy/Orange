@@ -1,83 +1,189 @@
-
 package com.webobjects.eoaccess.synchronization;
+/**
+ * Encapsulates column changes.
+ * Since: 5.4 See Also:EOSchemaSynchronizationTableChanges, EOSchemaSynchronizationFactory, EOSchemaSynchronization
+ */
+public class EOSchemaSynchronizationColumnChanges extends com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationChanges{
+    public EOSchemaSynchronizationColumnChanges(java.lang.String name){
+         //TODO codavaj!!
+    }
 
+    public boolean allowNull(){
+        return false; //TODO codavaj!!
+    }
 
+    /**
+     * Resets the allow null parameter
+     */
+    public void clearAllowNull(){
+        return; //TODO codavaj!!
+    }
 
-public class EOSchemaSynchronizationColumnChanges extends EOSchemaSynchronizationChanges {
+    /**
+     * Resets the External Type parameter
+     */
+    public void clearExternalType(){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Resets the Precision parameter
+     */
+    public void clearPrecision(){
+        return; //TODO codavaj!!
+    }
 
-    public EOSchemaSynchronizationColumnChanges(String name) { return null; }
+    /**
+     * Resets the scale parameter
+     */
+    public void clearScale(){
+        return; //TODO codavaj!!
+    }
 
-    public String name() { return null; }
+    /**
+     * Resets the width parameter
+     */
+    public void clearWidth(){
+        return; //TODO codavaj!!
+    }
 
-    public boolean isEmpty() { return true; }
+    public com.webobjects.eoaccess.synchronization.EOSchemaSynchronizationColumnChanges clone(){
+        return null; //TODO codavaj!!
+    }
 
-    public String oldName() { return null; }
+    /**
+     * Returns the default precision for the column if not set.
+     */
+    public java.lang.String defaultExternalType(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setOldName(String value) {}
+    /**
+     * Returns the default precision for the column if not set.
+     */
+    public java.lang.Number defaultPrecision(){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean isRename() { return true; }
+    /**
+     * Returns the default scale for the column if not set.
+     */
+    public java.lang.Number defaultScale(){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean isAllowNullDefined() { return true; }
+    /**
+     * Returns the default width for the column if not set.
+     */
+    public java.lang.Number defaultWidth(){
+        return null; //TODO codavaj!!
+    }
 
-    public void clearAllowNull() {}
+    public java.lang.String externalType(){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean allowNull() { return true; }
+    public void fieldsToString(java.lang.StringBuilder aLog){
+        return; //TODO codavaj!!
+    }
 
-    public void setAllowNull(boolean value) {}
+    /**
+     * Check if allow null have been defined
+     */
+    public boolean isAllowNullDefined(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean isExternalTypeDefined() { return true; }
+    /**
+     * Checks if there is any changes defined by this structrure
+     */
+    public boolean isEmpty(){
+        return false; //TODO codavaj!!
+    }
 
-    public void clearExternalType() {}
+    /**
+     * Check if External Type have been defined
+     */
+    public boolean isExternalTypeDefined(){
+        return false; //TODO codavaj!!
+    }
 
-    public String defaultExternalType() { return null; }
+    /**
+     * Check if Precision have been defined
+     */
+    public boolean isPrecisionDefined(){
+        return false; //TODO codavaj!!
+    }
 
-    public String externalType() { return null; }
+    /**
+     * Checks if this is a column rename
+     */
+    public boolean isRename(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setExternalType(String value) {}
+    /**
+     * Check if Scale have been defined
+     */
+    public boolean isScaleDefined(){
+        return false; //TODO codavaj!!
+    }
 
-    public boolean isPrecisionDefined() { return true; }
+    /**
+     * Check if Width have been defined
+     */
+    public boolean isWidthDefined(){
+        return false; //TODO codavaj!!
+    }
 
-    public void clearPrecision() {}
+    public java.lang.String name(){
+        return null; //TODO codavaj!!
+    }
 
-    public Number defaultPrecision() { return null; }
+    /**
+     * Returns the old name of the column
+     */
+    public java.lang.String oldName(){
+        return null; //TODO codavaj!!
+    }
 
-    public int precision() { return 0; }
+    public int precision(){
+        return 0; //TODO codavaj!!
+    }
 
-    public void setPrecision(int value) {}
+    public int scale(){
+        return 0; //TODO codavaj!!
+    }
 
-    public boolean isWidthDefined() { return true; }
+    public void setAllowNull(boolean value){
+        return; //TODO codavaj!!
+    }
 
-    public void clearWidth() {}
+    public void setExternalType(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public Number defaultWidth() { return null; }
+    /**
+     * Sets the old name of the column
+     */
+    public void setOldName(java.lang.String value){
+        return; //TODO codavaj!!
+    }
 
-    public int width() { return 0; }
+    public void setPrecision(int value){
+        return; //TODO codavaj!!
+    }
 
-    public void setWidth(int value) {}
+    public void setScale(int scale){
+        return; //TODO codavaj!!
+    }
 
-    public boolean isScaleDefined() { return true; }
+    public void setWidth(int value){
+        return; //TODO codavaj!!
+    }
 
-    public void clearScale() {}
-
-    public Number defaultScale() { return null; }
-
-    public int scale() { return 0; }
-
-    public void setScale(int scale) {}
-
-    public EOSchemaSynchronizationColumnChanges clone() { return null; }
-
-    public void fieldsToString(StringBuilder aLog) {}
-
-    public volatile Object clone() throws CloneNotSupportedException { return null; }
-
-    protected String _name;
-    protected String _oldName;
-    protected String _externalType;
-    protected Boolean _allowNull;
-    protected Number _precision;
-    protected Number _scale;
-    protected Number _width;
+    public int width(){
+        return 0; //TODO codavaj!!
+    }
 
 }

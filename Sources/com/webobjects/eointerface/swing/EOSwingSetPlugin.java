@@ -1,24 +1,20 @@
-
 package com.webobjects.eointerface.swing;
+/**
+ * EOSwingSetPlugin is a concrete subclass of EOWidgetPluginRegistry.WidgetSetPlugin which is used to diplay alerts using JFC.
+ */
+public class EOSwingSetPlugin extends com.webobjects.eointerface.EOWidgetPluginRegistry.WidgetSetPlugin{
+    /**
+     * Creates a new EOSwingSetPlugin.
+     */
+    public EOSwingSetPlugin(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eointerface.EOWidgetPluginRegistry;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.*;
-import javax.swing.*;
-
-public class EOSwingSetPlugin extends com.webobjects.eointerface.EOWidgetPluginRegistry.WidgetSetPlugin {
-
-
-    public EOSwingSetPlugin() { return null; }
-
-    public static JTextArea _messageDialogComponent(String message) { return null; }
-
-    public int runAlertPanel(String title, String message, String defaultButton, String alternateButton, String otherButton) { return 0; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private static Color _messageBackgroundColor;
-    private static Font _messageFont;
+    /**
+     * Displays an alert with up to three buttons, with all the configurations given in the parameters.
+     */
+    public int runAlertPanel(java.lang.String title, java.lang.String message, java.lang.String defaultButton, java.lang.String alternateButton, java.lang.String otherButton){
+        return 0; //TODO codavaj!!
+    }
 
 }

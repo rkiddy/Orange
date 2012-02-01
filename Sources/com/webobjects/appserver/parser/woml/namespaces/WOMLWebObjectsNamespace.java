@@ -1,23 +1,23 @@
-
 package com.webobjects.appserver.parser.woml.namespaces;
+/**
+ * Element generator for the WebObjects namespace.
+ */
+public class WOMLWebObjectsNamespace extends com.webobjects.appserver.parser.woml.namespaces.WOMLAbstractNamespace{
+    public static final java.lang.String ATTRIBUTE_COMPONENT="component";
 
-import com.webobjects.appserver.WOAssociationFactory;
-import com.webobjects.appserver.WOElement;
-import com.webobjects.appserver._private.WOMutableDeclaration;
-import com.webobjects.appserver.parser.woml.*;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation.NSMutableDictionary;
+    public WOMLWebObjectsNamespace(java.lang.String namespaceId){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Sets the type of the declaration
+     */
+    public void contributeToDeclaration(com.webobjects.appserver.parser.woml.WOMLElement element, com.webobjects.appserver.WOElement template, com.webobjects.appserver._private.WOMutableDeclaration declaration, com.webobjects.foundation.NSArray languages, com.webobjects.appserver.WOAssociationFactory associationFactory) throws com.webobjects.appserver.parser.woml.WOMLElementGenerationException{
+        return; //TODO codavaj!!
+    }
 
-public class WOMLWebObjectsNamespace extends WOMLAbstractNamespace {
-
-
-    public WOMLWebObjectsNamespace(String namespaceId) { return null; }
-
-    public String getComponentIdentifierAttributeName() { return null; }
-
-    public void contributeToDeclaration(WOMLElement element, WOElement template, WOMutableDeclaration declaration, NSArray languages, WOAssociationFactory associationFactory) throws WOMLElementGenerationException {}
-
-    public static final String ATTRIBUTE_COMPONENT = "component";
+    public java.lang.String getComponentIdentifierAttributeName(){
+        return null; //TODO codavaj!!
+    }
 
 }

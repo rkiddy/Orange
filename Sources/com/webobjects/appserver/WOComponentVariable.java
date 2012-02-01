@@ -1,57 +1,72 @@
-
 package com.webobjects.appserver;
-
-
-
-public class WOComponentVariable {
-    public static final class WOComponentVariableScope extends Enum {
-
-
-        public static final WOComponentVariableScope[] values() { return null; }
-
-        public static WOComponentVariableScope valueOf(String name) { return null; }
-
-        private WOComponentVariableScope(String s, int i) { return null; }
-
-        static  {}
-
-        public static final WOComponentVariableScope SESSION;
-        public static final WOComponentVariableScope REQUEST;
-        public static final WOComponentVariableScope PAGE;
-        public static final WOComponentVariableScope COMPONENT;
-        private static final WOComponentVariableScope $VALUES[];
-
+public class WOComponentVariable{
+    public WOComponentVariable(java.lang.String name){
+         //TODO codavaj!!
     }
 
+    public WOComponentVariable(java.lang.String name, java.lang.Class type){
+         //TODO codavaj!!
+    }
 
+    public WOComponentVariable(java.lang.String name, java.lang.Class type, com.webobjects.appserver.WOAssociation initialValueAssociation){
+         //TODO codavaj!!
+    }
 
-    public WOComponentVariable(String name) { return null; }
+    public WOComponentVariable(java.lang.String name, java.lang.Class type, com.webobjects.appserver.WOComponentVariable.WOComponentVariableScope scope, com.webobjects.appserver.WOAssociation initialValue){
+         //TODO codavaj!!
+    }
 
-    public WOComponentVariable(String name, Class type) { return null; }
+    public com.webobjects.appserver.WOAssociation getInitialValueAssociation(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOComponentVariable(String name, Class type, WOAssociation initialValueAssociation) { return null; }
+    public java.lang.String getName(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOComponentVariable(String name, Class type, WOComponentVariableScope scope, WOAssociation initialValue) { return null; }
+    public com.webobjects.appserver.WOComponentVariable.WOComponentVariableScope getScope(){
+        return null; //TODO codavaj!!
+    }
 
-    public String getName() { return null; }
+    public java.lang.Class getType(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setName(String name) {}
+    public void setInitialValueAssociation(com.webobjects.appserver.WOAssociation initialValueAssociation){
+        return; //TODO codavaj!!
+    }
 
-    public Class getType() { return null; }
+    public void setName(java.lang.String name){
+        return; //TODO codavaj!!
+    }
 
-    public void setType(Class type) {}
+    public void setScope(com.webobjects.appserver.WOComponentVariable.WOComponentVariableScope scope){
+        return; //TODO codavaj!!
+    }
 
-    public WOComponentVariableScope getScope() { return null; }
+    public void setType(java.lang.Class type){
+        return; //TODO codavaj!!
+    }
 
-    public void setScope(WOComponentVariableScope scope) {}
+    /**
+     * See Also:Serialized Form
+     */
+    public static final class WOComponentVariableScope extends java.lang.Enum{
+        public static final com.webobjects.appserver.WOComponentVariable.WOComponentVariableScope COMPONENT=null;
 
-    public WOAssociation getInitialValueAssociation() { return null; }
+        public static final com.webobjects.appserver.WOComponentVariable.WOComponentVariableScope PAGE=null;
 
-    public void setInitialValueAssociation(WOAssociation initialValueAssociation) {}
+        public static final com.webobjects.appserver.WOComponentVariable.WOComponentVariableScope REQUEST=null;
 
-    private String name;
-    private Class type;
-    private WOComponentVariableScope scope;
-    private WOAssociation initialValueAssociation;
+        public static final com.webobjects.appserver.WOComponentVariable.WOComponentVariableScope SESSION=null;
 
+        public static com.webobjects.appserver.WOComponentVariable.WOComponentVariableScope valueOf(java.lang.String name){
+            return null; //TODO codavaj!!
+        }
+
+        public static final com.webobjects.appserver.WOComponentVariable.WOComponentVariableScope[] values(){
+            return null; //TODO codavaj!!
+        }
+
+    }
 }

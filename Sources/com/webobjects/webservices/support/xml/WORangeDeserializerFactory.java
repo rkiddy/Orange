@@ -1,20 +1,19 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WORangeDeserializerFactory creates instances of WORangeDeserializer.
+ * See Also:Serialized Form
+ */
+public class WORangeDeserializerFactory extends org.apache.axis.encoding.ser.BaseDeserializerFactory{
+    public WORangeDeserializerFactory(){
+         //TODO codavaj!!
+    }
 
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.DeserializerFactory;
-import org.apache.axis.encoding.ser.BaseDeserializerFactory;
+    public WORangeDeserializerFactory(java.lang.Class aJavaType, javax.xml.namespace.QName anXmlType){
+         //TODO codavaj!!
+    }
 
-
-public class WORangeDeserializerFactory extends BaseDeserializerFactory {
-
-
-    public WORangeDeserializerFactory() { return null; }
-
-    public WORangeDeserializerFactory(Class aJavaType, QName anXmlType) { return null; }
-
-    public static DeserializerFactory create(Class javaType, QName xmlType) { return null; }
-
-    private static final long serialVersionUID = 0x8a6bc3deL;
+    public static org.apache.axis.encoding.DeserializerFactory create(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+        return null; //TODO codavaj!!
+    }
 
 }

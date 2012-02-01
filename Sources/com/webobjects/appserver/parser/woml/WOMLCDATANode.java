@@ -1,20 +1,23 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLCDATANode extends com.webobjects.appserver.parser.woml.WOMLDataNode{
+    public static final java.lang.String CDATA_PREFIX="![CDATA[";
 
+    public static final java.lang.String CDATA_SUFFIX="]]";
 
+    public WOMLCDATANode(com.webobjects.appserver.parser.woml.WOMLPosition position){
+         //TODO codavaj!!
+    }
 
-public class WOMLCDATANode extends WOMLDataNode {
+    public java.lang.String getOutputPrefix(){
+        return null; //TODO codavaj!!
+    }
 
+    public java.lang.String getOutputSuffix(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLCDATANode(WOMLPosition position) { return null; }
-
-    public String getOutputPrefix() { return null; }
-
-    public String getOutputSuffix() { return null; }
-
-    public String toString() { return null; }
-
-    public static final String CDATA_PREFIX = "<![CDATA[";
-    public static final String CDATA_SUFFIX = "]]>";
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

@@ -1,23 +1,42 @@
-
 package com.webobjects.directtoweb;
+/**
+ * The list of tab names and of tab contents is not a rule firing phenomenon. It is entirely determined by the tab names. But by making it the result of rule firing, we can take advantage of the caching mechanism which we otherwise would have to replicate in the TabInspectPage.
+ * See Also:Serialized Form
+ */
+public class TabDictionaryComputer extends com.webobjects.directtoweb.Assignment{
+    /**
+     * Constructs a new TabDictionaryComputer based on an EOKeyValueUnarchiver. This is used to read the assignment information from a rule file.
+     * Parameters:unarchiver - - the unarchiver.
+     */
+    public TabDictionaryComputer(com.webobjects.eocontrol.EOKeyValueUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eocontrol.EOKeyValueUnarchiver;
-import com.webobjects.foundation.*;
+    /**
+     * Constructs a new TabDictionaryComputer with the specified key path and value.
+     * Parameters:keyPath - - the key path.value - - the value.
+     */
+    public TabDictionaryComputer(java.lang.String keyPath, java.lang.Object value){
+         //TODO codavaj!!
+    }
 
+    public static java.lang.Object decodeWithKeyValueUnarchiver(com.webobjects.eocontrol.EOKeyValueUnarchiver unarchiver){
+        return null; //TODO codavaj!!
+    }
 
-public class TabDictionaryComputer extends Assignment {
+    /**
+     * Description copied from class:
+     * This method is invoked when a rule fires. It returns the right-hand side value (an Object) for a right-hand side key in the Direct to Web context. You can override this method to provide your own assignments.
+     */
+    public java.lang.Object fire(com.webobjects.directtoweb.D2WContext context){
+        return null; //TODO codavaj!!
+    }
 
-
-    public TabDictionaryComputer(String keyPath, Object value) { return null; }
-
-    public TabDictionaryComputer(EOKeyValueUnarchiver unarchiver) { return null; }
-
-    public boolean tabNameIsInHeader(String tabName) { return true; }
-
-    public Object fire(D2WContext context) { return null; }
-
-    public static Object decodeWithKeyValueUnarchiver(EOKeyValueUnarchiver unarchiver) { return null; }
-
-    private static final long serialVersionUID = 0xd70958a6L;
+    /**
+     * Tests whether the tab name is the header.
+     */
+    public boolean tabNameIsInHeader(java.lang.String tabName){
+        return false; //TODO codavaj!!
+    }
 
 }

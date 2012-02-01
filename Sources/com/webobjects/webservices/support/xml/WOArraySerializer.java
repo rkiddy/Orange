@@ -1,23 +1,18 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOArraySerializer serializes NSArray instances.
+ * See Also:Serialized Form
+ */
+public class WOArraySerializer extends org.apache.axis.encoding.ser.ArraySerializer implements com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WOArraySerializer(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.*;
-import java.io.IOException;
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.SerializationContext;
-import org.apache.axis.encoding.ser.ArraySerializer;
-import org.apache.axis.utils.Messages;
-import org.xml.sax.Attributes;
-
-
-public class WOArraySerializer extends ArraySerializer
-    implements WOSoapConstants {
-
-
-    public WOArraySerializer() { return null; }
-
-    public void serialize(QName name, Attributes attributes, Object value, SerializationContext context) throws IOException {}
-
-    private static final long serialVersionUID = 0x17492f53L;
+    /**
+     * Serialize an NSArray.
+     */
+    public void serialize(javax.xml.namespace.QName name, org.xml.sax.Attributes attributes, java.lang.Object value, org.apache.axis.encoding.SerializationContext context) throws java.io.IOException{
+        return; //TODO codavaj!!
+    }
 
 }

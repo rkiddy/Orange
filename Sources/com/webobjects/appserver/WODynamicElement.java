@@ -1,18 +1,26 @@
-
 package com.webobjects.appserver;
+/**
+ * WODynamicElement is an abstract superclass for classes that generate dynamic elements: Either objects executing an operation (repetitions, conditions) or objects rendering themselves in any type of markup language like XML, HTML or PDF elements. Their values can programmatically change at runtime. Dynamic elements have a name and one or more properties, instance variables holding such things as user-entered data or user-triggerable actions. The property of dynamic elements are associated with, or "bound" to, the properties of the WOComponent object representing the page (or portion of a page) in which the dynamic element appears.
+ * At runtime, a dynamic element can extract values from the request, feed those values across the bindings to the owning component, receive back new data, and include that data in the next representation of the page. A dynamic element also detects if the user has manipulated it (for instance, clicking a button) to signal some intention and then trigger the appropriate action method in the owning WOComponent. The bindings between properties of a dynamic element and properties of a WOComponent are made possible by associations, objects that know how to "push" (assign) and "pull" (retrieve) values to and from another object using keys.
+ * WODynamicElements must implement the default constructor to initialize their instance variables with the appropriate association objects (passed in). As WOElement objects, they must also implement one or more of the three request-handling methods. In the context of request handling, a dynamic element can use its associations to: Push request values into the associated properties of their WOComponent: takeValuesFromRequest(WORequest aRequest, WOContext aContext). Invoke action methods of the WOComponent: invokeAction(WORequest aRequest, WOContext aContext). Extract values from the WOComponent when composing a dynamic XML/HTML/WAP/PDF/etc... response: appendToResponse(WOResponse aResponse, WOContext aContext).
+ * All dynamic elements must implement appendToResponse. If they accept user input or respond to user actions (such as mouse clicks), they must implement takeValuesFromRequest and invokeAction, respectively.
+ * Dynamic elements do not know about their location in the graph of elements, nor the elements around them. The location of a dynamic element must be fixed in a graph of elements. This is always true when using a WebObjects Builder generated template. The fixed location is important as the context increments an element ID marker as it traverses the graph of elements, and this marker must have the same value in each phase for a given dynamic element. Dynamic elements are only able to message the top-level element of the graph of elements they contain (using the super invocation for either phase).
+ * Each request-handling loop involves the creation or reuse of a top-level WOComponent (a page), and forces the incrementation of the WOContext ID for the current user's session. The session maintains a stack of used WOComponent objects (representing a page and subcomponents on the page), ordered by context IDs. The incoming request's contextID determines which component in the stack will become the top-level current component for the first two phases. At any time a context is available, the current component is accessed throught aContext.component(), whereas the top-level component can be accessed throught aContext.pageComponent()
+ * Dynamic elements do not know about their WOComponent object until runtime. Also, a dynamic element instance must be able to serve all instances of the same WOComponent class simultaneously, and therefore must be totally thread safe. Every WOComponent has a pointer to a unique, shared component definition, a graph of WOElements (either dynamic elements or other children components). When the current WOComponent starts a new phase of the request-response loop (as listed above), it invokes one of the three methods on the top WOElement of the graph, which then forwards it down to subelements as needed. All along, the current component is available through the WOContext passed as parameter in each invocation. The dynamic element's WOAssociations retrieve the current WOComponent object (through an invocation of WOContext's component method) and reads and writes values from and to the WOComponent object using key-value coding methods.
+ * See Also:WOComponent.appendToResponse(WOResponse aResponse, WOContext aContext), WOComponent.invokeAction(WORequest aRequest, WOContext aContext), WOComponent.takeValuesFromRequest(WORequest aRequest, WOContext aContext)
+ */
+public abstract class WODynamicElement extends com.webobjects.appserver.WOElement{
+    /**
+     * Returns a dynamic element identified by class aName and initialized with the objects in dictionary associations. The dictionary contains WOAssociation objects, which know how to take values from, and set values in, an "owning" WOComponent. To properly initialize a dynamic element, you should use the published keys of the dynamic element to get the associations that belong to the dynamic element. Then assign these objects to instance variables. The template argument, if not null, is the root object of a graph of sub-WOElements associated with the dynamic element.
+     * Typically, a key in the associations dictionary is identified with a property of the element, and the value of this key is the name of a property of the associated WOComponent. For example, the value of key "userName" might be bound to "employee.name" in the WOComponent; this designation means that WOComponent has a property called "employee" (possibly referring to an "Employee" object) which in turn has a property called "name". In this case, the binding is two-way; changes in the dynamic element are reflected in the WOComponent property in the takeValuesFromRequest(WORequest aRequest, WOContext aContext) phase, and changes in the WOComponent property are communicated to the dynamic element in the appendToResponse(WOResponse aResponse, WOContext aContext) phase. The value of an association can also be a constant, in which case the WOComponent is of course not asked to evaluate it.
+     * Parameters:aName - the name of the WOAdaptor subclassassociations - objects that know how to "push" and "pull" values to and from another object using keystemplate - A WOElement representing the root object of the graph of static and dynamic HTML elements and subcomponents. It is used to graphically render the information contained inside the brackets of this dynamic element in the components template. It is passed by the parser at runtime, and if not null, should be forwarded each of the 3 phases' invocation.
+     */
+    public WODynamicElement(java.lang.String aName, com.webobjects.foundation.NSDictionary associations, com.webobjects.appserver.WOElement template){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.NSDictionary;
-
-
-public abstract class WODynamicElement extends WOElement {
-
-
-    public WODynamicElement(String aName, NSDictionary associations, WOElement template) { return null; }
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _ConstructorParameters[];
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

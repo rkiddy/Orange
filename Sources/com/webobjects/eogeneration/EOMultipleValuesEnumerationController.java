@@ -1,176 +1,239 @@
-
 package com.webobjects.eogeneration;
-
-import com.webobjects.eoapplication.*;
-import com.webobjects.eocontrol.EOEnterpriseObject;
-import com.webobjects.eocontrol.EOSortOrdering;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.*;
-import com.webobjects.foundation.*;
-import java.awt.Dimension;
-import java.awt.event.*;
-import javax.swing.*;
-
-
-public class EOMultipleValuesEnumerationController extends EOEnumerationController
-    implements ActionListener, ComponentListener, MouseListener, com.webobjects.eoapplication.EOComponentController.EndEditing {
-
-
-    public EOMultipleValuesEnumerationController() { return null; }
-
-    public EOMultipleValuesEnumerationController(EOXMLUnarchiver unarchiver) { return null; }
-
-    public NSMutableDictionary _xmlParameters() { return null; }
-
-    protected void disposeAssociations() {}
-
-    public void prepareForNewTask(boolean prepareSubcontrollersForNewTask) {}
-
-    protected void connectionWasEstablished() {}
-
-    protected void connectionWasBroken() {}
-
-    public void setUsesTableLabels(boolean flag) {}
-
-    public boolean usesTableLabels() { return true; }
-
-    protected boolean _preferredCanResizeVertically() { return true; }
-
-    protected int preferredLabelComponentPosition() { return 0; }
-
-    protected int _labelComponentVerticalOffset() { return 0; }
-
-    protected void componentDidBecomeVisible() {}
-
-    public boolean endEditing() { return true; }
-
-    protected void _updateUserInterface() {}
-
-    protected boolean _needsUserInterfaceUpdateNotifications() { return true; }
-
-    protected String _derivedLabel() { return null; }
-
-    public String detailEntityName() { return null; }
-
-    public String titlesEntityName() { return null; }
-
-    public void setDetailRelationshipPath(String string) {}
-
-    public String detailRelationshipPath() { return null; }
-
-    public void addDetailKey(String key) {}
-
-    public void removeDetailKey(String key) {}
-
-    public void setDetailKeys(NSArray keys) {}
-
-    public void setSingleDetailKey(String key) {}
-
-    public NSArray detailKeys() { return null; }
-
-    public void setIndexKey(String string) {}
-
-    public String indexKey() { return null; }
-
-    protected NSArray detailDisplayGroupSortOrderings() { return null; }
-
-    protected int _widthForTable(NSArray keys, boolean trueForDetailTableAndFalseForTitlesTable) { return 0; }
-
-    protected int _heightForTables() { return 0; }
-
-    protected JButton _newButton(String actionName, String unlocalizedTitle, NSMutableArray buttonsArray) { return null; }
-
-    protected NSMutableArray _buttons() { return null; }
-
-    protected JComponent _titlesWidget() { return null; }
-
-    protected JComponent newWidget() { return null; }
-
-    protected void startListeningToWidget() {}
-
-    protected void stopListeningToWidget() {}
-
-    public EODisplayGroup detailDisplayGroup() { return null; }
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    public void setAllowsRemoveAll(boolean flag) {}
-
-    public boolean allowsRemoveAll() { return true; }
-
-    public void setAllowsDuplicates(boolean flag) {}
-
-    public boolean allowsDuplicates() { return true; }
-
-    public boolean canPerformActionNamed(String actionName) { return true; }
-
-    public boolean canAdd() { return true; }
-
-    protected void _updateDetailIndexes(NSArray objects) {}
-
-    protected void _addWithObjects(NSArray relationshipObjects) {}
-
-    public void add() {}
-
-    public boolean canRemove() { return true; }
-
-    protected void _removeWithSelectedObjects(NSArray selectedObjects) {}
-
-    public void remove() {}
-
-    private boolean _canUpOrDown(boolean trueForUpAndFalseForDown) { return true; }
-
-    private void _move(int direction) {}
-
-    public boolean canUp() { return true; }
-
-    public void up() {}
-
-    public boolean canDown() { return true; }
-
-    public void down() {}
-
-    public void actionPerformed(ActionEvent event) {}
-
-    public void componentHidden(ComponentEvent componentevent) {}
-
-    public void componentMoved(ComponentEvent componentevent) {}
-
-    public void componentResized(ComponentEvent event) {}
-
-    public void componentShown(ComponentEvent componentevent) {}
-
-    public void mouseClicked(MouseEvent event) {}
-
-    public void mouseEntered(MouseEvent mouseevent) {}
-
-    public void mouseExited(MouseEvent mouseevent) {}
-
-    public void mousePressed(MouseEvent mouseevent) {}
-
-    public void mouseReleased(MouseEvent mouseevent) {}
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private NSMutableArray _detailKeys;
-    private String _detailRelationshipPath;
-    private String _indexKey;
-    protected EOTable _relationshipTable;
-    protected EOTable _titlesTable;
-    protected JButton _addButton;
-    protected JButton _removeButton;
-    protected JButton _upButton;
-    protected JButton _downButton;
-    protected JButton _enabledTestButton;
-    private EODisplayGroup _detailDisplayGroup;
-    private NSMutableArray _associations;
-    private EOActionAssociation _enabledTestAssociation;
-    private int _labelComponentVerticalOffset;
-    private boolean _usesTableLabels;
-    private boolean _allowsRemoveAll;
-    private boolean _allowsDuplicates;
+public class EOMultipleValuesEnumerationController extends com.webobjects.eogeneration.EOEnumerationController implements java.awt.event.ActionListener, java.awt.event.ComponentListener, java.awt.event.MouseListener, com.webobjects.eoapplication.EOComponentController.EndEditing{
+    public EOMultipleValuesEnumerationController(){
+         //TODO codavaj!!
+    }
+
+    public EOMultipleValuesEnumerationController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
+
+    public void actionPerformed(java.awt.event.ActionEvent event){
+        return; //TODO codavaj!!
+    }
+
+    public void add(){
+        return; //TODO codavaj!!
+    }
+
+    public void addDetailKey(java.lang.String key){
+        return; //TODO codavaj!!
+    }
+
+    public boolean allowsDuplicates(){
+        return false; //TODO codavaj!!
+    }
+
+    public boolean allowsRemoveAll(){
+        return false; //TODO codavaj!!
+    }
+
+    public boolean canAdd(){
+        return false; //TODO codavaj!!
+    }
+
+    public boolean canDown(){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from interface:
+     * Returns true if the receiver can perform the action method (sent by an EOAction object) named actionName, false otherwise. An EOController's implementation of this method generally returns false if the receiver doesn't have an action named actionName or if the actionName action is explicitly disabled.
+     */
+    public boolean canPerformActionNamed(java.lang.String actionName){
+        return false; //TODO codavaj!!
+    }
+
+    public boolean canRemove(){
+        return false; //TODO codavaj!!
+    }
+
+    public boolean canUp(){
+        return false; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * Invoked when the receiver's component becomes visible, giving the receiver a chance to react. EOComponentController's implementation invokes establishConnection to ensure the receiver is connected to the controller hierarchy.
+     */
+    protected void componentDidBecomeVisible(){
+        return; //TODO codavaj!!
+    }
+
+    public void componentHidden(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
+
+    public void componentMoved(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
+
+    public void componentResized(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
+
+    public void componentShown(java.awt.event.ComponentEvent event){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * Invoked from breakConnection to notify the receiver that its connection to its supercontroller has been broken, giving the receiver the opportunity to clean up after its become idle.
+     */
+    protected void connectionWasBroken(){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * Invoked from establishConnection to notify the receiver that its connection to the controller hierarchy has been established, giving the receiver the opportunity to prepare itself (for example, setting delegates).
+     */
+    protected void connectionWasEstablished(){
+        return; //TODO codavaj!!
+    }
+
+    public com.webobjects.eointerface.EODisplayGroup detailDisplayGroup(){
+        return null; //TODO codavaj!!
+    }
+
+    protected com.webobjects.foundation.NSArray detailDisplayGroupSortOrderings(){
+        return null; //TODO codavaj!!
+    }
+
+    public java.lang.String detailEntityName(){
+        return null; //TODO codavaj!!
+    }
+
+    public com.webobjects.foundation.NSArray detailKeys(){
+        return null; //TODO codavaj!!
+    }
+
+    public java.lang.String detailRelationshipPath(){
+        return null; //TODO codavaj!!
+    }
+
+    protected void disposeAssociations(){
+        return; //TODO codavaj!!
+    }
+
+    public void down(){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from interface:
+     * Ensures that all current edits in the user interface are flushed to the underlying data objects.
+     */
+    public boolean endEditing(){
+        return false; //TODO codavaj!!
+    }
+
+    public java.lang.String indexKey(){
+        return null; //TODO codavaj!!
+    }
+
+    public void mouseClicked(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
+
+    public void mouseEntered(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
+
+    public void mouseExited(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
+
+    public void mousePressed(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
+
+    public void mouseReleased(java.awt.event.MouseEvent event){
+        return; //TODO codavaj!!
+    }
+
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
+
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
+
+    protected int preferredLabelComponentPosition(){
+        return 0; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * Prepares the receiver for performing a new task by resetting any data. If prepareSubcontrollersForNewTask is true, this method also sends prepareForNewTask to each of the receiver's subcontrollers. This method is usually invoked to prepare a branch of the controller for reuse. Subclasses should override this method to get rid of data and perform any additional clean up.
+     */
+    public void prepareForNewTask(boolean prepareSubcontrollersForNewTask){
+        return; //TODO codavaj!!
+    }
+
+    public void remove(){
+        return; //TODO codavaj!!
+    }
+
+    public void removeDetailKey(java.lang.String key){
+        return; //TODO codavaj!!
+    }
+
+    public void setAllowsDuplicates(boolean flag){
+        return; //TODO codavaj!!
+    }
+
+    public void setAllowsRemoveAll(boolean flag){
+        return; //TODO codavaj!!
+    }
+
+    public void setDetailKeys(com.webobjects.foundation.NSArray keys){
+        return; //TODO codavaj!!
+    }
+
+    public void setDetailRelationshipPath(java.lang.String string){
+        return; //TODO codavaj!!
+    }
+
+    public void setIndexKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
+
+    public void setSingleDetailKey(java.lang.String key){
+        return; //TODO codavaj!!
+    }
+
+    public void setUsesTableLabels(boolean flag){
+        return; //TODO codavaj!!
+    }
+
+    protected void startListeningToWidget(){
+        return; //TODO codavaj!!
+    }
+
+    protected void stopListeningToWidget(){
+        return; //TODO codavaj!!
+    }
+
+    public java.lang.String titlesEntityName(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * Description copied from class:
+     * Returns the receiver as a string that states the receiver's class name and type name, whether the receiver is connected, the number of subcontrollers, whether or not the receiver has been prepared, whether or not the receiver is visible, information about widget sizing and alignment behavior, and so on.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
+
+    public void up(){
+        return; //TODO codavaj!!
+    }
+
+    public boolean usesTableLabels(){
+        return false; //TODO codavaj!!
+    }
 
 }

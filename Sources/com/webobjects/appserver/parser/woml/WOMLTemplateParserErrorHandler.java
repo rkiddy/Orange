@@ -1,16 +1,19 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLTemplateParserErrorHandler implements org.xml.sax.ErrorHandler{
+    public WOMLTemplateParserErrorHandler(){
+         //TODO codavaj!!
+    }
 
-import org.xml.sax.*;
+    public void error(org.xml.sax.SAXParseException exception) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-public class WOMLTemplateParserErrorHandler
-    implements ErrorHandler {
+    public void fatalError(org.xml.sax.SAXParseException exception) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public WOMLTemplateParserErrorHandler() { return null; }
+    public void warning(org.xml.sax.SAXParseException exception) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
-    public void error(SAXParseException exception) throws SAXException {}
-
-    public void fatalError(SAXParseException exception) throws SAXException {}
-
-    public void warning(SAXParseException saxparseexception) throws SAXException {}
 }

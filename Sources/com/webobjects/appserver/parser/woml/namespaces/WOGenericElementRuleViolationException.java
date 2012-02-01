@@ -1,14 +1,22 @@
-
 package com.webobjects.appserver.parser.woml.namespaces;
+/**
+ * See Also:Serialized Form
+ */
+public class WOGenericElementRuleViolationException extends java.lang.RuntimeException{
+    public WOGenericElementRuleViolationException(){
+         //TODO codavaj!!
+    }
 
+    public WOGenericElementRuleViolationException(java.lang.String message){
+         //TODO codavaj!!
+    }
 
-public class WOGenericElementRuleViolationException extends RuntimeException {
+    public WOGenericElementRuleViolationException(java.lang.String message, java.lang.Throwable throwable){
+         //TODO codavaj!!
+    }
 
-    public WOGenericElementRuleViolationException() { return null; }
+    public WOGenericElementRuleViolationException(java.lang.Throwable throwable){
+         //TODO codavaj!!
+    }
 
-    public WOGenericElementRuleViolationException(String message, Throwable throwable) { return null; }
-
-    public WOGenericElementRuleViolationException(String message) { return null; }
-
-    public WOGenericElementRuleViolationException(Throwable throwable) { return null; }
 }

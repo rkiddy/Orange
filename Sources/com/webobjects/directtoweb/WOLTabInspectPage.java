@@ -1,14 +1,10 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOContext;
-
-
-public class WOLTabInspectPage extends D2WTabInspectPage {
-
-
-    public WOLTabInspectPage(WOContext aContext) { return null; }
-
-    private static final long serialVersionUID = 0xd2b7e8b4L;
+/**
+ * See Also:Serialized Form
+ */
+public class WOLTabInspectPage extends com.webobjects.directtoweb.D2WTabInspectPage{
+    public WOLTabInspectPage(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
 }

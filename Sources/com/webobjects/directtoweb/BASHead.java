@@ -1,14 +1,11 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOContext;
-
-
-public class BASHead extends D2WHead {
-
-
-    public BASHead(WOContext context) { return null; }
-
-    private static final long serialVersionUID = 0xe88aafa7L;
+/**
+ * The BASHead class provides custom behavior for the Direct to Web Basic template component..
+ * See Also:Serialized Form
+ */
+public class BASHead extends com.webobjects.directtoweb.D2WHead{
+    public BASHead(com.webobjects.appserver.WOContext context){
+         //TODO codavaj!!
+    }
 
 }

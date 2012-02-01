@@ -1,75 +1,75 @@
-
 package com.webobjects.appserver;
+/**
+ * Register this Mbean with the JMX MBean server to monitor a WOApplication instance.
+ * Since: 5.4
+ */
+public interface WOApplicationMBean{
+    abstract boolean getAdaptorsDispatchRequestsConcurrently();
 
-import java.util.ArrayList;
+    abstract java.util.ArrayList getAdditionalAdaptors();
 
-public interface WOApplicationMBean {
+    abstract boolean getAllowsConcurrentRequestHandling();
 
-    public abstract String getApplicationBaseURL();
+    abstract java.lang.String getApplicationBaseURL();
 
-    public abstract boolean getAdaptorsDispatchRequestsConcurrently();
+    abstract java.lang.String getBaseURL();
 
-    public abstract ArrayList getAdditionalAdaptors();
+    abstract java.lang.String getCGIAdaptorURL();
 
-    public abstract boolean getAllowsConcurrentRequestHandling();
+    abstract java.util.ArrayList getClassPaths();
 
-    public abstract String getBaseURL();
+    abstract int getDefaultUndoStackLimit();
 
-    public abstract String getCGIAdaptorURL();
+    abstract java.lang.String getDirectConnectURL();
 
-    public abstract int getDefaultUndoStackLimit();
+    abstract java.lang.String getHost();
 
-    public abstract String getDirectConnectURL();
+    abstract java.lang.String getHostAddress();
 
-    public abstract String getHost();
+    abstract boolean getIncludeCommentsInResponses();
 
-    public abstract String getHostAddress();
+    abstract boolean getIsCachingEnabled();
 
-    public abstract boolean getIncludeCommentsInResponses();
+    abstract boolean getIsMonitorEnabled();
 
-    public abstract boolean getIsCachingEnabled();
+    abstract boolean getIsPageRefreshOnBacktrackEnabled();
 
-    public abstract boolean getIsMonitorEnabled();
+    abstract boolean getIsRefusingNewSessions();
 
-    public abstract boolean getIsPageRefreshOnBacktrackEnabled();
+    abstract boolean getIsTerminating();
 
-    public abstract boolean getIsRefusingNewSessions();
+    abstract java.lang.String getJMXDomain();
 
-    public abstract boolean getIsTerminating();
+    abstract int getLifebeatDestinationPort();
 
-    public abstract String getJMXDomain();
+    abstract int getLifebeatInterval();
 
-    public abstract int getLifebeatDestinationPort();
+    abstract int getListenQueueSize();
 
-    public abstract int getLifebeatInterval();
+    abstract int getMaxSocketIdleTime();
 
-    public abstract int getListenQueueSize();
+    abstract int getMinimumActiveSessionsCount();
 
-    public abstract int getMaxSocketIdleTime();
+    abstract java.lang.String getName();
 
-    public abstract int getMinimumActiveSessionsCount();
+    abstract java.lang.String getOutputPath();
 
-    public abstract String getName();
+    abstract int getPageCacheSize();
 
-    public abstract String getOutputPath();
+    abstract int getPort();
 
-    public abstract int getPageCacheSize();
+    abstract java.lang.String getServletConnectURL();
 
-    public abstract int getPort();
+    abstract int getSessionTimeOut();
 
-    public abstract String getServletConnectURL();
+    abstract double getTimeOut();
 
-    public abstract int getSessionTimeOut();
+    abstract java.lang.String getWebObjectsVersion();
 
-    public abstract double getTimeOut();
+    abstract java.lang.String getWebserverConnectURL();
 
-    public abstract String getWebserverConnectURL();
+    abstract int getWorkerThreadCountMax();
 
-    public abstract int getWorkerThreadCountMax();
+    abstract int getWorkerThreadCountMin();
 
-    public abstract int getWorkerThreadCountMin();
-
-    public abstract String getWebObjectsVersion();
-
-    public abstract ArrayList getClassPaths();
 }

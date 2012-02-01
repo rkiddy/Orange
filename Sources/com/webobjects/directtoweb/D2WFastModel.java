@@ -1,65 +1,75 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOApplication;
-import com.webobjects.appserver.WOResourceManager;
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation.NSLog;
-import java.util.Hashtable;
-import java.util.Vector;
-
-
-public class D2WFastModel extends D2WModel {
-    static class FastLhsKey extends D2WMultiKey {
-
-        public FastLhsKey(short keyCount) { return null; }
-
-        public FastLhsKey(Object keys[]) { return null; }
-
-        public String toString() { return null; }
+/**
+ * The D2WFastModel class is a D2WModel that is specialized with support for significant keys. Precomputing the significant keys of rules expedites the determination of the rules that can fire in a given context.
+ * The current implementation caches the keys in an array of fixed size. Intially, the maximum number of significant keys is 32.
+ * The implementation is subject to change in future releases.
+ */
+public class D2WFastModel extends com.webobjects.directtoweb.D2WModel{
+    /**
+     * Creates an instance of D2WFastModel with the specified rules.
+     * Parameters:rules - instance of NSArraySee Also:D2WModel.D2WModel(NSArray)
+     */
+    protected D2WFastModel(com.webobjects.foundation.NSArray rules){
+         //TODO codavaj!!
     }
 
+    /**
+     * Gets the default fast model.
+     */
+    public static com.webobjects.directtoweb.D2WFastModel defaultFastModel(){
+        return null; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Fires all candidate rules for the specified key path that can fire in the specified context; aggregates the results of all firings.
+     */
+    protected java.util.Vector fireAllRulesForKeyPathInContext(java.lang.String keyPath, com.webobjects.directtoweb.D2WContext context){
+        return null; //TODO codavaj!!
+    }
 
-    public static D2WFastModel defaultFastModel() { return null; }
+    /**
+     * Description copied from class:
+     * Fires the first candidate rule for the specified key path that can fire in the specified context.
+     */
+    protected java.lang.Object fireRuleForKeyPathInContext(java.lang.String keyPath, com.webobjects.directtoweb.D2WContext context){
+        return null; //TODO codavaj!!
+    }
 
-    public static String[] significantKeys() { return null; }
+    /**
+     * Description copied from class:
+     * Fires the first candidate rule for the specified key path that can fire in the specified context but is not authored by the Web Assistant.
+     */
+    protected java.lang.Object fireSystemRuleForKeyPathInContext(java.lang.String keyPath, com.webobjects.directtoweb.D2WContext context){
+        return null; //TODO codavaj!!
+    }
 
-    public static void newSignificantKey(String newKey) { return null; }
+    /**
+     * Clears the local caches of fast left-hand side keys.
+     */
+    protected void invalidateCaches(){
+        return; //TODO codavaj!!
+    }
 
-    public static short significantKeyCount() { return null; }
+    /**
+     * Adds the specified key to the significant keys. Increments the significant key count.
+     */
+    public static void newSignificantKey(java.lang.String newKey){
+        return; //TODO codavaj!!
+    }
 
-    public static void _resetSignificantKeys(int maxKeyCount) { return null; }
+    /**
+     * Gets the current number of significant keys.
+     */
+    public static short significantKeyCount(){
+        return 0; //TODO codavaj!!
+    }
 
-    protected D2WFastModel(NSArray rules) { return null; }
-
-    protected synchronized Object fireRuleForKeyPathInContext(String keyPath, D2WContext context) { return null; }
-
-    protected synchronized Object fireSystemRuleForKeyPathInContext(String keyPath, D2WContext context) { return null; }
-
-    protected synchronized Vector fireAllRulesForKeyPathInContext(String keyPath, D2WContext context) { return null; }
-
-    protected void invalidateCaches() {}
-
-    public static synchronized boolean _canAssistantBeMadeAvailable(String assistantEnabledKey) { return null; }
-
-    static  {}
-
-    public static final String _TrueValue = "true";
-    public static final String _YesValue = "YES";
-    private static final Object _NULL_VALUE;
-    public static final String _DefaultSignificantKeys[];
-    private static final int _MAX_SIGNIFICANT_KEY_COUNT = 32;
-    private static String _significantKeys[];
-    private static short _significantKeyCount;
-    private static short _significantKeyAndKeyPathCount;
-    private static boolean _significantKeysChanged;
-    static D2WFastModel _defaultModel;
-    private Hashtable _cache;
-    private Hashtable _systemCache;
-    private FastLhsKey _lhsKey;
-    private Object _lhsKeys[];
-    private int _recursing;
+    /**
+     * Gets the significant keys.
+     */
+    public static java.lang.String[] significantKeys(){
+        return null; //TODO codavaj!!
+    }
 
 }

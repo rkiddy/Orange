@@ -1,20 +1,19 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOStringKeyMapDeserializerFactory creates instances of WOStringKeyMapDeserializer.
+ * See Also:Serialized Form
+ */
+public class WOStringKeyMapDeserializerFactory extends org.apache.axis.encoding.ser.BaseDeserializerFactory{
+    public WOStringKeyMapDeserializerFactory(){
+         //TODO codavaj!!
+    }
 
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.DeserializerFactory;
-import org.apache.axis.encoding.ser.BaseDeserializerFactory;
+    public WOStringKeyMapDeserializerFactory(java.lang.Class aJavaType, javax.xml.namespace.QName anXmlType){
+         //TODO codavaj!!
+    }
 
-
-public class WOStringKeyMapDeserializerFactory extends BaseDeserializerFactory {
-
-
-    public WOStringKeyMapDeserializerFactory() { return null; }
-
-    public WOStringKeyMapDeserializerFactory(Class aJavaType, QName anXmlType) { return null; }
-
-    public static DeserializerFactory create(Class javaType, QName xmlType) { return null; }
-
-    private static final long serialVersionUID = 0x2b1bd6a8L;
+    public static org.apache.axis.encoding.DeserializerFactory create(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+        return null; //TODO codavaj!!
+    }
 
 }

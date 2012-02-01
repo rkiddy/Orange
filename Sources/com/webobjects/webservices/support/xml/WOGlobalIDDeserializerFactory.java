@@ -1,20 +1,19 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOGlobalIDDeserializerFactory creates instances of WOGlobalIDDeserializer.
+ * See Also:Serialized Form
+ */
+public class WOGlobalIDDeserializerFactory extends org.apache.axis.encoding.ser.BaseDeserializerFactory{
+    public WOGlobalIDDeserializerFactory(){
+         //TODO codavaj!!
+    }
 
-import javax.xml.namespace.QName;
-import org.apache.axis.encoding.DeserializerFactory;
-import org.apache.axis.encoding.ser.BaseDeserializerFactory;
+    public WOGlobalIDDeserializerFactory(java.lang.Class aJavaType, javax.xml.namespace.QName anXmlType){
+         //TODO codavaj!!
+    }
 
-
-public class WOGlobalIDDeserializerFactory extends BaseDeserializerFactory {
-
-
-    public WOGlobalIDDeserializerFactory() { return null; }
-
-    public WOGlobalIDDeserializerFactory(Class aJavaType, QName anXmlType) { return null; }
-
-    public static DeserializerFactory create(Class javaType, QName xmlType) { return null; }
-
-    private static final long serialVersionUID = 0xff37debdL;
+    public static org.apache.axis.encoding.DeserializerFactory create(java.lang.Class javaType, javax.xml.namespace.QName xmlType){
+        return null; //TODO codavaj!!
+    }
 
 }

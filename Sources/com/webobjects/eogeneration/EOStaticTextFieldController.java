@@ -1,37 +1,31 @@
-
 package com.webobjects.eogeneration;
+public class EOStaticTextFieldController extends com.webobjects.eogeneration.EOTextFieldController{
+    public EOStaticTextFieldController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.swing.EOTextField;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.*;
-import javax.swing.JComponent;
+    public EOStaticTextFieldController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public java.awt.Color color(){
+        return null; //TODO codavaj!!
+    }
 
-public class EOStaticTextFieldController extends EOTextFieldController {
+    public java.awt.Font font(){
+        return null; //TODO codavaj!!
+    }
 
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOStaticTextFieldController() { return null; }
+    public void setColor(java.awt.Color color){
+        return; //TODO codavaj!!
+    }
 
-    public EOStaticTextFieldController(EOXMLUnarchiver unarchiver) { return null; }
-
-    public NSMutableDictionary _xmlParameters() { return null; }
-
-    public void setColor(Color color) {}
-
-    public Color color() { return null; }
-
-    public void setFont(Font font) {}
-
-    public Font font() { return null; }
-
-    protected JComponent newWidget() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private Color _color;
-    private Font _font;
+    public void setFont(java.awt.Font font){
+        return; //TODO codavaj!!
+    }
 
 }

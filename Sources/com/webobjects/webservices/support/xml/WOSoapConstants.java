@@ -1,42 +1,50 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * WOSoapConstants defines a number of constants used during serialization/deserialization.
+ */
+public interface WOSoapConstants{
+    static final javax.xml.namespace.QName EOENTERPRISEOBJECT_QNAME=null;
 
-import javax.xml.namespace.QName;
-import org.apache.axis.Constants;
-import org.xml.sax.helpers.AttributesImpl;
+    static final javax.xml.namespace.QName EOGLOBALID_QNAME=null;
 
+    static final javax.xml.namespace.QName EOGLOBALID_QNAME_WEBSERVICESCORE_WORKAROUND=null;
 
-public interface WOSoapConstants {
-    public static class WOXMLAttributes extends AttributesImpl {
+    static final java.lang.String NS_PREFIX_WOSOAP_ENC="wosoapenc";
 
-        public WOXMLAttributes(String uri, String localName, String qName, String type, String value) { return null; }
+    static final javax.xml.namespace.QName NSARRAY_QNAME=null;
+
+    static final javax.xml.namespace.QName NSDATA_QNAME=null;
+
+    static final javax.xml.namespace.QName NSDICTIONARY_QNAME=null;
+
+    static final javax.xml.namespace.QName NSKVCNULL_QNAME=null;
+
+    static final javax.xml.namespace.QName NSRANGE_QNAME=null;
+
+    static final javax.xml.namespace.QName NSSET_QNAME=null;
+
+    static final javax.xml.namespace.QName NSTIMESTAMP_QNAME=null;
+
+    static final javax.xml.namespace.QName NSTIMEZONE_QNAME=null;
+
+    static final java.lang.String SOAP_ENC_PREFIX="soapenc";
+
+    static final java.lang.String SOAP_URI=null;
+
+    static final java.lang.String WOSOAP_URI="http://www.apple.com/webobjects/webservices/soap/";
+
+    static final javax.xml.namespace.QName WOSTRINGKEYMAP_QNAME=null;
+
+    static final java.lang.String XSD_URI="http://www.w3.org/2001/XMLSchema";
+
+    static final javax.xml.namespace.QName XSI_TYPE=null;
+
+    static final java.lang.String XSI_URI="http://www.w3.org/2001/XMLSchema-instance";
+
+    public static class WOXMLAttributes extends org.xml.sax.helpers.AttributesImpl{
+        public WOXMLAttributes(java.lang.String uri, java.lang.String localName, java.lang.String qName, java.lang.String type, java.lang.String value){
+             //TODO codavaj!!
+        }
+
     }
-
-
-
-
-
-    public static final String WOSOAP_URI = "http://www.apple.com/webobjects/webservices/soap/";
-    public static final String NS_PREFIX_WOSOAP_ENC = "wosoapenc";
-    public static final String XSI_URI = "http://www.w3.org/2001/XMLSchema-instance";
-    public static final String XSD_URI = "http://www.w3.org/2001/XMLSchema";
-    public static final String SOAP_URI = null;
-    public static final String SOAP_ENC_PREFIX = "soapenc";
-    public static final QName XSI_TYPE = null;
-    public static final QName EOENTERPRISEOBJECT_QNAME = null;
-    public static final QName EOGLOBALID_QNAME = null;
-    public static final QName EOGLOBALID_QNAME_WEBSERVICESCORE_WORKAROUND = null;
-    public static final QName NSKVCNULL_QNAME = null;
-    public static final QName NSRANGE_QNAME = null;
-    public static final QName NSDATA_QNAME = null;
-    public static final QName NSTIMEZONE_QNAME = null;
-    public static final QName NSTIMESTAMP_QNAME = null;
-    public static final QName WOSTRINGKEYMAP_QNAME = null;
-    public static final QName NSARRAY_QNAME = null;
-    public static final QName NSDICTIONARY_QNAME = null;
-    public static final QName NSSET_QNAME = null;
-    public static final WOEnterpriseObjectSerializationStrategy _defaultStrategy = null;
-    public static final WOXMLAttributes _XSINIL = null;
-    public static final WOXMLAttributes _STRINGKEYMAP = null;
-
 }

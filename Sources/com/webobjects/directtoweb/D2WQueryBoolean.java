@@ -1,32 +1,44 @@
-
 package com.webobjects.directtoweb;
-
-import com.webobjects.appserver.WOContext;
-import com.webobjects.appserver.WODisplayGroup;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation.NSMutableDictionary;
-
-
-public class D2WQueryBoolean extends QueryComponent {
-
-
-    public D2WQueryBoolean(WOContext aContext) { return null; }
-
-    public String displayString() { return null; }
-
-    public Object value() { return null; }
-
-    public void setValue(Object newValue) {}
-
-    static  {}
-
-    private static final long serialVersionUID = 0xc4773190L;
-    public Object item;
+/**
+ * This property-level component builds a query based on a boolean attribute which is stored as a number on the server. A non-zero value represents Yes.
+ * Property-level components are not accessed programmatically. Instead, you use the Web Assistant to choose the property-level component that Direct to Web uses to display a property on a particular entity and task page.
+ * If you want to create property-level component to query based on a property, use D2WCustomQueryComponent.
+ * See Also:Serialized Form
+ */
+public class D2WQueryBoolean extends com.webobjects.directtoweb.QueryComponent{
     public int index;
-    private static final String _queryValues[];
-    private static final Object ONE_VALUE;
-    private static final Object ZERO_INTEGER;
-    private static final Object _queryNumbers[];
-    public final NSArray queryNumbers;
+
+    public java.lang.Object item;
+
+    public final com.webobjects.foundation.NSArray queryNumbers=null;
+
+    /**
+     * Creates a new D2WQueryBoolean with the specified context.
+     * Parameters:aContext - a WOContext.
+     */
+    public D2WQueryBoolean(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
+
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public java.lang.String displayString(){
+        return null; //TODO codavaj!!
+    }
+
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public void setValue(java.lang.Object newValue){
+        return; //TODO codavaj!!
+    }
+
+    /**
+     * This method is intentionally undocumented. You should never have to invoke or customize it.
+     */
+    public java.lang.Object value(){
+        return null; //TODO codavaj!!
+    }
 
 }

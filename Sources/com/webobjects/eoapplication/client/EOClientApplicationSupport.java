@@ -1,88 +1,72 @@
-
 package com.webobjects.eoapplication.client;
-
-import com.webobjects.eoapplication.*;
-import com.webobjects.eocontrol.*;
-import com.webobjects.eodistribution.client.*;
-import com.webobjects.foundation.*;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-
-public class EOClientApplicationSupport extends com.webobjects.eoapplication.EOApplication.ApplicationSupport
-    implements com.webobjects.eodistribution.client.EODistributionChannel._DefaultExceptionHandler {
-    public class _DataSourceFactory extends EODataSourceFactory {
-
-
-        public _DataSourceFactory() { return null; }
-
-        public EODataSource newMasterDataSourceWithFetchSpecificationName(EOEditingContext editingContext, String entityName, String fetchSpecificationName) { return null; }
-
-        public EODataSource newMasterDataSource(EOEditingContext editingContext, String entityName, EOFetchSpecification fetchSpecification) { return null; }
-
-        public boolean isMasterDataSource(EODataSource dataSource) { return true; }
-
-        public boolean isDetailDataSource(EODataSource dataSource) { return true; }
-
-        public void setAuxilaryQualifierOnDataSource(EODataSource dataSource, EOQualifier qualifier) {}
-
-        final EOClientApplicationSupport this$0;
-
+/**
+ * EOClientApplicationSupport is an EOApplication.ApplicationSupport subclass used with three-tier Java Client applications. The main function on EOClientApplicationSupport is the entry point used for these kind of applications.
+ */
+public class EOClientApplicationSupport extends com.webobjects.eoapplication.EOApplication.ApplicationSupport{
+    /**
+     * Creates a new EOClientApplicationSupport object.
+     * Parameters:remoteRequestArguments - true if additional arguments need to be requested from the server; false if all arguments have already been retrieved
+     */
+    public EOClientApplicationSupport(boolean remoteRequestArguments){
+         //TODO codavaj!!
     }
 
+    /**
+     * Notifies the server that the client is about to quit so that it can terminate the session.
+     */
+    public void acknowledgeQuit(){
+        return; //TODO codavaj!!
+    }
 
+    /**
+     * Creates a new distribution channel to be used with the application.
+     */
+    public com.webobjects.eodistribution.client.EODistributionChannel channelWithParameters(com.webobjects.foundation.NSDictionary parameters){
+        return null; //TODO codavaj!!
+    }
 
-    public static void main(String argv[]) { return null; }
+    /**
+     * Main entry point for three-tier Java Client applications.
+     */
+    public static void main(java.lang.String[] argv){
+        return; //TODO codavaj!!
+    }
 
-    public EOClientApplicationSupport(boolean remoteRequestArguments) { return null; }
+    /**
+     * Sets the application name and a client-side specific defaults manager.
+     */
+    public void prepareApplication(com.webobjects.eoapplication.EOApplication application, com.webobjects.foundation.NSDictionary arguments){
+        return; //TODO codavaj!!
+    }
 
-    public void _distributionChannelArgumentsProvided(NSNotification notification) {}
+    /**
+     * Initializes some client-side principal classes and the distribution channel if that has not already happened.
+     */
+    public void prepareClasses(com.webobjects.foundation.NSDictionary arguments){
+        return; //TODO codavaj!!
+    }
 
-    public EODistributionChannel channelWithParameters(NSDictionary parameters) { return null; }
+    /**
+     * Initializes all client-side principal classes and a client-side specific data source factory and resource bundle. Also creates a distributed object store and registers it as default parent object store for editing contexts.
+     */
+    public void prepareGlobalObjects(com.webobjects.foundation.NSDictionary arguments){
+        return; //TODO codavaj!!
+    }
 
-    public void runStartupDialogs(NSDictionary arguments) {}
+    /**
+     * Refreshes the enterprise objects fetched to the client with to reflect the latest state known on the server.
+     */
+    public void refreshData(){
+        return; //TODO codavaj!!
+    }
 
-    private void _initializePrincipalClasses(NSDictionary arguments, boolean logProblems) {}
-
-    private void _downloadClientClasses(NSDictionary arguments, EODistributionChannel channel) {}
-
-    public void prepareClasses(NSDictionary arguments) {}
-
-    public void prepareGlobalObjects(NSDictionary arguments) {}
-
-    private static byte[] _bytesFromDescriptions(NSArray descriptions) { return null; }
-
-    private static void _initializeTemporaryGlobalID(String temporaryGIDBase) { return null; }
-
-    public void prepareApplication(EOApplication application, NSDictionary arguments) {}
-
-    public void refreshData() {}
-
-    public void acknowledgeQuit() {}
-
-    public Throwable _handleDistributionChannelServerException(Throwable clientExceptionForServerException, String originalServerExceptionClassName, String originalServerExceptionMessage) { return null; }
-
-    public IOException _handleDistributionChannelIOException(IOException ioException) { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private static final String _RunApplicationURLDialogArgument = "runApplicationURLDialog";
-    private static final String _SuppressClassLoadingArgument = "suppressClassLoading";
-    private static final String _ApplicationNameArgument = "applicationName";
-    private static final String _ChannelClassNameArgument = "channelClassName";
-    private static final String _DownloadClientClassesArgument = "downloadClientClasses";
-    private static final String _DownloadClientClassURLsArgument = "downloadClientClassURLs";
-    private static final String _PrincipalClassNamesArgument = "principalClassNames";
-    private static final String _TemporaryGIDBaseArgument = "temporaryGIDBase";
-    private static final String _PrincipalClassNameSeparator = " ";
-    private static final char _TemporaryGIDBaseSeparator = 61;
-    private static final String _TemporaryGIDBaseValueSeparator = "+";
-    private static final String _DefaultChannelClassName = "com.webobjects.eodistribution.client.EOHTTPChannel";
-    private boolean _remoteRequestArguments;
-    private boolean _argumentsProvidedThroughNotification;
-    private EODistributionChannel _distributionChannel;
-    private EODistributedObjectStore _distributedObjectStore;
+    /**
+     * If requested with the
+     * runApplicationURLDialog
+     * argument, runs a URL connection dialog to ask for the server URL.
+     */
+    public void runStartupDialogs(com.webobjects.foundation.NSDictionary arguments){
+        return; //TODO codavaj!!
+    }
 
 }

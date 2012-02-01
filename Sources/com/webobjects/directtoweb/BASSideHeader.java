@@ -1,10 +1,10 @@
-
 package com.webobjects.directtoweb;
+/**
+ * See Also:Serialized Form
+ */
+public class BASSideHeader extends com.webobjects.directtoweb.DefaultHeader{
+    public BASSideHeader(com.webobjects.appserver.WOContext aContext){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.WOContext;
-
-
-public class BASSideHeader extends DefaultHeader {
-
-    public BASSideHeader(WOContext aContext) { return null; }
 }

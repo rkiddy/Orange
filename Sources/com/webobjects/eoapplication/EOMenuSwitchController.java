@@ -1,68 +1,42 @@
-
 package com.webobjects.eoapplication;
-
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation.NSArray;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Dimension;
-import java.awt.Point;
-import javax.swing.*;
-
-
-public class EOMenuSwitchController extends EOSwitchController {
-    private class _SwitchComboBoxModel extends AbstractListModel
-        implements ComboBoxModel {
-
-
-        public _SwitchComboBoxModel(boolean ignoresStateChange) { return null; }
-
-        public int getSize() { return 0; }
-
-        public Object getElementAt(int index) { return null; }
-
-        public Object getSelectedItem() { return null; }
-
-        public void setSelectedItem(Object item) {}
-
-        public void setIgnoresStateChange(boolean ignoresStateChange) {}
-
-        private boolean _ignoresStateChange;
-        final EOMenuSwitchController this$0;
-
+public class EOMenuSwitchController extends com.webobjects.eoapplication.EOSwitchController{
+    public EOMenuSwitchController(){
+         //TODO codavaj!!
     }
 
+    /**
+     * Parameters:unarchiver -
+     */
+    public EOMenuSwitchController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    protected void addBorderComponentForControllerToDisplayComponent(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent){
+        return; //TODO codavaj!!
+    }
 
-    public EOMenuSwitchController() { return null; }
+    protected java.awt.Dimension displayComponentBorderSize(){
+        return null; //TODO codavaj!!
+    }
 
-    public EOMenuSwitchController(EOXMLUnarchiver unarchiver) { return null; }
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-    public void dispose() {}
+    protected javax.swing.JComponent newDisplayComponent(){
+        return null; //TODO codavaj!!
+    }
 
-    protected JComponent newDisplayComponent() { return null; }
+    protected void removeBorderComponentForControllerFromDisplayComponent(com.webobjects.eoapplication.EOComponentController controller, javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent, int index){
+        return; //TODO codavaj!!
+    }
 
-    private int _comboBoxHeight() { return 0; }
+    protected javax.swing.JComponent selectedBorderComponentInDisplayComponent(javax.swing.JComponent displayComponent){
+        return null; //TODO codavaj!!
+    }
 
-    protected Dimension displayComponentBorderSize() { return null; }
+    protected void showBorderComponentAtIndexInDisplayComponent(javax.swing.JComponent borderComponent, javax.swing.JComponent displayComponent, int index){
+        return; //TODO codavaj!!
+    }
 
-    protected JComponent selectedBorderComponentInDisplayComponent(JComponent displayComponent) { return null; }
-
-    protected void addBorderComponentForControllerToDisplayComponent(EOComponentController controller, JComponent borderComponent, JComponent displayComponent) {}
-
-    protected void removeBorderComponentForControllerFromDisplayComponent(EOComponentController controller, JComponent borderComponent, JComponent displayComponent, int index) {}
-
-    protected void showBorderComponentAtIndexInDisplayComponent(JComponent borderComponent, JComponent displayComponent, int index) {}
-
-    static int access$000(EOMenuSwitchController x0) { return 0; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private JComboBox _comboBox;
-    private int _comboBoxHeight;
-    private int _visibleBorderComponentIndex;
-
-
-    static int access$000(EOMenuSwitchController x0) { return 0; }
 }

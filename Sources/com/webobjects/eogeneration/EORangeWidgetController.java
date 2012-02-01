@@ -1,42 +1,56 @@
-
 package com.webobjects.eogeneration;
+public abstract class EORangeWidgetController extends com.webobjects.eogeneration.EOWidgetController{
+    public EORangeWidgetController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.swing.EOViewLayout;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Dimension;
-import javax.swing.JComponent;
+    public EORangeWidgetController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Prepares the receiver so it is disposed when Java performs garbage collection.
+     */
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-public abstract class EORangeWidgetController extends EOWidgetController {
+    /**
+     * Description copied from class:
+     * Invoked when it's necessary to create the receiver's component, including setting up the subcontroller area. Subclass implementations of this method usually invoke setComponent and if necessary setSubcontrollerArea. EOComponentController's default implementation creates an empty EOView to hold subcontroller components.
+     * The layout mechanisms used to integrate the components of controllers expect that the component is generated with the minimum size possible.
+     */
+    protected void generateComponent(){
+        return; //TODO codavaj!!
+    }
 
+    public javax.swing.JComponent rangeWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public EORangeWidgetController() { return null; }
+    public javax.swing.JComponent separatorLabelComponent(){
+        return null; //TODO codavaj!!
+    }
 
-    public EORangeWidgetController(EOXMLUnarchiver unarchiver) { return null; }
+    public void setRangeWidget(javax.swing.JComponent widget){
+        return; //TODO codavaj!!
+    }
 
-    public void dispose() {}
+    public void setSeparatorLabelComponent(javax.swing.JComponent labelComponent){
+        return; //TODO codavaj!!
+    }
 
-    protected void generateComponent() {}
+    public void setWidgetAlignment(int alignment){
+        return; //TODO codavaj!!
+    }
 
-    public void setWidgetAlignment(int alignment) {}
+    protected void startListeningToRangeWidget(){
+        return; //TODO codavaj!!
+    }
 
-    protected void startListeningToRangeWidget() {}
-
-    protected void stopListeningToRangeWidget() {}
-
-    public void setRangeWidget(JComponent widget) {}
-
-    public JComponent rangeWidget() { return null; }
-
-    public void setSeparatorLabelComponent(JComponent labelComponent) {}
-
-    public JComponent separatorLabelComponent() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    private JComponent _rangeWidget;
-    private JComponent _separatorLabelComponent;
+    protected void stopListeningToRangeWidget(){
+        return; //TODO codavaj!!
+    }
 
 }

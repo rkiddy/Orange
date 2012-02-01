@@ -1,51 +1,49 @@
-
 package com.webobjects.foundation;
-
-import java.io.IOException;
-import java.net.*;
-
-
-public class NSSocketUtilities {
-    private class SocketThread extends Thread {
-
-
-        public SocketThread(boolean bindLocal, InetAddress address, int port, InetAddress localAddress, int localPort) { return null; }
-
-        public void run() {}
-
-        protected volatile Socket returnSocket;
-        protected volatile IOException exception;
-        private boolean shouldBindLocal;
-        private InetAddress aRemoteAddress;
-        private int aRemotePort;
-        private InetAddress aLocalAddress;
-        private int aLocalPort;
-        final NSSocketUtilities this$0;
-
+/**
+ * This class provides an easy way to get a TCP socket (java.net.Socket) with a connection timeout. The static methods in this class correspond to all of the java.net.Socket constructors. Invoking getSocketWithTimeout either returns a valid socket, or throws an java.io.IOException (because the Socket creation timed out, or failed for other reasons). When a new socket is requested with getSocketWithTimeout, a timeout argument (in milliseconds) is passed in, and the socket creation times-out when that timeout is exceeded. Passing a timeout value of 0 will result in the default java.net.Socket creation behavior (i.e. a system dependant timeout). This class only contains static methods, and should never be instantiated.
+ * See Also:NSSocketUtilities.getSocketWithTimeout(String host, int port, int timeout), NSSocketUtilities.getSocketWithTimeout(InetAddress address, int port, int timeout), NSSocketUtilities.getSocketWithTimeout(String host, int port, InetAddress localAddress, int localPort, int timeout), NSSocketUtilities.getSocketWithTimeout(InetAddress address, int port, InetAddress localAddress, int localPort, int timeout), Socket
+ */
+public class NSSocketUtilities{
+    /**
+     * Creates a socket and connects it to the remote address and host specified, using the given timeout in milliseconds. The local end of the socket will be bound to the localPort and localAddress specified.
+     */
+    public static java.net.Socket getSocketWithTimeout(java.net.InetAddress address, int port, java.net.InetAddress localAddress, int localPort, int timeout) throws java.io.IOException{
+        return null; //TODO codavaj!!
     }
 
-
-    private NSSocketUtilities() { return null; }
-
-    public static Socket getSocketWithTimeout(String host, int port, int timeout) throws UnknownHostException, IOException { return null; }
-
-    public static Socket getSocketWithTimeout(String host, int port, InetAddress localAddress, int localPort, int timeout) throws UnknownHostException, IOException { return null; }
-
-    public static Socket getSocketWithTimeout(InetAddress address, int port, int timeout) throws IOException { return null; }
-
-    public static Socket getSocketWithTimeout(InetAddress address, int port, InetAddress localAddress, int localPort, int timeout) throws IOException { return null; }
-
-    private Socket _getSocketWithTimeout(boolean bindLocal, InetAddress address, int port, InetAddress localAddress, int localPort, int timeout) throws IOException { return null; }
+    /**
+     * Creates a socket and connects it to the remote port and address specified, using the given timeout in milliseconds.
+     */
+    public static java.net.Socket getSocketWithTimeout(java.net.InetAddress address, int port, int timeout) throws java.io.IOException{
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method pollingInterval is deprecated
+     * Creates a socket and connects it to the remote port and host specified, using the given timeout in milliseconds. The local end of the socket will be bound to the localPort and localAddress specified.
      */
-
-    public static int pollingInterval() { return null; }
+    public static java.net.Socket getSocketWithTimeout(java.lang.String host, int port, java.net.InetAddress localAddress, int localPort, int timeout) throws java.net.UnknownHostException, java.io.IOException{
+        return null; //TODO codavaj!!
+    }
 
     /**
-     * @deprecated Method setPollingInterval is deprecated
+     * Creates a socket and connects it to the remote port and host specified, using the given timeout in milliseconds.
      */
+    public static java.net.Socket getSocketWithTimeout(java.lang.String host, int port, int timeout) throws java.net.UnknownHostException, java.io.IOException{
+        return null; //TODO codavaj!!
+    }
 
-    public static void setPollingInterval(int i) { return null; }
+    /**
+     * Deprecated.
+     */
+    public static int pollingInterval(){
+        return 0; //TODO codavaj!!
+    }
+
+    /**
+     * Deprecated.
+     */
+    public static void setPollingInterval(int interval){
+        return; //TODO codavaj!!
+    }
+
 }

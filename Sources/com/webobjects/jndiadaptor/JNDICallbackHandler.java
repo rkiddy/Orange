@@ -1,13 +1,11 @@
-
 package com.webobjects.jndiadaptor;
+public class JNDICallbackHandler implements javax.security.auth.callback.CallbackHandler{
+    public JNDICallbackHandler(){
+         //TODO codavaj!!
+    }
 
-import java.io.IOException;
-import javax.security.auth.callback.*;
+    public void handle(javax.security.auth.callback.Callback[] callbacks) throws java.io.IOException, javax.security.auth.callback.UnsupportedCallbackException{
+        return; //TODO codavaj!!
+    }
 
-public class JNDICallbackHandler
-    implements CallbackHandler {
-
-    public JNDICallbackHandler() { return null; }
-
-    public void handle(Callback acallback[]) throws IOException, UnsupportedCallbackException {}
 }

@@ -1,15 +1,11 @@
-
 package com.webobjects.directtoweb.generation;
+public class WOComponentContentGeneration{
+    public WOComponentContentGeneration(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.appserver.*;
-import com.webobjects.appserver._private.WODynamicGroup;
-import com.webobjects.appserver._private.WOGenerationSupport;
-import com.webobjects.foundation.NSDictionary;
+    public static void appendToTemplate(com.webobjects.appserver.WOElement element, com.webobjects.directtoweb.generation.DTWTemplate aTemplate, com.webobjects.appserver.WOContext aContext){
+        return; //TODO codavaj!!
+    }
 
-
-public class WOComponentContentGeneration {
-
-    public WOComponentContentGeneration() { return null; }
-
-    public static void appendToTemplate(WOElement element, DTWTemplate aTemplate, WOContext aContext) { return null; }
 }

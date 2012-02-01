@@ -1,86 +1,127 @@
-
 package com.webobjects.eointerface.swing;
+/**
+ * The EOQuickTimeView class is used to display QuickTime movies (or other QuickTime playe types) in Swing user interfaces. Note that you have to make sure that the QuickTime for Java classes are available in your appliation (in the classpath). EOQuickTimeView is designed to make use of QuickTime for Java if available and to show an empty content otherwise.
+ * See Also:Serialized Form
+ */
+public class EOQuickTimeView extends javax.swing.JPanel{
+    /**
+     * This constant is used to specify that the QuickTime canvas should resize to fill out EOQuickTimeView component size while preserving the aspect ratio of the canvas.
+     * See Also:Constant Field Values
+     */
+    public static final int QuickTimeCanvasAspectResizing=1;
 
-import com.webobjects.foundation.*;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.lang.reflect.*;
-import javax.swing.JPanel;
+    /**
+     * This constant is used to specify that the QuickTime canvas should resize freely with the EOQuickTimeView component size.
+     * See Also:Constant Field Values
+     */
+    public static final int QuickTimeCanvasFreeResizing=2;
 
-public class EOQuickTimeView extends JPanel {
+    /**
+     * This constant is used to specify that the QuickTime canvas should resize horizontally with the EOQuickTimeView component size.
+     * See Also:Constant Field Values
+     */
+    public static final int QuickTimeCanvasHorizontalResizing=5;
 
+    /**
+     * This constant is used to specify that the QuickTime canvas should resize to fill out EOQuickTimeView component size while preserving the aspect ratio of the canvas and only growing by integral increments (2x, 3x, 4x, etc.).
+     * See Also:Constant Field Values
+     */
+    public static final int QuickTimeCanvasIntegralResizing=3;
 
-    public static boolean isQuickTimeAvailable() { return null; }
+    /**
+     * This constant is used to specify that the QuickTime canvas should not resize with the EOQuickTimeView component size.
+     * See Also:Constant Field Values
+     */
+    public static final int QuickTimeCanvasNoResizing=0;
 
-    public EOQuickTimeView() { return null; }
+    /**
+     * This constant is used to specify that the QuickTime canvas should resize with the EOQuickTimeView component size to any size which is a factor of 2 of the initial canvas size.
+     * See Also:Constant Field Values
+     */
+    public static final int QuickTimeCanvasPerformanceResizing=4;
 
-    public void setBounds(int x, int y, int width, int height) {}
+    /**
+     * This constant is used to specify that the QuickTime canvas should resize vertically with the EOQuickTimeView component size.
+     * See Also:Constant Field Values
+     */
+    public static final int QuickTimeCanvasVerticalResizing=6;
 
-    public Dimension getPreferredSize() { return null; }
+    /**
+     * Constructs a new EOQuickTimeView with EOQuickTimeView.QuickTimeCanvasNoResizing canvas resizing mode.
+     * See Also:EOQuickTimeView.QuickTimeCanvasNoResizing
+     */
+    public EOQuickTimeView(){
+         //TODO codavaj!!
+    }
 
-    public void setCanvasResizing(int canvasResizing) {}
+    /**
+     * Returns the receiver's canvas resizing mode. Possible values are QuickTimeCanvasNoResizing, QuickTimeCanvasAspectResizing, QuickTimeCanvasFreeResizing, QuickTimeCanvasIntegralResizing, QuickTimeCanvasPerformanceResizing, QuickTimeCanvasHorizontalResizing, and QuickTimeCanvasVerticalResizing.
+     */
+    public int canvasResizing(){
+        return 0; //TODO codavaj!!
+    }
 
-    public int canvasResizing() { return 0; }
+    /**
+     * Returns the preferred size of the receiver.
+     */
+    public java.awt.Dimension getPreferredSize(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setMovieFromURL(String url) {}
+    /**
+     * Returns whether or not the QuickTime for Java classes are available in the application (in the class path and loaded). If the classes are in the class path but aren't loaded, this method attempts to load them.
+     */
+    public static boolean isQuickTimeAvailable(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setMovie(Object movie) {}
+    /**
+     * Returns the movie displayed in the EOQuickTimeView. The movie is an instance of the quicktime.std.movies.Movie class
+     */
+    public java.lang.Object movie(){
+        return null; //TODO codavaj!!
+    }
 
-    public Object movie() { return null; }
+    /**
+     * Returns the player displayed in the EOQuickTimeView. The player is an instance of the quicktime.app.players.QTPlayer class.
+     */
+    public java.lang.Object player(){
+        return null; //TODO codavaj!!
+    }
 
-    private void _setPlayer(Object player) {}
+    /**
+     * Sets the receiver's bounds.
+     */
+    public void setBounds(int x, int y, int width, int height){
+        return; //TODO codavaj!!
+    }
 
-    public void setPlayer(Object player) {}
+    /**
+     * Sets the receiver's canvas resizing mode to canvasResizing. Possible values are QuickTimeCanvasNoResizing, QuickTimeCanvasAspectResizing, QuickTimeCanvasFreeResizing, QuickTimeCanvasIntegralResizing, QuickTimeCanvasPerformanceResizing, QuickTimeCanvasHorizontalResizing, and QuickTimeCanvasVerticalResizing.
+     */
+    public void setCanvasResizing(int canvasResizing){
+        return; //TODO codavaj!!
+    }
 
-    public Object player() { return null; }
+    /**
+     * Displays the movie movie in the EOQuickTimeView. movie has to be an instance of the quicktime.std.movies.Movie class.
+     */
+    public void setMovie(java.lang.Object movie){
+        return; //TODO codavaj!!
+    }
 
-    static  {}
+    /**
+     * Loads a movie from the URL url and displays it in the EOQuickTimeView.
+     */
+    public void setMovieFromURL(java.lang.String url){
+        return; //TODO codavaj!!
+    }
 
-    private static final long serialVersionUID = 0x78e15e45L;
-    public static final Class _CLASS;
-    private static final Float _oneHalfFloat;
-    private static boolean _isQuickTimeAvailabilityTested;
-    private static boolean _isQuickTimeAvailable;
-    private static Class _sessionClass;
-    private static Class _movieClass;
-    private static Class _controllerClass;
-    private static Class _canvasClass;
-    private static Class _playerClass;
-    private static Class _drawableClass;
-    private static Class _dataRefClass;
-    private static Class _QTConstantsClass;
-    private static Class _QTExceptionClass;
-    private static Method _sessionOpen;
-    private static Method _sessionClose;
-    private static Constructor _canvasConstructor;
-    private static Method _canvasSetClient;
-    private static Method _canvasSetResizeFlag;
-    private static Method _canvasRemoveClient;
-    private static Constructor _controllerConstructor;
-    private static Method _controllerSetKeysEnabled;
-    private static Constructor _playerContructor;
-    private static Method _movieFromDataRef;
-    private static Constructor _dataRefConstructor;
-    private static int _kAspectResize;
-    private static int _kFreeResize;
-    private static int _kHorizontalResize;
-    private static int _kInitialSize;
-    private static int _kIntegralResize;
-    private static int _kPerformanceResize;
-    private static int _kVerticalResize;
-    private static int _newMovieActive;
-    private static Object _emptyObjectArray[];
-    private static Class _emptyClassArray[];
-    public static final int QuickTimeCanvasNoResizing = 0;
-    public static final int QuickTimeCanvasAspectResizing = 1;
-    public static final int QuickTimeCanvasFreeResizing = 2;
-    public static final int QuickTimeCanvasIntegralResizing = 3;
-    public static final int QuickTimeCanvasPerformanceResizing = 4;
-    public static final int QuickTimeCanvasHorizontalResizing = 5;
-    public static final int QuickTimeCanvasVerticalResizing = 6;
-    private Component _canvas;
-    private int _canvasResizing;
-    private Object _player;
-    private Object _movie;
+    /**
+     * Displays the movie player in the EOQuickTimeView. player has to be an instance of the quicktime.app.players.QTPlayer class.
+     */
+    public void setPlayer(java.lang.Object player){
+        return; //TODO codavaj!!
+    }
 
 }

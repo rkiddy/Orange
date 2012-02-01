@@ -1,37 +1,31 @@
-
 package com.webobjects.eogeneration;
+public class EOTextAreaController extends com.webobjects.eogeneration.EOValueAndURLController{
+    public EOTextAreaController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.EOXMLUnarchiver;
-import com.webobjects.eoapplication._EOWidgetUtilities;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.EOTextArea;
-import com.webobjects.foundation._NSUtilities;
-import javax.swing.JComponent;
+    public EOTextAreaController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
-public class EOTextAreaController extends EOValueAndURLController {
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
+    protected int preferredLabelComponentPosition(){
+        return 0; //TODO codavaj!!
+    }
 
-    public EOTextAreaController() { return null; }
+    protected boolean preferredUsesLabelComponent(){
+        return false; //TODO codavaj!!
+    }
 
-    public EOTextAreaController(EOXMLUnarchiver unarchiver) { return null; }
-
-    protected int _labelComponentVerticalOffset() { return 0; }
-
-    protected int preferredLabelComponentPosition() { return 0; }
-
-    protected boolean preferredUsesLabelComponent() { return true; }
-
-    protected int preferredWidgetAutosizingMask() { return 0; }
-
-    protected boolean _preferredCanResizeVertically() { return true; }
-
-    protected JComponent newWidget() { return null; }
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
+    protected int preferredWidgetAutosizingMask(){
+        return 0; //TODO codavaj!!
+    }
 
 }

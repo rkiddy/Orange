@@ -1,19 +1,14 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * See Also:Serialized Form
+ */
+public class WODictionaryDeserializer extends org.apache.axis.encoding.ser.MapDeserializer implements com.webobjects.webservices.support.xml.WOSoapConstants{
+    public WODictionaryDeserializer(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.NSKeyValueCoding;
-import org.apache.axis.encoding.ser.MapDeserializer;
-import org.xml.sax.SAXException;
-
-
-public class WODictionaryDeserializer extends MapDeserializer
-    implements WOSoapConstants {
-
-
-    public WODictionaryDeserializer() { return null; }
-
-    public void setChildValue(Object aValue, Object aHint) throws SAXException {}
-
-    private static final long serialVersionUID = 0x8ae6d375L;
+    public void setChildValue(java.lang.Object aValue, java.lang.Object aHint) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
 }

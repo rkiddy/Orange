@@ -1,19 +1,14 @@
-
 package com.webobjects.webservices.support.xml;
+/**
+ * This class implements org.apache.axis.encoding.Target in a manner compatible with NSKeyValueCoding.
+ */
+public class WOKVCTarget implements org.apache.axis.encoding.Target{
+    public WOKVCTarget(java.lang.Object target, java.lang.String key){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.foundation.NSKeyValueCoding;
-import org.apache.axis.encoding.Target;
-import org.xml.sax.SAXException;
-
-public class WOKVCTarget
-    implements Target {
-
-
-    public WOKVCTarget(Object target, String key) { return null; }
-
-    public void set(Object value) throws SAXException {}
-
-    protected Object _target;
-    protected String _key;
+    public void set(java.lang.Object value) throws org.xml.sax.SAXException{
+        return; //TODO codavaj!!
+    }
 
 }

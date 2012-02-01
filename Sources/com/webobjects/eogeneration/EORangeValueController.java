@@ -1,121 +1,205 @@
-
 package com.webobjects.eogeneration;
+public abstract class EORangeValueController extends com.webobjects.eogeneration.EORangeWidgetController implements com.webobjects.eoapplication.EOEditable, com.webobjects.eoapplication.EOAssociationConnector{
+    public static final java.lang.String ControllerDisplayGroupProviderMethodName="controllerDisplayGroup";
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.EOAssociation;
-import com.webobjects.eointerface.EODisplayGroup;
-import com.webobjects.foundation.*;
-import javax.swing.JComponent;
+    public EORangeValueController(){
+         //TODO codavaj!!
+    }
 
+    public EORangeValueController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
-public abstract class EORangeValueController extends EORangeWidgetController
-    implements EOEditable, EOAssociationConnector {
+    /**
+     * Description copied from class:
+     * Returns whether the controller can be transient. By default, a component controller is transient only if it's an instance of EOComponentController, not an instance of a subclass.
+     */
+    public boolean canBeTransient(){
+        return false; //TODO codavaj!!
+    }
 
+    /**
+     * Description copied from class:
+     * Invoked from breakConnection to notify the receiver that its connection to its supercontroller has been broken, giving the receiver the opportunity to clean up after its become idle.
+     */
+    protected void connectionWasBroken(){
+        return; //TODO codavaj!!
+    }
 
-    public EORangeValueController() { return null; }
+    /**
+     * Description copied from class:
+     * Invoked from establishConnection to notify the receiver that its connection to the controller hierarchy has been established, giving the receiver the opportunity to prepare itself (for example, setting delegates).
+     */
+    protected void connectionWasEstablished(){
+        return; //TODO codavaj!!
+    }
 
-    public EORangeValueController(EOXMLUnarchiver unarchiver) { return null; }
+    public com.webobjects.eointerface.EODisplayGroup controllerDisplayGroup(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    public com.webobjects.eointerface.EODisplayGroup displayGroup(){
+        return null; //TODO codavaj!!
+    }
 
-    protected void disposeAssociations() {}
+    public java.lang.String displayGroupProviderMethodName(){
+        return null; //TODO codavaj!!
+    }
 
-    public void dispose() {}
+    /**
+     * Description copied from class:
+     * Prepares the receiver so it is disposed when Java performs garbage collection.
+     */
+    public void dispose(){
+        return; //TODO codavaj!!
+    }
 
-    protected boolean disposeIfTransient() { return true; }
+    protected void disposeAssociations(){
+        return; //TODO codavaj!!
+    }
 
-    public boolean canBeTransient() { return true; }
+    /**
+     * Description copied from class:
+     * Disposes the receiver if it's transient, first removing it from its supercontroller with removeTransientSubcontroller If the receiver's supercontroller is non-null, this method also attempts to dispose of the supercontroller if it's transient. Supercontrollers can prevent a controller from becoming transient, in which case this method returns false. Subclasses should first invoke the super implementation and only continue disposing if the super implementation returns true.
+     */
+    protected boolean disposeIfTransient(){
+        return false; //TODO codavaj!!
+    }
 
-    protected void connectionWasEstablished() {}
+    /**
+     * Description copied from interface:
+     * Returns the editability of the receiver. The default behavior should be to return EOEditable.IfSupercontrollerEditable.
+     */
+    public int editability(){
+        return 0; //TODO codavaj!!
+    }
 
-    protected void connectionWasBroken() {}
+    public com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup(){
+        return null; //TODO codavaj!!
+    }
 
-    protected boolean _preferredCanResizeVertically() { return true; }
+    public java.lang.String enabledDisplayGroupProviderMethodName(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setSuppressesAssociation(boolean flag) {}
+    public java.lang.String enabledKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public boolean suppressesAssociation() { return true; }
+    /**
+     * Description copied from interface:
+     * Returns whether the receiver is currently editable. A receiver is editable if its editability is EOEditable.AlwaysEditable or its editability is EOEditable.IfSupercontrollerEditable and sending EOEditable.isEditable to the first EOEditable supercontroller of the receiver returns true.
+     */
+    public boolean isEditable(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setDisplayGroupProviderMethodName(String string) {}
+    public com.webobjects.eointerface.EOAssociation maximumAssociation(){
+        return null; //TODO codavaj!!
+    }
 
-    public String displayGroupProviderMethodName() { return null; }
+    public java.lang.String maximumValueKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setEnabledDisplayGroupProviderMethodName(String string) {}
+    public com.webobjects.eointerface.EOAssociation minimumAssociation(){
+        return null; //TODO codavaj!!
+    }
 
-    public String enabledDisplayGroupProviderMethodName() { return null; }
+    public java.lang.String minimumValueKey(){
+        return null; //TODO codavaj!!
+    }
 
-    public void setEnabledKey(String string) {}
+    protected abstract com.webobjects.eointerface.EOAssociation newMaximumAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup);
 
-    public String enabledKey() { return null; }
+    protected abstract com.webobjects.eointerface.EOAssociation newMinimumAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup);
 
-    public void setBothValueKeys(String string) {}
+    public void setBothValueKeys(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void setMinimumValueKey(String string) {}
+    public void setDisplayGroup(com.webobjects.eointerface.EODisplayGroup displayGroup){
+        return; //TODO codavaj!!
+    }
 
-    public String minimumValueKey() { return null; }
+    public void setDisplayGroupProviderMethodName(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void setMaximumValueKey(String string) {}
+    /**
+     * Description copied from interface:
+     * Sets the editability of the receiver to editability. See the method description of setEditability in the interface specification for EOEditable.
+     */
+    public void setEditability(int editability){
+        return; //TODO codavaj!!
+    }
 
-    public String maximumValueKey() { return null; }
+    public void setEnabledDisplayGroup(com.webobjects.eointerface.EODisplayGroup displayGroup){
+        return; //TODO codavaj!!
+    }
 
-    protected String _derivedLabel() { return null; }
+    public void setEnabledDisplayGroupProviderMethodName(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    private void _updateEditability() {}
+    public void setEnabledKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void setEditability(int editability) {}
+    public void setMaximumAssociation(com.webobjects.eointerface.EOAssociation association){
+        return; //TODO codavaj!!
+    }
 
-    public int editability() { return 0; }
+    public void setMaximumValueKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public boolean isEditable() { return true; }
+    public void setMinimumAssociation(com.webobjects.eointerface.EOAssociation association){
+        return; //TODO codavaj!!
+    }
 
-    public void supercontrollerEditabilityDidChange() {}
+    public void setMinimumValueKey(java.lang.String string){
+        return; //TODO codavaj!!
+    }
 
-    public void takeResponsibilityForEditabilityOfAssociation(EOAssociation association) {}
+    public void setSuppressesAssociation(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    protected EODisplayGroup _defaultDisplayGroup() { return null; }
+    /**
+     * Description copied from interface:
+     * Invoked to notify the receiver that the editability of its supercontroller changed, giving the receiver the opportunity to update its user interface to match the editability of the supercontroller. This method is only sent to connected subcontrollers whose editability is EOEditable.IfSupercontrollerEditable.
+     */
+    public void supercontrollerEditabilityDidChange(){
+        return; //TODO codavaj!!
+    }
 
-    public EODisplayGroup controllerDisplayGroup() { return null; }
+    public boolean suppressesAssociation(){
+        return false; //TODO codavaj!!
+    }
 
-    public void setDisplayGroup(EODisplayGroup displayGroup) {}
+    /**
+     * Description copied from interface:
+     * Invoked when one of the receiver's subcontrollers is disposed as a transient controller. This method instructs the receiver to assume responsibility for managing the editability of the subcontroller's EOAssociation, association.
+     */
+    public void takeResponsibilityForEditabilityOfAssociation(com.webobjects.eointerface.EOAssociation association){
+        return; //TODO codavaj!!
+    }
 
-    public EODisplayGroup displayGroup() { return null; }
+    /**
+     * Description copied from interface:
+     * Invoked when one of the receiver's subcontrollers is disposed as a transient controller. Instructs the receiver to assume responsibility for managing the subcontroller's EOAssociation, association.
+     */
+    public void takeResposibilityForConnectionOfAssociation(com.webobjects.eointerface.EOAssociation association){
+        return; //TODO codavaj!!
+    }
 
-    public void setEnabledDisplayGroup(EODisplayGroup displayGroup) {}
-
-    public EODisplayGroup enabledDisplayGroup() { return null; }
-
-    public void takeResposibilityForConnectionOfAssociation(EOAssociation association) {}
-
-    protected abstract EOAssociation newMinimumAssociation(JComponent jcomponent, EODisplayGroup eodisplaygroup, String s, EODisplayGroup eodisplaygroup1);
-
-    protected abstract EOAssociation newMaximumAssociation(JComponent jcomponent, EODisplayGroup eodisplaygroup, String s, EODisplayGroup eodisplaygroup1);
-
-    public void setMinimumAssociation(EOAssociation association) {}
-
-    public EOAssociation minimumAssociation() { return null; }
-
-    public void setMaximumAssociation(EOAssociation association) {}
-
-    public EOAssociation maximumAssociation() { return null; }
-
-    public String toString() { return null; }
-
-    static  {}
-
-    public static final Class _CLASS;
-    public static final String ControllerDisplayGroupProviderMethodName = "controllerDisplayGroup";
-    private boolean _suppressesAssociation;
-    private String _displayGroupProviderMethodName;
-    private String _enabledDisplayGroupProviderMethodName;
-    private EODisplayGroup _displayGroup;
-    private EODisplayGroup _enabledDisplayGroup;
-    private String _enabledKey;
-    private String _minimumValueKey;
-    private String _maximumValueKey;
-    private EOAssociation _minimumAssociation;
-    private EOAssociation _maximumAssociation;
-    private int _editability;
-    private NSMutableArray _editabilityAssociations;
-    private NSMutableArray _connectionAssociations;
+    /**
+     * Description copied from class:
+     * Returns the receiver as a string that states the receiver's class name and type name, whether the receiver is connected, the number of subcontrollers, whether or not the receiver has been prepared, whether or not the receiver is visible, information about widget sizing and alignment behavior, and so on.
+     */
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }

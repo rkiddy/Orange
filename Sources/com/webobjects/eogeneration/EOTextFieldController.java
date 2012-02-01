@@ -1,60 +1,63 @@
-
 package com.webobjects.eogeneration;
+public class EOTextFieldController extends com.webobjects.eogeneration.EOFormatValueController implements java.awt.event.ActionListener, com.webobjects.eogeneration.EOWidgetController.QueryWidget{
+    public EOTextFieldController(){
+         //TODO codavaj!!
+    }
 
-import com.webobjects.eoapplication.*;
-import com.webobjects.eointerface.*;
-import com.webobjects.eointerface.swing.EOSwingUtilities;
-import com.webobjects.foundation.NSMutableDictionary;
-import com.webobjects.foundation._NSUtilities;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JComponent;
-import javax.swing.JTextField;
+    public EOTextFieldController(com.webobjects.eoapplication.EOXMLUnarchiver unarchiver){
+         //TODO codavaj!!
+    }
 
+    public void actionPerformed(java.awt.event.ActionEvent event){
+        return; //TODO codavaj!!
+    }
 
-public class EOTextFieldController extends EOFormatValueController
-    implements ActionListener, EOWidgetController.QueryWidget {
+    /**
+     * Description copied from class:
+     * Disposes the receiver if it's transient, first removing it from its supercontroller with removeTransientSubcontroller If the receiver's supercontroller is non-null, this method also attempts to dispose of the supercontroller if it's transient. Supercontrollers can prevent a controller from becoming transient, in which case this method returns false. Subclasses should first invoke the super implementation and only continue disposing if the super implementation returns true.
+     */
+    protected boolean disposeIfTransient(){
+        return false; //TODO codavaj!!
+    }
 
+    public boolean isQueryWidget(){
+        return false; //TODO codavaj!!
+    }
 
-    public EOTextFieldController() { return null; }
+    protected com.webobjects.eointerface.EOAssociation newAssociation(javax.swing.JComponent widget, com.webobjects.eointerface.EODisplayGroup displayGroup, java.lang.String enabledKey, com.webobjects.eointerface.EODisplayGroup enabledDisplayGroup){
+        return null; //TODO codavaj!!
+    }
 
-    public EOTextFieldController(EOXMLUnarchiver unarchiver) { return null; }
+    protected javax.swing.JComponent newWidget(){
+        return null; //TODO codavaj!!
+    }
 
-    public NSMutableDictionary _xmlParameters() { return null; }
+    protected boolean preferredUsesLabelComponent(){
+        return false; //TODO codavaj!!
+    }
 
-    protected boolean disposeIfTransient() { return true; }
+    protected void setAlignmentForWidget(javax.swing.JComponent widget, int alignment){
+        return; //TODO codavaj!!
+    }
 
-    protected boolean preferredUsesLabelComponent() { return true; }
+    public void setIsQueryWidget(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public void setIsQueryWidget(boolean flag) {}
+    public void setUsesPasswordField(boolean flag){
+        return; //TODO codavaj!!
+    }
 
-    public boolean isQueryWidget() { return true; }
+    protected void startListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    public void setUsesPasswordField(boolean flag) {}
+    protected void stopListeningToWidget(){
+        return; //TODO codavaj!!
+    }
 
-    public boolean usesPasswordField() { return true; }
-
-    protected JComponent newWidget() { return null; }
-
-    protected void setAlignmentForWidget(JComponent widget, int alignment) {}
-
-    protected void startListeningToWidget() {}
-
-    protected void stopListeningToWidget() {}
-
-    protected EODisplayGroup _defaultDisplayGroup() { return null; }
-
-    protected String _associationValueKey() { return null; }
-
-    protected EOAssociation newAssociation(JComponent widget, EODisplayGroup displayGroup, String enabledKey, EODisplayGroup enabledDisplayGroup) { return null; }
-
-    public void actionPerformed(ActionEvent event) {}
-
-    static  {}
-
-    public static final Class _CLASS;
-    private boolean _isQueryWidget;
-    private boolean _usesPasswordField;
+    public boolean usesPasswordField(){
+        return false; //TODO codavaj!!
+    }
 
 }

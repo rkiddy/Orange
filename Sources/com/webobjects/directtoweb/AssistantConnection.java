@@ -1,26 +1,15 @@
-
 package com.webobjects.directtoweb;
+public class AssistantConnection extends java.lang.Thread{
+    public AssistantConnection(java.net.Socket clientSocket){
+         //TODO codavaj!!
+    }
 
-import com.apple.client.directtoweb.common.AssistantPacket;
-import com.webobjects.appserver.WOApplication;
-import com.webobjects.foundation.NSForwardException;
-import com.webobjects.foundation.NSLog;
-import java.io.*;
-import java.net.Socket;
+    public void run(){
+        return; //TODO codavaj!!
+    }
 
-
-public class AssistantConnection extends Thread {
-
-
-    public AssistantConnection(Socket clientSocket) { return null; }
-
-    public void run() {}
-
-    public void sendPacket(AssistantPacket packet) throws IOException {}
-
-    public Socket _clientSocket;
-    protected DataInputStream _in;
-    protected DataOutputStream _out;
-    private ServerInterface _session;
+    public void sendPacket(com.apple.client.directtoweb.common.AssistantPacket packet) throws java.io.IOException{
+        return; //TODO codavaj!!
+    }
 
 }

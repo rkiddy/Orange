@@ -1,107 +1,61 @@
-
 package com.webobjects.eoaccess;
+/**
+ * All qualifiers that can be used to generate SQL queries implement this interface.
+ * See Also:EOFetchSpecification.setHints(NSDictionary hints), EOAdaptorChannel.evaluateExpression(EOSQLExpression expression), EOQualifier, EOSQLQualifier
+ */
+public interface EOQualifierSQLGeneration{
+    /**
+     * Creates a new EOQualifier by moving the qualifier from the source entity to the destination of the relationship path. All of the keys are migrated across the specified relationshipPath.
+     */
+    abstract com.webobjects.eocontrol.EOQualifier qualifierMigratedFromEntityRelationshipPath(com.webobjects.eoaccess.EOEntity entity, java.lang.String relationshipPath);
 
-import com.webobjects.eocontrol.*;
-import com.webobjects.foundation.*;
+    /**
+     * Returns an equivalent EOQualifier with object references replaced by foreign key references.
+     */
+    abstract com.webobjects.eocontrol.EOQualifier schemaBasedQualifierWithRootEntity(com.webobjects.eoaccess.EOEntity entity);
 
+    /**
+     * Returns the SQL text that is represented by the EOSQLExpression object.
+     */
+    abstract java.lang.String sqlStringForSQLExpression(com.webobjects.eoaccess.EOSQLExpression sqlExpression);
 
-public interface EOQualifierSQLGeneration {
-    public static class _NotQualifierSupport extends Support {
+    /**
+     * The abstract EOQualifierSQLGeneration.Support class provides basic functionality to subclasses that implement the EOQualifierSQLGeneration interface for specific qualifier types.
+     * See Also:EOQualifierSQLGeneration, EOSQLQualifier
+     */
+    public static abstract class Support{
+        public Support(){
+             //TODO codavaj!!
+        }
 
-        public _NotQualifierSupport() { return null; }
+        /**
+         * Creates a new version of qualifier, translates all the keys to work with the entity specified in relationshipPath. The receiver's keys are all specified in terms of entity. For example, assume that an Employee entity has a relationship named "department" to a Department entity. You could migrate a qualifier described in terms of the Employee entity (department.name = "Finance", for example) to a qualifier described in terms of the Department entity (name = "Finance"). To do so, send a qualifierMigratedFromEntityRelationshipPath message with the Employee entity as the entity and "department" as the relationship path.
+         */
+        public abstract com.webobjects.eocontrol.EOQualifier qualifierMigratedFromEntityRelationshipPath(com.webobjects.eocontrol.EOQualifier qualifier, com.webobjects.eoaccess.EOEntity entity, java.lang.String relationshipPath);
 
-        public EOQualifier schemaBasedQualifierWithRootEntity(EOQualifier qualifier, EOEntity entity) { return null; }
+        /**
+         * Returns an EOQualifier that is translated so that it is based on the foreign keys of the entity.
+         */
+        public abstract com.webobjects.eocontrol.EOQualifier schemaBasedQualifierWithRootEntity(com.webobjects.eocontrol.EOQualifier qualifier, com.webobjects.eoaccess.EOEntity entity);
 
-        public String sqlStringForSQLExpression(EOQualifier qualifier, EOSQLExpression sqlExpression) { return null; }
+        /**
+         * Sets the Support class to be used internally for the specified qualifier class.
+         */
+        public static void setSupportForClass(com.webobjects.eoaccess.EOQualifierSQLGeneration.Support support, java.lang.Class aClass){
+            return; //TODO codavaj!!
+        }
 
-        public EOQualifier qualifierMigratedFromEntityRelationshipPath(EOQualifier qualifier, EOEntity entity, String relationshipPath) { return null; }
-    }
+        /**
+         * Returns the SQL String for the qualifier within the context of sqlExpression.
+         */
+        public abstract java.lang.String sqlStringForSQLExpression(com.webobjects.eocontrol.EOQualifier qualifier, com.webobjects.eoaccess.EOSQLExpression sqlExpression);
 
-    public static class _OrQualifierSupport extends Support {
-
-        public _OrQualifierSupport() { return null; }
-
-        public EOQualifier schemaBasedQualifierWithRootEntity(EOQualifier qualifier, EOEntity entity) { return null; }
-
-        public String sqlStringForSQLExpression(EOQualifier qualifier, EOSQLExpression sqlExpression) { return null; }
-
-        public EOQualifier qualifierMigratedFromEntityRelationshipPath(EOQualifier qualifier, EOEntity entity, String relationshipPath) { return null; }
-    }
-
-    public static class _AndQualifierSupport extends Support {
-
-        public _AndQualifierSupport() { return null; }
-
-        public EOQualifier schemaBasedQualifierWithRootEntity(EOQualifier qualifier, EOEntity entity) { return null; }
-
-        public String sqlStringForSQLExpression(EOQualifier qualifier, EOSQLExpression sqlExpression) { return null; }
-
-        public EOQualifier qualifierMigratedFromEntityRelationshipPath(EOQualifier qualifier, EOEntity entity, String relationshipPath) { return null; }
-    }
-
-    public static class _KeyComparisonQualifierSupport extends Support {
-
-        public _KeyComparisonQualifierSupport() { return null; }
-
-        public EOQualifier schemaBasedQualifierWithRootEntity(EOQualifier qualifier, EOEntity entity) { return null; }
-
-        public String sqlStringForSQLExpression(EOQualifier qualifier, EOSQLExpression sqlExpression) { return null; }
-
-        public EOQualifier qualifierMigratedFromEntityRelationshipPath(EOQualifier qualifier, EOEntity entity, String relationshipPath) { return null; }
-    }
-
-    public static class _KeyValueQualifierSupport extends Support {
-
-        public _KeyValueQualifierSupport() { return null; }
-
-        public EOQualifier schemaBasedQualifierWithRootEntity(EOQualifier qualifier, EOEntity entity) { return null; }
-
-        public String sqlStringForSQLExpression(EOQualifier qualifier, EOSQLExpression sqlExpression) { return null; }
-
-        public EOQualifier qualifierMigratedFromEntityRelationshipPath(EOQualifier qualifier, EOEntity entity, String relationshipPath) { return null; }
-    }
-
-    public static abstract class Support {
-
-
-        public Support() { return null; }
-
-        public static Support supportForClass(Class aClass) { return null; }
-
-        public static void setSupportForClass(Support support, Class aClass) { return null; }
-
-        public abstract String sqlStringForSQLExpression(EOQualifier eoqualifier, EOSQLExpression eosqlexpression);
-
-        public abstract EOQualifier schemaBasedQualifierWithRootEntity(EOQualifier eoqualifier, EOEntity eoentity);
-
-        public abstract EOQualifier qualifierMigratedFromEntityRelationshipPath(EOQualifier eoqualifier, EOEntity eoentity, String s);
-
-        public static String _sqlStringForSQLExpression(EOQualifier qualifier, EOSQLExpression sqlExpression) { return null; }
-
-        public static EOQualifier _schemaBasedQualifierWithRootEntity(EOQualifier qualifier, EOEntity entity) { return null; }
-
-        public static EOQualifier _qualifierMigratedFromEntityRelationshipPath(EOQualifier qualifier, EOEntity entity, String relationshipPath) { return null; }
-
-        public static String _flattenRelationshipPath(String relationshipPath, EOEntity entity) { return null; }
-
-        public static String _optimizeQualifierKeyPath(EOEntity entity, String relationshipPath, String key) { return null; }
-
-        public static EOQualifier _qualifierMigratedToSubEntityFromParentEntity(EOQualifier qualifier, EOEntity subEntity, EOEntity parentEntity) { return null; }
-
-        public static String _translateKeyAcrossRelationshipPath(String sourceKey, String relPath, EOEntity entity) { return null; }
-
-        static  {}
-
-        private static NSMutableDictionary _supportByClass;
-        private static final NSSelector _relationshipPathSelector;
-        private static final NSSelector _nameSelector;
+        /**
+         * Returns the Support class for the specified qualifier class.
+         */
+        public static com.webobjects.eoaccess.EOQualifierSQLGeneration.Support supportForClass(java.lang.Class aClass){
+            return null; //TODO codavaj!!
+        }
 
     }
-
-
-    public abstract String sqlStringForSQLExpression(EOSQLExpression eosqlexpression);
-
-    public abstract EOQualifier schemaBasedQualifierWithRootEntity(EOEntity eoentity);
-
-    public abstract EOQualifier qualifierMigratedFromEntityRelationshipPath(EOEntity eoentity, String s);
 }

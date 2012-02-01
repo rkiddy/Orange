@@ -1,20 +1,23 @@
-
 package com.webobjects.appserver.parser.woml;
+public class WOMLCommentNode extends com.webobjects.appserver.parser.woml.WOMLDataNode{
+    public static final java.lang.String COMMENT_PREFIX="!--";
 
+    public static final java.lang.String COMMENT_SUFFIX="--";
 
+    public WOMLCommentNode(com.webobjects.appserver.parser.woml.WOMLPosition position){
+         //TODO codavaj!!
+    }
 
-public class WOMLCommentNode extends WOMLDataNode {
+    public java.lang.String getOutputPrefix(){
+        return null; //TODO codavaj!!
+    }
 
+    public java.lang.String getOutputSuffix(){
+        return null; //TODO codavaj!!
+    }
 
-    public WOMLCommentNode(WOMLPosition position) { return null; }
-
-    public String getOutputPrefix() { return null; }
-
-    public String getOutputSuffix() { return null; }
-
-    public String toString() { return null; }
-
-    public static final String COMMENT_PREFIX = "<!--";
-    public static final String COMMENT_SUFFIX = "-->";
+    public java.lang.String toString(){
+        return null; //TODO codavaj!!
+    }
 
 }
