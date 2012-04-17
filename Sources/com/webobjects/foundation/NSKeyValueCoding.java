@@ -1,26 +1,94 @@
 package com.webobjects.foundation;
 /**
- * The NSKeyValueCoding interface defines a data transport mechanism in which the properties of an object are accessed indirectly by name (or key), rather than directly through invocation of an accessor method or as instance variables. Thus, all of an object's properties can be accessed in a consistent manner. The takeValueForKey method sets the value for an object's property, and valueForKey returns the value for an object's property.
- * The NSKeyValueCoding interface contains an inner interface, NSKeyValueCoding.ErrorHandling, that defines an extension to the basic NSKeyValueCoding interface for handling errors that occur during key-value coding.
- * Additionally, NSKeyValueCoding contains two inner classes, NSKeyValueCoding.DefaultImplementation and NSKeyValueCoding.Utility. The former provides a default implementation of the interface, making it easy to implement NSKeyValueCoding on your's own custom classes. The latter is a convenience that allows you to access the properties of NSKeyValueCoding objects and non-NSKeyValueCoding objects using the same code. Both the DefaultImplementation class and the Utility class provide NSKeyValueCoding.ErrorHandling API in addition to basic NSKeyValueCoding API.
- * The methods in the NSKeyValueCoding.DefaultImplementation class are just like the methods defined by the NSKeyValueCoding interface (and the NSKeyValueCoding.ErrorHandling interface), except they are static methods and they take an extra argument -- the object on which the default implementation should operate.
- * For example, suppose you want to implement an Employee class that implements NSKeyValueCoding using NSKeyValueCoding.DefaultImplementation. Employee's valueForKey method would then look like this:
- * The NSKeyValueCoding.DefaultImplementation methods use accessor methods normally implemented by objects (such as setKey and key), or they access instance variables directly if no accessors for a key exist.
- * Recall that the NSKeyValueCoding.Utility class is a convenience that allows you to access the properties of NSKeyValueCoding objects and non-NSKeyValueCoding objects using the same code.
- * Utility's methods are similar to DefaultImplementation's methods in that they are static methods and they take an extra argument -- the object on which the method should operate. However, Utility's methods simply check to see if the object on which they operate is an NSKeyValueCoding object and invoke the corresponding NSKeyValueCoding method on the object if it is. Otherwise, they invoke the corresponding DefaultImplementation method, passing the object on which to operate.
- * For example, suppose that you want to access an object with the NSKeyValueCoding API but you do not know if the object is an NSKeyValueCoding object. To do so, you simply use the corresponding Utility API, as in the following line of code:
+ * <p>
+ * The NSKeyValueCoding interface defines a data transport mechanism in which the properties of an object are accessed indirectly by name (or key), 
+ * rather than directly through invocation of an accessor method or as instance variables. Thus, all of an object's properties can be accessed in a 
+ * consistent manner. The takeValueForKey method sets the value for an object's property, and valueForKey returns the value for an object's property.
+ * </p><p>
+ * The NSKeyValueCoding interface contains an inner interface, NSKeyValueCoding.ErrorHandling, that defines an extension to the basic NSKeyValueCoding 
+ * interface for handling errors that occur during key-value coding.
+ * </p><p>
+ * Additionally, NSKeyValueCoding contains two inner classes, NSKeyValueCoding.DefaultImplementation and NSKeyValueCoding.Utility. The former provides a 
+ * default implementation of the interface, making it easy to implement NSKeyValueCoding on your's own custom classes. The latter is a convenience that 
+ * allows you to access the properties of NSKeyValueCoding objects and non-NSKeyValueCoding objects using the same code. Both the DefaultImplementation 
+ * class and the Utility class provide NSKeyValueCoding.ErrorHandling API in addition to basic NSKeyValueCoding API.
+ * </p>
+ * <h2>Default Implementation</h2>
+ * <p>
+ * The methods in the NSKeyValueCoding.DefaultImplementation class are just like the methods defined by the NSKeyValueCoding interface (and the 
+ * NSKeyValueCoding.ErrorHandling interface), except they are static methods and they take an extra argument -- the object on which the default 
+ * implementation should operate.
+ * </p><p>
+ * For example, suppose you want to implement an Employee class that implements NSKeyValueCoding using NSKeyValueCoding.DefaultImplementation. Employee's 
+ * valueForKey method would then look like this:
+ * <blockquote><pre>
+   public Object valueForKey(String key) {
+      return NSKeyValueCoding.DefaultImplementation.valueForKey(this, key);
+   }
+   </pre></blockquote>
+ *</p>
+ * The NSKeyValueCoding.DefaultImplementation methods use accessor methods normally implemented by objects (such as setKey and key), or they access instance 
+ * variables directly if no accessors for a key exist.
+ * </p>
+ * <h2>Utility</h2>
+ * <p>
+ * Recall that the NSKeyValueCoding.Utility class is a convenience that allows you to access the properties of NSKeyValueCoding objects and non-NSKeyValueCoding 
+ * objects using the same code.
+ * </p><p>
+ * Utility's methods are similar to DefaultImplementation's methods in that they are static methods and they take an extra argument -- the object on which the 
+ * method should operate. However, Utility's methods simply check to see if the object on which they operate is an NSKeyValueCoding object and invoke the 
+ * corresponding NSKeyValueCoding method on the object if it is. Otherwise, they invoke the corresponding DefaultImplementation method, passing the object 
+ * on which to operate.
+ * </p><p>
+ * For example, suppose that you want to access an object with the NSKeyValueCoding API but you do not know if the object is an NSKeyValueCoding object.
+ * To do so, you simply use the corresponding Utility API, as in the following line of code:
+ * <blockquote><pre>
+   theValue = NSKeyValueCoding.Utility.valueForKey(object, key);
+   </pre></blockquote>
+ * </p><p>
  * The above line of code is simply a short-cut for the following:
- * By default, key-value coding methods directly access instance variables if there are no accessor methods for setting and retrieving values. However, you can modify this behavior without overriding the default implementation. To instruct the default implementation to not directly access instance variables, implement the static method canAccessFieldsDirectly on your NSKeyValueCoding class to return false.
- * public static boolean canAccessFieldsDirectly()
- * An NSKeyValueCoding class does not have to implement this method. It's an optional method that allows a class to tailor key-value coding behavior. By default, the key-value implementation provided by NSKeyValueCoding.DefaultImplementation accesses fields directly if it can not find corresponding accessor methods. An NSKeyValueCoding class can override this behavior by implementing this method to return false, in which case the key-value coding methods will not access fields directly.
- * This method is not strictly part of this interface because static methods cannot be formally declared in an interface. However, this method is so closely related to the interface as to be considered part of it.
- * See Also:NSKeyValueCoding.takeValueForKey(java.lang.Object, java.lang.String), NSKeyValueCoding.valueForKey(java.lang.String), NSKeyValueCoding.ErrorHandling, NSKeyValueCoding.DefaultImplementation, NSKeyValueCoding.Utility
+ * <blockquote><pre>
+   if (object instanceof NSKeyValueCoding) {
+       theValue = ((NSKeyValueCoding)object).valueForKey(key);
+   } else {
+       theValue = NSKeyValueCoding.DefaultImplementation.valueForKey(object, key);
+   }
+   </pre></blockquote>
+ * </p>
+ * <h2>Directly Accessing Instance Variables</h2>
+ * <p>
+ * By default, key-value coding methods directly access instance variables if there are no accessor methods for setting and retrieving values. However, you 
+ * can modify this behavior without overriding the default implementation. To instruct the default implementation to not directly access instance variables, 
+ * implement the static method canAccessFieldsDirectly on your NSKeyValueCoding class to return <code>false</code>.
+ * </p><p><code>
+   public static boolean canAccessFieldsDirectly()
+   </code></p><p>
+ * An NSKeyValueCoding class does not have to implement this method. It's an optional method that allows a class to tailor key-value coding behavior. By 
+ * default, the key-value implementation provided by NSKeyValueCoding.DefaultImplementation accesses fields directly if it can not find corresponding 
+ * accessor methods. An NSKeyValueCoding class can override this behavior by implementing this method to return false, in which case the key-value coding 
+ * methods will not access fields directly.
+ * </p><p>
+ * This method is not strictly part of this interface because static methods cannot be formally declared in an interface. However, this method is so closely 
+ * related to the interface as to be considered part of it.
+ * </p>
  */
-public interface NSKeyValueCoding{
+public interface NSKeyValueCoding {
     /**
      * A constant used to represent null in places which do not handle raw null.
      */
     static final com.webobjects.foundation.NSKeyValueCoding.Null NullValue=null;
+
+    /**
+     * Instances of the NSKeyValueCoding.UnknownKeyException class are created and thrown when an unknown key is encountered during key-value coding.
+     */
+    public static class UnknownKeyException { }
+
+    /**
+     * NSKeyValueCoding.ValueAccessor is an abstract class that establishes a mechanism by which NSKeyValueCoding can operate on object's package access instance variables.
+     */
+    public abstract class Accessor { }
+
+    public static class _KeyBinding { }
 
     /**
      * Sets the value for the property identified by key to value.

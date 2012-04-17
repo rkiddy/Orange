@@ -5,7 +5,8 @@ package com.webobjects.eoaccess;
  */
 public interface EOQualifierSQLGeneration{
     /**
-     * Creates a new EOQualifier by moving the qualifier from the source entity to the destination of the relationship path. All of the keys are migrated across the specified relationshipPath.
+     * Creates a new EOQualifier by moving the qualifier from the source entity to the destination of the relationship path. All of the keys are 
+     * migrated across the specified relationshipPath.
      */
     abstract com.webobjects.eocontrol.EOQualifier qualifierMigratedFromEntityRelationshipPath(com.webobjects.eoaccess.EOEntity entity, java.lang.String relationshipPath);
 
@@ -27,6 +28,8 @@ public interface EOQualifierSQLGeneration{
         public Support(){
              //TODO codavaj!!
         }
+
+    public static class _KeyValueQualifierSupport { }
 
         /**
          * Creates a new version of qualifier, translates all the keys to work with the entity specified in relationshipPath. The receiver's keys are all specified in terms of entity. For example, assume that an Employee entity has a relationship named "department" to a Department entity. You could migrate a qualifier described in terms of the Employee entity (department.name = "Finance", for example) to a qualifier described in terms of the Department entity (name = "Finance"). To do so, send a qualifierMigratedFromEntityRelationshipPath message with the Employee entity as the entity and "department" as the relationship path.

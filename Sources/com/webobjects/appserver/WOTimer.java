@@ -1,3 +1,3 @@
 package com.webobjects.appserver;
-class WOTimer{
+public class WOTimer{
 }

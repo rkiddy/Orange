@@ -52,7 +52,7 @@ public class WOMessage implements com.webobjects.foundation.NSKeyValueCoding, co
      */
     public static final int HTTP_STATUS_OK=200;
 
-    protected static final boolean[] map=false;
+    protected static final boolean[] map = new boolean[] { false };
 
     /**
      * This protected class variable contains a String identifying the default encoding to use when constructing responses, which is defined in WOMessage to be UTF8 (UTF-8). Pre-5.4, ISO-8859-1 was the default encoding setting.

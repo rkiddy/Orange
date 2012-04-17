@@ -3,9 +3,16 @@ package com.webobjects.eoaccess;
  * EOEntityIndex represent an index on an entity.
  */
 public class EOEntityIndex implements com.webobjects.eoaccess.EOPropertyListEncoding, com.webobjects.eoaccess.EOSQLExpression.SQLValue{
+
     public EOEntityIndex(){
          //TODO codavaj!!
     }
+
+    public class Constraint { }
+
+    public class Order { }
+
+    public class Type { }
 
     /**
      * Creates an EOEntityIndex object with the state specified in plist whose parent is owner. The possible keys for plist are: name attributes constrain indexType order userInfo

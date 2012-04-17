@@ -6,7 +6,7 @@ public class WODeclarationParserTokenManager implements com.webobjects.appserver
 
     protected com.webobjects.appserver.parser.declaration.JavaCharStream input_stream;
 
-    public static final int[] jjnewLexState=0;
+    public static final int[] jjnewLexState = new int[] { 0 };
 
     public static final java.lang.String[] jjstrLiteralImages=null;
 
