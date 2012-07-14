@@ -5,9 +5,7 @@ import java.io.*;
 import java.util.Enumeration;
 
 
-public class _NSThreadsafeMutableDictionary extends _NSThreadsafeWrapper
-    implements Serializable, NSKeyValueCoding {
-
+public class _NSThreadsafeMutableDictionary extends _NSThreadsafeWrapper implements Serializable, NSKeyValueCoding {
 
     public _NSThreadsafeMutableDictionary(NSMutableDictionary dict) { return null; }
 

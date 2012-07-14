@@ -52,6 +52,8 @@ public class EOControllerFactory implements com.webobjects.foundation.NSDisposab
 
     public static final java.lang.String UserInterfaceParametersQuestion="userInterfaceParameters";
 
+    public static class _XMLProvider { }
+
     public EOControllerFactory(){
          //TODO codavaj!!
     }

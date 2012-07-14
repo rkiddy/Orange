@@ -4,6 +4,11 @@ package com.webobjects.eoaccess;
  * See Also:EOFetchSpecification.setHints(NSDictionary hints), EOAdaptorChannel.evaluateExpression(EOSQLExpression expression), EOQualifier, EOSQLQualifier
  */
 public interface EOQualifierSQLGeneration{
+
+    public static class _KeyValueQualifierSupport { }
+
+    public static class _OrQualifierSupport { } 
+
     /**
      * Creates a new EOQualifier by moving the qualifier from the source entity to the destination of the relationship path. All of the keys are 
      * migrated across the specified relationshipPath.

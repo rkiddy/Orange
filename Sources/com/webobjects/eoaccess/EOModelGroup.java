@@ -1,15 +1,57 @@
 package com.webobjects.eoaccess;
 /**
- * An EOModelGroup represents an aggregation of related models. When a model in the group needs to resolve a relationship to an entity in another model, it looks for that model in its group. Model groups allow applications to load entities and their properties only as they're needed, by distributing them among separate EOModels.
- * The default model group contains all models for an application, as well as any frameworks the application references. It is automatically created on demand. The entity name space among all of these models is global; consequently, the same entity name should not appear in any two of models in the group. All cross-model information is represented in the models by entity name only. Binding the entity name to an actual entity is done at runtime within the EOModelGroup.
- * In the majority of applications, the automatically created default model group is sufficient. If different model grouping semantics are needed, programmers can create their own model group instance, add whatever models they like, and then replace the default model group with their custom model group.
+ * An EOModelGroup represents an aggregation of related models. When a model in the group needs to resolve a relationship to an 
+ * entity in another model, it looks for that model in its group. Model groups allow applications to load entities and their 
+ * properties only as they're needed, by distributing them among separate EOModels.
+ * <p>
+ * The <strong>default model group</strong> contains all models for an application, as well as any frameworks the application 
+ * references. It is automatically created on demand. The entity name space among all of these models is global; consequently, 
+ * the same entity name should not appear in any two of models in the group. All cross-model information is represented in the 
+ * models by entity name only. Binding the entity name to an actual entity is done at runtime within the EOModelGroup.
+ * </p><p>
+ * In the majority of applications, the automatically created default model group is sufficient. If different model grouping 
+ * semantics are needed, programmers can create their own model group instance, add whatever models they like, and then replace
+ * the default model group with their custom model group.
+ * </p>
+ * <h4>Setting Up A Model Group Programmatically</h4>
+ * <p>
  * The following code demonstrates programmatic creation of a model group.
- * Each model lives within a group and can form connections to other models in its group. EOModeler puts models with identical names in separate groups to allow you to load two models with the same name at the same time.
- * A model can find a related model by name using the statement this.modelGroup().modelNamed(name);.
- * A data source can locate a model using the statement: EOModelGroup.defaultGroup().modelNamed(name);.
- * Your EOModelGroup object should have a delegate which can influence how it finds and loads models. In addition to the delegates you assign to EOModelGroup instances, the EOModelGroup class itself can have a delegate. The class delegate implements a single method, defaultModelGroup. The instance delegate can implement the methods defined in the EOModelGroup.Delegate interface.
- * Note that the following delegate methods are set on EOModelGroup, rather than EOEntity, to provide a single point in the code where you can alter the database-to-objects mapping.
- * See Also:EOModelGroup.ClassDelegate.defaultModelGroup(), EOModelGroup.Delegate.classForObjectWithGlobalID(EOEntity entity, EOGlobalID gid), EOModelGroup.Delegate.subEntityForEntity(EOEntity entity, NSDictionary dic), EOModelGroup.ClassDelegate, EOModelGroup, EOModel
+ * <blockquote><pre>
+   java.net.URL modelURL;//Assume this exists
+   EOModelGroup group = new EOModelGroup();
+   group.addModelWithPathURL(modelURL);
+   EOModelGroup.setDefaultGroup(group);
+   </pre><blockquote> 
+ * </p><p>
+ * Each model lives within a group and can form connections to other models in its group. EOModeler puts models with identical 
+ * names in separate groups to allow you to load two models with the same name at the same time.
+ * </p><p>
+ * A model can find a related model by name using the statement <code>this.modelGroup().modelNamed(name);</code>.
+ * </p><p>
+ * A data source can locate a model using the statement: <code>EOModelGroup.defaultGroup().modelNamed(name);</code>.
+ * </p>
+ * <h4>EOModelGroup Delegates</h4>
+ * <p>
+ * Your EOModelGroup object should have a delegate which can influence how it finds and loads models. In addition to the delegates 
+ * you assign to EOModelGroup instances, the EOModelGroup class itself can have a delegate. The class delegate implements a single
+ * method, <code>defaultModelGroup</code>. The instance delegate can implement the methods defined in the <code>EOModelGroup.Delegate</code>
+ * interface.
+ * </p><p>
+ * Note that the following delegate methods are set on EOModelGroup, rather than EOEntity, to provide a single point in the code 
+ * where you can alter the database-to-objects mapping.
+ * <code><ul>
+ * <li>classForObjectWithGlobalID</li>
+ * <li>failedToLookupClassNamed</li>
+ * <li> relationshipForRow</li>
+ * <li>subEntityForEntity</li>
+ * </ul></code>
+ *
+ * @see EOModelGroup.ClassDelegate.defaultModelGroup()
+ * @see EOModelGroup.Delegate.classForObjectWithGlobalID(EOEntity entity, EOGlobalID gid)
+ * @see EOModelGroup.Delegate.subEntityForEntity(EOEntity entity, NSDictionary dic)
+ * @see EOModelGroup.ClassDelegate
+ * @see EOModelGroup
+ * @see EOModel
  */
 public class EOModelGroup{
     /**

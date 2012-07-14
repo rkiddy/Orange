@@ -1,7 +1,7 @@
 package com.webobjects.appserver;
 /**
  * Register this Mbean with the JMX MBean server to monitor a WOApplication instance.
- * Since: 5.4
+ * @since 5.4
  */
 public interface WOApplicationMBean{
     abstract boolean getAdaptorsDispatchRequestsConcurrently();

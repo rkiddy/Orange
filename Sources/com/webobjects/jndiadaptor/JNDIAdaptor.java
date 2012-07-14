@@ -75,6 +75,8 @@ public class JNDIAdaptor extends com.webobjects.eoaccess.EOAdaptor{
      */
     public static final java.lang.String UsernameKey="username";
 
+    public static class _Environment { }
+
     /**
      * Creates a new instance of JNDIAdaptor.
      * Parameters:name - - name of adaptorSee Also:EOAdaptor.EOAdaptor(String)

@@ -1,6 +1,6 @@
 package com.webobjects.appserver;
 /**
- * Since: 5.4
+ * @since 5.4
  */
 public interface WOAssociationFactory{
     /**

@@ -30,6 +30,8 @@ public class EOApplication extends com.webobjects.eoapplication.EOController{
      */
     public static final java.lang.String ApplicationWillStartNotification="EOApplicationWillStart";
 
+    public interface _QuitHandler { }
+
     /**
      * Creates a new EOApplication object.
      */

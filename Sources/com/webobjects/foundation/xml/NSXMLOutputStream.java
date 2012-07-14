@@ -15,6 +15,9 @@ package com.webobjects.foundation.xml;
  * See Also:DataOutput, ObjectInputStream, Serializable, Externalizable
  */
 public class NSXMLOutputStream extends java.io.ObjectOutputStream implements com.webobjects.foundation.xml.NSXMLObjectStreamConstants, com.webobjects.foundation.xml.NSXMLObjectOutput{
+
+    public static class DOMRecursiveInfo { }
+
     /**
      * Creates an ObjectOutputStream that writes to the specified OutputStream.
      * If a security manager is installed, this constructor will check for the "enableSubclassImplementation" SerializablePermission.

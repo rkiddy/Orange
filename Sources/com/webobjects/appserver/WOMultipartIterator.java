@@ -3,6 +3,9 @@ package com.webobjects.appserver;
  * This class represents the content of a multipart/form-data HTTP request. You get the iterator for such a request by calling multipartIterator on the WORequest object. Once you have this object, you get WOFormData objects by repeatedly calling nextFormData, until it returns null. Each WOFormData allows you to introspect the sub-headers, as well as either look at the form value(s) or grab the entire content of the part as an InputStream subclass. The InputStream subclass is a WOFormDataInpuStream and can be used to stream large file uploads to disk (or elsewhere). The WOMultipartIterator should NOT be used with WOFileUpload component actions. It may be used with component actions where there is no WOFileUpload, and it may be used in DirectActions.
  */
 public class WOMultipartIterator{
+
+    public class WOFormData { }
+
     protected WOMultipartIterator(){
          //TODO codavaj!!
     }

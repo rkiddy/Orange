@@ -15,6 +15,8 @@ package com.webobjects.eoaccess;
  * See Also:EODatabaseContext, EOGlobalID, EOEntity
  */
 public class EODatabase implements com.webobjects.foundation.NSDisposable{
+
+   protected static class _DatabaseRecord { }
     /**
      * Creates and returns a new EODatabase object, specifying adaptor as the new EODatabase's adaptor. Throws an exception if adaptor is null.
      * Typically, you don't need to programmatically create EODatabase objects. Rather, they are created automatically by the control layer. If you do need to create an EODatabase programmatically, never associate more than one EODatabase with a given EOAdaptor. In general, create an EODatabase with an EOModel instead of an EOAdaptor.
